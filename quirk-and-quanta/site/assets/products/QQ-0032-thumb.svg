@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="160" height="160">
+  <defs>
+    <linearGradient id="bgGrad_QQ-0032_thumb" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF5FF" />
+      <stop offset="100%" stop-color="#FFFFFF" />
+    </linearGradient>
+    <filter id="shadow_QQ-0032_thumb" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#18243A" flood-opacity="0.08" />
+    </filter>
+  </defs>
+
+  <!-- Clean Subtle Background -->
+  <rect width="400" height="400" fill="url(#bgGrad_QQ-0032_thumb)" />
+  
+  <!-- Subtle Technical Grid Lines -->
+  <g opacity="0.15" stroke="#44337A" stroke-width="0.8">
+    <line x1="40" y1="0" x2="40" y2="400" stroke-dasharray="4,4" />
+    <line x1="360" y1="0" x2="360" y2="400" stroke-dasharray="4,4" />
+    <line x1="0" y1="40" x2="400" y2="40" stroke-dasharray="4,4" />
+    <line x1="0" y1="360" x2="400" y2="360" stroke-dasharray="4,4" />
+  </g>
+
+  <!-- Category & SKU Header Tag -->
+  <g transform="translate(25, 25)">
+    <rect x="0" y="0" width="75" height="22" rx="4" fill="#44337A" />
+    <text x="37.5" y="15" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">QQ-0032</text>
+    
+    <text x="85" y="15" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#9F7AEA">Home &amp; Decor</text>
+  </g>
+
+  <!-- Circular Pedestal Ground Shadow -->
+  <ellipse cx="200" cy="315" rx="120" ry="22" fill="#E2E8F0" opacity="0.6" filter="url(#shadow_QQ-0032_thumb)" />
+
+  <!-- Distinct Centered Product Vector Illustration -->
+  <g id="product-art">
+    
+        <g transform="translate(110, 110)">
+          <!-- Folded Woven Blanket -->
+          <rect x="25" y="40" width="130" height="110" rx="8" fill="#18243A" stroke="#158D89" stroke-width="2" />
+          <!-- Woven Calabi-Yau geometry curves -->
+          <path d="M 35 70 Q 75 40 100 80 T 145 70" fill="none" stroke="#F4C95D" stroke-width="2" />
+          <path d="M 35 100 Q 80 130 110 95 T 145 110" fill="none" stroke="#2CD4CD" stroke-width="2" />
+          <path d="M 45 130 Q 90 90 120 135" fill="none" stroke="#E2E8F0" stroke-width="1.5" stroke-dasharray="3,2" />
+          <!-- Fringed tassel edge -->
+          <g transform="translate(25, 150)">
+            <line x1="10" y1="0" x2="10" y2="15" stroke="#F4C95D" stroke-width="2" />
+            <line x1="30" y1="0" x2="30" y2="15" stroke="#E2E8F0" stroke-width="2" />
+            <line x1="50" y1="0" x2="50" y2="15" stroke="#F4C95D" stroke-width="2" />
+            <line x1="70" y1="0" x2="70" y2="15" stroke="#E2E8F0" stroke-width="2" />
+            <line x1="90" y1="0" x2="90" y2="15" stroke="#F4C95D" stroke-width="2" />
+            <line x1="110" y1="0" x2="110" y2="15" stroke="#E2E8F0" stroke-width="2" />
+          </g>
+        </g>
+        
+  </g>
+
+  <!-- Product Title Label at Bottom -->
+  <g transform="translate(200, 368)">
+    <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#44337A" text-anchor="middle">
+      String Theory Throw Blanket
+    </text>
+    <text x="0" y="16" font-family="monospace" font-size="9.5" fill="#718096" text-anchor="middle">
+      Quirk &amp; Quanta &#8226; Certified Fictional
+    </text>
+  </g>
+</svg>

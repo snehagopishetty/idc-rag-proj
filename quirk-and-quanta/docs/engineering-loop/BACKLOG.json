@@ -1,0 +1,68 @@
+{
+  "tasks": [
+    {
+      "id": "TASK-001",
+      "track": "P0-B",
+      "gate": "G4, G5",
+      "title": "Implement BM25 lexical retriever and Reciprocal Rank Fusion hybrid search",
+      "status": "IN_PROGRESS",
+      "iteration": 1
+    },
+    {
+      "id": "TASK-002",
+      "track": "P0-C",
+      "gate": "G6, G7",
+      "title": "Build additive film defect scenario overlay and local GraphRAG engine",
+      "status": "TODO",
+      "iteration": 2
+    },
+    {
+      "id": "TASK-003",
+      "track": "P0-E",
+      "gate": "G9, G10, G11",
+      "title": "Implement guardrails for grounding, pirate injection defense, and task boundaries",
+      "status": "TODO",
+      "iteration": 3
+    },
+    {
+      "id": "TASK-004",
+      "track": "P0-F",
+      "gate": "G12, G13",
+      "title": "Implement server-side RBAC token verification, cost privacy, and IDOR mitigation",
+      "status": "TODO",
+      "iteration": 4
+    },
+    {
+      "id": "TASK-005",
+      "track": "P0-G",
+      "gate": "G14",
+      "title": "Implement request tracing, token usage, cost attribution, and budget limits",
+      "status": "TODO",
+      "iteration": 5
+    },
+    {
+      "id": "TASK-006",
+      "track": "P0-D",
+      "gate": "G8",
+      "title": "Expand golden dataset to 40+ curated questions and run comparative evaluation",
+      "status": "TODO",
+      "iteration": 6
+    },
+    {
+      "id": "TASK-007",
+      "track": "P0-H, P1",
+      "gate": "G16, G17, O1-O4",
+      "title": "Execute 100-attendee load test, Neo4j adapter, and deployment packaging",
+      "status": "TODO",
+      "iteration": 7
+    },
+    {
+      "id": "TASK-008",
+      "track": "P0-A",
+      "gate": "G1-G3, G15",
+      "title": "Perform final regression testing, verify 17 demos, and publish final handoff",
+      "status": "TODO",
+      "iteration": 8
+    }
+  ]
+}

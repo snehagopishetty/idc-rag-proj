@@ -1,0 +1,21 @@
+{
+  "iteration": 8,
+  "service": "quirk-quanta-rag",
+  "final_verification_metrics": {
+    "total_tests": 145,
+    "pass_rate_percent": 100.0,
+    "concurrency_tested_users": 100,
+    "load_error_rate_percent": 0.0,
+    "products_verified": 100,
+    "svgs_verified": 202,
+    "chunks_embedded": 4316,
+    "graph_nodes": 143,
+    "graph_relationships": 1206,
+    "golden_eval_questions": 42,
+    "vector_hit_rate": 0.476,
+    "bm25_hit_rate": 0.571,
+    "hybrid_hit_rate": 0.500,
+    "graph_rag_defect_accuracy": 1.0,
+    "memory_rss_mb": 102.34
+  }
+}

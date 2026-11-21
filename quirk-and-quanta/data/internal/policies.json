@@ -1,0 +1,60 @@
+[
+  {
+    "id": "POL-RET-07",
+    "name": "Standard 7-Day Precision Return Policy",
+    "type": "return",
+    "durationDays": 7,
+    "terms": "Item may be returned within 7 calendar days provided original packaging and atomic integrity are uncompromised."
+  },
+  {
+    "id": "POL-RET-14",
+    "name": "14-Day Roommate Trial Return Policy",
+    "type": "return",
+    "durationDays": 14,
+    "terms": "Permits 14 days of practical roommate arbitration. Returns accepted if disputes remain irreconcilable under household protocol."
+  },
+  {
+    "id": "POL-RET-30",
+    "name": "30-Day Scholar Return Guarantee",
+    "type": "return",
+    "durationDays": 30,
+    "terms": "Full 30-day trial for academic and laboratory environments. Includes coverage for optical and metrological dissatisfaction."
+  },
+  {
+    "id": "POL-WAR-06",
+    "name": "6-Month Component Integrity Warranty",
+    "type": "warranty",
+    "durationMonths": 6,
+    "terms": "Guarantees free repair or replacement against manufacturing defects and structural micro-fractures under standard domestic use."
+  },
+  {
+    "id": "POL-WAR-12",
+    "name": "12-Month Comprehensive Physicist Warranty",
+    "type": "warranty",
+    "durationMonths": 12,
+    "terms": "Comprehensive coverage of electronic boards, optical assemblies, and electromagnetic coils against drift and failure."
+  },
+  {
+    "id": "POL-WAR-24",
+    "name": "24-Month Extended Laboratory Hardware Warranty",
+    "type": "warranty",
+    "durationMonths": 24,
+    "terms": "Industrial-grade two-year warranty protecting against mechanical wear, bearing fatigue, and sensor calibration deviation."
+  },
+  {
+    "id": "POL-SHIP-STD",
+    "name": "Standard Ground Velocity Shipping",
+    "type": "shipping",
+    "minDays": 3,
+    "maxDays": 5,
+    "terms": "Delivered across all major Indian postal zones via ground logistics with calculated transit speed."
+  },
+  {
+    "id": "POL-SHIP-EXP",
+    "name": "Relativistic Express Courier Delivery",
+    "type": "shipping",
+    "minDays": 1,
+    "maxDays": 2,
+    "terms": "Priority transit with real-time telemetry tracking and temperature-stable vehicle compartment."
+  }
+]

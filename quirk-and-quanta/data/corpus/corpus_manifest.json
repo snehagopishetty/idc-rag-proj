@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-11-20T13:27:15.642383Z",
+  "publicDocumentCount": 341,
+  "internalDocumentCount": 100,
+  "totalDocumentCount": 441,
+  "countsByType": {
+    "product_description": 100,
+    "product_specifications": 100,
+    "product_policies": 100,
+    "supplier_dossier": 12,
+    "component_spec": 24,
+    "recall_bulletin": 5,
+    "confidential_procurement": 100
+  },
+  "accessLevels": {
+    "public": 341,
+    "internal_procurement": 100
+  },
+  "publicCorpusHash": "e05ffd9ee3ac46a0",
+  "internalCorpusHash": "f45572dfbcc8a637"
+}

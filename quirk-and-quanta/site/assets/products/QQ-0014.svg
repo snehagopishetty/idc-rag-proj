@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="bgGrad_QQ-0014" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F0F4F8" />
+      <stop offset="100%" stop-color="#FFFFFF" />
+    </linearGradient>
+    <filter id="shadow_QQ-0014" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#18243A" flood-opacity="0.08" />
+    </filter>
+  </defs>
+
+  <!-- Clean Subtle Background -->
+  <rect width="400" height="400" fill="url(#bgGrad_QQ-0014)" />
+  
+  <!-- Subtle Technical Grid Lines -->
+  <g opacity="0.15" stroke="#2B4C7E" stroke-width="0.8">
+    <line x1="40" y1="0" x2="40" y2="400" stroke-dasharray="4,4" />
+    <line x1="360" y1="0" x2="360" y2="400" stroke-dasharray="4,4" />
+    <line x1="0" y1="40" x2="400" y2="40" stroke-dasharray="4,4" />
+    <line x1="0" y1="360" x2="400" y2="360" stroke-dasharray="4,4" />
+  </g>
+
+  <!-- Category & SKU Header Tag -->
+  <g transform="translate(25, 25)">
+    <rect x="0" y="0" width="75" height="22" rx="4" fill="#2B4C7E" />
+    <text x="37.5" y="15" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">QQ-0014</text>
+    
+    <text x="85" y="15" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#F4C95D">Desk &amp; Office</text>
+  </g>
+
+  <!-- Circular Pedestal Ground Shadow -->
+  <ellipse cx="200" cy="315" rx="120" ry="22" fill="#E2E8F0" opacity="0.6" filter="url(#shadow_QQ-0014)" />
+
+  <!-- Distinct Centered Product Vector Illustration -->
+  <g id="product-art">
+    
+        <g transform="translate(80, 150)">
+          <!-- Oversized Mat Perspective -->
+          <polygon points="10,130 230,130 210,30 30,30" fill="#1A202C" stroke="#158D89" stroke-width="3" />
+          <!-- Green Stitched Border Highlight -->
+          <polygon points="12,127 228,127 208,33 32,33" fill="none" stroke="#2CD4CD" stroke-width="1.2" stroke-dasharray="4,2" />
+          <!-- Typeset Math Formulas on Mat -->
+          <text x="60" y="60" font-family="'Courier New', monospace" font-size="10" fill="#FFFFFF">&#8747; e^(-x&#178;) dx = &#8730;&#960;</text>
+          <text x="120" y="85" font-family="'Courier New', monospace" font-size="9" fill="#F4C95D">S = k_B ln &#937;</text>
+          <text x="70" y="110" font-family="'Courier New', monospace" font-size="11" fill="#2CD4CD">H|&#968;&#9002; = E|&#968;&#9002;</text>
+        </g>
+        
+  </g>
+
+  <!-- Product Title Label at Bottom -->
+  <g transform="translate(200, 368)">
+    <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#2B4C7E" text-anchor="middle">
+      Infinite Equation Mouse Pad
+    </text>
+    <text x="0" y="16" font-family="monospace" font-size="9.5" fill="#718096" text-anchor="middle">
+      Quirk &amp; Quanta &#8226; Certified Fictional
+    </text>
+  </g>
+</svg>

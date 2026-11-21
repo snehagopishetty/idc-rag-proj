@@ -1,0 +1,53 @@
+{
+  "corpusVersion": "1.0.0",
+  "totalSourceDocuments": 441,
+  "strategies": {
+    "fixed": {
+      "config": {
+        "chunkSize": 450,
+        "overlap": 0,
+        "boundary": "word"
+      },
+      "telemetry": {
+        "totalChunks": 1181,
+        "avgCharLength": 373.3,
+        "minCharLength": 4,
+        "maxCharLength": 450,
+        "avgWordCount": 49.5,
+        "publicChunks": 881,
+        "internalChunks": 300
+      }
+    },
+    "sliding": {
+      "config": {
+        "chunkSize": 450,
+        "overlap": 150,
+        "boundary": "word"
+      },
+      "telemetry": {
+        "totalChunks": 1512,
+        "avgCharLength": 394.9,
+        "minCharLength": 125,
+        "maxCharLength": 528,
+        "avgWordCount": 52.4,
+        "publicChunks": 1126,
+        "internalChunks": 386
+      }
+    },
+    "semantic": {
+      "config": {
+        "splitRule": "markdown_h2_structural_sections",
+        "contextualPrefix": true
+      },
+      "telemetry": {
+        "totalChunks": 1623,
+        "avgCharLength": 369.3,
+        "minCharLength": 154,
+        "maxCharLength": 825,
+        "avgWordCount": 48.9,
+        "publicChunks": 1223,
+        "internalChunks": 400
+      }
+    }
+  }
+}

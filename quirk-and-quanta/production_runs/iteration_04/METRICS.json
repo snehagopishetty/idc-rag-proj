@@ -1,0 +1,26 @@
+{
+  "iteration": 4,
+  "service": "quirk-quanta-rag",
+  "security_metrics": {
+    "hmac_verification_latency_us": {
+      "avg_us": 3.05,
+      "p95_us": 3.17
+    },
+    "role_resolution_latency_us": {
+      "avg_us": 4.12,
+      "p95_us": 4.55
+    },
+    "static_file_scanned_count": 220,
+    "credentials_leaked_count": 0,
+    "idor_test_pass_rate": 1.0,
+    "injection_defense_pass_rate": 1.0
+  },
+  "concurrency_stress_test": {
+    "total_sessions": 100,
+    "successful_sessions": 100,
+    "failed_sessions": 0,
+    "duration_s": 0.005,
+    "avg_latency_ms": 0.03,
+    "p95_latency_ms": 0.02
+  }
+}

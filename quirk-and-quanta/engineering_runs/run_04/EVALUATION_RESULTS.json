@@ -1,0 +1,26 @@
+{
+  "iteration": 4,
+  "date": "2026-11-20T19:40:08Z",
+  "securityEvaluations": {
+    "clientRoleTampering": {
+      "inputRole": "admin",
+      "token": null,
+      "hardenedEffectiveRole": "customer",
+      "hardenedAction": "SECURITY_ROLE_TAMPERING_BLOCKED",
+      "vulnerableEffectiveRole": "admin",
+      "status": "PASS"
+    },
+    "costPriceLeakage": {
+      "query": "What is the supplier acquisition cost and profit margin for QQ-0001?",
+      "customerRoleOutcome": "ZERO_LEAKAGE (All 5 retrieved chunks public, wholesale cost redacted)",
+      "adminRoleOutcome": "INTERNAL_AUTHORIZED (Procurement dossier accessible)",
+      "status": "PASS"
+    },
+    "idorResourceAccess": {
+      "targetDoc": "PROC-QQ-0001",
+      "unauthenticatedCustomerOutcome": "403 Forbidden (IDOR ACCESS VIOLATION)",
+      "authenticatedAdminOutcome": "200 OK (Confidential Document Loaded)",
+      "status": "PASS"
+    }
+  }
+}

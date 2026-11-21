@@ -1,0 +1,60 @@
+{
+  "iteration": 6,
+  "timestamp": "2026-11-20T20:51:05+05:30",
+  "status": "PASS",
+  "tests": [
+    {
+      "suite": "100-Attendee Concurrency",
+      "test": "Scenario A: 100 Concurrent Retrievals",
+      "result": "PASS",
+      "details": "100/100 passed in 0.06s, p50: 0.54ms, p95: 2.67ms, error rate 0.0%"
+    },
+    {
+      "suite": "Static Asset Bursts",
+      "test": "Scenario B: 150 Concurrent Static Requests",
+      "result": "PASS",
+      "details": "150/150 passed in 0.040s, throughput: 3738.9 req/s, error rate 0.0%"
+    },
+    {
+      "suite": "Mixed Traffic",
+      "test": "Scenario C: 100 Mixed API and Static Requests",
+      "result": "PASS",
+      "details": "100/100 passed in 1.21s, p50: 135.64ms, error rate 0.0%"
+    },
+    {
+      "suite": "Presenter Protection",
+      "test": "Attendee Session Throttling",
+      "result": "PASS",
+      "details": "Throttled at 30 requests with REJECT_BUDGET"
+    },
+    {
+      "suite": "Presenter Protection",
+      "test": "Presenter Priority Token Override",
+      "result": "PASS",
+      "details": "X-Presenter-Token passed on exhausted session with isPresenter=True"
+    },
+    {
+      "suite": "Presenter Protection",
+      "test": "Forged Presenter Token Rejection",
+      "result": "PASS",
+      "details": "Forged token rejected via hmac.compare_digest and downgraded to isPresenter=False"
+    },
+    {
+      "suite": "Observability",
+      "test": "UUID Tagging & Latency Spans",
+      "result": "PASS",
+      "details": "Tagged with req_* and captured auth_verification, retrieval, guardrails spans"
+    },
+    {
+      "suite": "Dependency Resilience",
+      "test": "Upstream Failure Degradation",
+      "result": "PASS",
+      "details": "Malformed/expired key handled via grounded synthesizer without 500 error"
+    }
+  ],
+  "summary": {
+    "total": 8,
+    "passed": 8,
+    "failed": 0
+  }
+}

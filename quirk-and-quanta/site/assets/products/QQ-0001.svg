@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="bgGrad_QQ-0001" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EDF2F7" />
+      <stop offset="100%" stop-color="#FFFFFF" />
+    </linearGradient>
+    <filter id="shadow_QQ-0001" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#18243A" flood-opacity="0.08" />
+    </filter>
+  </defs>
+
+  <!-- Clean Subtle Background -->
+  <rect width="400" height="400" fill="url(#bgGrad_QQ-0001)" />
+  
+  <!-- Subtle Technical Grid Lines -->
+  <g opacity="0.15" stroke="#18243A" stroke-width="0.8">
+    <line x1="40" y1="0" x2="40" y2="400" stroke-dasharray="4,4" />
+    <line x1="360" y1="0" x2="360" y2="400" stroke-dasharray="4,4" />
+    <line x1="0" y1="40" x2="400" y2="40" stroke-dasharray="4,4" />
+    <line x1="0" y1="360" x2="400" y2="360" stroke-dasharray="4,4" />
+  </g>
+
+  <!-- Category & SKU Header Tag -->
+  <g transform="translate(25, 25)">
+    <rect x="0" y="0" width="75" height="22" rx="4" fill="#18243A" />
+    <text x="37.5" y="15" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">QQ-0001</text>
+    
+    <text x="85" y="15" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#158D89">Apparel</text>
+  </g>
+
+  <!-- Circular Pedestal Ground Shadow -->
+  <ellipse cx="200" cy="315" rx="120" ry="22" fill="#E2E8F0" opacity="0.6" filter="url(#shadow_QQ-0001)" />
+
+  <!-- Distinct Centered Product Vector Illustration -->
+  <g id="product-art">
+    
+        <!-- Hoodie Body -->
+        <path d="M 120 180 L 170 120 L 230 120 L 280 180 L 250 200 L 230 180 L 230 330 L 170 330 L 170 180 L 150 200 Z" fill="#18243A" />
+        <!-- Hood -->
+        <path d="M 170 120 Q 200 60 230 120 Q 200 140 170 120 Z" fill="#243452" stroke="#158D89" stroke-width="2" />
+        <!-- Drawstrings with aglets -->
+        <path d="M 185 135 Q 185 180 180 210" fill="none" stroke="#FFFFFF" stroke-width="2.5" />
+        <rect x="177" y="210" width="6" height="14" fill="#F4C95D" rx="2" />
+        <path d="M 215 135 Q 215 180 220 210" fill="none" stroke="#FFFFFF" stroke-width="2.5" />
+        <rect x="217" y="210" width="6" height="14" fill="#F4C95D" rx="2" />
+        <!-- Kangaroo pocket -->
+        <path d="M 180 250 L 220 250 L 230 300 L 170 300 Z" fill="#131D2E" stroke="#158D89" stroke-width="1.5" />
+        <!-- Wave equation print on sleeve -->
+        <path d="M 130 190 Q 140 220 150 210 T 170 230" fill="none" stroke="#2CD4CD" stroke-width="2" />
+        <text x="200" y="275" font-family="'Courier New', monospace" font-size="10" fill="#2CD4CD" text-anchor="middle">&#916;x &#8226; &#916;p &#8805; &#8463;/2</text>
+        
+  </g>
+
+  <!-- Product Title Label at Bottom -->
+  <g transform="translate(200, 368)">
+    <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#18243A" text-anchor="middle">
+      Quantum Uncertainty Hoodie
+    </text>
+    <text x="0" y="16" font-family="monospace" font-size="9.5" fill="#718096" text-anchor="middle">
+      Quirk &amp; Quanta &#8226; Certified Fictional
+    </text>
+  </g>
+</svg>

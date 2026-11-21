@@ -1,0 +1,147 @@
+# 12 Fictional Suppliers
+SUPPLIERS = [
+    {
+        "id": "SUP-001",
+        "name": "Orbital Threads Manufacturing",
+        "code": "OTM-IND-01",
+        "city": "Bengaluru",
+        "country": "India",
+        "categories": ["Apparel", "Textiles"],
+        "reliabilityScore": 0.98,
+        "contractStatus": "active",
+        "contactEmail": "procurement@orbitalthreads.example.com",
+        "tier": "Tier-1 Primary"
+    },
+    {
+        "id": "SUP-002",
+        "name": "Precision Machining & Quantum Works",
+        "code": "PMQ-HYD-02",
+        "city": "Hyderabad",
+        "country": "India",
+        "categories": ["Desk & Office", "Railway & Engineering"],
+        "reliabilityScore": 0.99,
+        "contractStatus": "active",
+        "contactEmail": "b2b@precisionquantum.example.com",
+        "tier": "Tier-1 Primary"
+    },
+    {
+        "id": "SUP-003",
+        "name": "Thermodynamic Glass & Ceramic Co.",
+        "code": "TGC-PUN-03",
+        "city": "Pune",
+        "country": "India",
+        "categories": ["Drinkware & Kitchen"],
+        "reliabilityScore": 0.96,
+        "contractStatus": "active",
+        "contactEmail": "orders@thermoglass.example.com",
+        "tier": "Tier-2 Verified"
+    },
+    {
+        "id": "SUP-004",
+        "name": "Subatomic Living & Ergonomics",
+        "code": "SLE-DEL-04",
+        "city": "New Delhi",
+        "country": "India",
+        "categories": ["Home & Decor"],
+        "reliabilityScore": 0.95,
+        "contractStatus": "active",
+        "contactEmail": "contracts@subatomicliving.example.com",
+        "tier": "Tier-2 Verified"
+    },
+    {
+        "id": "SUP-005",
+        "name": "Photon & Field Instruments Ltd.",
+        "code": "PFI-CHE-05",
+        "city": "Chennai",
+        "country": "India",
+        "categories": ["Science Gadgets"],
+        "reliabilityScore": 0.97,
+        "contractStatus": "active",
+        "contactEmail": "labgear@photonfield.example.com",
+        "tier": "Tier-1 Primary"
+    },
+    {
+        "id": "SUP-006",
+        "name": "Cognitive Entropy Games & Press",
+        "code": "CEG-MUM-06",
+        "city": "Mumbai",
+        "country": "India",
+        "categories": ["Puzzles & Games"],
+        "reliabilityScore": 0.94,
+        "contractStatus": "active",
+        "contactEmail": "distribution@cognitiveentropy.example.com",
+        "tier": "Tier-2 Verified"
+    },
+    {
+        "id": "SUP-007",
+        "name": "Cartesian Paper & Bound Media",
+        "code": "CPB-KOL-07",
+        "city": "Kolkata",
+        "country": "India",
+        "categories": ["Stationery & Learning"],
+        "reliabilityScore": 0.98,
+        "contractStatus": "active",
+        "contactEmail": "press@cartesianpaper.example.com",
+        "tier": "Tier-1 Primary"
+    },
+    {
+        "id": "SUP-008",
+        "name": "Galactic Silicon & Peripherals",
+        "code": "GSP-BLR-08",
+        "city": "Bengaluru",
+        "country": "India",
+        "categories": ["Tech Accessories"],
+        "reliabilityScore": 0.93,
+        "contractStatus": "active",
+        "contactEmail": "silicon@galacticsilicon.example.com",
+        "tier": "Tier-2 Verified"
+    },
+    {
+        "id": "SUP-009",
+        "name": "Standard Gauge Railway Models",
+        "code": "SGR-JAI-09",
+        "city": "Jaipur",
+        "country": "India",
+        "categories": ["Railway & Engineering"],
+        "reliabilityScore": 0.97,
+        "contractStatus": "active",
+        "contactEmail": "locomotives@standardgauge.example.com",
+        "tier": "Tier-1 Primary"
+    },
+    {
+        "id": "SUP-010",
+        "name": "Curiosity Enamel & Minting Guild",
+        "code": "CEM-AHM-10",
+        "city": "Ahmedabad",
+        "country": "India",
+        "categories": ["Gifts & Collectibles"],
+        "reliabilityScore": 0.95,
+        "contractStatus": "active",
+        "contactEmail": "mint@curiosityguild.example.com",
+        "tier": "Tier-2 Verified"
+    },
+    {
+        "id": "SUP-011",
+        "name": "Apex Kinetic Polymers & Resins",
+        "code": "AKP-NAG-11",
+        "city": "Nagpur",
+        "country": "India",
+        "categories": ["Home & Decor", "Desk & Office", "Gifts & Collectibles"],
+        "reliabilityScore": 0.92,
+        "contractStatus": "active",
+        "contactEmail": "supply@apexpolymers.example.com",
+        "tier": "Tier-3 Secondary"
+    },
+    {
+        "id": "SUP-012",
+        "name": "Helios Micro-Optics & Sensors",
+        "code": "HMS-BLR-12",
+        "city": "Bengaluru",
+        "country": "India",
+        "categories": ["Science Gadgets", "Tech Accessories"],
+        "reliabilityScore": 0.96,
+        "contractStatus": "active",
+        "contactEmail": "optics@heliossensors.example.com",
+        "tier": "Tier-2 Verified"
+    }
+]

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Our Obsession | Quirk &amp; Quanta</title>
+  <meta name="description" content="Discover the fictional origins of Quirk & Quanta, founded on peer-reviewed retail, obsessive precision, and theoretical physics.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+      <div class="announcement-bar-content">
+        <span class="announcement-ticker">
+          <span class="announcement-ticker-icon">⚛️</span>
+          <span>Peer-Reviewed Ground Velocity Shipping across India &bull; Free Transit on Orders Over ₹999</span>
+        </span>
+      </div>
+      <div class="announcement-bar-links">
+        <a href="about.html">Fictional Story</a>
+        <a href="products.html">All 100 Products</a>
+        <span style="color: var(--color-gold);">Gate 1 RAG Workshop Demo</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Sticky Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-main">
+        <!-- Logo -->
+        <a href="index.html" class="header-brand" aria-label="Quirk &amp; Quanta Home">
+          <img src="assets/logo.svg" alt="Quirk &amp; Quanta Logo" class="header-logo-img">
+        </a>
+
+        <!-- Global Search Bar -->
+        <div class="header-search">
+          <form id="global-search-form" class="search-input-wrapper">
+            <input type="text" 
+                   id="global-search-input" 
+                   class="search-input" 
+                   placeholder="Search 100 peer-reviewed items by SKU, concept, or formula..." 
+                   autocomplete="off"
+                   aria-label="Search catalog">
+            <button type="submit" class="search-btn" aria-label="Submit search">Search</button>
+          </form>
+          <!-- Live Preview Dropdown -->
+          <div id="search-dropdown" class="search-results-dropdown"></div>
+        </div>
+
+        <!-- Header Actions -->
+        <div class="header-actions">
+          <button id="role-toggle-btn" class="role-badge-toggle" title="Switch Demonstration Role Preview">
+            <span>👤</span> Role: Customer
+          </button>
+          <a href="products.html" class="header-action-btn" title="View Wishlist">
+            <span>♥</span>
+            <span class="badge-count" id="header-wishlist-count">0</span>
+          </a>
+          <button id="header-cart-btn" class="header-action-btn" title="Open Shopping Cart">
+            <span>🛒</span>
+            <span>Cart</span>
+            <span class="badge-count" id="header-cart-count">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category Navigation Sub-bar -->
+    <nav class="header-nav" aria-label="Category navigation">
+      <div class="container">
+        <ul class="header-nav-list">
+          <li><a href="products.html" class="header-nav-link">All 100 Products</a></li>
+          <li><a href="products.html?category=CAT-APPAREL" class="header-nav-link">Apparel</a></li>
+          <li><a href="products.html?category=CAT-DESK" class="header-nav-link">Desk &amp; Office</a></li>
+          <li><a href="products.html?category=CAT-KITCHEN" class="header-nav-link">Drinkware &amp; Kitchen</a></li>
+          <li><a href="products.html?category=CAT-HOME" class="header-nav-link">Home &amp; Decor</a></li>
+          <li><a href="products.html?category=CAT-GADGETS" class="header-nav-link">Science Gadgets</a></li>
+          <li><a href="products.html?category=CAT-PUZZLES" class="header-nav-link">Puzzles &amp; Games</a></li>
+          <li><a href="products.html?category=CAT-STATIONERY" class="header-nav-link">Stationery &amp; Learning</a></li>
+          <li><a href="products.html?category=CAT-TECH" class="header-nav-link">Tech Accessories</a></li>
+          <li><a href="products.html?category=CAT-RAILWAY" class="header-nav-link">Railway &amp; Engineering</a></li>
+          <li><a href="products.html?category=CAT-GIFTS" class="header-nav-link">Gifts &amp; Collectibles</a></li>
+          <li><a href="workshop.html" class="header-nav-link" style="color: var(--color-gold); font-weight: 700;">🧪 Workshop Lab</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Page Header Hero -->
+  <div style="background-color: var(--color-navy); color: #FFFFFF; padding: 48px 0; border-bottom: 3px solid var(--color-gold);">
+    <div class="container" style="max-width: 900px; text-align: center;">
+      <span class="badge badge-gold" style="margin-bottom: 12px;">Fictional Corporate Annals</span>
+      <h1 style="font-size: 2.5rem; font-weight: 900; color: #FFFFFF; margin-bottom: 16px; letter-spacing: -0.02em;">
+        The Peculiar Genesis of Quirk &amp; Quanta
+      </h1>
+      <p style="font-size: 1.125rem; color: rgba(255,255,255,0.85); line-height: 1.6; max-width: 720px; margin: 0 auto;">
+        "If a coffee mug deviates from thermodynamic optimum by more than 0.04%, it is not a mug; it is an ambient heat disaster."
+      </p>
+    </div>
+  </div>
+
+  <!-- Main Narrative Content -->
+  <main class="section">
+    <div class="container" style="max-width: 860px;">
+      
+      <!-- Prominent Educational Notice Callout -->
+      <div style="background-color: #FEF9C3; border: 2px solid #EAB308; border-radius: 8px; padding: 18px 24px; margin-bottom: 36px;">
+        <div style="display: flex; gap: 14px; align-items: flex-start;">
+          <span style="font-size: 1.75rem;">🎓</span>
+          <div>
+            <h3 style="font-size: 1.0625rem; font-weight: 800; color: #854D0E; margin-bottom: 4px;">
+              Educational Demonstration Notice (Gate 1 of 11)
+            </h3>
+            <p style="font-size: 0.875rem; color: #713F12; line-height: 1.5; margin: 0;">
+              <strong>Quirk &amp; Quanta is an entirely fictional storefront.</strong> No commercial transactions are performed, and no products can be purchased. This enterprise, its products, suppliers, customer reviews, and operational documents were synthesized specifically for the technical workshop: <em>"Beyond Basic RAG: Building Production-Ready AI Systems."</em>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Founding Story Section -->
+      <section style="margin-bottom: 48px;">
+        <h2 style="font-size: 1.75rem; font-weight: 800; color: var(--color-navy); margin-bottom: 16px;">
+          1. The 3:14 AM Epiphany
+        </h2>
+        <p style="font-size: 1rem; line-height: 1.8; color: var(--color-text-main); margin-bottom: 16px;">
+          Quirk &amp; Quanta was conceived in the autumn of 2021 by two eccentric theoretical physicists sharing a rented second-floor apartment in Bengaluru: <strong>Dr. Arthur Pendelton</strong> (an obsessive string theorist whose seating arrangements required strict laminar airflow calculations) and <strong>Dr. Rajeshwari Varma</strong> (a high-energy particle phenomenologist whose morning tea preparation followed a strict 14-variable thermodynamic equation).
+        </p>
+        <p style="font-size: 1rem; line-height: 1.8; color: var(--color-text-main); margin-bottom: 16px;">
+          The precipitating crisis occurred during a debate over a supermarket pizza cutter. Dr. Pendelton observed that standard retail pizza cutters exhibited a rotational wobble of 1.4 millimeters, introducing asymmetric radial crust compression and violating basic geometric dignity. Dr. Varma countered that the real scandal was the absence of laser-guided coordinate alignment markers for equilateral slice subdivision.
+        </p>
+        <p style="font-size: 1rem; line-height: 1.8; color: var(--color-text-main); margin-bottom: 16px;">
+          By sunrise, they had drafted the blueprints for SKU <code>QQ-0029</code> (the <em>Precision Pizza Cutting Wheel</em>) with surgical-grade tungsten carbide bearings and a vernier radial scale. When visiting university colleagues demanded identical units for their personal kitchens, Dr. Pendelton sighed, adjusted his spectacles, and declared: <em>"It appears civilization suffers from an intolerable deficit of peer-reviewed consumer products."</em>
+        </p>
+      </section>
+
+      <!-- The Four Axioms Section -->
+      <section id="principles" style="margin-bottom: 48px;">
+        <h2 style="font-size: 1.75rem; font-weight: 800; color: var(--color-navy); margin-bottom: 20px;">
+          2. The Four Operational Axioms
+        </h2>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
+          
+          <div style="background-color: #FFFFFF; border: 1px solid var(--color-border); border-radius: 8px; padding: 20px; box-shadow: var(--shadow-sm);">
+            <div style="font-size: 1.5rem; margin-bottom: 8px;">🔬</div>
+            <h3 style="font-size: 1.0625rem; font-weight: 800; color: var(--color-navy); margin-bottom: 6px;">
+              Axiom I: Sub-Millimeter Tolerances
+            </h3>
+            <p style="font-size: 0.875rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+              If a product's dimensions cannot be verified with a calibrated vernier caliper or laser micrometer, it is not an apparatus; it is merely an unverified opinion.
+            </p>
+          </div>
+
+          <div style="background-color: #FFFFFF; border: 1px solid var(--color-border); border-radius: 8px; padding: 20px; box-shadow: var(--shadow-sm);">
+            <div style="font-size: 1.5rem; margin-bottom: 8px;">📜</div>
+            <h3 style="font-size: 1.0625rem; font-weight: 800; color: var(--color-navy); margin-bottom: 6px;">
+              Axiom II: Peer-Reviewed Domesticity
+            </h3>
+            <p style="font-size: 0.875rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+              Every household routine—from roommate protocol adherence to laundry separation vectors—must be governed by formal, empirical hypotheses and reproducible tests.
+            </p>
+          </div>
+
+          <div style="background-color: #FFFFFF; border: 1px solid var(--color-border); border-radius: 8px; padding: 20px; box-shadow: var(--shadow-sm);">
+            <div style="font-size: 1.5rem; margin-bottom: 8px;">🚂</div>
+            <h3 style="font-size: 1.0625rem; font-weight: 800; color: var(--color-navy); margin-bottom: 6px;">
+              Axiom III: Railway-Grade Precision
+            </h3>
+            <p style="font-size: 0.875rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+              Locomotives and timetables represent humanity's highest triumph over entropy. All logistics, switches, and chronometers must reflect railway-standard reliability.
+            </p>
+          </div>
+
+          <div style="background-color: #FFFFFF; border: 1px solid var(--color-border); border-radius: 8px; padding: 20px; box-shadow: var(--shadow-sm);">
+            <div style="font-size: 1.5rem; margin-bottom: 8px;">📐</div>
+            <h3 style="font-size: 1.0625rem; font-weight: 800; color: var(--color-navy); margin-bottom: 6px;">
+              Axiom IV: Relativistic Ergonomics
+            </h3>
+            <p style="font-size: 0.875rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+              Seating positions and workspace layouts are not matters of taste. The optimal cushion deflection angle is mathematically fixed by gravitational vector alignment.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Workshop Connection Section -->
+      <section id="workshop" style="margin-bottom: 48px; background-color: var(--color-bg); border-radius: 12px; padding: 32px; border: 1px solid var(--color-border);">
+        <h2 style="font-size: 1.75rem; font-weight: 800; color: var(--color-navy); margin-bottom: 12px;">
+          3. The "Beyond Basic RAG" Workshop Context
+        </h2>
+        <p style="font-size: 0.9375rem; line-height: 1.7; color: var(--color-text-main); margin-bottom: 16px;">
+          Quirk &amp; Quanta serves as the rich multi-entity test harness for the advanced RAG masterclass attended by approximately 100 engineers and researchers. Rather than relying on synthetic lorem-ipsum documents, this ecosystem provides an interconnected web of:
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 20px;">
+          <div style="background: #FFFFFF; padding: 14px; border-radius: 6px; border-left: 3px solid var(--color-teal);">
+            <div style="font-weight: 700; font-size: 0.875rem; color: var(--color-navy);">100 Unique Products</div>
+            <div style="font-size: 0.8125rem; color: var(--color-text-muted);">Exact descriptions, numeric attributes, prices, and reviews across 10 categories.</div>
+          </div>
+          <div style="background: #FFFFFF; padding: 14px; border-radius: 6px; border-left: 3px solid var(--color-gold);">
+            <div style="font-weight: 700; font-size: 0.875rem; color: var(--color-navy);">12 Fictional Suppliers</div>
+            <div style="font-size: 0.8125rem; color: var(--color-text-muted);">Lead times, certifications, contact points, and supply chains.</div>
+          </div>
+          <div style="background: #FFFFFF; padding: 14px; border-radius: 6px; border-left: 3px solid var(--color-navy);">
+            <div style="font-weight: 700; font-size: 0.875rem; color: var(--color-navy);">24 Key Components</div>
+            <div style="font-size: 0.8125rem; color: var(--color-text-muted);">Materials, alloy grades, and microcontrollers mapped to SKUs.</div>
+          </div>
+          <div style="background: #FFFFFF; padding: 14px; border-radius: 6px; border-left: 3px solid var(--color-danger);">
+            <div style="font-weight: 700; font-size: 0.875rem; color: var(--color-navy);">5 Quality Recalls</div>
+            <div style="font-size: 0.8125rem; color: var(--color-text-muted);">Component-level defects testing multi-hop GraphRAG failure retrieval.</div>
+          </div>
+        </div>
+
+        <h4 style="font-size: 1rem; font-weight: 800; color: var(--color-navy); margin-bottom: 8px;">
+          Upcoming Workshop Milestones:
+        </h4>
+        <ul style="padding-left: 20px; font-size: 0.875rem; color: var(--color-text-main); line-height: 1.8;">
+          <li><strong>Gates 2 &amp; 3:</strong> Dense vector embeddings and semantic chunking comparisons.</li>
+          <li><strong>Gates 4 &amp; 5:</strong> Multi-hop retrieval failure challenges and BM25 hybrid fusion.</li>
+          <li><strong>Gate 7:</strong> Full GraphRAG integration using Neo4j AuraDB knowledge graphs.</li>
+          <li><strong>Gates 9 &amp; 10:</strong> Role-Based Access Control (RBAC), anti-hallucination guardrails, and IDOR vulnerability testing.</li>
+          <li><strong>Gate 11:</strong> End-to-end LLM evaluations, latency benchmarks, and observability telemetry.</li>
+        </ul>
+      </section>
+
+      <!-- Architecture and Data Separation Section -->
+      <section id="architecture" style="margin-bottom: 48px;">
+        <h2 style="font-size: 1.75rem; font-weight: 800; color: var(--color-navy); margin-bottom: 16px;">
+          4. Zero-Dependency Static Architecture
+        </h2>
+        <p style="font-size: 0.9375rem; line-height: 1.7; color: var(--color-text-main); margin-bottom: 16px;">
+          The storefront has been purposefully architected without frameworks, compilers, or third-party package dependencies:
+        </p>
+        <ul style="padding-left: 20px; font-size: 0.875rem; color: var(--color-text-main); line-height: 1.8; margin-bottom: 20px;">
+          <li><strong>Strict Separation of Concerns:</strong> The static site in <code>site/</code> contains only public, sanitized product metadata (<code>data/products.public.json</code>). Canonical pricing, internal margin figures, supplier contracts, and QC recall batches reside strictly in <code>data/internal/</code>.</li>
+          <li><strong>Pure Web Standards:</strong> 100% plain HTML5, CSS3, and ES6 JavaScript. Zero node_modules or pip installations required.</li>
+          <li><strong>Standalone Vector Art:</strong> Every product features an original, custom-crafted SVG illustration rendered deterministically from mathematical geometries.</li>
+          <li><strong>Server Agnostic:</strong> Runs seamlessly via Python's built-in HTTP server: <code>python3 -m http.server 8000</code>.</li>
+        </ul>
+      </section>
+
+      <!-- Fictional Leadership Bios -->
+      <section style="margin-bottom: 48px;">
+        <h2 style="font-size: 1.75rem; font-weight: 800; color: var(--color-navy); margin-bottom: 20px;">
+          5. Fictional Executive Faculty
+        </h2>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+          
+          <div style="background-color: #FFFFFF; border: 1px solid var(--color-border); border-radius: 8px; padding: 20px;">
+            <div style="font-size: 2.25rem; margin-bottom: 8px;">👨‍🔬</div>
+            <h3 style="font-size: 1.125rem; font-weight: 800; color: var(--color-navy); margin-bottom: 4px;">
+              Dr. Arthur Pendelton
+            </h3>
+            <div style="font-size: 0.75rem; font-weight: 700; color: var(--color-teal); text-transform: uppercase; margin-bottom: 8px;">
+              Co-Founder &bull; Chief Officer of Spatial Tolerances
+            </div>
+            <p style="font-size: 0.8125rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+              Ph.D. in Theoretical Condensed Matter Physics. Refuses to sit on any sofa before inspecting its spring tension coefficient and verifying that ambient drafts do not cause neck chill. Author of <em>The 47-Clause Roommate Charter</em>.
+            </p>
+          </div>
+
+          <div style="background-color: #FFFFFF; border: 1px solid var(--color-border); border-radius: 8px; padding: 20px;">
+            <div style="font-size: 2.25rem; margin-bottom: 8px;">👩‍🔬</div>
+            <h3 style="font-size: 1.125rem; font-weight: 800; color: var(--color-navy); margin-bottom: 4px;">
+              Dr. Rajeshwari Varma
+            </h3>
+            <div style="font-size: 0.75rem; font-weight: 700; color: var(--color-teal); text-transform: uppercase; margin-bottom: 8px;">
+              Co-Founder &bull; Director of Subatomic Quality Assurance
+            </div>
+            <p style="font-size: 0.8125rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+              Ph.D. in High-Energy Particle Phenomenology. Passionate railway schedule archivist and tea brewing purist. Formally banned instant coffee from company premises under threat of departmental sanctions.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Bottom CTA Banner -->
+      <div style="text-align: center; background-color: var(--color-navy); border-radius: 12px; padding: 36px 24px; color: #FFFFFF;">
+        <h3 style="font-size: 1.5rem; font-weight: 800; color: #FFFFFF; margin-bottom: 8px;">
+          Ready to Explore the 100 Oddities?
+        </h3>
+        <p style="font-size: 0.9375rem; color: rgba(255,255,255,0.8); margin-bottom: 20px;">
+          Step into our peer-reviewed digital showroom and test the client-side catalog.
+        </p>
+        <a href="products.html" class="btn btn-gold btn-lg">Explore Full Catalog &rarr;</a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-grid">
+          
+          <div class="footer-col" style="grid-column: span 1.5;">
+            <div class="footer-brand">
+              <img src="assets/logo.svg" alt="Quirk &amp; Quanta" style="height: 44px; filter: brightness(0) invert(1); margin-bottom: 8px;">
+              <p class="footer-tagline">"Precisely Unnecessary. Scientifically Delightful."</p>
+              <p style="font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.5; margin-top: 10px;">
+                An eccentric theoretical physicist's dream department store. Built with mathematical precision and uncompromising scientific curiosity.
+              </p>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-col-title">Disciplines</h4>
+            <ul class="footer-links">
+              <li><a href="products.html?category=CAT-APPAREL">Apparel</a></li>
+              <li><a href="products.html?category=CAT-DESK">Desk &amp; Office</a></li>
+              <li><a href="products.html?category=CAT-KITCHEN">Drinkware &amp; Kitchen</a></li>
+              <li><a href="products.html?category=CAT-HOME">Home &amp; Decor</a></li>
+              <li><a href="products.html?category=CAT-GADGETS">Science Gadgets</a></li>
+              <li><a href="products.html?category=CAT-PUZZLES">Puzzles &amp; Games</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-col-title">Workshop Scope</h4>
+            <ul class="footer-links">
+              <li><a href="about.html">Fictional Brand Story</a></li>
+              <li><a href="products.html">All 100 Unique SKUs</a></li>
+              <li><a href="about.html#workshop">Beyond Basic RAG</a></li>
+              <li><a href="about.html#principles">Scientific Axioms</a></li>
+              <li><a href="about.html#architecture">Gate 1 Data Architecture</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-col-title">Fictional Headquarters</h4>
+            <p style="font-size: 0.8125rem; line-height: 1.6; margin-bottom: 8px;">
+              Department of Theoretical Retail &bull; Laboratory Suite 314<br>
+              Subatomic Park, Bengaluru, Karnataka, India
+            </p>
+            <p style="font-size: 0.8125rem; color: var(--color-gold);">
+              Operational Hours: 24 Hours (Circadian Invariant)
+            </p>
+            <div style="margin-top: 14px;">
+              <button onclick="openModal('role-explainer-modal')" class="btn btn-outline btn-sm" style="color: #FFFFFF; border-color: rgba(255,255,255,0.3);">
+                🛡️ Role Preview Details
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Quirk &amp; Quanta. All rights reserved. Built for "Beyond Basic RAG" Workshop.
+        </div>
+        <div style="font-size: 0.75rem; color: var(--color-text-light);">
+          Zero NPM Packages &bull; Vanilla HTML, CSS &amp; JS &bull; Pure Standard Library Data Architecture
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-Out Cart Drawer -->
+  <div class="modal-overlay" id="cart-drawer-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping Cart">
+    <div class="cart-drawer-header">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="font-size: 1.25rem;">🛒</span>
+        <h3 style="font-size: 1.125rem; font-weight: 800;">Your Calibrated Basket</h3>
+      </div>
+      <button class="modal-close-btn" id="close-cart-btn" aria-label="Close cart">&times;</button>
+    </div>
+    <div class="cart-drawer-items" id="cart-items-container"></div>
+    <div class="cart-drawer-footer">
+      <div class="cart-subtotal-row">
+        <span>Subtotal</span>
+        <span id="cart-subtotal-price">₹0</span>
+      </div>
+      <p style="font-size: 0.75rem; color: var(--color-text-muted);">
+        Taxes calculated using theoretical state tensors. Free ground shipping applies.
+      </p>
+      <button class="btn btn-primary btn-block btn-lg" id="checkout-action-btn">
+        Proceed to Checkout
+      </button>
+    </div>
+  </aside>
+
+  <!-- Educational Purchasing Disabled Modal -->
+  <div class="modal-overlay" id="checkout-demo-modal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 class="modal-title">Purchasing Disabled (Educational Demonstration)</h3>
+        <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div style="font-size: 3rem; text-align: center; margin-bottom: 16px;">🛑</div>
+        <h4 style="font-size: 1.125rem; font-weight: 800; color: var(--color-navy); text-align: center; margin-bottom: 8px;">
+          This is a fictional educational storefront.
+        </h4>
+        <p style="font-size: 0.9375rem; color: var(--color-text-muted); text-align: center; line-height: 1.6; margin-bottom: 16px;">
+          Purchasing is disabled. Quirk &amp; Quanta exists solely as the multi-domain knowledge base and application harness for the workshop <em>"Beyond Basic RAG: Building Production-Ready AI Systems."</em>
+        </p>
+        <div style="background-color: var(--color-bg); padding: 12px 16px; border-radius: 8px; font-size: 0.8125rem; color: var(--color-text-main);">
+          <strong>What happens next in the workshop?</strong><br>
+          In subsequent gates, this dataset will become the foundation for vector embeddings, semantic and BM25 hybrid search, GraphRAG multi-hop retrieval, and server-side RBAC security tests.
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary close-modal-trigger">Understood &bull; Continue Exploring</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Role Preview Explainer Modal -->
+  <div class="modal-overlay" id="role-explainer-modal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 class="modal-title">Role Preview Demonstration Architecture</h3>
+        <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div style="font-size: 2.5rem; text-align: center; margin-bottom: 12px;">🛡️</div>
+        <h4 style="font-size: 1.0625rem; font-weight: 800; color: var(--color-navy); margin-bottom: 8px;">
+          Client-Side Hiding is NOT Security
+        </h4>
+        <p style="font-size: 0.875rem; color: var(--color-text-main); line-height: 1.6; margin-bottom: 12px;">
+          This toggle demonstrates the separation between <strong>Public Storefront Data</strong> and <strong>Internal Canonical Data</strong>.
+        </p>
+        <ul style="padding-left: 20px; font-size: 0.8125rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 16px;">
+          <li><strong>Public Storefront Data:</strong> Filtered via <code>scripts/generate-public-data.py</code>. Contains zero cost prices, margins, or procurement codes.</li>
+          <li><strong>Internal Data:</strong> Strictly housed in <code>data/internal/</code> outside the deployable static site.</li>
+          <li><strong>Future Workshop Gates:</strong> In Gate 9 and Gate 10, true server-side authorization and RBAC retrieval filtering will be implemented with authenticated sessions.</li>
+        </ul>
+        <div class="fictional-disclaimer">
+          Toggling this switch in Gate 1 only modifies demo UI annotations. No sensitive canonical records are ever exposed to the client browser.
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary close-modal-trigger">Close Explanation</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- JavaScript Modules -->
+  <script src="js/app.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/role-preview.js"></script>
+</body>
+</html>

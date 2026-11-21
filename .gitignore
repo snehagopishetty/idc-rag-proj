@@ -1,0 +1,106 @@
+# ==============================================================================
+# Quirk & Quanta (.gitignore)
+# Project: idc-rag-proj
+# ==============================================================================
+
+# Operating System & Filesystem Artifacts
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Python Bytecode, Caches & Packaging
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Python Virtual Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Testing, Type Checking & Coverage
+.pytest_cache/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.tox/
+.nox/
+.mypy_cache/
+.pytype/
+.ruff_cache/
+
+# Node.js / NPM / Web Artifacts
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.pnpm-store/
+
+# Firebase & Cloud Tooling Ephemera
+.firebase/
+firebase-debug.log*
+firestore-debug.log*
+ui-debug.log*
+
+# Secrets, API Keys & Sensitive Credentials
+.env
+.env.*
+!.env.example
+secrets/
+*.pem
+*.key
+*.cert
+*.crt
+*service-account*.json
+*presenter-key*.txt
+
+# IDEs, Text Editors & Local Configuration
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+*.bak
+.directory
+.project
+.pydevproject
+.settings/
+
+# Agentic / Scratch & Ephemeral Directories
+.system_generated/
+*.log

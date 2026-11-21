@@ -1,0 +1,71 @@
+# ==============================================================================
+# Quirk & Quanta (.gitignore)
+# Directory: quirk-and-quanta/
+# ==============================================================================
+
+# Operating System & Filesystem Artifacts
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Python Bytecode, Caches & Packaging
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+
+# Python Virtual Environments
+.env
+.venv
+env/
+venv/
+
+# Testing, Type Checking & Coverage
+.pytest_cache/
+.coverage
+.coverage.*
+.cache
+.tox/
+.mypy_cache/
+
+# Node.js / NPM / Web Artifacts
+node_modules/
+*.log
+
+# Firebase & Cloud Tooling Ephemera
+.firebase/
+firebase-debug.log*
+firestore-debug.log*
+ui-debug.log*
+
+# Secrets, API Keys & Sensitive Credentials
+.env
+.env.*
+!.env.example
+secrets/
+*.pem
+*.key
+*.cert
+*.crt
+*service-account*.json
+*presenter-key*.txt
+
+# IDEs, Text Editors & Local Configuration
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+*.bak
+
+# Agentic / Scratch & Ephemeral Directories
+.system_generated/

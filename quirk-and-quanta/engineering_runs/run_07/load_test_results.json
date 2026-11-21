@@ -1,0 +1,69 @@
+{
+  "timestamp": "2026-11-20T15:19:04Z",
+  "transportMode": "in_process",
+  "targetUrl": "in-process-concurrent",
+  "scenarios": {
+    "scenario_a_concurrent_retrieval": {
+      "description": "100 concurrent attendees issuing retrieval queries across Vector, BM25, and Hybrid RRF",
+      "concurrency": 100,
+      "totalRequests": 100,
+      "successfulRequests": 100,
+      "failedRequests": 0,
+      "errorRatePercent": 0.0,
+      "totalDurationSec": 3.152,
+      "throughputReqPerSec": 31.72,
+      "latencyMs": {
+        "min": 0.32,
+        "max": 2714.68,
+        "mean": 458.05,
+        "p50": 257.16,
+        "p95": 2073.29,
+        "p99": 2711.33
+      }
+    },
+    "scenario_b_static_assets_burst": {
+      "description": "150 concurrent attendees loading storefront pages, styles, scripts, and JSON catalog",
+      "concurrency": 150,
+      "totalRequests": 150,
+      "successfulRequests": 150,
+      "failedRequests": 0,
+      "errorRatePercent": 0.0,
+      "totalDurationSec": 0.013,
+      "throughputReqPerSec": 11492.42,
+      "latencyMs": {
+        "min": 0.71,
+        "max": 8.98,
+        "mean": 3.41,
+        "p50": 3.29,
+        "p95": 7.18,
+        "p99": 7.92
+      }
+    },
+    "scenario_c_mixed_traffic": {
+      "description": "100 concurrent requests mixing live hybrid retrieval and static assets",
+      "concurrency": 100,
+      "totalRequests": 100,
+      "successfulRequests": 100,
+      "failedRequests": 0,
+      "errorRatePercent": 0.0,
+      "totalDurationSec": 1.209,
+      "throughputReqPerSec": 82.68,
+      "latencyMs": {
+        "min": 34.9,
+        "max": 499.98,
+        "mean": 170.7,
+        "p50": 135.64,
+        "p95": 391.27,
+        "p99": 426.2
+      }
+    }
+  },
+  "summary": {
+    "totalWorkshopRequestsExecuted": 350,
+    "totalFailures": 0,
+    "overallErrorRatePercent": 0.0,
+    "staticP95Ms": 7.18,
+    "retrievalP95Ms": 2073.29,
+    "verdict": "PASS"
+  }
+}

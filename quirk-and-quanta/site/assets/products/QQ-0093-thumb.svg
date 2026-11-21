@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="160" height="160">
+  <defs>
+    <linearGradient id="bgGrad_QQ-0093_thumb" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF5F5" />
+      <stop offset="100%" stop-color="#FFFFFF" />
+    </linearGradient>
+    <filter id="shadow_QQ-0093_thumb" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#18243A" flood-opacity="0.08" />
+    </filter>
+  </defs>
+
+  <!-- Clean Subtle Background -->
+  <rect width="400" height="400" fill="url(#bgGrad_QQ-0093_thumb)" />
+  
+  <!-- Subtle Technical Grid Lines -->
+  <g opacity="0.15" stroke="#742A2A" stroke-width="0.8">
+    <line x1="40" y1="0" x2="40" y2="400" stroke-dasharray="4,4" />
+    <line x1="360" y1="0" x2="360" y2="400" stroke-dasharray="4,4" />
+    <line x1="0" y1="40" x2="400" y2="40" stroke-dasharray="4,4" />
+    <line x1="0" y1="360" x2="400" y2="360" stroke-dasharray="4,4" />
+  </g>
+
+  <!-- Category & SKU Header Tag -->
+  <g transform="translate(25, 25)">
+    <rect x="0" y="0" width="75" height="22" rx="4" fill="#742A2A" />
+    <text x="37.5" y="15" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">QQ-0093</text>
+    
+    <text x="85" y="15" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#D69E2E">Gifts &amp; Collectibles</text>
+  </g>
+
+  <!-- Circular Pedestal Ground Shadow -->
+  <ellipse cx="200" cy="315" rx="120" ry="22" fill="#E2E8F0" opacity="0.6" filter="url(#shadow_QQ-0093_thumb)" />
+
+  <!-- Distinct Centered Product Vector Illustration -->
+  <g id="product-art">
+    
+        <g transform="translate(100, 100)">
+          <!-- Gold Element Fob -->
+          <g transform="translate(10, 30)">
+            <rect x="10" y="30" width="38" height="50" rx="4" fill="#ECC94B" stroke="#B7791F" stroke-width="2" />
+            <text x="29" y="58" font-family="sans-serif" font-size="16" font-weight="bold" fill="#744210" text-anchor="middle">Au</text>
+            <circle cx="29" cy="20" r="7" fill="none" stroke="#A0AEC0" stroke-width="2" />
+          </g>
+          <!-- Titanium Element Fob -->
+          <g transform="translate(65, 30)">
+            <rect x="10" y="30" width="38" height="50" rx="4" fill="#A0AEC0" stroke="#4A5568" stroke-width="2" />
+            <text x="29" y="58" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1A202C" text-anchor="middle">Ti</text>
+            <circle cx="29" cy="20" r="7" fill="none" stroke="#A0AEC0" stroke-width="2" />
+          </g>
+          <!-- Platinum Element Fob -->
+          <g transform="translate(120, 30)">
+            <rect x="10" y="30" width="38" height="50" rx="4" fill="#EDF2F7" stroke="#718096" stroke-width="2" />
+            <text x="29" y="58" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2B4C7E" text-anchor="middle">Pt</text>
+            <circle cx="29" cy="20" r="7" fill="none" stroke="#A0AEC0" stroke-width="2" />
+          </g>
+        </g>
+        
+  </g>
+
+  <!-- Product Title Label at Bottom -->
+  <g transform="translate(200, 368)">
+    <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#742A2A" text-anchor="middle">
+      Atomic Element Keychain Set
+    </text>
+    <text x="0" y="16" font-family="monospace" font-size="9.5" fill="#718096" text-anchor="middle">
+      Quirk &amp; Quanta &#8226; Certified Fictional
+    </text>
+  </g>
+</svg>

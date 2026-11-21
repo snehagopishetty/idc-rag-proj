@@ -1,0 +1,67 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: quirk-quanta-rag
+  namespace: idc-rag-proj
+  labels:
+    cloud.googleapis.com/location: asia-south1
+    app: quirk-and-quanta
+    workshop: idc-rag-masterclass
+  annotations:
+    run.googleapis.com/launch-stage: GA
+    run.googleapis.com/ingress: all
+spec:
+  template:
+    metadata:
+      annotations:
+        autoscaling.knative.dev/minScale: '1'
+        autoscaling.knative.dev/maxScale: '3'
+        run.googleapis.com/cpu-throttling: 'true'
+        run.googleapis.com/startup-cpu-boost: 'true'
+    spec:
+      serviceAccountName: quirk-quanta-runtime@idc-rag-proj.iam.gserviceaccount.com
+      containerConcurrency: 20
+      timeoutSeconds: 45
+      containers:
+        - image: asia-south1-docker.pkg.dev/idc-rag-proj/quirk-quanta/rag-service:latest
+          ports:
+            - name: http1
+              containerPort: 8080
+          resources:
+            limits:
+              cpu: '1000m'
+              memory: '2Gi'
+          env:
+            - name: PYTHONUNBUFFERED
+              value: '1'
+            - name: PORT
+              value: '8080'
+            - name: WORKSHOP_MODE
+              value: 'production'
+            - name: PROJECT_ID
+              value: 'idc-rag-proj'
+            - name: REGION
+              value: 'asia-south1'
+            - name: QUIRK_AUTH_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: quirk-quanta-auth-secret
+                  key: latest
+            - name: PRESENTER_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: quirk-quanta-presenter-token
+                  key: latest
+          startupProbe:
+            httpGet:
+              path: /health
+              port: 8080
+            initialDelaySeconds: 2
+            periodSeconds: 3
+            failureThreshold: 5
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+            periodSeconds: 15
+            timeoutSeconds: 3

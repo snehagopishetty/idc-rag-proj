@@ -1,0 +1,23 @@
+{
+  "iteration": 1,
+  "timestamp": "2026-11-20T14:59:00Z",
+  "smokeTest": {
+    "verdict": "PASS",
+    "checksPassed": 6,
+    "checksFailed": 0,
+    "details": {
+      "startup_and_memory": "PASS",
+      "healthz_probe": "PASS",
+      "telemetry_and_chunking_honesty": "PASS",
+      "static_asset_integrity": "PASS",
+      "path_traversal_isolation": "PASS",
+      "retrieval_pipeline": "PASS"
+    }
+  },
+  "unitTestRegression": {
+    "totalSuites": 10,
+    "totalTests": 79,
+    "passed": 79,
+    "failed": 0
+  }
+}

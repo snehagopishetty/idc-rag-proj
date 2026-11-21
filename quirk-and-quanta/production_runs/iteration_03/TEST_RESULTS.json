@@ -1,0 +1,78 @@
+{
+  "iteration": 3,
+  "timestamp": "2026-11-20T20:37:30+05:30",
+  "status": "PASS",
+  "tests": [
+    {
+      "suite": "Firebase Hosting Config",
+      "test": ".firebaserc Default Project",
+      "result": "PASS",
+      "details": "idc-rag-proj"
+    },
+    {
+      "suite": "Firebase Hosting Config",
+      "test": "Public Directory",
+      "result": "PASS",
+      "details": "site/"
+    },
+    {
+      "suite": "Firebase Hosting Config",
+      "test": "Cloud Run Rewrite Specification",
+      "result": "PASS",
+      "details": "quirk-quanta-rag in asia-south1"
+    },
+    {
+      "suite": "Firebase Hosting Headers",
+      "test": "Security Headers (nosniff, SAMEORIGIN, strict-origin)",
+      "result": "PASS",
+      "details": "Configured on /**"
+    },
+    {
+      "suite": "Firebase Hosting Headers",
+      "test": "Static Asset Cache Control",
+      "result": "PASS",
+      "details": "max-age=31536000, immutable"
+    },
+    {
+      "suite": "Firebase Reverse Proxy End-to-End",
+      "test": "GET /healthz Forwarding",
+      "result": "PASS",
+      "details": "Status 200, healthy response"
+    },
+    {
+      "suite": "Firebase Reverse Proxy End-to-End",
+      "test": "GET /api/rag/status Forwarding",
+      "result": "PASS",
+      "details": "Status 200, ready status"
+    },
+    {
+      "suite": "Firebase Reverse Proxy End-to-End",
+      "test": "GET /api/rag/questions Forwarding",
+      "result": "PASS",
+      "details": "Status 200, 42 golden questions returned"
+    },
+    {
+      "suite": "Firebase Reverse Proxy End-to-End",
+      "test": "POST /api/rag/retrieve Forwarding",
+      "result": "PASS",
+      "details": "Status 200, 3 BM25 evidence chunks returned"
+    },
+    {
+      "suite": "Firebase Reverse Proxy End-to-End",
+      "test": "POST /api/rag/compare Forwarding",
+      "result": "PASS",
+      "details": "Status 200, side-by-side vector and BM25 results returned"
+    },
+    {
+      "suite": "Proxy Security Boundaries",
+      "test": "Block Internal Directory Access",
+      "result": "PASS",
+      "details": "HTTP 404 on /data/internal/ access"
+    }
+  ],
+  "summary": {
+    "total": 11,
+    "passed": 11,
+    "failed": 0
+  }
+}

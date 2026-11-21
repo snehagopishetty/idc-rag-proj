@@ -1,0 +1,31 @@
+{
+  "iteration": 8,
+  "timestamp": "2026-11-20T14:38:00Z",
+  "projectStatus": "COMPLETE",
+  "totalGates": 21,
+  "gatesPassed": 21,
+  "gatesFailed": 0,
+  "acceptanceSummary": {
+    "storefrontBaseline": { "gate": "G1", "status": "GREEN", "verified": true },
+    "truthfulProvenance": { "gate": "G2", "status": "GREEN", "verified": true },
+    "chunkingInspection": { "gate": "G3", "status": "GREEN", "verified": true },
+    "bm25ExactSku": { "gate": "G4", "status": "GREEN", "verified": true, "hitRate": 0.571 },
+    "hybridRRF": { "gate": "G5", "status": "GREEN", "verified": true, "hitRate": 0.500 },
+    "filmDefectScenario": { "gate": "G6", "status": "GREEN", "verified": true },
+    "localGraphRAG": { "gate": "G7", "status": "GREEN", "verified": true, "hitRate": 1.0 },
+    "comparativeMetrics": { "gate": "G8", "status": "GREEN", "verified": true, "cases": 42 },
+    "groundedAbstention": { "gate": "G9", "status": "GREEN", "verified": true },
+    "injectionDefense": { "gate": "G10", "status": "GREEN", "verified": true },
+    "scopeBoundaries": { "gate": "G11", "status": "GREEN", "verified": true },
+    "serverRbac": { "gate": "G12", "status": "GREEN", "verified": true },
+    "idorMitigation": { "gate": "G13", "status": "GREEN", "verified": true },
+    "observabilitySpike": { "gate": "G14", "status": "GREEN", "verified": true },
+    "workshop17Demos": { "gate": "G15", "status": "GREEN", "verified": true, "demosPassing": 17 },
+    "degradedFallbacks": { "gate": "G16", "status": "GREEN", "verified": true },
+    "concurrencyLoad": { "gate": "G17", "status": "GREEN", "verified": true, "attendees": 100, "errorRate": 0.0 },
+    "neo4jIntegration": { "gate": "O1", "status": "GREEN", "verified": true },
+    "cloudRunPackaging": { "gate": "O2", "status": "GREEN", "verified": true },
+    "aiStudioGuide": { "gate": "O3", "status": "GREEN", "verified": true },
+    "vercelPackaging": { "gate": "O4", "status": "GREEN", "verified": true }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "iteration": 7,
+  "timestamp": "2026-11-20T20:54:55+05:30",
+  "status": "PASS",
+  "demos": [
+    {"id": "DEMO-01", "name": "Baseline Dense Vector Retrieval", "result": "PASS", "latencyMs": 24.4},
+    {"id": "DEMO-02", "name": "Fixed-Size Chunking Inspection", "result": "PASS", "latencyMs": 87.5},
+    {"id": "DEMO-03", "name": "Sliding-Window Chunking Inspection", "result": "PASS", "latencyMs": 116.1},
+    {"id": "DEMO-04", "name": "Structural Section Chunking Inspection", "result": "PASS", "latencyMs": 23.7},
+    {"id": "DEMO-05", "name": "Exact SKU Lexical Search (BM25)", "result": "PASS", "latencyMs": 0.9},
+    {"id": "DEMO-06", "name": "Hybrid RRF Comparison", "result": "PASS", "latencyMs": 42.6},
+    {"id": "DEMO-07", "name": "Multi-Hop Retrieval Disconnection", "result": "PASS", "latencyMs": 22.3},
+    {"id": "DEMO-08", "name": "Local GraphRAG Root-Cause Traversal", "result": "PASS", "latencyMs": 0.3},
+    {"id": "DEMO-09", "name": "Neo4j AuraDB Cypher Adapter", "result": "PASS", "latencyMs": 0.2},
+    {"id": "DEMO-10", "name": "Golden Evaluation Dataset & Metrics", "result": "PASS", "latencyMs": 2.7},
+    {"id": "DEMO-11", "name": "Grounded Abstention Refusal", "result": "PASS", "latencyMs": 21.7},
+    {"id": "DEMO-12", "name": "Direct Prompt Injection (Vulnerable Mode)", "result": "PASS", "latencyMs": 21.5},
+    {"id": "DEMO-13", "name": "Scope Boundary Enforcement", "result": "PASS", "latencyMs": 21.4},
+    {"id": "DEMO-14", "name": "Telemetry & Observability Status", "result": "PASS", "latencyMs": 2.4},
+    {"id": "DEMO-15", "name": "Server-Side RBAC Demotion", "result": "PASS", "latencyMs": 0.1},
+    {"id": "DEMO-16", "name": "IDOR Authorized Resource Access", "result": "PASS", "latencyMs": 0.2},
+    {"id": "DEMO-17", "name": "Upstream Failure Fallback", "result": "PASS", "latencyMs": 22.7}
+  ],
+  "summary": {
+    "total": 17,
+    "passed": 17,
+    "failed": 0,
+    "passRatePercent": 100.0
+  }
+}

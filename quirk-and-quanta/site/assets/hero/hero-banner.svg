@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" width="1200" height="500">
+  <defs>
+    <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18243A" />
+      <stop offset="60%" stop-color="#141E30" />
+      <stop offset="100%" stop-color="#0F1724" />
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#158D89" />
+      <stop offset="100%" stop-color="#2CD4CD" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F4C95D" />
+      <stop offset="100%" stop-color="#E29F25" />
+    </linearGradient>
+    <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#253550" stroke-width="0.8" opacity="0.6" />
+      <circle cx="0" cy="0" r="1.5" fill="#158D89" opacity="0.5" />
+    </pattern>
+  </defs>
+
+  <!-- Deep Navy Background with Grid Matrix -->
+  <rect width="1200" height="500" fill="url(#heroBg)" />
+  <rect width="1200" height="500" fill="url(#gridPattern)" />
+
+  <!-- Left Content Column Background Glow -->
+  <circle cx="200" cy="250" r="280" fill="#158D89" opacity="0.08" filter="blur(60px)" />
+  <circle cx="950" cy="250" r="320" fill="#F4C95D" opacity="0.06" filter="blur(70px)" />
+
+  <!-- Scientific Vector Background Illustrations (Right Hemisphere) -->
+  <g transform="translate(680, 50)" opacity="0.95">
+    <!-- Huge Keplerian Orbit Geometry -->
+    <ellipse cx="260" cy="200" rx="220" ry="80" fill="none" stroke="#158D89" stroke-width="1.8" stroke-dasharray="6,4" transform="rotate(-25, 260, 200)" />
+    <ellipse cx="260" cy="200" rx="180" ry="140" fill="none" stroke="#F4C95D" stroke-width="1.5" opacity="0.6" transform="rotate(40, 260, 200)" />
+    <circle cx="260" cy="200" r="90" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.2" />
+
+    <!-- Central Glowing Core -->
+    <circle cx="260" cy="200" r="38" fill="url(#goldGrad)" opacity="0.9" />
+    <circle cx="260" cy="200" r="48" fill="none" stroke="#F4C95D" stroke-width="2" opacity="0.4" />
+
+    <!-- Blackboard Style Math Annotations -->
+    <text x="320" y="110" font-family="'Courier New', monospace" font-size="14" fill="#2CD4CD" opacity="0.85">i&#8463; &#8706;&#968;/&#8706;t = &#292;&#968;</text>
+    <text x="120" y="320" font-family="'Courier New', monospace" font-size="13" fill="#F4C95D" opacity="0.85">&#8711; &#215; B = &#956;&#8320;J + &#956;&#8320;&#949;&#8320;&#8706;E/&#8706;t</text>
+    <text x="360" y="270" font-family="'Courier New', monospace" font-size="14" fill="#FFFFFF" opacity="0.75">R_&#956;&#957; - &#189;Rg_&#956;&#957; = 8&#960;GT_&#956;&#957;</text>
+
+    <!-- Hanging Atomic Lamp Silhouette -->
+    <g transform="translate(140, 40)">
+      <line x1="80" y1="0" x2="80" y2="70" stroke="#718096" stroke-width="3" />
+      <circle cx="80" cy="100" r="30" fill="none" stroke="#F4C95D" stroke-width="3" />
+      <circle cx="80" cy="100" r="16" fill="url(#goldGrad)" />
+      <ellipse cx="80" cy="100" rx="38" ry="12" fill="none" stroke="#158D89" stroke-width="2" transform="rotate(-30, 80, 100)" />
+      <ellipse cx="80" cy="100" rx="38" ry="12" fill="none" stroke="#158D89" stroke-width="2" transform="rotate(30, 80, 100)" />
+    </g>
+
+    <!-- Miniature Steam Locomotive Silhouette -->
+    <g transform="translate(220, 310)">
+      <rect x="0" y="30" width="160" height="50" rx="8" fill="#1F2E47" stroke="#158D89" stroke-width="2" />
+      <rect x="110" y="10" width="45" height="70" rx="4" fill="#18243A" stroke="#F4C95D" stroke-width="2" />
+      <rect x="25" y="10" width="16" height="25" fill="#158D89" />
+      <!-- Wheels -->
+      <circle cx="25" cy="85" r="16" fill="#18243A" stroke="#F4C95D" stroke-width="3" />
+      <circle cx="65" cy="85" r="16" fill="#18243A" stroke="#F4C95D" stroke-width="3" />
+      <circle cx="105" cy="85" r="16" fill="#18243A" stroke="#F4C95D" stroke-width="3" />
+      <line x1="25" y1="85" x2="105" y2="85" stroke="#F4C95D" stroke-width="3" />
+      <!-- Track -->
+      <line x1="-30" y1="102" x2="190" y2="102" stroke="#4A5568" stroke-width="4" />
+    </g>
+
+    <!-- Floating Icosahedron Polyhedron -->
+    <g transform="translate(420, 60)">
+      <polygon points="50,10 90,35 90,80 50,105 10,80 10,35" fill="none" stroke="#2CD4CD" stroke-width="2" />
+      <polygon points="50,10 50,105" fill="none" stroke="#2CD4CD" stroke-width="1.2" stroke-dasharray="3,3" />
+      <polygon points="10,35 90,35" fill="none" stroke="#2CD4CD" stroke-width="1.2" />
+      <polygon points="10,80 90,80" fill="none" stroke="#2CD4CD" stroke-width="1.2" />
+      <circle cx="50" cy="10" r="3" fill="#F4C95D" />
+      <circle cx="90" cy="35" r="3" fill="#F4C95D" />
+      <circle cx="90" cy="80" r="3" fill="#F4C95D" />
+      <circle cx="50" cy="105" r="3" fill="#F4C95D" />
+      <circle cx="10" cy="80" r="3" fill="#F4C95D" />
+      <circle cx="10" cy="35" r="3" fill="#F4C95D" />
+    </g>
+  </g>
+
+  <!-- Left Hero Copy Content -->
+  <g transform="translate(80, 110)">
+    <!-- Subtitle Pill -->
+    <g>
+      <rect x="0" y="0" width="295" height="34" rx="17" fill="#1F2F4A" stroke="#158D89" stroke-width="1.5" />
+      <circle cx="18" cy="17" r="5" fill="#F4C95D" />
+      <text x="32" y="22" font-family="system-ui, sans-serif" font-size="12" font-weight="700" letter-spacing="1" fill="#E2E8F0">
+        THEORETICAL APPAREL &amp; APPARATUS
+      </text>
+    </g>
+
+    <!-- Main Headline -->
+    <text x="0" y="90" font-family="system-ui, -apple-system, sans-serif" font-size="46" font-weight="900" line-height="1.15" fill="#FFFFFF">
+      Because Your Desk Deserves
+    </text>
+    <text x="0" y="145" font-family="system-ui, -apple-system, sans-serif" font-size="46" font-weight="900" fill="url(#tealGrad)">
+      A Peer-Reviewed Upgrade.
+    </text>
+
+    <!-- Paragraph Description -->
+    <text x="0" y="195" font-family="system-ui, sans-serif" font-size="17" font-weight="400" fill="#A0AEC0">
+      Discover 100 precisely engineered gadgets, apparel, stationery,
+    </text>
+    <text x="0" y="222" font-family="system-ui, sans-serif" font-size="17" font-weight="400" fill="#A0AEC0">
+      and glorious scientific absurdities for the unapologetic intellect.
+    </text>
+
+    <!-- Feature Value Badges -->
+    <g transform="translate(0, 260)">
+      <g transform="translate(0, 0)">
+        <circle cx="10" cy="10" r="7" fill="#158D89" />
+        <path d="M 7 10 L 9 12 L 13 8" fill="none" stroke="#FFFFFF" stroke-width="1.8" />
+        <text x="25" y="14" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#CBD5E0">100 Unique Products</text>
+      </g>
+      <g transform="translate(190, 0)">
+        <circle cx="10" cy="10" r="7" fill="#158D89" />
+        <path d="M 7 10 L 9 12 L 13 8" fill="none" stroke="#FFFFFF" stroke-width="1.8" />
+        <text x="25" y="14" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#CBD5E0">Calculated Margins</text>
+      </g>
+      <g transform="translate(370, 0)">
+        <circle cx="10" cy="10" r="7" fill="#158D89" />
+        <path d="M 7 10 L 9 12 L 13 8" fill="none" stroke="#FFFFFF" stroke-width="1.8" />
+        <text x="25" y="14" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#CBD5E0">RAG &amp; Graph Ready</text>
+      </g>
+    </g>
+  </g>
+</svg>

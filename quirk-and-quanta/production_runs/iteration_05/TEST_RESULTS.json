@@ -1,0 +1,78 @@
+{
+  "iteration": 5,
+  "timestamp": "2026-11-20T20:46:15+05:30",
+  "status": "PASS",
+  "tests": [
+    {
+      "suite": "Retrieval Provenance",
+      "test": "Dense Vector Retrieval",
+      "result": "PASS",
+      "details": "Returned 3 chunks, cosine similarity top score: 0.3112"
+    },
+    {
+      "suite": "Retrieval Provenance",
+      "test": "Lexical BM25 Retrieval",
+      "result": "PASS",
+      "details": "Returned 3 chunks, BM25 top score: 12.83"
+    },
+    {
+      "suite": "Retrieval Provenance",
+      "test": "Hybrid RRF Retrieval",
+      "result": "PASS",
+      "details": "Returned 3 chunks, RRF top score: 0.0325"
+    },
+    {
+      "suite": "Retrieval Provenance",
+      "test": "Multi-Hop GraphRAG Defect Tracing",
+      "result": "PASS",
+      "details": "Traced products QQ-0011/74/49 -> Component COMP-025 -> Recall REC-VREG-01"
+    },
+    {
+      "suite": "Safeguards",
+      "test": "Out-of-Scope Coding Rejection",
+      "result": "PASS",
+      "details": "Action: REJECT_OFF_TOPIC"
+    },
+    {
+      "suite": "Safeguards",
+      "test": "Ungrounded Query Abstention",
+      "result": "PASS",
+      "details": "Action: ABSTAIN_UNGROUNDED"
+    },
+    {
+      "suite": "Safeguards",
+      "test": "Grounded Answer Generation with Citations",
+      "result": "PASS",
+      "details": "1 citation generated, grounded text confirmed"
+    },
+    {
+      "suite": "Gemini Integration",
+      "test": "Deterministic Offline Fallback on API Key Failure",
+      "result": "PASS",
+      "details": "Mode: offline_reference, model: grounded_local_synthesizer"
+    },
+    {
+      "suite": "Gemini Integration",
+      "test": "Usage Admission Controller Throttling",
+      "result": "PASS",
+      "details": "Throttled excess requests exceeding 30 req/min quota limit"
+    },
+    {
+      "suite": "Neo4j AuraDB Resilience",
+      "test": "Adapter Initialization",
+      "result": "PASS",
+      "details": "Safe offline initialization without credentials"
+    },
+    {
+      "suite": "Neo4j AuraDB Resilience",
+      "test": "Seamless Offline Cypher Fallback",
+      "result": "PASS",
+      "details": "Returned valid defect trace with fallbackUsed=True"
+    }
+  ],
+  "summary": {
+    "total": 11,
+    "passed": 11,
+    "failed": 0
+  }
+}

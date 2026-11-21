@@ -1,0 +1,7630 @@
+[
+  {
+    "id": "REL-0001",
+    "sourceId": "QQ-0001",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-APPAREL",
+    "properties": {
+      "categoryName": "Apparel"
+    }
+  },
+  {
+    "id": "REL-0002",
+    "sourceId": "QQ-0002",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-APPAREL",
+    "properties": {
+      "categoryName": "Apparel"
+    }
+  },
+  {
+    "id": "REL-0003",
+    "sourceId": "QQ-0003",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-APPAREL",
+    "properties": {
+      "categoryName": "Apparel"
+    }
+  },
+  {
+    "id": "REL-0004",
+    "sourceId": "QQ-0004",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-APPAREL",
+    "properties": {
+      "categoryName": "Apparel"
+    }
+  },
+  {
+    "id": "REL-0005",
+    "sourceId": "QQ-0005",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-APPAREL",
+    "properties": {
+      "categoryName": "Apparel"
+    }
+  },
+  {
+    "id": "REL-0006",
+    "sourceId": "QQ-0006",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-APPAREL",
+    "properties": {
+      "categoryName": "Apparel"
+    }
+  },
+  {
+    "id": "REL-0007",
+    "sourceId": "QQ-0007",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-APPAREL",
+    "properties": {
+      "categoryName": "Apparel"
+    }
+  },
+  {
+    "id": "REL-0008",
+    "sourceId": "QQ-0008",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-APPAREL",
+    "properties": {
+      "categoryName": "Apparel"
+    }
+  },
+  {
+    "id": "REL-0009",
+    "sourceId": "QQ-0009",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-APPAREL",
+    "properties": {
+      "categoryName": "Apparel"
+    }
+  },
+  {
+    "id": "REL-0010",
+    "sourceId": "QQ-0010",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-APPAREL",
+    "properties": {
+      "categoryName": "Apparel"
+    }
+  },
+  {
+    "id": "REL-0011",
+    "sourceId": "QQ-0011",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-DESK",
+    "properties": {
+      "categoryName": "Desk & Office"
+    }
+  },
+  {
+    "id": "REL-0012",
+    "sourceId": "QQ-0012",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-DESK",
+    "properties": {
+      "categoryName": "Desk & Office"
+    }
+  },
+  {
+    "id": "REL-0013",
+    "sourceId": "QQ-0013",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-DESK",
+    "properties": {
+      "categoryName": "Desk & Office"
+    }
+  },
+  {
+    "id": "REL-0014",
+    "sourceId": "QQ-0014",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-DESK",
+    "properties": {
+      "categoryName": "Desk & Office"
+    }
+  },
+  {
+    "id": "REL-0015",
+    "sourceId": "QQ-0015",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-DESK",
+    "properties": {
+      "categoryName": "Desk & Office"
+    }
+  },
+  {
+    "id": "REL-0016",
+    "sourceId": "QQ-0016",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-DESK",
+    "properties": {
+      "categoryName": "Desk & Office"
+    }
+  },
+  {
+    "id": "REL-0017",
+    "sourceId": "QQ-0017",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-DESK",
+    "properties": {
+      "categoryName": "Desk & Office"
+    }
+  },
+  {
+    "id": "REL-0018",
+    "sourceId": "QQ-0018",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-DESK",
+    "properties": {
+      "categoryName": "Desk & Office"
+    }
+  },
+  {
+    "id": "REL-0019",
+    "sourceId": "QQ-0019",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-DESK",
+    "properties": {
+      "categoryName": "Desk & Office"
+    }
+  },
+  {
+    "id": "REL-0020",
+    "sourceId": "QQ-0020",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-DESK",
+    "properties": {
+      "categoryName": "Desk & Office"
+    }
+  },
+  {
+    "id": "REL-0021",
+    "sourceId": "QQ-0021",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-KITCHEN",
+    "properties": {
+      "categoryName": "Drinkware & Kitchen"
+    }
+  },
+  {
+    "id": "REL-0022",
+    "sourceId": "QQ-0022",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-KITCHEN",
+    "properties": {
+      "categoryName": "Drinkware & Kitchen"
+    }
+  },
+  {
+    "id": "REL-0023",
+    "sourceId": "QQ-0023",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-KITCHEN",
+    "properties": {
+      "categoryName": "Drinkware & Kitchen"
+    }
+  },
+  {
+    "id": "REL-0024",
+    "sourceId": "QQ-0024",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-KITCHEN",
+    "properties": {
+      "categoryName": "Drinkware & Kitchen"
+    }
+  },
+  {
+    "id": "REL-0025",
+    "sourceId": "QQ-0025",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-KITCHEN",
+    "properties": {
+      "categoryName": "Drinkware & Kitchen"
+    }
+  },
+  {
+    "id": "REL-0026",
+    "sourceId": "QQ-0026",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-KITCHEN",
+    "properties": {
+      "categoryName": "Drinkware & Kitchen"
+    }
+  },
+  {
+    "id": "REL-0027",
+    "sourceId": "QQ-0027",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-KITCHEN",
+    "properties": {
+      "categoryName": "Drinkware & Kitchen"
+    }
+  },
+  {
+    "id": "REL-0028",
+    "sourceId": "QQ-0028",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-KITCHEN",
+    "properties": {
+      "categoryName": "Drinkware & Kitchen"
+    }
+  },
+  {
+    "id": "REL-0029",
+    "sourceId": "QQ-0029",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-KITCHEN",
+    "properties": {
+      "categoryName": "Drinkware & Kitchen"
+    }
+  },
+  {
+    "id": "REL-0030",
+    "sourceId": "QQ-0030",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-KITCHEN",
+    "properties": {
+      "categoryName": "Drinkware & Kitchen"
+    }
+  },
+  {
+    "id": "REL-0031",
+    "sourceId": "QQ-0031",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-HOME",
+    "properties": {
+      "categoryName": "Home & Decor"
+    }
+  },
+  {
+    "id": "REL-0032",
+    "sourceId": "QQ-0032",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-HOME",
+    "properties": {
+      "categoryName": "Home & Decor"
+    }
+  },
+  {
+    "id": "REL-0033",
+    "sourceId": "QQ-0033",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-HOME",
+    "properties": {
+      "categoryName": "Home & Decor"
+    }
+  },
+  {
+    "id": "REL-0034",
+    "sourceId": "QQ-0034",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-HOME",
+    "properties": {
+      "categoryName": "Home & Decor"
+    }
+  },
+  {
+    "id": "REL-0035",
+    "sourceId": "QQ-0035",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-HOME",
+    "properties": {
+      "categoryName": "Home & Decor"
+    }
+  },
+  {
+    "id": "REL-0036",
+    "sourceId": "QQ-0036",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-HOME",
+    "properties": {
+      "categoryName": "Home & Decor"
+    }
+  },
+  {
+    "id": "REL-0037",
+    "sourceId": "QQ-0037",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-HOME",
+    "properties": {
+      "categoryName": "Home & Decor"
+    }
+  },
+  {
+    "id": "REL-0038",
+    "sourceId": "QQ-0038",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-HOME",
+    "properties": {
+      "categoryName": "Home & Decor"
+    }
+  },
+  {
+    "id": "REL-0039",
+    "sourceId": "QQ-0039",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-HOME",
+    "properties": {
+      "categoryName": "Home & Decor"
+    }
+  },
+  {
+    "id": "REL-0040",
+    "sourceId": "QQ-0040",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-HOME",
+    "properties": {
+      "categoryName": "Home & Decor"
+    }
+  },
+  {
+    "id": "REL-0041",
+    "sourceId": "QQ-0041",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-GADGETS",
+    "properties": {
+      "categoryName": "Science Gadgets"
+    }
+  },
+  {
+    "id": "REL-0042",
+    "sourceId": "QQ-0042",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-GADGETS",
+    "properties": {
+      "categoryName": "Science Gadgets"
+    }
+  },
+  {
+    "id": "REL-0043",
+    "sourceId": "QQ-0043",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-GADGETS",
+    "properties": {
+      "categoryName": "Science Gadgets"
+    }
+  },
+  {
+    "id": "REL-0044",
+    "sourceId": "QQ-0044",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-GADGETS",
+    "properties": {
+      "categoryName": "Science Gadgets"
+    }
+  },
+  {
+    "id": "REL-0045",
+    "sourceId": "QQ-0045",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-GADGETS",
+    "properties": {
+      "categoryName": "Science Gadgets"
+    }
+  },
+  {
+    "id": "REL-0046",
+    "sourceId": "QQ-0046",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-GADGETS",
+    "properties": {
+      "categoryName": "Science Gadgets"
+    }
+  },
+  {
+    "id": "REL-0047",
+    "sourceId": "QQ-0047",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-GADGETS",
+    "properties": {
+      "categoryName": "Science Gadgets"
+    }
+  },
+  {
+    "id": "REL-0048",
+    "sourceId": "QQ-0048",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-GADGETS",
+    "properties": {
+      "categoryName": "Science Gadgets"
+    }
+  },
+  {
+    "id": "REL-0049",
+    "sourceId": "QQ-0049",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-GADGETS",
+    "properties": {
+      "categoryName": "Science Gadgets"
+    }
+  },
+  {
+    "id": "REL-0050",
+    "sourceId": "QQ-0050",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-GADGETS",
+    "properties": {
+      "categoryName": "Science Gadgets"
+    }
+  },
+  {
+    "id": "REL-0051",
+    "sourceId": "QQ-0051",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-PUZZLES",
+    "properties": {
+      "categoryName": "Puzzles & Games"
+    }
+  },
+  {
+    "id": "REL-0052",
+    "sourceId": "QQ-0052",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-PUZZLES",
+    "properties": {
+      "categoryName": "Puzzles & Games"
+    }
+  },
+  {
+    "id": "REL-0053",
+    "sourceId": "QQ-0053",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-PUZZLES",
+    "properties": {
+      "categoryName": "Puzzles & Games"
+    }
+  },
+  {
+    "id": "REL-0054",
+    "sourceId": "QQ-0054",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-PUZZLES",
+    "properties": {
+      "categoryName": "Puzzles & Games"
+    }
+  },
+  {
+    "id": "REL-0055",
+    "sourceId": "QQ-0055",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-PUZZLES",
+    "properties": {
+      "categoryName": "Puzzles & Games"
+    }
+  },
+  {
+    "id": "REL-0056",
+    "sourceId": "QQ-0056",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-PUZZLES",
+    "properties": {
+      "categoryName": "Puzzles & Games"
+    }
+  },
+  {
+    "id": "REL-0057",
+    "sourceId": "QQ-0057",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-PUZZLES",
+    "properties": {
+      "categoryName": "Puzzles & Games"
+    }
+  },
+  {
+    "id": "REL-0058",
+    "sourceId": "QQ-0058",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-PUZZLES",
+    "properties": {
+      "categoryName": "Puzzles & Games"
+    }
+  },
+  {
+    "id": "REL-0059",
+    "sourceId": "QQ-0059",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-PUZZLES",
+    "properties": {
+      "categoryName": "Puzzles & Games"
+    }
+  },
+  {
+    "id": "REL-0060",
+    "sourceId": "QQ-0060",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-PUZZLES",
+    "properties": {
+      "categoryName": "Puzzles & Games"
+    }
+  },
+  {
+    "id": "REL-0061",
+    "sourceId": "QQ-0061",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-STATIONERY",
+    "properties": {
+      "categoryName": "Stationery & Learning"
+    }
+  },
+  {
+    "id": "REL-0062",
+    "sourceId": "QQ-0062",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-STATIONERY",
+    "properties": {
+      "categoryName": "Stationery & Learning"
+    }
+  },
+  {
+    "id": "REL-0063",
+    "sourceId": "QQ-0063",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-STATIONERY",
+    "properties": {
+      "categoryName": "Stationery & Learning"
+    }
+  },
+  {
+    "id": "REL-0064",
+    "sourceId": "QQ-0064",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-STATIONERY",
+    "properties": {
+      "categoryName": "Stationery & Learning"
+    }
+  },
+  {
+    "id": "REL-0065",
+    "sourceId": "QQ-0065",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-STATIONERY",
+    "properties": {
+      "categoryName": "Stationery & Learning"
+    }
+  },
+  {
+    "id": "REL-0066",
+    "sourceId": "QQ-0066",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-STATIONERY",
+    "properties": {
+      "categoryName": "Stationery & Learning"
+    }
+  },
+  {
+    "id": "REL-0067",
+    "sourceId": "QQ-0067",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-STATIONERY",
+    "properties": {
+      "categoryName": "Stationery & Learning"
+    }
+  },
+  {
+    "id": "REL-0068",
+    "sourceId": "QQ-0068",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-STATIONERY",
+    "properties": {
+      "categoryName": "Stationery & Learning"
+    }
+  },
+  {
+    "id": "REL-0069",
+    "sourceId": "QQ-0069",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-STATIONERY",
+    "properties": {
+      "categoryName": "Stationery & Learning"
+    }
+  },
+  {
+    "id": "REL-0070",
+    "sourceId": "QQ-0070",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-STATIONERY",
+    "properties": {
+      "categoryName": "Stationery & Learning"
+    }
+  },
+  {
+    "id": "REL-0071",
+    "sourceId": "QQ-0071",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-TECH",
+    "properties": {
+      "categoryName": "Tech Accessories"
+    }
+  },
+  {
+    "id": "REL-0072",
+    "sourceId": "QQ-0072",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-TECH",
+    "properties": {
+      "categoryName": "Tech Accessories"
+    }
+  },
+  {
+    "id": "REL-0073",
+    "sourceId": "QQ-0073",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-TECH",
+    "properties": {
+      "categoryName": "Tech Accessories"
+    }
+  },
+  {
+    "id": "REL-0074",
+    "sourceId": "QQ-0074",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-TECH",
+    "properties": {
+      "categoryName": "Tech Accessories"
+    }
+  },
+  {
+    "id": "REL-0075",
+    "sourceId": "QQ-0075",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-TECH",
+    "properties": {
+      "categoryName": "Tech Accessories"
+    }
+  },
+  {
+    "id": "REL-0076",
+    "sourceId": "QQ-0076",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-TECH",
+    "properties": {
+      "categoryName": "Tech Accessories"
+    }
+  },
+  {
+    "id": "REL-0077",
+    "sourceId": "QQ-0077",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-TECH",
+    "properties": {
+      "categoryName": "Tech Accessories"
+    }
+  },
+  {
+    "id": "REL-0078",
+    "sourceId": "QQ-0078",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-TECH",
+    "properties": {
+      "categoryName": "Tech Accessories"
+    }
+  },
+  {
+    "id": "REL-0079",
+    "sourceId": "QQ-0079",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-TECH",
+    "properties": {
+      "categoryName": "Tech Accessories"
+    }
+  },
+  {
+    "id": "REL-0080",
+    "sourceId": "QQ-0080",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-TECH",
+    "properties": {
+      "categoryName": "Tech Accessories"
+    }
+  },
+  {
+    "id": "REL-0081",
+    "sourceId": "QQ-0081",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-RAILWAY",
+    "properties": {
+      "categoryName": "Railway & Engineering"
+    }
+  },
+  {
+    "id": "REL-0082",
+    "sourceId": "QQ-0082",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-RAILWAY",
+    "properties": {
+      "categoryName": "Railway & Engineering"
+    }
+  },
+  {
+    "id": "REL-0083",
+    "sourceId": "QQ-0083",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-RAILWAY",
+    "properties": {
+      "categoryName": "Railway & Engineering"
+    }
+  },
+  {
+    "id": "REL-0084",
+    "sourceId": "QQ-0084",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-RAILWAY",
+    "properties": {
+      "categoryName": "Railway & Engineering"
+    }
+  },
+  {
+    "id": "REL-0085",
+    "sourceId": "QQ-0085",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-RAILWAY",
+    "properties": {
+      "categoryName": "Railway & Engineering"
+    }
+  },
+  {
+    "id": "REL-0086",
+    "sourceId": "QQ-0086",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-RAILWAY",
+    "properties": {
+      "categoryName": "Railway & Engineering"
+    }
+  },
+  {
+    "id": "REL-0087",
+    "sourceId": "QQ-0087",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-RAILWAY",
+    "properties": {
+      "categoryName": "Railway & Engineering"
+    }
+  },
+  {
+    "id": "REL-0088",
+    "sourceId": "QQ-0088",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-RAILWAY",
+    "properties": {
+      "categoryName": "Railway & Engineering"
+    }
+  },
+  {
+    "id": "REL-0089",
+    "sourceId": "QQ-0089",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-RAILWAY",
+    "properties": {
+      "categoryName": "Railway & Engineering"
+    }
+  },
+  {
+    "id": "REL-0090",
+    "sourceId": "QQ-0090",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-RAILWAY",
+    "properties": {
+      "categoryName": "Railway & Engineering"
+    }
+  },
+  {
+    "id": "REL-0091",
+    "sourceId": "QQ-0091",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-GIFTS",
+    "properties": {
+      "categoryName": "Gifts & Collectibles"
+    }
+  },
+  {
+    "id": "REL-0092",
+    "sourceId": "QQ-0092",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-GIFTS",
+    "properties": {
+      "categoryName": "Gifts & Collectibles"
+    }
+  },
+  {
+    "id": "REL-0093",
+    "sourceId": "QQ-0093",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-GIFTS",
+    "properties": {
+      "categoryName": "Gifts & Collectibles"
+    }
+  },
+  {
+    "id": "REL-0094",
+    "sourceId": "QQ-0094",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-GIFTS",
+    "properties": {
+      "categoryName": "Gifts & Collectibles"
+    }
+  },
+  {
+    "id": "REL-0095",
+    "sourceId": "QQ-0095",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-GIFTS",
+    "properties": {
+      "categoryName": "Gifts & Collectibles"
+    }
+  },
+  {
+    "id": "REL-0096",
+    "sourceId": "QQ-0096",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-GIFTS",
+    "properties": {
+      "categoryName": "Gifts & Collectibles"
+    }
+  },
+  {
+    "id": "REL-0097",
+    "sourceId": "QQ-0097",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-GIFTS",
+    "properties": {
+      "categoryName": "Gifts & Collectibles"
+    }
+  },
+  {
+    "id": "REL-0098",
+    "sourceId": "QQ-0098",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-GIFTS",
+    "properties": {
+      "categoryName": "Gifts & Collectibles"
+    }
+  },
+  {
+    "id": "REL-0099",
+    "sourceId": "QQ-0099",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-GIFTS",
+    "properties": {
+      "categoryName": "Gifts & Collectibles"
+    }
+  },
+  {
+    "id": "REL-0100",
+    "sourceId": "QQ-0100",
+    "relationship": "BELONGS_TO",
+    "targetId": "CAT-GIFTS",
+    "properties": {
+      "categoryName": "Gifts & Collectibles"
+    }
+  },
+  {
+    "id": "REL-0101",
+    "sourceId": "QQ-0001",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-001"
+  },
+  {
+    "id": "REL-0102",
+    "sourceId": "QQ-0002",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-001"
+  },
+  {
+    "id": "REL-0103",
+    "sourceId": "QQ-0003",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-001"
+  },
+  {
+    "id": "REL-0104",
+    "sourceId": "QQ-0004",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-001"
+  },
+  {
+    "id": "REL-0105",
+    "sourceId": "QQ-0005",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-001"
+  },
+  {
+    "id": "REL-0106",
+    "sourceId": "QQ-0006",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-001"
+  },
+  {
+    "id": "REL-0107",
+    "sourceId": "QQ-0007",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-001"
+  },
+  {
+    "id": "REL-0108",
+    "sourceId": "QQ-0008",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-001"
+  },
+  {
+    "id": "REL-0109",
+    "sourceId": "QQ-0009",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-001"
+  },
+  {
+    "id": "REL-0110",
+    "sourceId": "QQ-0010",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-001"
+  },
+  {
+    "id": "REL-0111",
+    "sourceId": "QQ-0011",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-002"
+  },
+  {
+    "id": "REL-0112",
+    "sourceId": "QQ-0012",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-002"
+  },
+  {
+    "id": "REL-0113",
+    "sourceId": "QQ-0013",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-002"
+  },
+  {
+    "id": "REL-0114",
+    "sourceId": "QQ-0014",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-002"
+  },
+  {
+    "id": "REL-0115",
+    "sourceId": "QQ-0015",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-002"
+  },
+  {
+    "id": "REL-0116",
+    "sourceId": "QQ-0016",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-002"
+  },
+  {
+    "id": "REL-0117",
+    "sourceId": "QQ-0017",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-002"
+  },
+  {
+    "id": "REL-0118",
+    "sourceId": "QQ-0018",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-002"
+  },
+  {
+    "id": "REL-0119",
+    "sourceId": "QQ-0019",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-002"
+  },
+  {
+    "id": "REL-0120",
+    "sourceId": "QQ-0020",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-002"
+  },
+  {
+    "id": "REL-0121",
+    "sourceId": "QQ-0021",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-003"
+  },
+  {
+    "id": "REL-0122",
+    "sourceId": "QQ-0022",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-003"
+  },
+  {
+    "id": "REL-0123",
+    "sourceId": "QQ-0023",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-003"
+  },
+  {
+    "id": "REL-0124",
+    "sourceId": "QQ-0024",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-003"
+  },
+  {
+    "id": "REL-0125",
+    "sourceId": "QQ-0025",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-003"
+  },
+  {
+    "id": "REL-0126",
+    "sourceId": "QQ-0026",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-003"
+  },
+  {
+    "id": "REL-0127",
+    "sourceId": "QQ-0027",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-003"
+  },
+  {
+    "id": "REL-0128",
+    "sourceId": "QQ-0028",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-003"
+  },
+  {
+    "id": "REL-0129",
+    "sourceId": "QQ-0029",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-003"
+  },
+  {
+    "id": "REL-0130",
+    "sourceId": "QQ-0030",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-003"
+  },
+  {
+    "id": "REL-0131",
+    "sourceId": "QQ-0031",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-004"
+  },
+  {
+    "id": "REL-0132",
+    "sourceId": "QQ-0032",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-004"
+  },
+  {
+    "id": "REL-0133",
+    "sourceId": "QQ-0033",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-004"
+  },
+  {
+    "id": "REL-0134",
+    "sourceId": "QQ-0034",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-004"
+  },
+  {
+    "id": "REL-0135",
+    "sourceId": "QQ-0035",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-004"
+  },
+  {
+    "id": "REL-0136",
+    "sourceId": "QQ-0036",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-004"
+  },
+  {
+    "id": "REL-0137",
+    "sourceId": "QQ-0037",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-004"
+  },
+  {
+    "id": "REL-0138",
+    "sourceId": "QQ-0038",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-004"
+  },
+  {
+    "id": "REL-0139",
+    "sourceId": "QQ-0039",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-004"
+  },
+  {
+    "id": "REL-0140",
+    "sourceId": "QQ-0040",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-004"
+  },
+  {
+    "id": "REL-0141",
+    "sourceId": "QQ-0041",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-005"
+  },
+  {
+    "id": "REL-0142",
+    "sourceId": "QQ-0042",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-005"
+  },
+  {
+    "id": "REL-0143",
+    "sourceId": "QQ-0043",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-005"
+  },
+  {
+    "id": "REL-0144",
+    "sourceId": "QQ-0044",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-005"
+  },
+  {
+    "id": "REL-0145",
+    "sourceId": "QQ-0045",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-005"
+  },
+  {
+    "id": "REL-0146",
+    "sourceId": "QQ-0046",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-012"
+  },
+  {
+    "id": "REL-0147",
+    "sourceId": "QQ-0047",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-005"
+  },
+  {
+    "id": "REL-0148",
+    "sourceId": "QQ-0048",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-005"
+  },
+  {
+    "id": "REL-0149",
+    "sourceId": "QQ-0049",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-005"
+  },
+  {
+    "id": "REL-0150",
+    "sourceId": "QQ-0050",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-005"
+  },
+  {
+    "id": "REL-0151",
+    "sourceId": "QQ-0051",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-006"
+  },
+  {
+    "id": "REL-0152",
+    "sourceId": "QQ-0052",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-006"
+  },
+  {
+    "id": "REL-0153",
+    "sourceId": "QQ-0053",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-006"
+  },
+  {
+    "id": "REL-0154",
+    "sourceId": "QQ-0054",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-006"
+  },
+  {
+    "id": "REL-0155",
+    "sourceId": "QQ-0055",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-006"
+  },
+  {
+    "id": "REL-0156",
+    "sourceId": "QQ-0056",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-006"
+  },
+  {
+    "id": "REL-0157",
+    "sourceId": "QQ-0057",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-006"
+  },
+  {
+    "id": "REL-0158",
+    "sourceId": "QQ-0058",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-006"
+  },
+  {
+    "id": "REL-0159",
+    "sourceId": "QQ-0059",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-006"
+  },
+  {
+    "id": "REL-0160",
+    "sourceId": "QQ-0060",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-006"
+  },
+  {
+    "id": "REL-0161",
+    "sourceId": "QQ-0061",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-007"
+  },
+  {
+    "id": "REL-0162",
+    "sourceId": "QQ-0062",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-007"
+  },
+  {
+    "id": "REL-0163",
+    "sourceId": "QQ-0063",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-007"
+  },
+  {
+    "id": "REL-0164",
+    "sourceId": "QQ-0064",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-007"
+  },
+  {
+    "id": "REL-0165",
+    "sourceId": "QQ-0065",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-007"
+  },
+  {
+    "id": "REL-0166",
+    "sourceId": "QQ-0066",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-007"
+  },
+  {
+    "id": "REL-0167",
+    "sourceId": "QQ-0067",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-007"
+  },
+  {
+    "id": "REL-0168",
+    "sourceId": "QQ-0068",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-007"
+  },
+  {
+    "id": "REL-0169",
+    "sourceId": "QQ-0069",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-007"
+  },
+  {
+    "id": "REL-0170",
+    "sourceId": "QQ-0070",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-007"
+  },
+  {
+    "id": "REL-0171",
+    "sourceId": "QQ-0071",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-008"
+  },
+  {
+    "id": "REL-0172",
+    "sourceId": "QQ-0072",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-008"
+  },
+  {
+    "id": "REL-0173",
+    "sourceId": "QQ-0073",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-008"
+  },
+  {
+    "id": "REL-0174",
+    "sourceId": "QQ-0074",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-008"
+  },
+  {
+    "id": "REL-0175",
+    "sourceId": "QQ-0075",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-008"
+  },
+  {
+    "id": "REL-0176",
+    "sourceId": "QQ-0076",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-008"
+  },
+  {
+    "id": "REL-0177",
+    "sourceId": "QQ-0077",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-008"
+  },
+  {
+    "id": "REL-0178",
+    "sourceId": "QQ-0078",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-008"
+  },
+  {
+    "id": "REL-0179",
+    "sourceId": "QQ-0079",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-008"
+  },
+  {
+    "id": "REL-0180",
+    "sourceId": "QQ-0080",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-008"
+  },
+  {
+    "id": "REL-0181",
+    "sourceId": "QQ-0081",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-009"
+  },
+  {
+    "id": "REL-0182",
+    "sourceId": "QQ-0082",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-009"
+  },
+  {
+    "id": "REL-0183",
+    "sourceId": "QQ-0083",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-009"
+  },
+  {
+    "id": "REL-0184",
+    "sourceId": "QQ-0084",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-009"
+  },
+  {
+    "id": "REL-0185",
+    "sourceId": "QQ-0085",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-009"
+  },
+  {
+    "id": "REL-0186",
+    "sourceId": "QQ-0086",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-009"
+  },
+  {
+    "id": "REL-0187",
+    "sourceId": "QQ-0087",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-009"
+  },
+  {
+    "id": "REL-0188",
+    "sourceId": "QQ-0088",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-009"
+  },
+  {
+    "id": "REL-0189",
+    "sourceId": "QQ-0089",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-009"
+  },
+  {
+    "id": "REL-0190",
+    "sourceId": "QQ-0090",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-002"
+  },
+  {
+    "id": "REL-0191",
+    "sourceId": "QQ-0091",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-010"
+  },
+  {
+    "id": "REL-0192",
+    "sourceId": "QQ-0092",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-010"
+  },
+  {
+    "id": "REL-0193",
+    "sourceId": "QQ-0093",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-010"
+  },
+  {
+    "id": "REL-0194",
+    "sourceId": "QQ-0094",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-010"
+  },
+  {
+    "id": "REL-0195",
+    "sourceId": "QQ-0095",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-011"
+  },
+  {
+    "id": "REL-0196",
+    "sourceId": "QQ-0096",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-010"
+  },
+  {
+    "id": "REL-0197",
+    "sourceId": "QQ-0097",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-010"
+  },
+  {
+    "id": "REL-0198",
+    "sourceId": "QQ-0098",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-010"
+  },
+  {
+    "id": "REL-0199",
+    "sourceId": "QQ-0099",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-010"
+  },
+  {
+    "id": "REL-0200",
+    "sourceId": "QQ-0100",
+    "relationship": "SUPPLIED_BY",
+    "targetId": "SUP-002"
+  },
+  {
+    "id": "REL-0201",
+    "sourceId": "QQ-0001",
+    "relationship": "PART_OF",
+    "targetId": "COL-QUANTUM"
+  },
+  {
+    "id": "REL-0202",
+    "sourceId": "QQ-0002",
+    "relationship": "PART_OF",
+    "targetId": "COL-PARTICLE"
+  },
+  {
+    "id": "REL-0203",
+    "sourceId": "QQ-0003",
+    "relationship": "PART_OF",
+    "targetId": "COL-QUANTUM"
+  },
+  {
+    "id": "REL-0204",
+    "sourceId": "QQ-0004",
+    "relationship": "PART_OF",
+    "targetId": "COL-COSMIC"
+  },
+  {
+    "id": "REL-0205",
+    "sourceId": "QQ-0005",
+    "relationship": "PART_OF",
+    "targetId": "COL-LABORATORY"
+  },
+  {
+    "id": "REL-0206",
+    "sourceId": "QQ-0006",
+    "relationship": "PART_OF",
+    "targetId": "COL-QUANTUM"
+  },
+  {
+    "id": "REL-0207",
+    "sourceId": "QQ-0007",
+    "relationship": "PART_OF",
+    "targetId": "COL-MATHEMATICS"
+  },
+  {
+    "id": "REL-0208",
+    "sourceId": "QQ-0008",
+    "relationship": "PART_OF",
+    "targetId": "COL-COSMIC"
+  },
+  {
+    "id": "REL-0209",
+    "sourceId": "QQ-0009",
+    "relationship": "PART_OF",
+    "targetId": "COL-ROOMMATE"
+  },
+  {
+    "id": "REL-0210",
+    "sourceId": "QQ-0010",
+    "relationship": "PART_OF",
+    "targetId": "COL-COSMIC"
+  },
+  {
+    "id": "REL-0211",
+    "sourceId": "QQ-0011",
+    "relationship": "PART_OF",
+    "targetId": "COL-LABORATORY"
+  },
+  {
+    "id": "REL-0212",
+    "sourceId": "QQ-0012",
+    "relationship": "PART_OF",
+    "targetId": "COL-PRECISION"
+  },
+  {
+    "id": "REL-0213",
+    "sourceId": "QQ-0013",
+    "relationship": "PART_OF",
+    "targetId": "COL-PARTICLE"
+  },
+  {
+    "id": "REL-0214",
+    "sourceId": "QQ-0014",
+    "relationship": "PART_OF",
+    "targetId": "COL-MATHEMATICS"
+  },
+  {
+    "id": "REL-0215",
+    "sourceId": "QQ-0015",
+    "relationship": "PART_OF",
+    "targetId": "COL-PRECISION"
+  },
+  {
+    "id": "REL-0216",
+    "sourceId": "QQ-0016",
+    "relationship": "PART_OF",
+    "targetId": "COL-LABORATORY"
+  },
+  {
+    "id": "REL-0217",
+    "sourceId": "QQ-0017",
+    "relationship": "PART_OF",
+    "targetId": "COL-PARTICLE"
+  },
+  {
+    "id": "REL-0218",
+    "sourceId": "QQ-0018",
+    "relationship": "PART_OF",
+    "targetId": "COL-COSMIC"
+  },
+  {
+    "id": "REL-0219",
+    "sourceId": "QQ-0019",
+    "relationship": "PART_OF",
+    "targetId": "COL-LABORATORY"
+  },
+  {
+    "id": "REL-0220",
+    "sourceId": "QQ-0020",
+    "relationship": "PART_OF",
+    "targetId": "COL-PRECISION"
+  },
+  {
+    "id": "REL-0221",
+    "sourceId": "QQ-0021",
+    "relationship": "PART_OF",
+    "targetId": "COL-QUANTUM"
+  },
+  {
+    "id": "REL-0222",
+    "sourceId": "QQ-0022",
+    "relationship": "PART_OF",
+    "targetId": "COL-PARTICLE"
+  },
+  {
+    "id": "REL-0223",
+    "sourceId": "QQ-0023",
+    "relationship": "PART_OF",
+    "targetId": "COL-PARTICLE"
+  },
+  {
+    "id": "REL-0224",
+    "sourceId": "QQ-0024",
+    "relationship": "PART_OF",
+    "targetId": "COL-PRECISION"
+  },
+  {
+    "id": "REL-0225",
+    "sourceId": "QQ-0025",
+    "relationship": "PART_OF",
+    "targetId": "COL-LABORATORY"
+  },
+  {
+    "id": "REL-0226",
+    "sourceId": "QQ-0026",
+    "relationship": "PART_OF",
+    "targetId": "COL-COSMIC"
+  },
+  {
+    "id": "REL-0227",
+    "sourceId": "QQ-0027",
+    "relationship": "PART_OF",
+    "targetId": "COL-LABORATORY"
+  },
+  {
+    "id": "REL-0228",
+    "sourceId": "QQ-0028",
+    "relationship": "PART_OF",
+    "targetId": "COL-PARTICLE"
+  },
+  {
+    "id": "REL-0229",
+    "sourceId": "QQ-0029",
+    "relationship": "PART_OF",
+    "targetId": "COL-PRECISION"
+  },
+  {
+    "id": "REL-0230",
+    "sourceId": "QQ-0030",
+    "relationship": "PART_OF",
+    "targetId": "COL-COSMIC"
+  },
+  {
+    "id": "REL-0231",
+    "sourceId": "QQ-0031",
+    "relationship": "PART_OF",
+    "targetId": "COL-ROOMMATE"
+  },
+  {
+    "id": "REL-0232",
+    "sourceId": "QQ-0032",
+    "relationship": "PART_OF",
+    "targetId": "COL-QUANTUM"
+  },
+  {
+    "id": "REL-0233",
+    "sourceId": "QQ-0033",
+    "relationship": "PART_OF",
+    "targetId": "COL-COSMIC"
+  },
+  {
+    "id": "REL-0234",
+    "sourceId": "QQ-0034",
+    "relationship": "PART_OF",
+    "targetId": "COL-LABORATORY"
+  },
+  {
+    "id": "REL-0235",
+    "sourceId": "QQ-0035",
+    "relationship": "PART_OF",
+    "targetId": "COL-COSMIC"
+  },
+  {
+    "id": "REL-0236",
+    "sourceId": "QQ-0036",
+    "relationship": "PART_OF",
+    "targetId": "COL-PARTICLE"
+  },
+  {
+    "id": "REL-0237",
+    "sourceId": "QQ-0037",
+    "relationship": "PART_OF",
+    "targetId": "COL-COSMIC"
+  },
+  {
+    "id": "REL-0238",
+    "sourceId": "QQ-0038",
+    "relationship": "PART_OF",
+    "targetId": "COL-MATHEMATICS"
+  },
+  {
+    "id": "REL-0239",
+    "sourceId": "QQ-0039",
+    "relationship": "PART_OF",
+    "targetId": "COL-COSMIC"
+  },
+  {
+    "id": "REL-0240",
+    "sourceId": "QQ-0040",
+    "relationship": "PART_OF",
+    "targetId": "COL-PRECISION"
+  },
+  {
+    "id": "REL-0241",
+    "sourceId": "QQ-0041",
+    "relationship": "PART_OF",
+    "targetId": "COL-LABORATORY"
+  },
+  {
+    "id": "REL-0242",
+    "sourceId": "QQ-0042",
+    "relationship": "PART_OF",
+    "targetId": "COL-QUANTUM"
+  },
+  {
+    "id": "REL-0243",
+    "sourceId": "QQ-0043",
+    "relationship": "PART_OF",
+    "targetId": "COL-PARTICLE"
+  },
+  {
+    "id": "REL-0244",
+    "sourceId": "QQ-0044",
+    "relationship": "PART_OF",
+    "targetId": "COL-PARTICLE"
+  },
+  {
+    "id": "REL-0245",
+    "sourceId": "QQ-0045",
+    "relationship": "PART_OF",
+    "targetId": "COL-PRECISION"
+  },
+  {
+    "id": "REL-0246",
+    "sourceId": "QQ-0046",
+    "relationship": "PART_OF",
+    "targetId": "COL-LABORATORY"
+  },
+  {
+    "id": "REL-0247",
+    "sourceId": "QQ-0047",
+    "relationship": "PART_OF",
+    "targetId": "COL-PRECISION"
+  },
+  {
+    "id": "REL-0248",
+    "sourceId": "QQ-0048",
+    "relationship": "PART_OF",
+    "targetId": "COL-QUANTUM"
+  },
+  {
+    "id": "REL-0249",
+    "sourceId": "QQ-0049",
+    "relationship": "PART_OF",
+    "targetId": "COL-COSMIC"
+  },
+  {
+    "id": "REL-0250",
+    "sourceId": "QQ-0050",
+    "relationship": "PART_OF",
+    "targetId": "COL-LABORATORY"
+  },
+  {
+    "id": "REL-0251",
+    "sourceId": "QQ-0051",
+    "relationship": "PART_OF",
+    "targetId": "COL-QUANTUM"
+  },
+  {
+    "id": "REL-0252",
+    "sourceId": "QQ-0052",
+    "relationship": "PART_OF",
+    "targetId": "COL-PARTICLE"
+  },
+  {
+    "id": "REL-0253",
+    "sourceId": "QQ-0053",
+    "relationship": "PART_OF",
+    "targetId": "COL-MATHEMATICS"
+  },
+  {
+    "id": "REL-0254",
+    "sourceId": "QQ-0054",
+    "relationship": "PART_OF",
+    "targetId": "COL-COSMIC"
+  },
+  {
+    "id": "REL-0255",
+    "sourceId": "QQ-0055",
+    "relationship": "PART_OF",
+    "targetId": "COL-LABORATORY"
+  },
+  {
+    "id": "REL-0256",
+    "sourceId": "QQ-0056",
+    "relationship": "PART_OF",
+    "targetId": "COL-MATHEMATICS"
+  },
+  {
+    "id": "REL-0257",
+    "sourceId": "QQ-0057",
+    "relationship": "PART_OF",
+    "targetId": "COL-PRECISION"
+  },
+  {
+    "id": "REL-0258",
+    "sourceId": "QQ-0058",
+    "relationship": "PART_OF",
+    "targetId": "COL-PRECISION"
+  },
+  {
+    "id": "REL-0259",
+    "sourceId": "QQ-0059",
+    "relationship": "PART_OF",
+    "targetId": "COL-RAILWAY"
+  },
+  {
+    "id": "REL-0260",
+    "sourceId": "QQ-0060",
+    "relationship": "PART_OF",
+    "targetId": "COL-COSMIC"
+  },
+  {
+    "id": "REL-0261",
+    "sourceId": "QQ-0061",
+    "relationship": "PART_OF",
+    "targetId": "COL-ROOMMATE"
+  },
+  {
+    "id": "REL-0262",
+    "sourceId": "QQ-0062",
+    "relationship": "PART_OF",
+    "targetId": "COL-LABORATORY"
+  },
+  {
+    "id": "REL-0263",
+    "sourceId": "QQ-0063",
+    "relationship": "PART_OF",
+    "targetId": "COL-MATHEMATICS"
+  },
+  {
+    "id": "REL-0264",
+    "sourceId": "QQ-0064",
+    "relationship": "PART_OF",
+    "targetId": "COL-RAILWAY"
+  },
+  {
+    "id": "REL-0265",
+    "sourceId": "QQ-0065",
+    "relationship": "PART_OF",
+    "targetId": "COL-QUANTUM"
+  },
+  {
+    "id": "REL-0266",
+    "sourceId": "QQ-0066",
+    "relationship": "PART_OF",
+    "targetId": "COL-PARTICLE"
+  },
+  {
+    "id": "REL-0267",
+    "sourceId": "QQ-0067",
+    "relationship": "PART_OF",
+    "targetId": "COL-MATHEMATICS"
+  },
+  {
+    "id": "REL-0268",
+    "sourceId": "QQ-0068",
+    "relationship": "PART_OF",
+    "targetId": "COL-LABORATORY"
+  },
+  {
+    "id": "REL-0269",
+    "sourceId": "QQ-0069",
+    "relationship": "PART_OF",
+    "targetId": "COL-COSMIC"
+  },
+  {
+    "id": "REL-0270",
+    "sourceId": "QQ-0070",
+    "relationship": "PART_OF",
+    "targetId": "COL-LABORATORY"
+  },
+  {
+    "id": "REL-0271",
+    "sourceId": "QQ-0071",
+    "relationship": "PART_OF",
+    "targetId": "COL-QUANTUM"
+  },
+  {
+    "id": "REL-0272",
+    "sourceId": "QQ-0072",
+    "relationship": "PART_OF",
+    "targetId": "COL-COSMIC"
+  },
+  {
+    "id": "REL-0273",
+    "sourceId": "QQ-0073",
+    "relationship": "PART_OF",
+    "targetId": "COL-LABORATORY"
+  },
+  {
+    "id": "REL-0274",
+    "sourceId": "QQ-0074",
+    "relationship": "PART_OF",
+    "targetId": "COL-QUANTUM"
+  },
+  {
+    "id": "REL-0275",
+    "sourceId": "QQ-0075",
+    "relationship": "PART_OF",
+    "targetId": "COL-PRECISION"
+  },
+  {
+    "id": "REL-0276",
+    "sourceId": "QQ-0076",
+    "relationship": "PART_OF",
+    "targetId": "COL-MATHEMATICS"
+  },
+  {
+    "id": "REL-0277",
+    "sourceId": "QQ-0077",
+    "relationship": "PART_OF",
+    "targetId": "COL-COSMIC"
+  },
+  {
+    "id": "REL-0278",
+    "sourceId": "QQ-0078",
+    "relationship": "PART_OF",
+    "targetId": "COL-COSMIC"
+  },
+  {
+    "id": "REL-0279",
+    "sourceId": "QQ-0079",
+    "relationship": "PART_OF",
+    "targetId": "COL-PRECISION"
+  },
+  {
+    "id": "REL-0280",
+    "sourceId": "QQ-0080",
+    "relationship": "PART_OF",
+    "targetId": "COL-COSMIC"
+  },
+  {
+    "id": "REL-0281",
+    "sourceId": "QQ-0081",
+    "relationship": "PART_OF",
+    "targetId": "COL-RAILWAY"
+  },
+  {
+    "id": "REL-0282",
+    "sourceId": "QQ-0082",
+    "relationship": "PART_OF",
+    "targetId": "COL-RAILWAY"
+  },
+  {
+    "id": "REL-0283",
+    "sourceId": "QQ-0083",
+    "relationship": "PART_OF",
+    "targetId": "COL-RAILWAY"
+  },
+  {
+    "id": "REL-0284",
+    "sourceId": "QQ-0084",
+    "relationship": "PART_OF",
+    "targetId": "COL-RAILWAY"
+  },
+  {
+    "id": "REL-0285",
+    "sourceId": "QQ-0085",
+    "relationship": "PART_OF",
+    "targetId": "COL-PRECISION"
+  },
+  {
+    "id": "REL-0286",
+    "sourceId": "QQ-0086",
+    "relationship": "PART_OF",
+    "targetId": "COL-RAILWAY"
+  },
+  {
+    "id": "REL-0287",
+    "sourceId": "QQ-0087",
+    "relationship": "PART_OF",
+    "targetId": "COL-RAILWAY"
+  },
+  {
+    "id": "REL-0288",
+    "sourceId": "QQ-0088",
+    "relationship": "PART_OF",
+    "targetId": "COL-RAILWAY"
+  },
+  {
+    "id": "REL-0289",
+    "sourceId": "QQ-0089",
+    "relationship": "PART_OF",
+    "targetId": "COL-RAILWAY"
+  },
+  {
+    "id": "REL-0290",
+    "sourceId": "QQ-0090",
+    "relationship": "PART_OF",
+    "targetId": "COL-PRECISION"
+  },
+  {
+    "id": "REL-0291",
+    "sourceId": "QQ-0091",
+    "relationship": "PART_OF",
+    "targetId": "COL-COSMIC"
+  },
+  {
+    "id": "REL-0292",
+    "sourceId": "QQ-0092",
+    "relationship": "PART_OF",
+    "targetId": "COL-LABORATORY"
+  },
+  {
+    "id": "REL-0293",
+    "sourceId": "QQ-0093",
+    "relationship": "PART_OF",
+    "targetId": "COL-PARTICLE"
+  },
+  {
+    "id": "REL-0294",
+    "sourceId": "QQ-0094",
+    "relationship": "PART_OF",
+    "targetId": "COL-COSMIC"
+  },
+  {
+    "id": "REL-0295",
+    "sourceId": "QQ-0095",
+    "relationship": "PART_OF",
+    "targetId": "COL-LABORATORY"
+  },
+  {
+    "id": "REL-0296",
+    "sourceId": "QQ-0096",
+    "relationship": "PART_OF",
+    "targetId": "COL-MATHEMATICS"
+  },
+  {
+    "id": "REL-0297",
+    "sourceId": "QQ-0097",
+    "relationship": "PART_OF",
+    "targetId": "COL-PARTICLE"
+  },
+  {
+    "id": "REL-0298",
+    "sourceId": "QQ-0098",
+    "relationship": "PART_OF",
+    "targetId": "COL-QUANTUM"
+  },
+  {
+    "id": "REL-0299",
+    "sourceId": "QQ-0099",
+    "relationship": "PART_OF",
+    "targetId": "COL-COSMIC"
+  },
+  {
+    "id": "REL-0300",
+    "sourceId": "QQ-0100",
+    "relationship": "PART_OF",
+    "targetId": "COL-PRECISION"
+  },
+  {
+    "id": "REL-0301",
+    "sourceId": "QQ-0001",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-001"
+  },
+  {
+    "id": "REL-0302",
+    "sourceId": "QQ-0001",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-002"
+  },
+  {
+    "id": "REL-0303",
+    "sourceId": "QQ-0002",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-001"
+  },
+  {
+    "id": "REL-0304",
+    "sourceId": "QQ-0002",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-022"
+  },
+  {
+    "id": "REL-0305",
+    "sourceId": "QQ-0003",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-001"
+  },
+  {
+    "id": "REL-0306",
+    "sourceId": "QQ-0004",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-001"
+  },
+  {
+    "id": "REL-0307",
+    "sourceId": "QQ-0005",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-001"
+  },
+  {
+    "id": "REL-0308",
+    "sourceId": "QQ-0006",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-001"
+  },
+  {
+    "id": "REL-0309",
+    "sourceId": "QQ-0007",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-001"
+  },
+  {
+    "id": "REL-0310",
+    "sourceId": "QQ-0008",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-002"
+  },
+  {
+    "id": "REL-0311",
+    "sourceId": "QQ-0008",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-024"
+  },
+  {
+    "id": "REL-0312",
+    "sourceId": "QQ-0009",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-001"
+  },
+  {
+    "id": "REL-0313",
+    "sourceId": "QQ-0010",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-002"
+  },
+  {
+    "id": "REL-0314",
+    "sourceId": "QQ-0011",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-003"
+  },
+  {
+    "id": "REL-0315",
+    "sourceId": "QQ-0011",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-005"
+  },
+  {
+    "id": "REL-0316",
+    "sourceId": "QQ-0012",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-003"
+  },
+  {
+    "id": "REL-0317",
+    "sourceId": "QQ-0012",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-004"
+  },
+  {
+    "id": "REL-0318",
+    "sourceId": "QQ-0013",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-004"
+  },
+  {
+    "id": "REL-0319",
+    "sourceId": "QQ-0013",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-005"
+  },
+  {
+    "id": "REL-0320",
+    "sourceId": "QQ-0014",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-002"
+  },
+  {
+    "id": "REL-0321",
+    "sourceId": "QQ-0015",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-006"
+  },
+  {
+    "id": "REL-0322",
+    "sourceId": "QQ-0015",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-019"
+  },
+  {
+    "id": "REL-0323",
+    "sourceId": "QQ-0016",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-003"
+  },
+  {
+    "id": "REL-0324",
+    "sourceId": "QQ-0016",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-023"
+  },
+  {
+    "id": "REL-0325",
+    "sourceId": "QQ-0017",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-003"
+  },
+  {
+    "id": "REL-0326",
+    "sourceId": "QQ-0017",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-017"
+  },
+  {
+    "id": "REL-0327",
+    "sourceId": "QQ-0018",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-022"
+  },
+  {
+    "id": "REL-0328",
+    "sourceId": "QQ-0018",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-024"
+  },
+  {
+    "id": "REL-0329",
+    "sourceId": "QQ-0019",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-006"
+  },
+  {
+    "id": "REL-0330",
+    "sourceId": "QQ-0019",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-017"
+  },
+  {
+    "id": "REL-0331",
+    "sourceId": "QQ-0020",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-003"
+  },
+  {
+    "id": "REL-0332",
+    "sourceId": "QQ-0020",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-004"
+  },
+  {
+    "id": "REL-0333",
+    "sourceId": "QQ-0020",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-017"
+  },
+  {
+    "id": "REL-0334",
+    "sourceId": "QQ-0021",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-005"
+  },
+  {
+    "id": "REL-0335",
+    "sourceId": "QQ-0022",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-006"
+  },
+  {
+    "id": "REL-0336",
+    "sourceId": "QQ-0022",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-017"
+  },
+  {
+    "id": "REL-0337",
+    "sourceId": "QQ-0023",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-005"
+  },
+  {
+    "id": "REL-0338",
+    "sourceId": "QQ-0024",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-006"
+  },
+  {
+    "id": "REL-0339",
+    "sourceId": "QQ-0025",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-005"
+  },
+  {
+    "id": "REL-0340",
+    "sourceId": "QQ-0025",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-006"
+  },
+  {
+    "id": "REL-0341",
+    "sourceId": "QQ-0025",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-017"
+  },
+  {
+    "id": "REL-0342",
+    "sourceId": "QQ-0026",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-005"
+  },
+  {
+    "id": "REL-0343",
+    "sourceId": "QQ-0027",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-005"
+  },
+  {
+    "id": "REL-0344",
+    "sourceId": "QQ-0028",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-006"
+  },
+  {
+    "id": "REL-0345",
+    "sourceId": "QQ-0028",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-017"
+  },
+  {
+    "id": "REL-0346",
+    "sourceId": "QQ-0029",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-006"
+  },
+  {
+    "id": "REL-0347",
+    "sourceId": "QQ-0029",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-019"
+  },
+  {
+    "id": "REL-0348",
+    "sourceId": "QQ-0030",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-005"
+  },
+  {
+    "id": "REL-0349",
+    "sourceId": "QQ-0030",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-006"
+  },
+  {
+    "id": "REL-0350",
+    "sourceId": "QQ-0030",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-017"
+  },
+  {
+    "id": "REL-0351",
+    "sourceId": "QQ-0031",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-007"
+  },
+  {
+    "id": "REL-0352",
+    "sourceId": "QQ-0032",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-001"
+  },
+  {
+    "id": "REL-0353",
+    "sourceId": "QQ-0033",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-003"
+  },
+  {
+    "id": "REL-0354",
+    "sourceId": "QQ-0033",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-023"
+  },
+  {
+    "id": "REL-0355",
+    "sourceId": "QQ-0034",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-003"
+  },
+  {
+    "id": "REL-0356",
+    "sourceId": "QQ-0034",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-004"
+  },
+  {
+    "id": "REL-0357",
+    "sourceId": "QQ-0035",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-002"
+  },
+  {
+    "id": "REL-0358",
+    "sourceId": "QQ-0036",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-001"
+  },
+  {
+    "id": "REL-0359",
+    "sourceId": "QQ-0037",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-024"
+  },
+  {
+    "id": "REL-0360",
+    "sourceId": "QQ-0038",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-014"
+  },
+  {
+    "id": "REL-0361",
+    "sourceId": "QQ-0039",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-002"
+  },
+  {
+    "id": "REL-0362",
+    "sourceId": "QQ-0040",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-003"
+  },
+  {
+    "id": "REL-0363",
+    "sourceId": "QQ-0041",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-003"
+  },
+  {
+    "id": "REL-0364",
+    "sourceId": "QQ-0041",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-009"
+  },
+  {
+    "id": "REL-0365",
+    "sourceId": "QQ-0042",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-003"
+  },
+  {
+    "id": "REL-0366",
+    "sourceId": "QQ-0042",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-004"
+  },
+  {
+    "id": "REL-0367",
+    "sourceId": "QQ-0042",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-010"
+  },
+  {
+    "id": "REL-0368",
+    "sourceId": "QQ-0042",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-011"
+  },
+  {
+    "id": "REL-0369",
+    "sourceId": "QQ-0043",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-013"
+  },
+  {
+    "id": "REL-0370",
+    "sourceId": "QQ-0043",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-015"
+  },
+  {
+    "id": "REL-0371",
+    "sourceId": "QQ-0044",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-023"
+  },
+  {
+    "id": "REL-0372",
+    "sourceId": "QQ-0044",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-024"
+  },
+  {
+    "id": "REL-0373",
+    "sourceId": "QQ-0045",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-003"
+  },
+  {
+    "id": "REL-0374",
+    "sourceId": "QQ-0045",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-011"
+  },
+  {
+    "id": "REL-0375",
+    "sourceId": "QQ-0046",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-003"
+  },
+  {
+    "id": "REL-0376",
+    "sourceId": "QQ-0046",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-009"
+  },
+  {
+    "id": "REL-0377",
+    "sourceId": "QQ-0046",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-023"
+  },
+  {
+    "id": "REL-0378",
+    "sourceId": "QQ-0047",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-003"
+  },
+  {
+    "id": "REL-0379",
+    "sourceId": "QQ-0047",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-019"
+  },
+  {
+    "id": "REL-0380",
+    "sourceId": "QQ-0048",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-003"
+  },
+  {
+    "id": "REL-0381",
+    "sourceId": "QQ-0048",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-023"
+  },
+  {
+    "id": "REL-0382",
+    "sourceId": "QQ-0049",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-009"
+  },
+  {
+    "id": "REL-0383",
+    "sourceId": "QQ-0049",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-024"
+  },
+  {
+    "id": "REL-0384",
+    "sourceId": "QQ-0050",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-011"
+  },
+  {
+    "id": "REL-0385",
+    "sourceId": "QQ-0050",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-024"
+  },
+  {
+    "id": "REL-0386",
+    "sourceId": "QQ-0051",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-004"
+  },
+  {
+    "id": "REL-0387",
+    "sourceId": "QQ-0051",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-024"
+  },
+  {
+    "id": "REL-0388",
+    "sourceId": "QQ-0052",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-013"
+  },
+  {
+    "id": "REL-0389",
+    "sourceId": "QQ-0052",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-014"
+  },
+  {
+    "id": "REL-0390",
+    "sourceId": "QQ-0053",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-014"
+  },
+  {
+    "id": "REL-0391",
+    "sourceId": "QQ-0054",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-003"
+  },
+  {
+    "id": "REL-0392",
+    "sourceId": "QQ-0055",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-013"
+  },
+  {
+    "id": "REL-0393",
+    "sourceId": "QQ-0055",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-014"
+  },
+  {
+    "id": "REL-0394",
+    "sourceId": "QQ-0056",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-003"
+  },
+  {
+    "id": "REL-0395",
+    "sourceId": "QQ-0057",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-004"
+  },
+  {
+    "id": "REL-0396",
+    "sourceId": "QQ-0057",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-019"
+  },
+  {
+    "id": "REL-0397",
+    "sourceId": "QQ-0057",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-024"
+  },
+  {
+    "id": "REL-0398",
+    "sourceId": "QQ-0058",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-013"
+  },
+  {
+    "id": "REL-0399",
+    "sourceId": "QQ-0059",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-013"
+  },
+  {
+    "id": "REL-0400",
+    "sourceId": "QQ-0059",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-014"
+  },
+  {
+    "id": "REL-0401",
+    "sourceId": "QQ-0060",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-014"
+  },
+  {
+    "id": "REL-0402",
+    "sourceId": "QQ-0060",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-022"
+  },
+  {
+    "id": "REL-0403",
+    "sourceId": "QQ-0061",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-014"
+  },
+  {
+    "id": "REL-0404",
+    "sourceId": "QQ-0062",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-014"
+  },
+  {
+    "id": "REL-0405",
+    "sourceId": "QQ-0063",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-014"
+  },
+  {
+    "id": "REL-0406",
+    "sourceId": "QQ-0064",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-014"
+  },
+  {
+    "id": "REL-0407",
+    "sourceId": "QQ-0065",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-014"
+  },
+  {
+    "id": "REL-0408",
+    "sourceId": "QQ-0066",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-003"
+  },
+  {
+    "id": "REL-0409",
+    "sourceId": "QQ-0066",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-018"
+  },
+  {
+    "id": "REL-0410",
+    "sourceId": "QQ-0067",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-014"
+  },
+  {
+    "id": "REL-0411",
+    "sourceId": "QQ-0068",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-014"
+  },
+  {
+    "id": "REL-0412",
+    "sourceId": "QQ-0069",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-014"
+  },
+  {
+    "id": "REL-0413",
+    "sourceId": "QQ-0070",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-024"
+  },
+  {
+    "id": "REL-0414",
+    "sourceId": "QQ-0071",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-002"
+  },
+  {
+    "id": "REL-0415",
+    "sourceId": "QQ-0071",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-007"
+  },
+  {
+    "id": "REL-0416",
+    "sourceId": "QQ-0072",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-004"
+  },
+  {
+    "id": "REL-0417",
+    "sourceId": "QQ-0072",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-024"
+  },
+  {
+    "id": "REL-0418",
+    "sourceId": "QQ-0073",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-003"
+  },
+  {
+    "id": "REL-0419",
+    "sourceId": "QQ-0073",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-011"
+  },
+  {
+    "id": "REL-0420",
+    "sourceId": "QQ-0073",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-017"
+  },
+  {
+    "id": "REL-0421",
+    "sourceId": "QQ-0074",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-003"
+  },
+  {
+    "id": "REL-0422",
+    "sourceId": "QQ-0074",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-020"
+  },
+  {
+    "id": "REL-0423",
+    "sourceId": "QQ-0074",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-023"
+  },
+  {
+    "id": "REL-0424",
+    "sourceId": "QQ-0075",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-003"
+  },
+  {
+    "id": "REL-0425",
+    "sourceId": "QQ-0075",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-011"
+  },
+  {
+    "id": "REL-0426",
+    "sourceId": "QQ-0075",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-015"
+  },
+  {
+    "id": "REL-0427",
+    "sourceId": "QQ-0076",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-002"
+  },
+  {
+    "id": "REL-0428",
+    "sourceId": "QQ-0077",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-024"
+  },
+  {
+    "id": "REL-0429",
+    "sourceId": "QQ-0078",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-003"
+  },
+  {
+    "id": "REL-0430",
+    "sourceId": "QQ-0078",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-016"
+  },
+  {
+    "id": "REL-0431",
+    "sourceId": "QQ-0079",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-003"
+  },
+  {
+    "id": "REL-0432",
+    "sourceId": "QQ-0079",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-004"
+  },
+  {
+    "id": "REL-0433",
+    "sourceId": "QQ-0080",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-015"
+  },
+  {
+    "id": "REL-0434",
+    "sourceId": "QQ-0080",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-017"
+  },
+  {
+    "id": "REL-0435",
+    "sourceId": "QQ-0080",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-024"
+  },
+  {
+    "id": "REL-0436",
+    "sourceId": "QQ-0081",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-003"
+  },
+  {
+    "id": "REL-0437",
+    "sourceId": "QQ-0081",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-012"
+  },
+  {
+    "id": "REL-0438",
+    "sourceId": "QQ-0081",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-021"
+  },
+  {
+    "id": "REL-0439",
+    "sourceId": "QQ-0082",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-003"
+  },
+  {
+    "id": "REL-0440",
+    "sourceId": "QQ-0082",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-006"
+  },
+  {
+    "id": "REL-0441",
+    "sourceId": "QQ-0083",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-014"
+  },
+  {
+    "id": "REL-0442",
+    "sourceId": "QQ-0084",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-004"
+  },
+  {
+    "id": "REL-0443",
+    "sourceId": "QQ-0084",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-013"
+  },
+  {
+    "id": "REL-0444",
+    "sourceId": "QQ-0085",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-003"
+  },
+  {
+    "id": "REL-0445",
+    "sourceId": "QQ-0085",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-006"
+  },
+  {
+    "id": "REL-0446",
+    "sourceId": "QQ-0085",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-021"
+  },
+  {
+    "id": "REL-0447",
+    "sourceId": "QQ-0086",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-014"
+  },
+  {
+    "id": "REL-0448",
+    "sourceId": "QQ-0087",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-003"
+  },
+  {
+    "id": "REL-0449",
+    "sourceId": "QQ-0087",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-012"
+  },
+  {
+    "id": "REL-0450",
+    "sourceId": "QQ-0087",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-019"
+  },
+  {
+    "id": "REL-0451",
+    "sourceId": "QQ-0088",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-003"
+  },
+  {
+    "id": "REL-0452",
+    "sourceId": "QQ-0088",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-021"
+  },
+  {
+    "id": "REL-0453",
+    "sourceId": "QQ-0089",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-013"
+  },
+  {
+    "id": "REL-0454",
+    "sourceId": "QQ-0089",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-024"
+  },
+  {
+    "id": "REL-0455",
+    "sourceId": "QQ-0090",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-003"
+  },
+  {
+    "id": "REL-0456",
+    "sourceId": "QQ-0090",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-012"
+  },
+  {
+    "id": "REL-0457",
+    "sourceId": "QQ-0090",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-019"
+  },
+  {
+    "id": "REL-0458",
+    "sourceId": "QQ-0091",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-018"
+  },
+  {
+    "id": "REL-0459",
+    "sourceId": "QQ-0092",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-003"
+  },
+  {
+    "id": "REL-0460",
+    "sourceId": "QQ-0092",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-018"
+  },
+  {
+    "id": "REL-0461",
+    "sourceId": "QQ-0092",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-023"
+  },
+  {
+    "id": "REL-0462",
+    "sourceId": "QQ-0093",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-003"
+  },
+  {
+    "id": "REL-0463",
+    "sourceId": "QQ-0093",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-018"
+  },
+  {
+    "id": "REL-0464",
+    "sourceId": "QQ-0094",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-013"
+  },
+  {
+    "id": "REL-0465",
+    "sourceId": "QQ-0094",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-014"
+  },
+  {
+    "id": "REL-0466",
+    "sourceId": "QQ-0094",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-018"
+  },
+  {
+    "id": "REL-0467",
+    "sourceId": "QQ-0095",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-024"
+  },
+  {
+    "id": "REL-0468",
+    "sourceId": "QQ-0096",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-003"
+  },
+  {
+    "id": "REL-0469",
+    "sourceId": "QQ-0096",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-018"
+  },
+  {
+    "id": "REL-0470",
+    "sourceId": "QQ-0097",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-004"
+  },
+  {
+    "id": "REL-0471",
+    "sourceId": "QQ-0098",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-001"
+  },
+  {
+    "id": "REL-0472",
+    "sourceId": "QQ-0098",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-005"
+  },
+  {
+    "id": "REL-0473",
+    "sourceId": "QQ-0098",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-013"
+  },
+  {
+    "id": "REL-0474",
+    "sourceId": "QQ-0098",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-018"
+  },
+  {
+    "id": "REL-0475",
+    "sourceId": "QQ-0099",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-014"
+  },
+  {
+    "id": "REL-0476",
+    "sourceId": "QQ-0099",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-024"
+  },
+  {
+    "id": "REL-0477",
+    "sourceId": "QQ-0100",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-003"
+  },
+  {
+    "id": "REL-0478",
+    "sourceId": "QQ-0100",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-006"
+  },
+  {
+    "id": "REL-0479",
+    "sourceId": "QQ-0100",
+    "relationship": "CONTAINS",
+    "targetId": "COMP-023"
+  },
+  {
+    "id": "REL-0480",
+    "sourceId": "QQ-0012",
+    "relationship": "COMPATIBLE_WITH",
+    "targetId": "QQ-0020"
+  },
+  {
+    "id": "REL-0481",
+    "sourceId": "QQ-0014",
+    "relationship": "COMPATIBLE_WITH",
+    "targetId": "QQ-0073"
+  },
+  {
+    "id": "REL-0482",
+    "sourceId": "QQ-0020",
+    "relationship": "COMPATIBLE_WITH",
+    "targetId": "QQ-0012"
+  },
+  {
+    "id": "REL-0483",
+    "sourceId": "QQ-0020",
+    "relationship": "COMPATIBLE_WITH",
+    "targetId": "QQ-0075"
+  },
+  {
+    "id": "REL-0484",
+    "sourceId": "QQ-0034",
+    "relationship": "COMPATIBLE_WITH",
+    "targetId": "QQ-0070"
+  },
+  {
+    "id": "REL-0485",
+    "sourceId": "QQ-0042",
+    "relationship": "COMPATIBLE_WITH",
+    "targetId": "QQ-0095"
+  },
+  {
+    "id": "REL-0486",
+    "sourceId": "QQ-0070",
+    "relationship": "COMPATIBLE_WITH",
+    "targetId": "QQ-0034"
+  },
+  {
+    "id": "REL-0487",
+    "sourceId": "QQ-0071",
+    "relationship": "COMPATIBLE_WITH",
+    "targetId": "QQ-0075"
+  },
+  {
+    "id": "REL-0488",
+    "sourceId": "QQ-0072",
+    "relationship": "COMPATIBLE_WITH",
+    "targetId": "QQ-0074"
+  },
+  {
+    "id": "REL-0489",
+    "sourceId": "QQ-0072",
+    "relationship": "COMPATIBLE_WITH",
+    "targetId": "QQ-0079"
+  },
+  {
+    "id": "REL-0490",
+    "sourceId": "QQ-0073",
+    "relationship": "COMPATIBLE_WITH",
+    "targetId": "QQ-0014"
+  },
+  {
+    "id": "REL-0491",
+    "sourceId": "QQ-0073",
+    "relationship": "COMPATIBLE_WITH",
+    "targetId": "QQ-0075"
+  },
+  {
+    "id": "REL-0492",
+    "sourceId": "QQ-0074",
+    "relationship": "COMPATIBLE_WITH",
+    "targetId": "QQ-0072"
+  },
+  {
+    "id": "REL-0493",
+    "sourceId": "QQ-0074",
+    "relationship": "COMPATIBLE_WITH",
+    "targetId": "QQ-0077"
+  },
+  {
+    "id": "REL-0494",
+    "sourceId": "QQ-0075",
+    "relationship": "COMPATIBLE_WITH",
+    "targetId": "QQ-0071"
+  },
+  {
+    "id": "REL-0495",
+    "sourceId": "QQ-0075",
+    "relationship": "COMPATIBLE_WITH",
+    "targetId": "QQ-0020"
+  },
+  {
+    "id": "REL-0496",
+    "sourceId": "QQ-0076",
+    "relationship": "COMPATIBLE_WITH",
+    "targetId": "QQ-0073"
+  },
+  {
+    "id": "REL-0497",
+    "sourceId": "QQ-0077",
+    "relationship": "COMPATIBLE_WITH",
+    "targetId": "QQ-0074"
+  },
+  {
+    "id": "REL-0498",
+    "sourceId": "QQ-0079",
+    "relationship": "COMPATIBLE_WITH",
+    "targetId": "QQ-0072"
+  },
+  {
+    "id": "REL-0499",
+    "sourceId": "QQ-0080",
+    "relationship": "COMPATIBLE_WITH",
+    "targetId": "QQ-0075"
+  },
+  {
+    "id": "REL-0500",
+    "sourceId": "QQ-0081",
+    "relationship": "COMPATIBLE_WITH",
+    "targetId": "QQ-0089"
+  },
+  {
+    "id": "REL-0501",
+    "sourceId": "QQ-0089",
+    "relationship": "COMPATIBLE_WITH",
+    "targetId": "QQ-0081"
+  },
+  {
+    "id": "REL-0502",
+    "sourceId": "QQ-0095",
+    "relationship": "COMPATIBLE_WITH",
+    "targetId": "QQ-0042"
+  },
+  {
+    "id": "REL-0503",
+    "sourceId": "QQ-0001",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0007"
+  },
+  {
+    "id": "REL-0504",
+    "sourceId": "QQ-0001",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0004"
+  },
+  {
+    "id": "REL-0505",
+    "sourceId": "QQ-0001",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0032"
+  },
+  {
+    "id": "REL-0506",
+    "sourceId": "QQ-0002",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0004"
+  },
+  {
+    "id": "REL-0507",
+    "sourceId": "QQ-0002",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0022"
+  },
+  {
+    "id": "REL-0508",
+    "sourceId": "QQ-0002",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0066"
+  },
+  {
+    "id": "REL-0509",
+    "sourceId": "QQ-0003",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0001"
+  },
+  {
+    "id": "REL-0510",
+    "sourceId": "QQ-0003",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0009"
+  },
+  {
+    "id": "REL-0511",
+    "sourceId": "QQ-0003",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0097"
+  },
+  {
+    "id": "REL-0512",
+    "sourceId": "QQ-0004",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0001"
+  },
+  {
+    "id": "REL-0513",
+    "sourceId": "QQ-0004",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0008"
+  },
+  {
+    "id": "REL-0514",
+    "sourceId": "QQ-0004",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0091"
+  },
+  {
+    "id": "REL-0515",
+    "sourceId": "QQ-0005",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0046"
+  },
+  {
+    "id": "REL-0516",
+    "sourceId": "QQ-0005",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0062"
+  },
+  {
+    "id": "REL-0517",
+    "sourceId": "QQ-0005",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0070"
+  },
+  {
+    "id": "REL-0518",
+    "sourceId": "QQ-0006",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0001"
+  },
+  {
+    "id": "REL-0519",
+    "sourceId": "QQ-0006",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0009"
+  },
+  {
+    "id": "REL-0520",
+    "sourceId": "QQ-0006",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0007"
+  },
+  {
+    "id": "REL-0521",
+    "sourceId": "QQ-0007",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0001"
+  },
+  {
+    "id": "REL-0522",
+    "sourceId": "QQ-0007",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0063"
+  },
+  {
+    "id": "REL-0523",
+    "sourceId": "QQ-0007",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0096"
+  },
+  {
+    "id": "REL-0524",
+    "sourceId": "QQ-0008",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0004"
+  },
+  {
+    "id": "REL-0525",
+    "sourceId": "QQ-0008",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0001"
+  },
+  {
+    "id": "REL-0526",
+    "sourceId": "QQ-0008",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0078"
+  },
+  {
+    "id": "REL-0527",
+    "sourceId": "QQ-0009",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0003"
+  },
+  {
+    "id": "REL-0528",
+    "sourceId": "QQ-0009",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0061"
+  },
+  {
+    "id": "REL-0529",
+    "sourceId": "QQ-0009",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0091"
+  },
+  {
+    "id": "REL-0530",
+    "sourceId": "QQ-0010",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0001"
+  },
+  {
+    "id": "REL-0531",
+    "sourceId": "QQ-0010",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0008"
+  },
+  {
+    "id": "REL-0532",
+    "sourceId": "QQ-0010",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0071"
+  },
+  {
+    "id": "REL-0533",
+    "sourceId": "QQ-0011",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0014"
+  },
+  {
+    "id": "REL-0534",
+    "sourceId": "QQ-0011",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0074"
+  },
+  {
+    "id": "REL-0535",
+    "sourceId": "QQ-0011",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0013"
+  },
+  {
+    "id": "REL-0536",
+    "sourceId": "QQ-0012",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0017"
+  },
+  {
+    "id": "REL-0537",
+    "sourceId": "QQ-0012",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0020"
+  },
+  {
+    "id": "REL-0538",
+    "sourceId": "QQ-0012",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0076"
+  },
+  {
+    "id": "REL-0539",
+    "sourceId": "QQ-0013",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0015"
+  },
+  {
+    "id": "REL-0540",
+    "sourceId": "QQ-0013",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0044"
+  },
+  {
+    "id": "REL-0541",
+    "sourceId": "QQ-0013",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0042"
+  },
+  {
+    "id": "REL-0542",
+    "sourceId": "QQ-0014",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0011"
+  },
+  {
+    "id": "REL-0543",
+    "sourceId": "QQ-0014",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0076"
+  },
+  {
+    "id": "REL-0544",
+    "sourceId": "QQ-0014",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0073"
+  },
+  {
+    "id": "REL-0545",
+    "sourceId": "QQ-0015",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0013"
+  },
+  {
+    "id": "REL-0546",
+    "sourceId": "QQ-0015",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0047"
+  },
+  {
+    "id": "REL-0547",
+    "sourceId": "QQ-0015",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0087"
+  },
+  {
+    "id": "REL-0548",
+    "sourceId": "QQ-0016",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0033"
+  },
+  {
+    "id": "REL-0549",
+    "sourceId": "QQ-0016",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0012"
+  },
+  {
+    "id": "REL-0550",
+    "sourceId": "QQ-0016",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0062"
+  },
+  {
+    "id": "REL-0551",
+    "sourceId": "QQ-0017",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0012"
+  },
+  {
+    "id": "REL-0552",
+    "sourceId": "QQ-0017",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0070"
+  },
+  {
+    "id": "REL-0553",
+    "sourceId": "QQ-0017",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0020"
+  },
+  {
+    "id": "REL-0554",
+    "sourceId": "QQ-0018",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0049"
+  },
+  {
+    "id": "REL-0555",
+    "sourceId": "QQ-0018",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0033"
+  },
+  {
+    "id": "REL-0556",
+    "sourceId": "QQ-0018",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0041"
+  },
+  {
+    "id": "REL-0557",
+    "sourceId": "QQ-0019",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0068"
+  },
+  {
+    "id": "REL-0558",
+    "sourceId": "QQ-0019",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0062"
+  },
+  {
+    "id": "REL-0559",
+    "sourceId": "QQ-0019",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0012"
+  },
+  {
+    "id": "REL-0560",
+    "sourceId": "QQ-0020",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0012"
+  },
+  {
+    "id": "REL-0561",
+    "sourceId": "QQ-0020",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0075"
+  },
+  {
+    "id": "REL-0562",
+    "sourceId": "QQ-0020",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0080"
+  },
+  {
+    "id": "REL-0563",
+    "sourceId": "QQ-0021",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0001"
+  },
+  {
+    "id": "REL-0564",
+    "sourceId": "QQ-0021",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0022"
+  },
+  {
+    "id": "REL-0565",
+    "sourceId": "QQ-0021",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0027"
+  },
+  {
+    "id": "REL-0566",
+    "sourceId": "QQ-0022",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0002"
+  },
+  {
+    "id": "REL-0567",
+    "sourceId": "QQ-0022",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0025"
+  },
+  {
+    "id": "REL-0568",
+    "sourceId": "QQ-0022",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0028"
+  },
+  {
+    "id": "REL-0569",
+    "sourceId": "QQ-0023",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0021"
+  },
+  {
+    "id": "REL-0570",
+    "sourceId": "QQ-0023",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0022"
+  },
+  {
+    "id": "REL-0571",
+    "sourceId": "QQ-0023",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0026"
+  },
+  {
+    "id": "REL-0572",
+    "sourceId": "QQ-0024",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0029"
+  },
+  {
+    "id": "REL-0573",
+    "sourceId": "QQ-0024",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0027"
+  },
+  {
+    "id": "REL-0574",
+    "sourceId": "QQ-0024",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0012"
+  },
+  {
+    "id": "REL-0575",
+    "sourceId": "QQ-0025",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0022"
+  },
+  {
+    "id": "REL-0576",
+    "sourceId": "QQ-0025",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0028"
+  },
+  {
+    "id": "REL-0577",
+    "sourceId": "QQ-0025",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0030"
+  },
+  {
+    "id": "REL-0578",
+    "sourceId": "QQ-0026",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0027"
+  },
+  {
+    "id": "REL-0579",
+    "sourceId": "QQ-0026",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0021"
+  },
+  {
+    "id": "REL-0580",
+    "sourceId": "QQ-0026",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0023"
+  },
+  {
+    "id": "REL-0581",
+    "sourceId": "QQ-0027",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0021"
+  },
+  {
+    "id": "REL-0582",
+    "sourceId": "QQ-0027",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0026"
+  },
+  {
+    "id": "REL-0583",
+    "sourceId": "QQ-0027",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0024"
+  },
+  {
+    "id": "REL-0584",
+    "sourceId": "QQ-0028",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0022"
+  },
+  {
+    "id": "REL-0585",
+    "sourceId": "QQ-0028",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0025"
+  },
+  {
+    "id": "REL-0586",
+    "sourceId": "QQ-0028",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0004"
+  },
+  {
+    "id": "REL-0587",
+    "sourceId": "QQ-0029",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0024"
+  },
+  {
+    "id": "REL-0588",
+    "sourceId": "QQ-0029",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0061"
+  },
+  {
+    "id": "REL-0589",
+    "sourceId": "QQ-0029",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0031"
+  },
+  {
+    "id": "REL-0590",
+    "sourceId": "QQ-0030",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0022"
+  },
+  {
+    "id": "REL-0591",
+    "sourceId": "QQ-0030",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0021"
+  },
+  {
+    "id": "REL-0592",
+    "sourceId": "QQ-0030",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0025"
+  },
+  {
+    "id": "REL-0593",
+    "sourceId": "QQ-0031",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0036"
+  },
+  {
+    "id": "REL-0594",
+    "sourceId": "QQ-0031",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0061"
+  },
+  {
+    "id": "REL-0595",
+    "sourceId": "QQ-0031",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0032"
+  },
+  {
+    "id": "REL-0596",
+    "sourceId": "QQ-0032",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0001"
+  },
+  {
+    "id": "REL-0597",
+    "sourceId": "QQ-0032",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0031"
+  },
+  {
+    "id": "REL-0598",
+    "sourceId": "QQ-0032",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0035"
+  },
+  {
+    "id": "REL-0599",
+    "sourceId": "QQ-0033",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0016"
+  },
+  {
+    "id": "REL-0600",
+    "sourceId": "QQ-0033",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0018"
+  },
+  {
+    "id": "REL-0601",
+    "sourceId": "QQ-0033",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0037"
+  },
+  {
+    "id": "REL-0602",
+    "sourceId": "QQ-0034",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0070"
+  },
+  {
+    "id": "REL-0603",
+    "sourceId": "QQ-0034",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0038"
+  },
+  {
+    "id": "REL-0604",
+    "sourceId": "QQ-0034",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0012"
+  },
+  {
+    "id": "REL-0605",
+    "sourceId": "QQ-0035",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0032"
+  },
+  {
+    "id": "REL-0606",
+    "sourceId": "QQ-0035",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0037"
+  },
+  {
+    "id": "REL-0607",
+    "sourceId": "QQ-0035",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0018"
+  },
+  {
+    "id": "REL-0608",
+    "sourceId": "QQ-0036",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0031"
+  },
+  {
+    "id": "REL-0609",
+    "sourceId": "QQ-0036",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0032"
+  },
+  {
+    "id": "REL-0610",
+    "sourceId": "QQ-0036",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0058"
+  },
+  {
+    "id": "REL-0611",
+    "sourceId": "QQ-0037",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0011"
+  },
+  {
+    "id": "REL-0612",
+    "sourceId": "QQ-0037",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0044"
+  },
+  {
+    "id": "REL-0613",
+    "sourceId": "QQ-0037",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0049"
+  },
+  {
+    "id": "REL-0614",
+    "sourceId": "QQ-0038",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0007"
+  },
+  {
+    "id": "REL-0615",
+    "sourceId": "QQ-0038",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0034"
+  },
+  {
+    "id": "REL-0616",
+    "sourceId": "QQ-0038",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0053"
+  },
+  {
+    "id": "REL-0617",
+    "sourceId": "QQ-0039",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0035"
+  },
+  {
+    "id": "REL-0618",
+    "sourceId": "QQ-0039",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0033"
+  },
+  {
+    "id": "REL-0619",
+    "sourceId": "QQ-0039",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0010"
+  },
+  {
+    "id": "REL-0620",
+    "sourceId": "QQ-0040",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0012"
+  },
+  {
+    "id": "REL-0621",
+    "sourceId": "QQ-0040",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0015"
+  },
+  {
+    "id": "REL-0622",
+    "sourceId": "QQ-0040",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0092"
+  },
+  {
+    "id": "REL-0623",
+    "sourceId": "QQ-0041",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0046"
+  },
+  {
+    "id": "REL-0624",
+    "sourceId": "QQ-0041",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0018"
+  },
+  {
+    "id": "REL-0625",
+    "sourceId": "QQ-0041",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0050"
+  },
+  {
+    "id": "REL-0626",
+    "sourceId": "QQ-0042",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0013"
+  },
+  {
+    "id": "REL-0627",
+    "sourceId": "QQ-0042",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0044"
+  },
+  {
+    "id": "REL-0628",
+    "sourceId": "QQ-0042",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0095"
+  },
+  {
+    "id": "REL-0629",
+    "sourceId": "QQ-0043",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0042"
+  },
+  {
+    "id": "REL-0630",
+    "sourceId": "QQ-0043",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0047"
+  },
+  {
+    "id": "REL-0631",
+    "sourceId": "QQ-0043",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0068"
+  },
+  {
+    "id": "REL-0632",
+    "sourceId": "QQ-0044",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0037"
+  },
+  {
+    "id": "REL-0633",
+    "sourceId": "QQ-0044",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0042"
+  },
+  {
+    "id": "REL-0634",
+    "sourceId": "QQ-0044",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0013"
+  },
+  {
+    "id": "REL-0635",
+    "sourceId": "QQ-0045",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0043"
+  },
+  {
+    "id": "REL-0636",
+    "sourceId": "QQ-0045",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0050"
+  },
+  {
+    "id": "REL-0637",
+    "sourceId": "QQ-0045",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0074"
+  },
+  {
+    "id": "REL-0638",
+    "sourceId": "QQ-0046",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0041"
+  },
+  {
+    "id": "REL-0639",
+    "sourceId": "QQ-0046",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0005"
+  },
+  {
+    "id": "REL-0640",
+    "sourceId": "QQ-0046",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0068"
+  },
+  {
+    "id": "REL-0641",
+    "sourceId": "QQ-0047",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0015"
+  },
+  {
+    "id": "REL-0642",
+    "sourceId": "QQ-0047",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0048"
+  },
+  {
+    "id": "REL-0643",
+    "sourceId": "QQ-0047",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0087"
+  },
+  {
+    "id": "REL-0644",
+    "sourceId": "QQ-0048",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0047"
+  },
+  {
+    "id": "REL-0645",
+    "sourceId": "QQ-0048",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0056"
+  },
+  {
+    "id": "REL-0646",
+    "sourceId": "QQ-0048",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0096"
+  },
+  {
+    "id": "REL-0647",
+    "sourceId": "QQ-0049",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0018"
+  },
+  {
+    "id": "REL-0648",
+    "sourceId": "QQ-0049",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0037"
+  },
+  {
+    "id": "REL-0649",
+    "sourceId": "QQ-0049",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0035"
+  },
+  {
+    "id": "REL-0650",
+    "sourceId": "QQ-0050",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0041"
+  },
+  {
+    "id": "REL-0651",
+    "sourceId": "QQ-0050",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0045"
+  },
+  {
+    "id": "REL-0652",
+    "sourceId": "QQ-0050",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0068"
+  },
+  {
+    "id": "REL-0653",
+    "sourceId": "QQ-0051",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0053"
+  },
+  {
+    "id": "REL-0654",
+    "sourceId": "QQ-0051",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0058"
+  },
+  {
+    "id": "REL-0655",
+    "sourceId": "QQ-0051",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0048"
+  },
+  {
+    "id": "REL-0656",
+    "sourceId": "QQ-0052",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0002"
+  },
+  {
+    "id": "REL-0657",
+    "sourceId": "QQ-0052",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0022"
+  },
+  {
+    "id": "REL-0658",
+    "sourceId": "QQ-0052",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0055"
+  },
+  {
+    "id": "REL-0659",
+    "sourceId": "QQ-0053",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0007"
+  },
+  {
+    "id": "REL-0660",
+    "sourceId": "QQ-0053",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0056"
+  },
+  {
+    "id": "REL-0661",
+    "sourceId": "QQ-0053",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0051"
+  },
+  {
+    "id": "REL-0662",
+    "sourceId": "QQ-0054",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0051"
+  },
+  {
+    "id": "REL-0663",
+    "sourceId": "QQ-0054",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0057"
+  },
+  {
+    "id": "REL-0664",
+    "sourceId": "QQ-0054",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0058"
+  },
+  {
+    "id": "REL-0665",
+    "sourceId": "QQ-0055",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0052"
+  },
+  {
+    "id": "REL-0666",
+    "sourceId": "QQ-0055",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0053"
+  },
+  {
+    "id": "REL-0667",
+    "sourceId": "QQ-0055",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0068"
+  },
+  {
+    "id": "REL-0668",
+    "sourceId": "QQ-0056",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0048"
+  },
+  {
+    "id": "REL-0669",
+    "sourceId": "QQ-0056",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0053"
+  },
+  {
+    "id": "REL-0670",
+    "sourceId": "QQ-0056",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0096"
+  },
+  {
+    "id": "REL-0671",
+    "sourceId": "QQ-0057",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0054"
+  },
+  {
+    "id": "REL-0672",
+    "sourceId": "QQ-0057",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0051"
+  },
+  {
+    "id": "REL-0673",
+    "sourceId": "QQ-0057",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0013"
+  },
+  {
+    "id": "REL-0674",
+    "sourceId": "QQ-0058",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0054"
+  },
+  {
+    "id": "REL-0675",
+    "sourceId": "QQ-0058",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0036"
+  },
+  {
+    "id": "REL-0676",
+    "sourceId": "QQ-0058",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0094"
+  },
+  {
+    "id": "REL-0677",
+    "sourceId": "QQ-0059",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0081"
+  },
+  {
+    "id": "REL-0678",
+    "sourceId": "QQ-0059",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0084"
+  },
+  {
+    "id": "REL-0679",
+    "sourceId": "QQ-0059",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0064"
+  },
+  {
+    "id": "REL-0680",
+    "sourceId": "QQ-0060",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0018"
+  },
+  {
+    "id": "REL-0681",
+    "sourceId": "QQ-0060",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0035"
+  },
+  {
+    "id": "REL-0682",
+    "sourceId": "QQ-0060",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0049"
+  },
+  {
+    "id": "REL-0683",
+    "sourceId": "QQ-0061",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0009"
+  },
+  {
+    "id": "REL-0684",
+    "sourceId": "QQ-0061",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0031"
+  },
+  {
+    "id": "REL-0685",
+    "sourceId": "QQ-0061",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0063"
+  },
+  {
+    "id": "REL-0686",
+    "sourceId": "QQ-0062",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0005"
+  },
+  {
+    "id": "REL-0687",
+    "sourceId": "QQ-0062",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0068"
+  },
+  {
+    "id": "REL-0688",
+    "sourceId": "QQ-0062",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0016"
+  },
+  {
+    "id": "REL-0689",
+    "sourceId": "QQ-0063",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0007"
+  },
+  {
+    "id": "REL-0690",
+    "sourceId": "QQ-0063",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0061"
+  },
+  {
+    "id": "REL-0691",
+    "sourceId": "QQ-0063",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0012"
+  },
+  {
+    "id": "REL-0692",
+    "sourceId": "QQ-0064",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0083"
+  },
+  {
+    "id": "REL-0693",
+    "sourceId": "QQ-0064",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0059"
+  },
+  {
+    "id": "REL-0694",
+    "sourceId": "QQ-0064",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0081"
+  },
+  {
+    "id": "REL-0695",
+    "sourceId": "QQ-0065",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0069"
+  },
+  {
+    "id": "REL-0696",
+    "sourceId": "QQ-0065",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0062"
+  },
+  {
+    "id": "REL-0697",
+    "sourceId": "QQ-0065",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0070"
+  },
+  {
+    "id": "REL-0698",
+    "sourceId": "QQ-0066",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0002"
+  },
+  {
+    "id": "REL-0699",
+    "sourceId": "QQ-0066",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0022"
+  },
+  {
+    "id": "REL-0700",
+    "sourceId": "QQ-0066",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0067"
+  },
+  {
+    "id": "REL-0701",
+    "sourceId": "QQ-0067",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0007"
+  },
+  {
+    "id": "REL-0702",
+    "sourceId": "QQ-0067",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0066"
+  },
+  {
+    "id": "REL-0703",
+    "sourceId": "QQ-0067",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0068"
+  },
+  {
+    "id": "REL-0704",
+    "sourceId": "QQ-0068",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0005"
+  },
+  {
+    "id": "REL-0705",
+    "sourceId": "QQ-0068",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0046"
+  },
+  {
+    "id": "REL-0706",
+    "sourceId": "QQ-0068",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0062"
+  },
+  {
+    "id": "REL-0707",
+    "sourceId": "QQ-0069",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0065"
+  },
+  {
+    "id": "REL-0708",
+    "sourceId": "QQ-0069",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0063"
+  },
+  {
+    "id": "REL-0709",
+    "sourceId": "QQ-0069",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0076"
+  },
+  {
+    "id": "REL-0710",
+    "sourceId": "QQ-0070",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0034"
+  },
+  {
+    "id": "REL-0711",
+    "sourceId": "QQ-0070",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0017"
+  },
+  {
+    "id": "REL-0712",
+    "sourceId": "QQ-0070",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0062"
+  },
+  {
+    "id": "REL-0713",
+    "sourceId": "QQ-0071",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0075"
+  },
+  {
+    "id": "REL-0714",
+    "sourceId": "QQ-0071",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0074"
+  },
+  {
+    "id": "REL-0715",
+    "sourceId": "QQ-0071",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0010"
+  },
+  {
+    "id": "REL-0716",
+    "sourceId": "QQ-0072",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0074"
+  },
+  {
+    "id": "REL-0717",
+    "sourceId": "QQ-0072",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0079"
+  },
+  {
+    "id": "REL-0718",
+    "sourceId": "QQ-0072",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0077"
+  },
+  {
+    "id": "REL-0719",
+    "sourceId": "QQ-0073",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0014"
+  },
+  {
+    "id": "REL-0720",
+    "sourceId": "QQ-0073",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0076"
+  },
+  {
+    "id": "REL-0721",
+    "sourceId": "QQ-0073",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0075"
+  },
+  {
+    "id": "REL-0722",
+    "sourceId": "QQ-0074",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0072"
+  },
+  {
+    "id": "REL-0723",
+    "sourceId": "QQ-0074",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0077"
+  },
+  {
+    "id": "REL-0724",
+    "sourceId": "QQ-0074",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0011"
+  },
+  {
+    "id": "REL-0725",
+    "sourceId": "QQ-0075",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0071"
+  },
+  {
+    "id": "REL-0726",
+    "sourceId": "QQ-0075",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0020"
+  },
+  {
+    "id": "REL-0727",
+    "sourceId": "QQ-0075",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0080"
+  },
+  {
+    "id": "REL-0728",
+    "sourceId": "QQ-0076",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0014"
+  },
+  {
+    "id": "REL-0729",
+    "sourceId": "QQ-0076",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0073"
+  },
+  {
+    "id": "REL-0730",
+    "sourceId": "QQ-0076",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0012"
+  },
+  {
+    "id": "REL-0731",
+    "sourceId": "QQ-0077",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0074"
+  },
+  {
+    "id": "REL-0732",
+    "sourceId": "QQ-0077",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0072"
+  },
+  {
+    "id": "REL-0733",
+    "sourceId": "QQ-0077",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0078"
+  },
+  {
+    "id": "REL-0734",
+    "sourceId": "QQ-0078",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0077"
+  },
+  {
+    "id": "REL-0735",
+    "sourceId": "QQ-0078",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0008"
+  },
+  {
+    "id": "REL-0736",
+    "sourceId": "QQ-0078",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0010"
+  },
+  {
+    "id": "REL-0737",
+    "sourceId": "QQ-0079",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0072"
+  },
+  {
+    "id": "REL-0738",
+    "sourceId": "QQ-0079",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0074"
+  },
+  {
+    "id": "REL-0739",
+    "sourceId": "QQ-0079",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0020"
+  },
+  {
+    "id": "REL-0740",
+    "sourceId": "QQ-0080",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0020"
+  },
+  {
+    "id": "REL-0741",
+    "sourceId": "QQ-0080",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0075"
+  },
+  {
+    "id": "REL-0742",
+    "sourceId": "QQ-0080",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0012"
+  },
+  {
+    "id": "REL-0743",
+    "sourceId": "QQ-0081",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0087"
+  },
+  {
+    "id": "REL-0744",
+    "sourceId": "QQ-0081",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0089"
+  },
+  {
+    "id": "REL-0745",
+    "sourceId": "QQ-0081",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0082"
+  },
+  {
+    "id": "REL-0746",
+    "sourceId": "QQ-0082",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0081"
+  },
+  {
+    "id": "REL-0747",
+    "sourceId": "QQ-0082",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0088"
+  },
+  {
+    "id": "REL-0748",
+    "sourceId": "QQ-0082",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0064"
+  },
+  {
+    "id": "REL-0749",
+    "sourceId": "QQ-0083",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0064"
+  },
+  {
+    "id": "REL-0750",
+    "sourceId": "QQ-0083",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0086"
+  },
+  {
+    "id": "REL-0751",
+    "sourceId": "QQ-0083",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0081"
+  },
+  {
+    "id": "REL-0752",
+    "sourceId": "QQ-0084",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0059"
+  },
+  {
+    "id": "REL-0753",
+    "sourceId": "QQ-0084",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0088"
+  },
+  {
+    "id": "REL-0754",
+    "sourceId": "QQ-0084",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0081"
+  },
+  {
+    "id": "REL-0755",
+    "sourceId": "QQ-0085",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0090"
+  },
+  {
+    "id": "REL-0756",
+    "sourceId": "QQ-0085",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0081"
+  },
+  {
+    "id": "REL-0757",
+    "sourceId": "QQ-0085",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0086"
+  },
+  {
+    "id": "REL-0758",
+    "sourceId": "QQ-0086",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0081"
+  },
+  {
+    "id": "REL-0759",
+    "sourceId": "QQ-0086",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0083"
+  },
+  {
+    "id": "REL-0760",
+    "sourceId": "QQ-0086",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0087"
+  },
+  {
+    "id": "REL-0761",
+    "sourceId": "QQ-0087",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0090"
+  },
+  {
+    "id": "REL-0762",
+    "sourceId": "QQ-0087",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0081"
+  },
+  {
+    "id": "REL-0763",
+    "sourceId": "QQ-0087",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0047"
+  },
+  {
+    "id": "REL-0764",
+    "sourceId": "QQ-0088",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0082"
+  },
+  {
+    "id": "REL-0765",
+    "sourceId": "QQ-0088",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0084"
+  },
+  {
+    "id": "REL-0766",
+    "sourceId": "QQ-0088",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0081"
+  },
+  {
+    "id": "REL-0767",
+    "sourceId": "QQ-0089",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0081"
+  },
+  {
+    "id": "REL-0768",
+    "sourceId": "QQ-0089",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0087"
+  },
+  {
+    "id": "REL-0769",
+    "sourceId": "QQ-0089",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0092"
+  },
+  {
+    "id": "REL-0770",
+    "sourceId": "QQ-0090",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0087"
+  },
+  {
+    "id": "REL-0771",
+    "sourceId": "QQ-0090",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0085"
+  },
+  {
+    "id": "REL-0772",
+    "sourceId": "QQ-0090",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0047"
+  },
+  {
+    "id": "REL-0773",
+    "sourceId": "QQ-0091",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0001"
+  },
+  {
+    "id": "REL-0774",
+    "sourceId": "QQ-0091",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0009"
+  },
+  {
+    "id": "REL-0775",
+    "sourceId": "QQ-0091",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0096"
+  },
+  {
+    "id": "REL-0776",
+    "sourceId": "QQ-0092",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0040"
+  },
+  {
+    "id": "REL-0777",
+    "sourceId": "QQ-0092",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0096"
+  },
+  {
+    "id": "REL-0778",
+    "sourceId": "QQ-0092",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0098"
+  },
+  {
+    "id": "REL-0779",
+    "sourceId": "QQ-0093",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0002"
+  },
+  {
+    "id": "REL-0780",
+    "sourceId": "QQ-0093",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0066"
+  },
+  {
+    "id": "REL-0781",
+    "sourceId": "QQ-0093",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0091"
+  },
+  {
+    "id": "REL-0782",
+    "sourceId": "QQ-0094",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0096"
+  },
+  {
+    "id": "REL-0783",
+    "sourceId": "QQ-0094",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0049"
+  },
+  {
+    "id": "REL-0784",
+    "sourceId": "QQ-0094",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0018"
+  },
+  {
+    "id": "REL-0785",
+    "sourceId": "QQ-0095",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0005"
+  },
+  {
+    "id": "REL-0786",
+    "sourceId": "QQ-0095",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0042"
+  },
+  {
+    "id": "REL-0787",
+    "sourceId": "QQ-0095",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0092"
+  },
+  {
+    "id": "REL-0788",
+    "sourceId": "QQ-0096",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0007"
+  },
+  {
+    "id": "REL-0789",
+    "sourceId": "QQ-0096",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0053"
+  },
+  {
+    "id": "REL-0790",
+    "sourceId": "QQ-0096",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0094"
+  },
+  {
+    "id": "REL-0791",
+    "sourceId": "QQ-0097",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0003"
+  },
+  {
+    "id": "REL-0792",
+    "sourceId": "QQ-0097",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0021"
+  },
+  {
+    "id": "REL-0793",
+    "sourceId": "QQ-0097",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0061"
+  },
+  {
+    "id": "REL-0794",
+    "sourceId": "QQ-0098",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0021"
+  },
+  {
+    "id": "REL-0795",
+    "sourceId": "QQ-0098",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0004"
+  },
+  {
+    "id": "REL-0796",
+    "sourceId": "QQ-0098",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0053"
+  },
+  {
+    "id": "REL-0797",
+    "sourceId": "QQ-0099",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0091"
+  },
+  {
+    "id": "REL-0798",
+    "sourceId": "QQ-0099",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0048"
+  },
+  {
+    "id": "REL-0799",
+    "sourceId": "QQ-0099",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0063"
+  },
+  {
+    "id": "REL-0800",
+    "sourceId": "QQ-0100",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0012"
+  },
+  {
+    "id": "REL-0801",
+    "sourceId": "QQ-0100",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0020"
+  },
+  {
+    "id": "REL-0802",
+    "sourceId": "QQ-0100",
+    "relationship": "RELATED_TO",
+    "targetId": "QQ-0046"
+  },
+  {
+    "id": "REL-0803",
+    "sourceId": "QQ-0001",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0021"
+  },
+  {
+    "id": "REL-0804",
+    "sourceId": "QQ-0002",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0025"
+  },
+  {
+    "id": "REL-0805",
+    "sourceId": "QQ-0003",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0004"
+  },
+  {
+    "id": "REL-0806",
+    "sourceId": "QQ-0004",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0001"
+  },
+  {
+    "id": "REL-0807",
+    "sourceId": "QQ-0004",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0008"
+  },
+  {
+    "id": "REL-0808",
+    "sourceId": "QQ-0005",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0068"
+  },
+  {
+    "id": "REL-0809",
+    "sourceId": "QQ-0006",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0001"
+  },
+  {
+    "id": "REL-0810",
+    "sourceId": "QQ-0007",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0063"
+  },
+  {
+    "id": "REL-0811",
+    "sourceId": "QQ-0008",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0004"
+  },
+  {
+    "id": "REL-0812",
+    "sourceId": "QQ-0009",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0061"
+  },
+  {
+    "id": "REL-0813",
+    "sourceId": "QQ-0010",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0006"
+  },
+  {
+    "id": "REL-0814",
+    "sourceId": "QQ-0011",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0014"
+  },
+  {
+    "id": "REL-0815",
+    "sourceId": "QQ-0012",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0020"
+  },
+  {
+    "id": "REL-0816",
+    "sourceId": "QQ-0013",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0015"
+  },
+  {
+    "id": "REL-0817",
+    "sourceId": "QQ-0014",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0011"
+  },
+  {
+    "id": "REL-0818",
+    "sourceId": "QQ-0015",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0013"
+  },
+  {
+    "id": "REL-0819",
+    "sourceId": "QQ-0016",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0062"
+  },
+  {
+    "id": "REL-0820",
+    "sourceId": "QQ-0017",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0070"
+  },
+  {
+    "id": "REL-0821",
+    "sourceId": "QQ-0018",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0049"
+  },
+  {
+    "id": "REL-0822",
+    "sourceId": "QQ-0019",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0068"
+  },
+  {
+    "id": "REL-0823",
+    "sourceId": "QQ-0020",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0012"
+  },
+  {
+    "id": "REL-0824",
+    "sourceId": "QQ-0021",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0001"
+  },
+  {
+    "id": "REL-0825",
+    "sourceId": "QQ-0022",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0023"
+  },
+  {
+    "id": "REL-0826",
+    "sourceId": "QQ-0023",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0022"
+  },
+  {
+    "id": "REL-0827",
+    "sourceId": "QQ-0024",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0029"
+  },
+  {
+    "id": "REL-0828",
+    "sourceId": "QQ-0025",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0022"
+  },
+  {
+    "id": "REL-0829",
+    "sourceId": "QQ-0026",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0027"
+  },
+  {
+    "id": "REL-0830",
+    "sourceId": "QQ-0027",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0021"
+  },
+  {
+    "id": "REL-0831",
+    "sourceId": "QQ-0028",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0004"
+  },
+  {
+    "id": "REL-0832",
+    "sourceId": "QQ-0029",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0061"
+  },
+  {
+    "id": "REL-0833",
+    "sourceId": "QQ-0030",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0022"
+  },
+  {
+    "id": "REL-0834",
+    "sourceId": "QQ-0031",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0061"
+  },
+  {
+    "id": "REL-0835",
+    "sourceId": "QQ-0032",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0031"
+  },
+  {
+    "id": "REL-0836",
+    "sourceId": "QQ-0033",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0037"
+  },
+  {
+    "id": "REL-0837",
+    "sourceId": "QQ-0034",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0070"
+  },
+  {
+    "id": "REL-0838",
+    "sourceId": "QQ-0035",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0032"
+  },
+  {
+    "id": "REL-0839",
+    "sourceId": "QQ-0036",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0031"
+  },
+  {
+    "id": "REL-0840",
+    "sourceId": "QQ-0037",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0049"
+  },
+  {
+    "id": "REL-0841",
+    "sourceId": "QQ-0038",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0034"
+  },
+  {
+    "id": "REL-0842",
+    "sourceId": "QQ-0039",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0035"
+  },
+  {
+    "id": "REL-0843",
+    "sourceId": "QQ-0040",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0092"
+  },
+  {
+    "id": "REL-0844",
+    "sourceId": "QQ-0041",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0046"
+  },
+  {
+    "id": "REL-0845",
+    "sourceId": "QQ-0042",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0095"
+  },
+  {
+    "id": "REL-0846",
+    "sourceId": "QQ-0043",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0068"
+  },
+  {
+    "id": "REL-0847",
+    "sourceId": "QQ-0044",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0037"
+  },
+  {
+    "id": "REL-0848",
+    "sourceId": "QQ-0045",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0050"
+  },
+  {
+    "id": "REL-0849",
+    "sourceId": "QQ-0046",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0005"
+  },
+  {
+    "id": "REL-0850",
+    "sourceId": "QQ-0047",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0015"
+  },
+  {
+    "id": "REL-0851",
+    "sourceId": "QQ-0048",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0056"
+  },
+  {
+    "id": "REL-0852",
+    "sourceId": "QQ-0049",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0018"
+  },
+  {
+    "id": "REL-0853",
+    "sourceId": "QQ-0050",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0068"
+  },
+  {
+    "id": "REL-0854",
+    "sourceId": "QQ-0051",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0053"
+  },
+  {
+    "id": "REL-0855",
+    "sourceId": "QQ-0052",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0055"
+  },
+  {
+    "id": "REL-0856",
+    "sourceId": "QQ-0053",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0056"
+  },
+  {
+    "id": "REL-0857",
+    "sourceId": "QQ-0054",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0058"
+  },
+  {
+    "id": "REL-0858",
+    "sourceId": "QQ-0055",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0052"
+  },
+  {
+    "id": "REL-0859",
+    "sourceId": "QQ-0056",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0053"
+  },
+  {
+    "id": "REL-0860",
+    "sourceId": "QQ-0057",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0054"
+  },
+  {
+    "id": "REL-0861",
+    "sourceId": "QQ-0058",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0094"
+  },
+  {
+    "id": "REL-0862",
+    "sourceId": "QQ-0059",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0064"
+  },
+  {
+    "id": "REL-0863",
+    "sourceId": "QQ-0060",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0049"
+  },
+  {
+    "id": "REL-0864",
+    "sourceId": "QQ-0061",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0009"
+  },
+  {
+    "id": "REL-0865",
+    "sourceId": "QQ-0061",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0031"
+  },
+  {
+    "id": "REL-0866",
+    "sourceId": "QQ-0062",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0016"
+  },
+  {
+    "id": "REL-0867",
+    "sourceId": "QQ-0063",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0007"
+  },
+  {
+    "id": "REL-0868",
+    "sourceId": "QQ-0064",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0083"
+  },
+  {
+    "id": "REL-0869",
+    "sourceId": "QQ-0065",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0069"
+  },
+  {
+    "id": "REL-0870",
+    "sourceId": "QQ-0066",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0067"
+  },
+  {
+    "id": "REL-0871",
+    "sourceId": "QQ-0067",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0066"
+  },
+  {
+    "id": "REL-0872",
+    "sourceId": "QQ-0068",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0005"
+  },
+  {
+    "id": "REL-0873",
+    "sourceId": "QQ-0069",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0065"
+  },
+  {
+    "id": "REL-0874",
+    "sourceId": "QQ-0070",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0034"
+  },
+  {
+    "id": "REL-0875",
+    "sourceId": "QQ-0071",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0075"
+  },
+  {
+    "id": "REL-0876",
+    "sourceId": "QQ-0072",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0074"
+  },
+  {
+    "id": "REL-0877",
+    "sourceId": "QQ-0072",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0079"
+  },
+  {
+    "id": "REL-0878",
+    "sourceId": "QQ-0073",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0014"
+  },
+  {
+    "id": "REL-0879",
+    "sourceId": "QQ-0074",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0072"
+  },
+  {
+    "id": "REL-0880",
+    "sourceId": "QQ-0075",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0020"
+  },
+  {
+    "id": "REL-0881",
+    "sourceId": "QQ-0076",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0073"
+  },
+  {
+    "id": "REL-0882",
+    "sourceId": "QQ-0077",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0074"
+  },
+  {
+    "id": "REL-0883",
+    "sourceId": "QQ-0078",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0077"
+  },
+  {
+    "id": "REL-0884",
+    "sourceId": "QQ-0079",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0072"
+  },
+  {
+    "id": "REL-0885",
+    "sourceId": "QQ-0080",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0020"
+  },
+  {
+    "id": "REL-0886",
+    "sourceId": "QQ-0081",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0089"
+  },
+  {
+    "id": "REL-0887",
+    "sourceId": "QQ-0082",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0088"
+  },
+  {
+    "id": "REL-0888",
+    "sourceId": "QQ-0083",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0064"
+  },
+  {
+    "id": "REL-0889",
+    "sourceId": "QQ-0084",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0059"
+  },
+  {
+    "id": "REL-0890",
+    "sourceId": "QQ-0085",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0086"
+  },
+  {
+    "id": "REL-0891",
+    "sourceId": "QQ-0086",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0081"
+  },
+  {
+    "id": "REL-0892",
+    "sourceId": "QQ-0087",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0090"
+  },
+  {
+    "id": "REL-0893",
+    "sourceId": "QQ-0088",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0082"
+  },
+  {
+    "id": "REL-0894",
+    "sourceId": "QQ-0089",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0081"
+  },
+  {
+    "id": "REL-0895",
+    "sourceId": "QQ-0090",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0087"
+  },
+  {
+    "id": "REL-0896",
+    "sourceId": "QQ-0091",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0001"
+  },
+  {
+    "id": "REL-0897",
+    "sourceId": "QQ-0092",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0098"
+  },
+  {
+    "id": "REL-0898",
+    "sourceId": "QQ-0093",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0091"
+  },
+  {
+    "id": "REL-0899",
+    "sourceId": "QQ-0094",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0096"
+  },
+  {
+    "id": "REL-0900",
+    "sourceId": "QQ-0095",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0042"
+  },
+  {
+    "id": "REL-0901",
+    "sourceId": "QQ-0096",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0053"
+  },
+  {
+    "id": "REL-0902",
+    "sourceId": "QQ-0097",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0021"
+  },
+  {
+    "id": "REL-0903",
+    "sourceId": "QQ-0098",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0092"
+  },
+  {
+    "id": "REL-0904",
+    "sourceId": "QQ-0099",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0091"
+  },
+  {
+    "id": "REL-0905",
+    "sourceId": "QQ-0100",
+    "relationship": "BUNDLED_WITH",
+    "targetId": "QQ-0012"
+  },
+  {
+    "id": "REL-0906",
+    "sourceId": "QQ-0001",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-0907",
+    "sourceId": "QQ-0001",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-06"
+  },
+  {
+    "id": "REL-0908",
+    "sourceId": "QQ-0001",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-0909",
+    "sourceId": "QQ-0002",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-0910",
+    "sourceId": "QQ-0002",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-06"
+  },
+  {
+    "id": "REL-0911",
+    "sourceId": "QQ-0002",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-0912",
+    "sourceId": "QQ-0003",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-07"
+  },
+  {
+    "id": "REL-0913",
+    "sourceId": "QQ-0003",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-0914",
+    "sourceId": "QQ-0004",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-07"
+  },
+  {
+    "id": "REL-0915",
+    "sourceId": "QQ-0004",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-0916",
+    "sourceId": "QQ-0005",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-0917",
+    "sourceId": "QQ-0005",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-12"
+  },
+  {
+    "id": "REL-0918",
+    "sourceId": "QQ-0005",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-0919",
+    "sourceId": "QQ-0006",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-07"
+  },
+  {
+    "id": "REL-0920",
+    "sourceId": "QQ-0006",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-0921",
+    "sourceId": "QQ-0007",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-0922",
+    "sourceId": "QQ-0007",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-06"
+  },
+  {
+    "id": "REL-0923",
+    "sourceId": "QQ-0007",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-0924",
+    "sourceId": "QQ-0008",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-0925",
+    "sourceId": "QQ-0008",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-12"
+  },
+  {
+    "id": "REL-0926",
+    "sourceId": "QQ-0008",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-0927",
+    "sourceId": "QQ-0009",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-07"
+  },
+  {
+    "id": "REL-0928",
+    "sourceId": "QQ-0009",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-0929",
+    "sourceId": "QQ-0010",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-0930",
+    "sourceId": "QQ-0010",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-12"
+  },
+  {
+    "id": "REL-0931",
+    "sourceId": "QQ-0010",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-0932",
+    "sourceId": "QQ-0011",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-0933",
+    "sourceId": "QQ-0011",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-24"
+  },
+  {
+    "id": "REL-0934",
+    "sourceId": "QQ-0011",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-0935",
+    "sourceId": "QQ-0012",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-0936",
+    "sourceId": "QQ-0012",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-12"
+  },
+  {
+    "id": "REL-0937",
+    "sourceId": "QQ-0012",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-0938",
+    "sourceId": "QQ-0013",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-0939",
+    "sourceId": "QQ-0013",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-12"
+  },
+  {
+    "id": "REL-0940",
+    "sourceId": "QQ-0013",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-0941",
+    "sourceId": "QQ-0014",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-07"
+  },
+  {
+    "id": "REL-0942",
+    "sourceId": "QQ-0014",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-06"
+  },
+  {
+    "id": "REL-0943",
+    "sourceId": "QQ-0014",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-0944",
+    "sourceId": "QQ-0015",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-0945",
+    "sourceId": "QQ-0015",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-12"
+  },
+  {
+    "id": "REL-0946",
+    "sourceId": "QQ-0015",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-0947",
+    "sourceId": "QQ-0016",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-0948",
+    "sourceId": "QQ-0016",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-12"
+  },
+  {
+    "id": "REL-0949",
+    "sourceId": "QQ-0016",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-0950",
+    "sourceId": "QQ-0017",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-0951",
+    "sourceId": "QQ-0017",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-12"
+  },
+  {
+    "id": "REL-0952",
+    "sourceId": "QQ-0017",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-0953",
+    "sourceId": "QQ-0018",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-0954",
+    "sourceId": "QQ-0018",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-12"
+  },
+  {
+    "id": "REL-0955",
+    "sourceId": "QQ-0018",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-0956",
+    "sourceId": "QQ-0019",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-0957",
+    "sourceId": "QQ-0019",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-12"
+  },
+  {
+    "id": "REL-0958",
+    "sourceId": "QQ-0019",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-0959",
+    "sourceId": "QQ-0020",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-07"
+  },
+  {
+    "id": "REL-0960",
+    "sourceId": "QQ-0020",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-06"
+  },
+  {
+    "id": "REL-0961",
+    "sourceId": "QQ-0020",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-0962",
+    "sourceId": "QQ-0021",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-07"
+  },
+  {
+    "id": "REL-0963",
+    "sourceId": "QQ-0021",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-0964",
+    "sourceId": "QQ-0022",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-0965",
+    "sourceId": "QQ-0022",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-12"
+  },
+  {
+    "id": "REL-0966",
+    "sourceId": "QQ-0022",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-0967",
+    "sourceId": "QQ-0023",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-07"
+  },
+  {
+    "id": "REL-0968",
+    "sourceId": "QQ-0023",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-0969",
+    "sourceId": "QQ-0024",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-07"
+  },
+  {
+    "id": "REL-0970",
+    "sourceId": "QQ-0024",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-12"
+  },
+  {
+    "id": "REL-0971",
+    "sourceId": "QQ-0024",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-0972",
+    "sourceId": "QQ-0025",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-0973",
+    "sourceId": "QQ-0025",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-12"
+  },
+  {
+    "id": "REL-0974",
+    "sourceId": "QQ-0025",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-0975",
+    "sourceId": "QQ-0026",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-0976",
+    "sourceId": "QQ-0026",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-0977",
+    "sourceId": "QQ-0027",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-07"
+  },
+  {
+    "id": "REL-0978",
+    "sourceId": "QQ-0027",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-0979",
+    "sourceId": "QQ-0028",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-07"
+  },
+  {
+    "id": "REL-0980",
+    "sourceId": "QQ-0028",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-12"
+  },
+  {
+    "id": "REL-0981",
+    "sourceId": "QQ-0028",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-0982",
+    "sourceId": "QQ-0029",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-07"
+  },
+  {
+    "id": "REL-0983",
+    "sourceId": "QQ-0029",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-12"
+  },
+  {
+    "id": "REL-0984",
+    "sourceId": "QQ-0029",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-0985",
+    "sourceId": "QQ-0030",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-0986",
+    "sourceId": "QQ-0030",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-12"
+  },
+  {
+    "id": "REL-0987",
+    "sourceId": "QQ-0030",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-0988",
+    "sourceId": "QQ-0031",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-0989",
+    "sourceId": "QQ-0031",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-12"
+  },
+  {
+    "id": "REL-0990",
+    "sourceId": "QQ-0031",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-0991",
+    "sourceId": "QQ-0032",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-0992",
+    "sourceId": "QQ-0032",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-06"
+  },
+  {
+    "id": "REL-0993",
+    "sourceId": "QQ-0032",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-0994",
+    "sourceId": "QQ-0033",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-0995",
+    "sourceId": "QQ-0033",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-24"
+  },
+  {
+    "id": "REL-0996",
+    "sourceId": "QQ-0033",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-0997",
+    "sourceId": "QQ-0034",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-0998",
+    "sourceId": "QQ-0034",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-24"
+  },
+  {
+    "id": "REL-0999",
+    "sourceId": "QQ-0034",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1000",
+    "sourceId": "QQ-0035",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-1001",
+    "sourceId": "QQ-0035",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-12"
+  },
+  {
+    "id": "REL-1002",
+    "sourceId": "QQ-0035",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1003",
+    "sourceId": "QQ-0036",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-1004",
+    "sourceId": "QQ-0036",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-06"
+  },
+  {
+    "id": "REL-1005",
+    "sourceId": "QQ-0036",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1006",
+    "sourceId": "QQ-0037",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-1007",
+    "sourceId": "QQ-0037",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-12"
+  },
+  {
+    "id": "REL-1008",
+    "sourceId": "QQ-0037",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1009",
+    "sourceId": "QQ-0038",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-07"
+  },
+  {
+    "id": "REL-1010",
+    "sourceId": "QQ-0038",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1011",
+    "sourceId": "QQ-0039",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-07"
+  },
+  {
+    "id": "REL-1012",
+    "sourceId": "QQ-0039",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-06"
+  },
+  {
+    "id": "REL-1013",
+    "sourceId": "QQ-0039",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1014",
+    "sourceId": "QQ-0040",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-1015",
+    "sourceId": "QQ-0040",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-24"
+  },
+  {
+    "id": "REL-1016",
+    "sourceId": "QQ-0040",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1017",
+    "sourceId": "QQ-0041",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-1018",
+    "sourceId": "QQ-0041",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-12"
+  },
+  {
+    "id": "REL-1019",
+    "sourceId": "QQ-0041",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1020",
+    "sourceId": "QQ-0042",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-1021",
+    "sourceId": "QQ-0042",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-12"
+  },
+  {
+    "id": "REL-1022",
+    "sourceId": "QQ-0042",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1023",
+    "sourceId": "QQ-0043",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-1024",
+    "sourceId": "QQ-0043",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-12"
+  },
+  {
+    "id": "REL-1025",
+    "sourceId": "QQ-0043",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1026",
+    "sourceId": "QQ-0044",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-1027",
+    "sourceId": "QQ-0044",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-12"
+  },
+  {
+    "id": "REL-1028",
+    "sourceId": "QQ-0044",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1029",
+    "sourceId": "QQ-0045",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-1030",
+    "sourceId": "QQ-0045",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-12"
+  },
+  {
+    "id": "REL-1031",
+    "sourceId": "QQ-0045",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1032",
+    "sourceId": "QQ-0046",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-30"
+  },
+  {
+    "id": "REL-1033",
+    "sourceId": "QQ-0046",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-24"
+  },
+  {
+    "id": "REL-1034",
+    "sourceId": "QQ-0046",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1035",
+    "sourceId": "QQ-0047",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-1036",
+    "sourceId": "QQ-0047",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-12"
+  },
+  {
+    "id": "REL-1037",
+    "sourceId": "QQ-0047",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1038",
+    "sourceId": "QQ-0048",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-07"
+  },
+  {
+    "id": "REL-1039",
+    "sourceId": "QQ-0048",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-12"
+  },
+  {
+    "id": "REL-1040",
+    "sourceId": "QQ-0048",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1041",
+    "sourceId": "QQ-0049",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-1042",
+    "sourceId": "QQ-0049",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-12"
+  },
+  {
+    "id": "REL-1043",
+    "sourceId": "QQ-0049",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1044",
+    "sourceId": "QQ-0050",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-1045",
+    "sourceId": "QQ-0050",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-12"
+  },
+  {
+    "id": "REL-1046",
+    "sourceId": "QQ-0050",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1047",
+    "sourceId": "QQ-0051",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-07"
+  },
+  {
+    "id": "REL-1048",
+    "sourceId": "QQ-0051",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-06"
+  },
+  {
+    "id": "REL-1049",
+    "sourceId": "QQ-0051",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1050",
+    "sourceId": "QQ-0052",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-1051",
+    "sourceId": "QQ-0052",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-06"
+  },
+  {
+    "id": "REL-1052",
+    "sourceId": "QQ-0052",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1053",
+    "sourceId": "QQ-0053",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-07"
+  },
+  {
+    "id": "REL-1054",
+    "sourceId": "QQ-0053",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1055",
+    "sourceId": "QQ-0054",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-07"
+  },
+  {
+    "id": "REL-1056",
+    "sourceId": "QQ-0054",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1057",
+    "sourceId": "QQ-0055",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-1058",
+    "sourceId": "QQ-0055",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-06"
+  },
+  {
+    "id": "REL-1059",
+    "sourceId": "QQ-0055",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1060",
+    "sourceId": "QQ-0056",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-07"
+  },
+  {
+    "id": "REL-1061",
+    "sourceId": "QQ-0056",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-12"
+  },
+  {
+    "id": "REL-1062",
+    "sourceId": "QQ-0056",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1063",
+    "sourceId": "QQ-0057",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-07"
+  },
+  {
+    "id": "REL-1064",
+    "sourceId": "QQ-0057",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-06"
+  },
+  {
+    "id": "REL-1065",
+    "sourceId": "QQ-0057",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1066",
+    "sourceId": "QQ-0058",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-1067",
+    "sourceId": "QQ-0058",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-12"
+  },
+  {
+    "id": "REL-1068",
+    "sourceId": "QQ-0058",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1069",
+    "sourceId": "QQ-0059",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-1070",
+    "sourceId": "QQ-0059",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-06"
+  },
+  {
+    "id": "REL-1071",
+    "sourceId": "QQ-0059",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1072",
+    "sourceId": "QQ-0060",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-07"
+  },
+  {
+    "id": "REL-1073",
+    "sourceId": "QQ-0060",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1074",
+    "sourceId": "QQ-0061",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-1075",
+    "sourceId": "QQ-0061",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1076",
+    "sourceId": "QQ-0062",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-07"
+  },
+  {
+    "id": "REL-1077",
+    "sourceId": "QQ-0062",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1078",
+    "sourceId": "QQ-0063",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-07"
+  },
+  {
+    "id": "REL-1079",
+    "sourceId": "QQ-0063",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1080",
+    "sourceId": "QQ-0064",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-07"
+  },
+  {
+    "id": "REL-1081",
+    "sourceId": "QQ-0064",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1082",
+    "sourceId": "QQ-0065",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-07"
+  },
+  {
+    "id": "REL-1083",
+    "sourceId": "QQ-0065",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1084",
+    "sourceId": "QQ-0066",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-07"
+  },
+  {
+    "id": "REL-1085",
+    "sourceId": "QQ-0066",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1086",
+    "sourceId": "QQ-0067",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-07"
+  },
+  {
+    "id": "REL-1087",
+    "sourceId": "QQ-0067",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1088",
+    "sourceId": "QQ-0068",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-07"
+  },
+  {
+    "id": "REL-1089",
+    "sourceId": "QQ-0068",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1090",
+    "sourceId": "QQ-0069",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-07"
+  },
+  {
+    "id": "REL-1091",
+    "sourceId": "QQ-0069",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1092",
+    "sourceId": "QQ-0070",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-07"
+  },
+  {
+    "id": "REL-1093",
+    "sourceId": "QQ-0070",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-06"
+  },
+  {
+    "id": "REL-1094",
+    "sourceId": "QQ-0070",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1095",
+    "sourceId": "QQ-0071",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-1096",
+    "sourceId": "QQ-0071",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-12"
+  },
+  {
+    "id": "REL-1097",
+    "sourceId": "QQ-0071",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1098",
+    "sourceId": "QQ-0072",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-07"
+  },
+  {
+    "id": "REL-1099",
+    "sourceId": "QQ-0072",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-06"
+  },
+  {
+    "id": "REL-1100",
+    "sourceId": "QQ-0072",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1101",
+    "sourceId": "QQ-0073",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-1102",
+    "sourceId": "QQ-0073",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-24"
+  },
+  {
+    "id": "REL-1103",
+    "sourceId": "QQ-0073",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1104",
+    "sourceId": "QQ-0074",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-1105",
+    "sourceId": "QQ-0074",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-12"
+  },
+  {
+    "id": "REL-1106",
+    "sourceId": "QQ-0074",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1107",
+    "sourceId": "QQ-0075",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-1108",
+    "sourceId": "QQ-0075",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-24"
+  },
+  {
+    "id": "REL-1109",
+    "sourceId": "QQ-0075",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1110",
+    "sourceId": "QQ-0076",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-07"
+  },
+  {
+    "id": "REL-1111",
+    "sourceId": "QQ-0076",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-06"
+  },
+  {
+    "id": "REL-1112",
+    "sourceId": "QQ-0076",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1113",
+    "sourceId": "QQ-0077",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-07"
+  },
+  {
+    "id": "REL-1114",
+    "sourceId": "QQ-0077",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-06"
+  },
+  {
+    "id": "REL-1115",
+    "sourceId": "QQ-0077",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1116",
+    "sourceId": "QQ-0078",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-1117",
+    "sourceId": "QQ-0078",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-12"
+  },
+  {
+    "id": "REL-1118",
+    "sourceId": "QQ-0078",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1119",
+    "sourceId": "QQ-0079",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-07"
+  },
+  {
+    "id": "REL-1120",
+    "sourceId": "QQ-0079",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-12"
+  },
+  {
+    "id": "REL-1121",
+    "sourceId": "QQ-0079",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1122",
+    "sourceId": "QQ-0080",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-07"
+  },
+  {
+    "id": "REL-1123",
+    "sourceId": "QQ-0080",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-06"
+  },
+  {
+    "id": "REL-1124",
+    "sourceId": "QQ-0080",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1125",
+    "sourceId": "QQ-0081",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-1126",
+    "sourceId": "QQ-0081",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-24"
+  },
+  {
+    "id": "REL-1127",
+    "sourceId": "QQ-0081",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1128",
+    "sourceId": "QQ-0082",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-1129",
+    "sourceId": "QQ-0082",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-12"
+  },
+  {
+    "id": "REL-1130",
+    "sourceId": "QQ-0082",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1131",
+    "sourceId": "QQ-0083",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-07"
+  },
+  {
+    "id": "REL-1132",
+    "sourceId": "QQ-0083",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1133",
+    "sourceId": "QQ-0084",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-1134",
+    "sourceId": "QQ-0084",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-06"
+  },
+  {
+    "id": "REL-1135",
+    "sourceId": "QQ-0084",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1136",
+    "sourceId": "QQ-0085",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-1137",
+    "sourceId": "QQ-0085",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-12"
+  },
+  {
+    "id": "REL-1138",
+    "sourceId": "QQ-0085",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1139",
+    "sourceId": "QQ-0086",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-07"
+  },
+  {
+    "id": "REL-1140",
+    "sourceId": "QQ-0086",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1141",
+    "sourceId": "QQ-0087",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-1142",
+    "sourceId": "QQ-0087",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-12"
+  },
+  {
+    "id": "REL-1143",
+    "sourceId": "QQ-0087",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1144",
+    "sourceId": "QQ-0088",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-1145",
+    "sourceId": "QQ-0088",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-12"
+  },
+  {
+    "id": "REL-1146",
+    "sourceId": "QQ-0088",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1147",
+    "sourceId": "QQ-0089",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-1148",
+    "sourceId": "QQ-0089",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-12"
+  },
+  {
+    "id": "REL-1149",
+    "sourceId": "QQ-0089",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1150",
+    "sourceId": "QQ-0090",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-1151",
+    "sourceId": "QQ-0090",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-12"
+  },
+  {
+    "id": "REL-1152",
+    "sourceId": "QQ-0090",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1153",
+    "sourceId": "QQ-0091",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-07"
+  },
+  {
+    "id": "REL-1154",
+    "sourceId": "QQ-0091",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1155",
+    "sourceId": "QQ-0092",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-1156",
+    "sourceId": "QQ-0092",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-12"
+  },
+  {
+    "id": "REL-1157",
+    "sourceId": "QQ-0092",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1158",
+    "sourceId": "QQ-0093",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-07"
+  },
+  {
+    "id": "REL-1159",
+    "sourceId": "QQ-0093",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-06"
+  },
+  {
+    "id": "REL-1160",
+    "sourceId": "QQ-0093",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1161",
+    "sourceId": "QQ-0094",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-1162",
+    "sourceId": "QQ-0094",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-12"
+  },
+  {
+    "id": "REL-1163",
+    "sourceId": "QQ-0094",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1164",
+    "sourceId": "QQ-0095",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-07"
+  },
+  {
+    "id": "REL-1165",
+    "sourceId": "QQ-0095",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1166",
+    "sourceId": "QQ-0096",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-07"
+  },
+  {
+    "id": "REL-1167",
+    "sourceId": "QQ-0096",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1168",
+    "sourceId": "QQ-0097",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-07"
+  },
+  {
+    "id": "REL-1169",
+    "sourceId": "QQ-0097",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1170",
+    "sourceId": "QQ-0098",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-14"
+  },
+  {
+    "id": "REL-1171",
+    "sourceId": "QQ-0098",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-06"
+  },
+  {
+    "id": "REL-1172",
+    "sourceId": "QQ-0098",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1173",
+    "sourceId": "QQ-0099",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-07"
+  },
+  {
+    "id": "REL-1174",
+    "sourceId": "QQ-0099",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1175",
+    "sourceId": "QQ-0100",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-RET-30"
+  },
+  {
+    "id": "REL-1176",
+    "sourceId": "QQ-0100",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-WAR-24"
+  },
+  {
+    "id": "REL-1177",
+    "sourceId": "QQ-0100",
+    "relationship": "GOVERNED_BY",
+    "targetId": "POL-SHIP-STD"
+  },
+  {
+    "id": "REL-1178",
+    "sourceId": "SUP-001",
+    "relationship": "SUPPLIES",
+    "targetId": "COMP-001",
+    "properties": {
+      "compliance": "OEKO-TEX Standard 100"
+    }
+  },
+  {
+    "id": "REL-1179",
+    "sourceId": "SUP-001",
+    "relationship": "SUPPLIES",
+    "targetId": "COMP-002",
+    "properties": {
+      "compliance": "Global Recycled Standard"
+    }
+  },
+  {
+    "id": "REL-1180",
+    "sourceId": "SUP-002",
+    "relationship": "SUPPLIES",
+    "targetId": "COMP-003",
+    "properties": {
+      "compliance": "ASTM B221"
+    }
+  },
+  {
+    "id": "REL-1181",
+    "sourceId": "SUP-002",
+    "relationship": "SUPPLIES",
+    "targetId": "COMP-004",
+    "properties": {
+      "compliance": "RoHS Compliant"
+    }
+  },
+  {
+    "id": "REL-1182",
+    "sourceId": "SUP-003",
+    "relationship": "SUPPLIES",
+    "targetId": "COMP-005",
+    "properties": {
+      "compliance": "ISO 3585"
+    }
+  },
+  {
+    "id": "REL-1183",
+    "sourceId": "SUP-003",
+    "relationship": "SUPPLIES",
+    "targetId": "COMP-006",
+    "properties": {
+      "compliance": "FDA 21 CFR 175.300"
+    }
+  },
+  {
+    "id": "REL-1184",
+    "sourceId": "SUP-004",
+    "relationship": "SUPPLIES",
+    "targetId": "COMP-007",
+    "properties": {
+      "compliance": "CertiPUR-US"
+    }
+  },
+  {
+    "id": "REL-1185",
+    "sourceId": "SUP-005",
+    "relationship": "SUPPLIES",
+    "targetId": "COMP-008",
+    "properties": {
+      "compliance": "IEC 60825-1"
+    }
+  },
+  {
+    "id": "REL-1186",
+    "sourceId": "SUP-012",
+    "relationship": "SUPPLIES",
+    "targetId": "COMP-009",
+    "properties": {
+      "compliance": "MIL-PRF-13830B"
+    }
+  },
+  {
+    "id": "REL-1187",
+    "sourceId": "SUP-005",
+    "relationship": "SUPPLIES",
+    "targetId": "COMP-010",
+    "properties": {
+      "compliance": "CE / RoHS"
+    }
+  },
+  {
+    "id": "REL-1188",
+    "sourceId": "SUP-008",
+    "relationship": "SUPPLIES",
+    "targetId": "COMP-011",
+    "properties": {
+      "compliance": "IPC-A-610 Class 2"
+    }
+  },
+  {
+    "id": "REL-1189",
+    "sourceId": "SUP-002",
+    "relationship": "SUPPLIES",
+    "targetId": "COMP-012",
+    "properties": {
+      "compliance": "DIN 3962"
+    }
+  },
+  {
+    "id": "REL-1190",
+    "sourceId": "SUP-006",
+    "relationship": "SUPPLIES",
+    "targetId": "COMP-013",
+    "properties": {
+      "compliance": "FSC Certified"
+    }
+  },
+  {
+    "id": "REL-1191",
+    "sourceId": "SUP-007",
+    "relationship": "SUPPLIES",
+    "targetId": "COMP-014",
+    "properties": {
+      "compliance": "ISO 9706 Permanent Paper"
+    }
+  },
+  {
+    "id": "REL-1192",
+    "sourceId": "SUP-008",
+    "relationship": "SUPPLIES",
+    "targetId": "COMP-015",
+    "properties": {
+      "compliance": "UL 758"
+    }
+  },
+  {
+    "id": "REL-1193",
+    "sourceId": "SUP-008",
+    "relationship": "SUPPLIES",
+    "targetId": "COMP-016",
+    "properties": {
+      "compliance": "RoHS"
+    }
+  },
+  {
+    "id": "REL-1194",
+    "sourceId": "SUP-011",
+    "relationship": "SUPPLIES",
+    "targetId": "COMP-017",
+    "properties": {
+      "compliance": "USP Class VI"
+    }
+  },
+  {
+    "id": "REL-1195",
+    "sourceId": "SUP-010",
+    "relationship": "SUPPLIES",
+    "targetId": "COMP-018",
+    "properties": {
+      "compliance": "CPSIA Lead Compliant"
+    }
+  },
+  {
+    "id": "REL-1196",
+    "sourceId": "SUP-002",
+    "relationship": "SUPPLIES",
+    "targetId": "COMP-019",
+    "properties": {
+      "compliance": "ISO 492"
+    }
+  },
+  {
+    "id": "REL-1197",
+    "sourceId": "SUP-008",
+    "relationship": "SUPPLIES",
+    "targetId": "COMP-020",
+    "properties": {
+      "compliance": "JEDEC JESD47"
+    }
+  },
+  {
+    "id": "REL-1198",
+    "sourceId": "SUP-009",
+    "relationship": "SUPPLIES",
+    "targetId": "COMP-021",
+    "properties": {
+      "compliance": "EN 10132-4"
+    }
+  },
+  {
+    "id": "REL-1199",
+    "sourceId": "SUP-011",
+    "relationship": "SUPPLIES",
+    "targetId": "COMP-022",
+    "properties": {
+      "compliance": "DIN 67510"
+    }
+  },
+  {
+    "id": "REL-1200",
+    "sourceId": "SUP-003",
+    "relationship": "SUPPLIES",
+    "targetId": "COMP-023",
+    "properties": {
+      "compliance": "ASTM C1048"
+    }
+  },
+  {
+    "id": "REL-1201",
+    "sourceId": "SUP-011",
+    "relationship": "SUPPLIES",
+    "targetId": "COMP-024",
+    "properties": {
+      "compliance": "UL 94"
+    }
+  },
+  {
+    "id": "REL-1202",
+    "sourceId": "COMP-004",
+    "relationship": "AFFECTED_BY",
+    "targetId": "REC-001",
+    "properties": {
+      "severity": "low",
+      "batch": "BATCH-2026-MAG44"
+    }
+  },
+  {
+    "id": "REL-1203",
+    "sourceId": "COMP-020",
+    "relationship": "AFFECTED_BY",
+    "targetId": "REC-002",
+    "properties": {
+      "severity": "medium",
+      "batch": "BATCH-2026-GAN09"
+    }
+  },
+  {
+    "id": "REL-1204",
+    "sourceId": "COMP-012",
+    "relationship": "AFFECTED_BY",
+    "targetId": "REC-003",
+    "properties": {
+      "severity": "low",
+      "batch": "BATCH-2026-BRS18"
+    }
+  },
+  {
+    "id": "REL-1205",
+    "sourceId": "COMP-017",
+    "relationship": "AFFECTED_BY",
+    "targetId": "REC-004",
+    "properties": {
+      "severity": "low",
+      "batch": "BATCH-2026-SIL99"
+    }
+  },
+  {
+    "id": "REL-1206",
+    "sourceId": "COMP-009",
+    "relationship": "AFFECTED_BY",
+    "targetId": "REC-005",
+    "properties": {
+      "severity": "medium",
+      "batch": "BATCH-2026-OPT12"
+    }
+  }
+]

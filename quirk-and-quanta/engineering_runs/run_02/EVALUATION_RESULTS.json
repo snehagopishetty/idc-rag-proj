@@ -1,0 +1,34 @@
+{
+  "iteration": 2,
+  "date": "2026-11-20T19:31:18Z",
+  "narrativeInvestigation": {
+    "question": "Why are the Atomic Orbit Desk Lamp (QQ-0011), Atomic Orbit Wireless Charger (QQ-0074), and Digital Astronomy Star Projector (QQ-0049) experiencing flickering power cutoffs?",
+    "methodsComparison": {
+      "vector": {
+        "top1Doc": "QQ-0011",
+        "findsRootCause": false,
+        "limitation": "Dense vector retrieval matches superficial semantic phrasing of desk lamp but cannot bridge across disconnected product corpora."
+      },
+      "bm25": {
+        "top1Doc": "QQ-0074",
+        "findsRootCause": false,
+        "limitation": "Lexical BM25 matches keyword tokens ('flicker', 'power') within single documents but cannot join product to shared component."
+      },
+      "hybrid_rrf": {
+        "top1Doc": "QQ-0011",
+        "findsRootCause": false,
+        "limitation": "Reciprocal rank fusion elevates the top individual document matches, still missing cross-document multi-hop provenance."
+      },
+      "graph_rag": {
+        "top1Doc": "COMP-025",
+        "findsRootCause": true,
+        "rootCauseComponent": "COMP-025",
+        "rootCauseRecall": "REC-VREG-01",
+        "defectiveBatch": "BATCH-VREG-2026",
+        "supplier": "SUP-008",
+        "traversalLatencyMs": 0.08,
+        "status": "SUCCESS"
+      }
+    }
+  }
+}

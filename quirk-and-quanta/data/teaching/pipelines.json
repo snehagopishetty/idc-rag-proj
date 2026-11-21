@@ -1,0 +1,612 @@
+{
+  "version": "1.0.0",
+  "updatedAt": "2026-11-21T08:45:00Z",
+  "author": "Quirk & Quanta Technical Education Team",
+  "description": "Audited educational pseudocode, algorithmic pipelines, formulas, and real source function mappings for the 'Under the Hood' RAG workshop.",
+  "pipelines": {
+    "vector": {
+      "modeId": "vector",
+      "displayTitle": "Vanilla Vector RAG (Dense Cosine Similarity)",
+      "badge": "Dense Semantic",
+      "subtitle": "High-dimensional projection & cosine dot product similarity",
+      "description": "Embeds query text into 768-D dense latent space and calculates normalized dot-product cosine similarity against precomputed document chunk vectors.",
+      "stages": [
+        {
+          "id": "auth_verification",
+          "name": "1. Server RBAC Verification",
+          "description": "Cryptographically verifies HMAC session bearer token; demotes unauthenticated roles."
+        },
+        {
+          "id": "query_embedding",
+          "name": "2. Query Vector Embedding",
+          "description": "Transforms user query string into a 768-dimensional normalized unit vector."
+        },
+        {
+          "id": "vector_retrieval",
+          "name": "3. Cosine Vector Similarity",
+          "description": "Calculates unit dot product dot(q, d) over candidate chunks and selects Top-K."
+        },
+        {
+          "id": "guardrails",
+          "name": "4. Grounding & Safety Guardrails",
+          "description": "Validates evidence similarity threshold (>0.22) and inspects for prompt injection."
+        },
+        {
+          "id": "generation",
+          "name": "5. Grounded Generation",
+          "description": "Synthesizes final answer attributed strictly to retrieved chunk citations."
+        }
+      ],
+      "conceptualSnippet": "# 1. Embed query into 768-D semantic latent space\nquery_vector = embed(question, model=\"gemini-embedding-001\")\n\n# 2. Compute cosine similarity across candidate document chunks\nevidence = vector_search(\n    query_vector=query_vector,\n    candidates=document_corpus,\n    top_k=5\n)\n\n# 3. Grounded generation attributed strictly to retrieved context\nanswer = generate_grounded_answer(question, evidence)",
+      "formula": "Cosine Similarity: cos(θ) = (u · v) / (||u|| * ||v||) = Σ(u_i * v_i)",
+      "keyLearningPoint": "Dense embeddings excel at conceptual synonymy (e.g., 'dimmable office lamp' matches 'continuous stepless lighting'), but lack exact keyword guarantees.",
+      "commonFailureMode": "Exact alphanumeric codes (e.g. SKU 'QQ-0015') get fragmented into subword tokens and drift in 768-D latent space away from the target item.",
+      "sourceReferences": [
+        {
+          "file": "rag/retriever.py",
+          "symbol": "QuirkRetriever.retrieve_vector",
+          "description": "Normalized dot product over 768-D float arrays with RBAC filter"
+        },
+        {
+          "file": "rag/generator.py",
+          "symbol": "generate_grounded_answer",
+          "description": "Grounded synthesis attributing claims to chunk source citations"
+        }
+      ],
+      "relevantDemoIds": ["DEMO-01", "PRESET-1", "PRESET-2"]
+    },
+    "bm25": {
+      "modeId": "bm25",
+      "displayTitle": "Lexical BM25 Search (Okapi Inverted Index)",
+      "badge": "Sparse Lexical",
+      "subtitle": "Inverted index term-matching with saturation & length normalization",
+      "description": "Tokenizes query terms, looks up postings lists in an inverted index, and scores candidate documents using Okapi BM25 with term frequency saturation and document length normalization.",
+      "stages": [
+        {
+          "id": "auth_verification",
+          "name": "1. Server RBAC Verification",
+          "description": "Verifies caller access credentials and filters private procurement documents."
+        },
+        {
+          "id": "term_analysis",
+          "name": "2. Query Tokenization & Normalization",
+          "description": "Normalizes query into lowercased alphanumeric tokens and filters stop words."
+        },
+        {
+          "id": "inverted_index_lookup",
+          "name": "3. Inverted Index Posting Lookup",
+          "description": "Retrieves posting lists containing exact matched terms with Inverse Document Frequency (IDF)."
+        },
+        {
+          "id": "bm25_scoring",
+          "name": "4. Okapi BM25 Ranking",
+          "description": "Calculates BM25 score with k1=1.5 and b=0.75, prioritizing rare exact keywords."
+        },
+        {
+          "id": "generation",
+          "name": "5. Grounded Generation",
+          "description": "Synthesizes answer attributed to the top-scoring lexical evidence chunks."
+        }
+      ],
+      "conceptualSnippet": "# 1. Tokenize query into lexical terms\nquery_terms = tokenize(question)  # e.g. ['qq-0015', 'specifications']\n\n# 2. Score candidate chunks via Okapi BM25 inverted index\nevidence = bm25_search(\n    query_terms=query_terms,\n    k1=1.5, b=0.75,\n    top_k=5\n)\n\n# 3. Grounded generation from lexically matched context\nanswer = generate_grounded_answer(question, evidence)",
+      "formula": "BM25(D, Q) = Σ IDF(q_i) * [ f(q_i, D) * (k1 + 1) ] / [ f(q_i, D) + k1 * (1 - b + b * (|D| / avgdl)) ]",
+      "keyLearningPoint": "BM25 provides exact keyword and SKU guarantees because rare identifiers receive massive IDF weights and cannot suffer from semantic drift.",
+      "commonFailureMode": "Vocabulary mismatch / synonym blindness: BM25 fails completely when the query uses synonyms not present in the indexed text (e.g. 'caffeine vessel' vs 'beaker mug').",
+      "sourceReferences": [
+        {
+          "file": "rag/bm25.py",
+          "symbol": "BM25Retriever.search",
+          "description": "Pure-Python inverted index lookup with IDF term scoring"
+        },
+        {
+          "file": "rag/bm25.py",
+          "symbol": "BM25Retriever.score_document",
+          "description": "Okapi BM25 scoring with parameters k1=1.5, b=0.75"
+        }
+      ],
+      "relevantDemoIds": ["DEMO-05", "PRESET-2", "PRESET-3"]
+    },
+    "hybrid": {
+      "modeId": "hybrid",
+      "displayTitle": "Hybrid RAG (Reciprocal Rank Fusion - RRF k=60)",
+      "badge": "Hybrid Fusion",
+      "subtitle": "Parallel dense vector + sparse lexical retrieval merged by rank ordinal position",
+      "description": "Runs parallel dense vector search and sparse BM25 lexical search, then merges their distinct ordinal rankings using Cormack et al. Reciprocal Rank Fusion (RRF with smoothing constant k=60).",
+      "stages": [
+        {
+          "id": "parallel_dispatch",
+          "name": "1. Parallel Query Dispatch",
+          "description": "Dispatches query simultaneously to dense vector embedder and lexical BM25 index."
+        },
+        {
+          "id": "dense_retrieval",
+          "name": "2. Dense Vector Ranking",
+          "description": "Retrieves top 2*K candidates by cosine similarity in 768-D latent space."
+        },
+        {
+          "id": "lexical_retrieval",
+          "name": "3. Lexical BM25 Ranking",
+          "description": "Retrieves top 2*K candidates by exact keyword term matching."
+        },
+        {
+          "id": "rrf_fusion",
+          "name": "4. Reciprocal Rank Fusion (k=60)",
+          "description": "Combines ordinal ranks: score(d) = 1/(60 + rank_vec) + 1/(60 + rank_bm25)."
+        },
+        {
+          "id": "generation",
+          "name": "5. Grounded Generation",
+          "description": "Synthesizes answer from the unified top-K fused evidence set."
+        }
+      ],
+      "conceptualSnippet": "# 1. Execute parallel dense vector and sparse lexical retrieval\ndense_results = vector_search(embed(question), top_k=15)\nlexical_results = bm25_search(question, top_k=15)\n\n# 2. Fuse rankings via Reciprocal Rank Fusion (Cormack et al.)\nevidence = reciprocal_rank_fusion(\n    vector_results=dense_results,\n    bm25_results=lexical_results,\n    k=60,\n    top_k=5\n)\n\n# 3. Grounded generation from fused evidence\nanswer = generate_grounded_answer(question, evidence)",
+      "formula": "RRF_Score(d) = Σ [ weight_m / (k + rank_m(d)) ]  (where k=60, weight=1.0)",
+      "keyLearningPoint": "Cosine scores (0 to 1) and BM25 scores (unbounded) are not directly commensurate; RRF uses relative rank positions to merge them cleanly without brittle score normalization.",
+      "commonFailureMode": "Fusion overhead: running dual pipelines doubles retrieval computation. Benchmark evaluation shows BM25 Hit Rate@5 was 57.1% vs Hybrid 50.0% on this catalog, proving fusion requires empirical tuning.",
+      "sourceReferences": [
+        {
+          "file": "rag/hybrid.py",
+          "symbol": "HybridRetriever.fuse",
+          "description": "Cormack et al. RRF implementation with provenance tracking"
+        },
+        {
+          "file": "rag/retriever.py",
+          "symbol": "QuirkRetriever.retrieve_hybrid",
+          "description": "Coordinates parallel vector + BM25 pool retrieval and fusion"
+        }
+      ],
+      "relevantDemoIds": ["DEMO-06", "PRESET-3", "DEMO-10"]
+    },
+    "graph_local": {
+      "modeId": "graph_local",
+      "displayTitle": "Local GraphRAG (In-Memory Multi-Hop Traversal)",
+      "badge": "Graph Traversal",
+      "subtitle": "Relational entity resolution & multi-hop defect root-cause discovery",
+      "description": "Resolves product entity identifiers mentioned in the query, traverses directed property graph edges ([Product] -> CONTAINS -> [Component] -> AFFECTED_BY -> [Recall]), and resolves shared root causes in <0.1ms.",
+      "stages": [
+        {
+          "id": "entity_resolution",
+          "name": "1. Entity Identification",
+          "description": "Extracts product SKUs (e.g. QQ-0011, QQ-0074, QQ-0049) from query."
+        },
+        {
+          "id": "relationship_traversal",
+          "name": "2. Relational Adjacency Traversal",
+          "description": "Traverses 1,206 graph edges to discover intersecting components across products."
+        },
+        {
+          "id": "defect_root_cause",
+          "name": "3. Recall Notice Intersection",
+          "description": "Finds active voluntary recalls affecting the shared component (COMP-025 -> REC-VREG-01)."
+        },
+        {
+          "id": "graph_synthesis",
+          "name": "4. Deterministic Graph Synthesis",
+          "description": "Synthesizes multi-hop root-cause explanation linking symptoms to defective batch."
+        }
+      ],
+      "conceptualSnippet": "# 1. Extract product entity SKUs from query\nproduct_skus = extract_skus(question)  # ['QQ-0011', 'QQ-0074', 'QQ-0049']\n\n# 2. Traverse property graph to find common shared sub-assemblies\nshared_components = graph.find_common_components(product_skus)\n\n# 3. Intersect component with active engineering recall alerts\nrecalls = graph.find_recalls_for_components(shared_components)\n\n# 4. Synthesize multi-hop explanation from graph path\nanswer = explain_defect_root_cause(product_skus, shared_components, recalls)",
+      "formula": "Traversal Path: Products(P_1..P_n) ➔ [:CONTAINS] ➔ Component(c) ➔ [:AFFECTED_BY] ➔ Recall(r)",
+      "keyLearningPoint": "Standard vector retrieval fails on multi-hop questions because the common defect is never mentioned on public product pages; GraphRAG connects isolated entities through structured relational links.",
+      "commonFailureMode": "Knowledge graph incompleteness: if a component relationship edge is missing from the Bill of Materials graph, GraphRAG cannot discover the connection.",
+      "sourceReferences": [
+        {
+          "file": "rag/graph_local.py",
+          "symbol": "QuirkKnowledgeGraph.trace_defect_root_cause",
+          "description": "In-memory BFS traversal discovering shared component and recall"
+        },
+        {
+          "file": "rag/pipeline.py",
+          "symbol": "RAGPipeline.ask_graph",
+          "description": "Extracts SKUs and synthesizes multi-hop root-cause evidence"
+        }
+      ],
+      "relevantDemoIds": ["DEMO-07", "DEMO-08", "PRESET-4", "PRESET-5"]
+    },
+    "graph_neo4j": {
+      "modeId": "graph_neo4j",
+      "displayTitle": "Neo4j AuraDB GraphRAG (Cypher Pattern Matching)",
+      "badge": "External Database",
+      "subtitle": "Declarative property graph query execution over Neo4j AuraDB",
+      "description": "Constructs and executes declarative Cypher pattern queries against an external Neo4j AuraDB instance via transactional HTTP REST commits, with graceful local in-memory fallback when unconfigured.",
+      "stages": [
+        {
+          "id": "cypher_construction",
+          "name": "1. Cypher Query Construction",
+          "description": "Builds parameterized Cypher query matching Products, Components, and Recalls."
+        },
+        {
+          "id": "connection_check",
+          "name": "2. Database Connection Check",
+          "description": "Checks NEO4J_URI & NEO4J_PASSWORD; flags 'Not connected' if absent."
+        },
+        {
+          "id": "cypher_execution",
+          "name": "3. REST Transactional Execution",
+          "description": "Executes Cypher on AuraDB HTTP API or delegates to deterministic local engine."
+        },
+        {
+          "id": "generation",
+          "name": "4. Grounded Synthesis",
+          "description": "Formats Cypher record rows into grounded diagnostic explanation."
+        }
+      ],
+      "conceptualSnippet": "# 1. Construct parameterized Cypher multi-hop query\ncypher = \"\"\"\nMATCH (p:Product)-[:CONTAINS]->(c:Component)-[:AFFECTED_BY]->(r:RecallNotice)\nWHERE p.sku IN $skus\nWITH c, r, collect(p.sku) AS affected_products\nWHERE size(affected_products) = size($skus)\nRETURN c.componentId, r.recallId, r.severity, affected_products\n\"\"\"\n\n# 2. Execute against Neo4j AuraDB (or fallback to local graph if offline)\nresults = neo4j_adapter.execute_cypher(cypher, {\"skus\": product_skus})",
+      "formula": "Cypher Match: (p:Product)-[:CONTAINS]->(c:Component)-[:AFFECTED_BY]->(r:RecallNotice)",
+      "keyLearningPoint": "Cypher enables expressive declarative pattern queries over billions of nodes; enterprise graph databases offload traversal compute from application server memory.",
+      "commonFailureMode": "Network partitioning or absent database credentials; requires resilient offline fallback adapters to maintain workshop application availability.",
+      "sourceReferences": [
+        {
+          "file": "rag/graph_neo4j.py",
+          "symbol": "Neo4jGraphAdapter.execute_cypher",
+          "description": "HTTP REST transactional Cypher execution against AuraDB"
+        },
+        {
+          "file": "rag/graph_neo4j.py",
+          "symbol": "Neo4jGraphAdapter.trace_defect_root_cause",
+          "description": "Executes multi-hop Cypher with seamless offline reference fallback"
+        }
+      ],
+      "relevantDemoIds": ["DEMO-09", "PRESET-5"]
+    },
+    "embedding_explorer": {
+      "modeId": "embedding_explorer",
+      "displayTitle": "Embedding & Semantic Latent Space",
+      "badge": "Vector Space",
+      "subtitle": "768-dimensional geometric representation & subword tokenization",
+      "description": "Visualizes how text is projected into a 768-dimensional normalized unit vector using gemini-embedding-001, and explains why exact alphanumeric SKUs drift in high-dimensional semantic space.",
+      "stages": [
+        {
+          "id": "text_tokenization",
+          "name": "1. Subword Tokenization",
+          "description": "Splits text using Byte-Pair Encoding (BPE), fragmenting alphanumeric identifiers."
+        },
+        {
+          "id": "transformer_projection",
+          "name": "2. 768-D Neural Projection",
+          "description": "Transformer layers output continuous 768-dimensional semantic embedding vector."
+        },
+        {
+          "id": "l2_normalization",
+          "name": "3. L2 Unit Normalization",
+          "description": "Normalizes vector so Euclidean length ||v|| = 1.0 on hypersphere."
+        },
+        {
+          "id": "cosine_dot_product",
+          "name": "4. Vector Dot Product",
+          "description": "Cosine similarity simplifies to fast single dot product between unit vectors."
+        }
+      ],
+      "conceptualSnippet": "# 1. Project query into 768-dimensional embedding\nraw_vector = model.embed(text, task_type=\"RETRIEVAL_QUERY\")\n\n# 2. L2 Unit Normalization (Euclidean norm ||v|| = 1.0)\nnorm = math.sqrt(sum(x * x for x in raw_vector))\nunit_vector = [x / norm for x in raw_vector]\n\n# 3. Cosine dot product against normalized document vectors\nsimilarity = sum(q * d for q, d in zip(unit_vector, doc_vector))",
+      "formula": "L2 Norm: ||v|| = sqrt(Σ v_i^2) = 1.0;  Cosine Similarity: cos(q, d) = q · d",
+      "keyLearningPoint": "Embeddings map conceptual meaning, not literal character sequences. Normalized unit vectors allow cosine similarity to be computed as an extremely fast dot product.",
+      "commonFailureMode": "Subword fragmentation: SKU 'QQ-0015' splits into ['QQ', '-', '00', '15'], scattering its geometric projection across unrelated numeric and temporal clusters.",
+      "sourceReferences": [
+        {
+          "file": "scripts/generate_embeddings.py",
+          "symbol": "generate_offline_embedding",
+          "description": "Deterministic 768-D normalized unit vector generator"
+        },
+        {
+          "file": "rag/retriever.py",
+          "symbol": "QuirkRetriever.embed_query",
+          "description": "Coordinates golden cache, live Gemini, and offline projection"
+        }
+      ],
+      "relevantDemoIds": ["DEMO-01", "PRESET-1"]
+    },
+    "chunking_structural": {
+      "modeId": "chunking_structural",
+      "displayTitle": "Structural / Heading-Based Chunking",
+      "badge": "Document Structure",
+      "subtitle": "Splitting along Markdown H1/H2 boundaries preserving complete sections",
+      "description": "Divides document dossiers along logical Markdown heading sections (H1/H2), keeping descriptions, specifications, warranty tables, and compliance clauses intact as cohesive contextual units.",
+      "stages": [
+        {
+          "id": "markdown_parse",
+          "name": "1. Heading Hierarchy Parsing",
+          "description": "Identifies Markdown section headers (# Title, ## Specifications, ## Policies)."
+        },
+        {
+          "id": "section_cohesion",
+          "name": "2. Cohesive Boundary Slicing",
+          "description": "Preserves complete sentences, bullet points, and data tables within section."
+        },
+        {
+          "id": "context_injection",
+          "name": "3. Header Breadcrumb Injection",
+          "description": "Prepends document title and section name to ensure semantic standalone context."
+        }
+      ],
+      "conceptualSnippet": "# Split document along Markdown heading boundaries (H1/H2)\nchunks = []\nfor section in parse_markdown_sections(document_text):\n    chunk_text = f\"[{doc_title} | {section.heading}]\\n{section.body}\"\n    chunks.append(create_chunk(chunk_text, section_title=section.heading))\n\n# Total corpus chunks: 1,623 (pristine section cohesion)",
+      "formula": "Chunk Boundary: Split where line matches '^#{1,2}\\s+(.+)$'",
+      "keyLearningPoint": "Heading-based splitting guarantees that critical technical clauses and tables are never truncated mid-sentence, maximizing semantic readability.",
+      "commonFailureMode": "Highly uneven chunk sizes: an expansive description section may produce a 900-character chunk while a brief notice produces 120 characters.",
+      "sourceReferences": [
+        {
+          "file": "scripts/chunk_corpus.py",
+          "symbol": "chunk_semantic_markdown",
+          "description": "Markdown heading section parser producing 1,623 corpus chunks"
+        }
+      ],
+      "relevantDemoIds": ["DEMO-04"]
+    },
+    "chunking_fixed": {
+      "modeId": "chunking_fixed",
+      "displayTitle": "Fixed-Size Word-Bounded Chunking",
+      "badge": "Fixed Window",
+      "subtitle": "Uniform 450-character slicing without context carryover",
+      "description": "Splits documents into uniform 450-character chunks snapped to word boundaries without overlap. Highly uniform, but risks cutting context across arbitrary chunk borders.",
+      "stages": [
+        {
+          "id": "char_window",
+          "name": "1. 450-Character Window Scan",
+          "description": "Steps through raw document text in 450-character segments."
+        },
+        {
+          "id": "word_snap",
+          "name": "2. Word Boundary Snapping",
+          "description": "Snaps split position to nearest whitespace to prevent cutting words in half."
+        },
+        {
+          "id": "index_creation",
+          "name": "3. Corpus Indexing",
+          "description": "Indexes 1,181 total corpus chunks with zero overlap redundancy."
+        }
+      ],
+      "conceptualSnippet": "# Uniform 450-character word-bounded window without overlap\nchunks = []\ncursor = 0\nwhile cursor < len(text):\n    end = find_nearest_word_boundary(text, start=cursor, target_len=450)\n    chunks.append(text[cursor:end])\n    cursor = end\n\n# Total corpus chunks: 1,181 (zero data overlap)",
+      "formula": "Window Step: cursor_{i+1} = cursor_i + 450 (snapped to whitespace)",
+      "keyLearningPoint": "Fixed-size chunking provides consistent embedding token counts and compact indexes, minimizing vector storage costs.",
+      "commonFailureMode": "Context cliff: a key specification or constraint split across chunk borders will fail retrieval because neither half contains enough context.",
+      "sourceReferences": [
+        {
+          "file": "scripts/chunk_corpus.py",
+          "symbol": "chunk_fixed_size",
+          "description": "Fixed 450-character word-bounded chunker (1,181 chunks)"
+        }
+      ],
+      "relevantDemoIds": ["DEMO-02"]
+    },
+    "chunking_sliding": {
+      "modeId": "chunking_sliding",
+      "displayTitle": "Sliding-Window Chunking with Overlap",
+      "badge": "Sliding Window",
+      "subtitle": "450-character windows with 150-character context carryover",
+      "description": "Slides a 450-character window with a 150-character overlap (step size 300). Carries contextual phrases across boundaries at the cost of 28% increased index size.",
+      "stages": [
+        {
+          "id": "window_advance",
+          "name": "1. Overlapping Window Step",
+          "description": "Advances window by 300 chars while retaining trailing 150 chars from previous slice."
+        },
+        {
+          "id": "boundary_carryover",
+          "name": "2. Context Carryover Preservation",
+          "description": "Ensures boundary phrases appear intact in at least one of two adjacent chunks."
+        },
+        {
+          "id": "redundancy_tradeoff",
+          "name": "3. Redundancy Trade-Off",
+          "description": "Indexes 1,512 corpus chunks (~28% index growth over fixed size)."
+        }
+      ],
+      "conceptualSnippet": "# Sliding 450-character window with 150-character overlap\nchunks = []\nstep_size = 450 - 150  # 300 characters\nfor start in range(0, len(text), step_size):\n    chunk = text[start : start + 450]\n    chunks.append(chunk)\n\n# Total corpus chunks: 1,512 (28% redundancy overhead)",
+      "formula": "Step Size: S = Size - Overlap = 450 - 150 = 300; Overlap Ratio: 150/450 = 33.3%",
+      "keyLearningPoint": "Overlap prevents the 'context cliff' of fixed chunking by guaranteeing that transition phrases appear intact in adjacent chunks.",
+      "commonFailureMode": "Retrieval redundancy: Top-5 results often return two chunks that duplicate 33% of the exact same sentence, wasting context window tokens.",
+      "sourceReferences": [
+        {
+          "file": "scripts/chunk_corpus.py",
+          "symbol": "chunk_sliding_window",
+          "description": "Sliding 450/150 word-bounded chunker (1,512 chunks)"
+        }
+      ],
+      "relevantDemoIds": ["DEMO-03"]
+    },
+    "grounding_abstention": {
+      "modeId": "grounding_abstention",
+      "displayTitle": "Calibrated Grounding & Abstention",
+      "badge": "Guardrails",
+      "subtitle": "Confidence-threshold gating & refusal to hallucinate out-of-domain queries",
+      "description": "Evaluates retrieved evidence similarity against a calibrated confidence threshold (0.22). If top evidence is weak or irrelevant, the model politely abstains rather than inventing hallucinations.",
+      "stages": [
+        {
+          "id": "similarity_audit",
+          "name": "1. Evidence Confidence Check",
+          "description": "Inspects Top-1 cosine similarity score against threshold (0.22)."
+        },
+        {
+          "id": "abstention_trigger",
+          "name": "2. Calibrated Abstention Intercept",
+          "description": "Triggers ABSTAIN_UNGROUNDED action when evidence is insufficient."
+        },
+        {
+          "id": "attribution_enforcement",
+          "name": "3. Grounded Citation Attribution",
+          "description": "If evidence passes, requires all factual assertions to link to chunk citation URLs."
+        }
+      ],
+      "conceptualSnippet": "# 1. Check whether top retrieved evidence meets confidence threshold\nconfidence_threshold = 0.22\ntop_score = evidence[0]['score'] if evidence else 0.0\n\nif top_score < confidence_threshold:\n    return abstain(\"Query falls outside verified catalog documentation.\")\n\n# 2. Evidence is sufficient: generate grounded answer with citations\nreturn generate_grounded_answer(question, evidence)",
+      "formula": "Abstain Condition: max_i(score(e_i)) < τ_grounding  (τ = 0.22)",
+      "keyLearningPoint": "A reliable enterprise RAG system must know what it does not know. Calibrated abstention prevents embarrassing and dangerous hallucinations.",
+      "commonFailureMode": "Heuristic threshold brittleness: a low threshold (e.g. 0.15) allows hallucinations through, while a high threshold (e.g. 0.40) rejects valid queries on complex wording.",
+      "sourceReferences": [
+        {
+          "file": "rag/guardrails.py",
+          "symbol": "GuardrailsEngine.evaluate_grounding",
+          "description": "Confidence threshold check triggering ABSTAIN_UNGROUNDED"
+        }
+      ],
+      "relevantDemoIds": ["DEMO-11", "PRESET-6"]
+    },
+    "prompt_injection": {
+      "modeId": "prompt_injection",
+      "displayTitle": "Guardrails & Prompt Injection Defense",
+      "badge": "Security",
+      "subtitle": "Dual-tier defense separating trusted system instructions from untrusted inputs",
+      "description": "Inspects incoming user prompts for adversarial persona overrides (e.g., Blackbeard pirate attacks), instruction jailbreaks, and off-topic coding misuse before inference begins.",
+      "stages": [
+        {
+          "id": "regex_heuristics",
+          "name": "1. Heuristic Pattern Detection",
+          "description": "Scans for 'ignore instructions', 'you are now', and system override keywords."
+        },
+        {
+          "id": "scope_enforcement",
+          "name": "2. Off-Topic Scope Filtering",
+          "description": "Rejects programming/homework questions to prevent denial-of-wallet."
+        },
+        {
+          "id": "instruction_isolation",
+          "name": "3. Context Shielding",
+          "description": "Encloses retrieved evidence inside strict XML delimiter tags to defang indirect injections."
+        }
+      ],
+      "conceptualSnippet": "# 1. Inspect input prompt against known adversarial jailbreak patterns\nif is_prompt_injection(user_input):\n    return block_attack(\"Adversarial instruction override intercepted.\")\n\n# 2. Defang indirect prompt injections in retrieved chunks\nsafe_evidence = sanitize_delimiters(evidence)\n\n# 3. Supply safe context to grounded generation\nreturn generate(system_prompt, safe_evidence, user_input)",
+      "formula": "Defense Rule: is_injection(q) = (regex_match(q, JAILBREAK_PATTERNS) and hardened_mode)",
+      "keyLearningPoint": "LLMs struggle to distinguish instructions from data. Guardrails enforce boundaries by inspecting prompts before execution and enclosing context in strict data delimiters.",
+      "commonFailureMode": "Adversarial evasion: clever attackers use leetspeak, base64 encoding, or foreign languages to slip past simple regex filters (necessitating defense-in-depth).",
+      "sourceReferences": [
+        {
+          "file": "rag/guardrails.py",
+          "symbol": "GuardrailsEngine.detect_prompt_injection",
+          "description": "Intercepts adversarial persona overrides and instruction jailbreaks"
+        }
+      ],
+      "relevantDemoIds": ["DEMO-12", "DEMO-13", "PRESET-7"]
+    },
+    "rbac_idor": {
+      "modeId": "rbac_idor",
+      "displayTitle": "Cryptographic RBAC & IDOR Protection",
+      "badge": "Authorization",
+      "subtitle": "Server-side HMAC token verification & customer privilege demotion",
+      "description": "Validates cryptographic HMAC-SHA256 bearer tokens at the server HTTP boundary. Unauthenticated requests claiming admin privileges are demoted to customer; direct document fetches enforce object permissions.",
+      "stages": [
+        {
+          "id": "token_verification",
+          "name": "1. HMAC Signature Verification",
+          "description": "Validates HMAC-SHA256 token against server secret; checks timestamp expiry."
+        },
+        {
+          "id": "role_demotion",
+          "name": "2. Client Privilege Demotion",
+          "description": "Unauthenticated requests claiming role='admin' demoted to 'customer' (wasTampered=True)."
+        },
+        {
+          "id": "resource_authorization",
+          "name": "3. Object-Level Access Control (IDOR)",
+          "description": "Blocks customer role from accessing internal procurement docs (/api/rag/doc)."
+        }
+      ],
+      "conceptualSnippet": "# 1. Server-side token verification (never trust client role claims)\npayload = verify_hmac_token(bearer_token, secret=SERVER_SECRET)\neffective_role = payload['role'] if payload else 'customer'\n\n# 2. Enforce object-level access control on document fetch\nif document.is_confidential and effective_role != 'admin':\n    raise Forbidden403(\"Access Denied: Customer cannot view procurement records.\")\n\nreturn document",
+      "formula": "HMAC Verification: hmac.compare_digest(hmac_sha256(secret, header.payload), signature)",
+      "keyLearningPoint": "Client-side dropdowns and localStorage are purely decorative; authorization must be strictly enforced on the server HTTP boundary using cryptographic tokens.",
+      "commonFailureMode": "IDOR (Insecure Direct Object Reference): developers protect search results but forget to authorize direct document fetch endpoints (e.g. GET /api/doc/PROC-001).",
+      "sourceReferences": [
+        {
+          "file": "rag/auth.py",
+          "symbol": "resolve_effective_role",
+          "description": "Server-side role resolution demoting untrusted role claims"
+        },
+        {
+          "file": "rag/server.py",
+          "symbol": "QuirkHTTPRequestHandler.do_POST",
+          "description": "Boundary enforcement for /api/rag/doc and /api/rag/retrieve"
+        }
+      ],
+      "relevantDemoIds": ["DEMO-15", "DEMO-16", "PRESET-8"]
+    },
+    "cost_observability": {
+      "modeId": "cost_observability",
+      "displayTitle": "Observability, Distributed Tracing & Budgets",
+      "badge": "Telemetry & SRE",
+      "subtitle": "Distributed span latency measurement, token counting & runaway loop caps",
+      "description": "Captures per-request trace spans (embedding, retrieval, guardrails, generation), estimates Gemini 2.5 Flash API token costs, and protects against runaway intern loop bills using rate and budget caps.",
+      "stages": [
+        {
+          "id": "trace_init",
+          "name": "1. Distributed Trace Generation",
+          "description": "Tags request with unique UUID (req_xxx) and initiates nanosecond perf counters."
+        },
+        {
+          "id": "span_recording",
+          "name": "2. Stage Latency Spanning",
+          "description": "Records individual sub-millisecond durations for auth, embedding, retrieval, generation."
+        },
+        {
+          "id": "token_attribution",
+          "name": "3. Token Counting & Cost Attribution",
+          "description": "Counts prompt and completion tokens; prices via Gemini Flash ($0.075 / $0.30 per 1M)."
+        },
+        {
+          "id": "budget_safeguard",
+          "name": "4. Budget Protection Enforcement",
+          "description": "Enforces container-level rate limits (30 req/min) and session token caps."
+        }
+      ],
+      "conceptualSnippet": "# 1. Distributed request span tracing\nwith tracer.start_span(\"rag_request\") as trace:\n    evidence = retrieve(question)\n    trace.add_span(\"retrieval\", duration_ms)\n    \n    answer = generate(question, evidence)\n    trace.add_span(\"generation\", duration_ms)\n\n# 2. Token consumption and cost accounting\ncost_usd = calculate_cost(trace.input_tokens, trace.output_tokens)\nrecord_telemetry(trace.id, cost_usd)",
+      "formula": "Cost = (PromptTokens / 10^6 * $0.075) + (CompletionTokens / 10^6 * $0.30)",
+      "keyLearningPoint": "Without granular observability and hard budget ceilings, an unmonitored recursive loop or scraper can incur thousands of dollars in cloud LLM charges overnight.",
+      "commonFailureMode": "Confusing process-local in-memory metrics with durable shared multi-instance cloud counters.",
+      "sourceReferences": [
+        {
+          "file": "rag/observability.py",
+          "symbol": "TraceCollector.start_trace",
+          "description": "UUID request tagging and span timing ring buffer"
+        },
+        {
+          "file": "rag/observability.py",
+          "symbol": "TraceCollector.simulate_cost_spike",
+          "description": "Story 7 runaway loop simulation ($10k+ vs $0.0012 safeguard)"
+        }
+      ],
+      "relevantDemoIds": ["DEMO-14", "PRESET-9"]
+    },
+    "golden_evaluations": {
+      "modeId": "golden_evaluations",
+      "displayTitle": "Automated Golden Evaluations (Empirical Rigor)",
+      "badge": "Evaluation Harness",
+      "subtitle": "Precision, Recall, Faithfulness, and Cost Scoring across 42 Curated Cases",
+      "description": "Systematic benchmarking harness executing 42 curated test questions across vector, BM25, and hybrid pipelines to measure empirical retrieval metrics and grounded answer faithfulness.",
+      "stages": [
+        {
+          "id": "dataset_loading",
+          "name": "1. Dataset Loading & Stratification",
+          "description": "Loads 42 curated queries across 7 functional evaluation families."
+        },
+        {
+          "id": "matrix_execution",
+          "name": "2. Multi-Strategy Pipeline Execution",
+          "description": "Runs queries in parallel through Vector, BM25, and Hybrid RRF pipelines."
+        },
+        {
+          "id": "retrieval_scoring",
+          "name": "3. Precision & Recall Calculation",
+          "description": "Computes Precision@K, Recall@K, and MRR against expected chunk ground truth."
+        },
+        {
+          "id": "faithfulness_scoring",
+          "name": "4. Grounding & Faithfulness Verification",
+          "description": "Verifies that generated claims are strictly supported by retrieved evidence citations."
+        }
+      ],
+      "conceptualSnippet": "# 1. Run evaluation suite across 42 golden test cases\nfor case in golden_dataset:\n    retrieved = pipeline.retrieve(case.query, strategy=strategy, top_k=5)\n    metrics = evaluate_retrieval(retrieved=retrieved, expected=case.expected_chunks)\n    record_metric(precision=metrics.p, recall=metrics.r, latency=metrics.ms)\n\n# 2. Compute aggregate benchmark scorecard\nbenchmark = summarize_scorecard(metrics_log)",
+      "formula": "Precision@K = |Retrieved ∩ Relevant| / K,   MRR = (1 / |Q|) * Σ (1 / rank_i)",
+      "keyLearningPoint": "Without empirical offline evaluation against a fixed golden dataset, prompt and retrieval 'improvements' often cause silent regressions in recall or exact-match precision.",
+      "commonFailureMode": "Optimizing purely for subjective answer smoothness while failing to measure retrieval Precision@K and MRR on exact SKUs.",
+      "sourceReferences": [
+        {
+          "file": "scripts/run_evaluations.py",
+          "symbol": "run_evaluations",
+          "description": "Offline benchmarking suite scoring 42 golden cases across all retrieval modes"
+        },
+        {
+          "file": "data/evaluation/golden_dataset.json",
+          "symbol": "golden_dataset",
+          "description": "42 curated questions with expected chunk IDs, families, and authorized roles"
+        }
+      ],
+      "relevantDemoIds": ["DEMO-10", "PRESET-3"]
+    }
+  }
+}

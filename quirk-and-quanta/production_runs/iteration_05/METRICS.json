@@ -1,0 +1,40 @@
+{
+  "iteration": 5,
+  "service": "quirk-quanta-rag",
+  "empirical_evaluation_metrics": {
+    "total_questions": 42,
+    "vector": {
+      "hit_rate_at_5": 0.476,
+      "mrr": 0.4762,
+      "mean_precision_at_5": 0.1952,
+      "mean_recall_at_5": 0.3798,
+      "latency_avg_ms": 22.28
+    },
+    "bm25": {
+      "hit_rate_at_5": 0.571,
+      "mrr": 0.5187,
+      "mean_precision_at_5": 0.2238,
+      "mean_recall_at_5": 0.4512,
+      "latency_avg_ms": 0.13
+    },
+    "hybrid_rrf": {
+      "hit_rate_at_5": 0.500,
+      "mrr": 0.4841,
+      "mean_precision_at_5": 0.2048,
+      "mean_recall_at_5": 0.3917,
+      "latency_avg_ms": 22.61
+    },
+    "graph_rag_defect_slice": {
+      "hit_rate": 1.0,
+      "hops_traversed": 3,
+      "latency_avg_ms": 0.01
+    }
+  },
+  "stress_test": {
+    "total_requests": 50,
+    "successful_requests": 50,
+    "duration_s": 0.567,
+    "avg_latency_ms": 45.53,
+    "p95_latency_ms": 139.24
+  }
+}

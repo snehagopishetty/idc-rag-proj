@@ -1,0 +1,74 @@
+# Google Cloud Build Pipeline for Quirk & Quanta
+# Project: idc-rag-proj | Region: asia-south1 | Service: quirk-quanta-rag
+# Authoritative Artifact Registry: asia-south1-docker.pkg.dev/idc-rag-proj/quirk-quanta/rag-service
+
+steps:
+  # 1. Build container image targeting Artifact Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '-t'
+      - 'asia-south1-docker.pkg.dev/idc-rag-proj/quirk-quanta/rag-service:$_TAG'
+      - '-t'
+      - 'asia-south1-docker.pkg.dev/idc-rag-proj/quirk-quanta/rag-service:latest'
+      - '-f'
+      - 'deploy/Dockerfile'
+      - '.'
+
+  # 2. Push container image to Artifact Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'push'
+      - 'asia-south1-docker.pkg.dev/idc-rag-proj/quirk-quanta/rag-service:$_TAG'
+
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'push'
+      - 'asia-south1-docker.pkg.dev/idc-rag-proj/quirk-quanta/rag-service:latest'
+
+  # 3. Deploy to Cloud Run in asia-south1 with dedicated runtime service account
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'gcloud'
+    args:
+      - 'run'
+      - 'deploy'
+      - 'quirk-quanta-rag'
+      - '--image'
+      - 'asia-south1-docker.pkg.dev/idc-rag-proj/quirk-quanta/rag-service:$_TAG'
+      - '--region'
+      - 'asia-south1'
+      - '--project'
+      - 'idc-rag-proj'
+      - '--platform'
+      - 'managed'
+      - '--allow-unauthenticated'
+      - '--service-account'
+      - 'quirk-quanta-runtime@idc-rag-proj.iam.gserviceaccount.com'
+      - '--port'
+      - '8080'
+      - '--memory'
+      - '2Gi'
+      - '--cpu'
+      - '1'
+      - '--concurrency'
+      - '20'
+      - '--min-instances'
+      - '1'
+      - '--max-instances'
+      - '3'
+      - '--timeout'
+      - '45s'
+      - '--set-env-vars'
+      - 'PYTHONUNBUFFERED=1,WORKSHOP_MODE=production,PROJECT_ID=idc-rag-proj,REGION=asia-south1'
+      - '--set-secrets'
+      - 'QUIRK_AUTH_SECRET=quirk-quanta-auth-secret:latest,PRESENTER_TOKEN=quirk-quanta-presenter-token:latest,GEMINI_API_KEY=gemini-api-key:latest'
+
+images:
+  - 'asia-south1-docker.pkg.dev/idc-rag-proj/quirk-quanta/rag-service:$_TAG'
+  - 'asia-south1-docker.pkg.dev/idc-rag-proj/quirk-quanta/rag-service:latest'
+
+substitutions:
+  _TAG: 'latest'
+
+options:
+  logging: CLOUD_LOGGING_ONLY

@@ -1,0 +1,195 @@
+# 24 Fictional Components and Materials
+COMPONENTS = [
+    {
+        "id": "COMP-001",
+        "name": "Combed Long-Staple Cotton Yarn",
+        "type": "Textile Material",
+        "supplierId": "SUP-001",
+        "specifications": "100% natural organic cotton, 30s count single jersey",
+        "complianceStandard": "OEKO-TEX Standard 100"
+    },
+    {
+        "id": "COMP-002",
+        "name": "Recycled Microfiber Fleece",
+        "type": "Textile Material",
+        "supplierId": "SUP-001",
+        "specifications": "280 GSM anti-pill synthetic fleece",
+        "complianceStandard": "Global Recycled Standard"
+    },
+    {
+        "id": "COMP-003",
+        "name": "Anodized Aerospace 6061 Aluminum",
+        "type": "Machined Metal",
+        "supplierId": "SUP-002",
+        "specifications": "CNC milled, Type II matte anodization, tolerance +/- 0.02mm",
+        "complianceStandard": "ASTM B221"
+    },
+    {
+        "id": "COMP-004",
+        "name": "Neodymium N52 Magnet Array",
+        "type": "Magnetic Component",
+        "supplierId": "SUP-002",
+        "specifications": "Sintered NdFeB, remnant induction 1.45 Tesla, Ni-Cu-Ni triple coat",
+        "complianceStandard": "RoHS Compliant"
+    },
+    {
+        "id": "COMP-005",
+        "name": "Borosilicate 3.3 Thermal Glass",
+        "type": "Technical Glassware",
+        "supplierId": "SUP-003",
+        "specifications": "Thermal expansion 3.3x10^-6/K, shock resistant to 150 deg C",
+        "complianceStandard": "ISO 3585"
+    },
+    {
+        "id": "COMP-006",
+        "name": "Food-Grade 304 Stainless Steel",
+        "type": "Culinary Metal",
+        "supplierId": "SUP-003",
+        "specifications": "18/8 austenitic chromium-nickel steel, electro-polished interior",
+        "complianceStandard": "FDA 21 CFR 175.300"
+    },
+    {
+        "id": "COMP-007",
+        "name": "High-Density Viscoelastic Foam",
+        "type": "Polymer Foam",
+        "supplierId": "SUP-004",
+        "specifications": "60 kg/m3 density, pressure-distributing memory profile",
+        "complianceStandard": "CertiPUR-US"
+    },
+    {
+        "id": "COMP-008",
+        "name": "Precision Laser Diode Module 650nm",
+        "type": "Optoelectronic",
+        "supplierId": "SUP-005",
+        "specifications": "Class 2 laser emitter, 650nm visible wavelength, <1mW output",
+        "complianceStandard": "IEC 60825-1"
+    },
+    {
+        "id": "COMP-009",
+        "name": "Achromatic Glass Triplet Lens",
+        "type": "Optical Lens System",
+        "supplierId": "SUP-012",
+        "specifications": "Crown and flint optical elements, anti-reflective multi-coating",
+        "complianceStandard": "MIL-PRF-13830B"
+    },
+    {
+        "id": "COMP-010",
+        "name": "Brushless Magnetic Levitation Solenoid",
+        "type": "Electromechanical",
+        "supplierId": "SUP-005",
+        "specifications": "Feedback controlled quad-coil electromagnet with Hall sensor",
+        "complianceStandard": "CE / RoHS"
+    },
+    {
+        "id": "COMP-011",
+        "name": "Microcontroller Board Q-Core 32bit",
+        "type": "Electronic Assembly",
+        "supplierId": "SUP-008",
+        "specifications": "Arm Cortex-M4 @ 64MHz, USB 2.0 PHY, integrated DAC/ADC",
+        "complianceStandard": "IPC-A-610 Class 2"
+    },
+    {
+        "id": "COMP-012",
+        "name": "Precision Brass Bevel Gear Set 1:4",
+        "type": "Machined Gear Mechanism",
+        "supplierId": "SUP-002",
+        "specifications": "CuZn39Pb3 brass, involute tooth profile, DIN 3962 Grade 7",
+        "complianceStandard": "DIN 3962"
+    },
+    {
+        "id": "COMP-013",
+        "name": "Laser-Cut Baltic Birch Plywood",
+        "type": "Engineered Wood",
+        "supplierId": "SUP-006",
+        "specifications": "Grade B/BB 3mm cross-laminated birch, zero formaldehyde adhesive",
+        "complianceStandard": "FSC Certified"
+    },
+    {
+        "id": "COMP-014",
+        "name": "Archival 120 GSM Acid-Free Paper",
+        "type": "Cellulose Media",
+        "supplierId": "SUP-007",
+        "specifications": "Neutral pH 7.5, lignin-free alpha cellulose, 5mm isometric grid",
+        "complianceStandard": "ISO 9706 Permanent Paper"
+    },
+    {
+        "id": "COMP-015",
+        "name": "High-Conductivity Braided Copper Core",
+        "type": "Electrical Wiring",
+        "supplierId": "SUP-008",
+        "specifications": "Oxygen-free electrolytic copper (OFC), nylon ballistic sheath",
+        "complianceStandard": "UL 758"
+    },
+    {
+        "id": "COMP-016",
+        "name": "Solid State Piezoelectric Transducer",
+        "type": "Acoustic Element",
+        "supplierId": "SUP-008",
+        "specifications": "Lead zirconate titanate (PZT) ceramic resonance disk 4kHz",
+        "complianceStandard": "RoHS"
+    },
+    {
+        "id": "COMP-017",
+        "name": "Silicone Micro-Gasket Sealant",
+        "type": "Elastomer Seal",
+        "supplierId": "SUP-011",
+        "specifications": "Platinum-cured food grade liquid silicone rubber (LSR), Shore 40A",
+        "complianceStandard": "USP Class VI"
+    },
+    {
+        "id": "COMP-018",
+        "name": "Hard Enamel with Gold Electroplating",
+        "type": "Decorative Metallurgy",
+        "supplierId": "SUP-010",
+        "specifications": "Polished vitreous cloisonne enamel, 24K micron gold bath",
+        "complianceStandard": "CPSIA Lead Compliant"
+    },
+    {
+        "id": "COMP-019",
+        "name": "Miniature Ball Bearing 608ZZ Steel",
+        "type": "Precision Bearing",
+        "supplierId": "SUP-002",
+        "specifications": "Chrome steel 52100, dual metal shields, ABEC-7 tolerance",
+        "complianceStandard": "ISO 492"
+    },
+    {
+        "id": "COMP-020",
+        "name": "GaN Fast-Charging Power IC",
+        "type": "Semiconductor Power Unit",
+        "supplierId": "SUP-008",
+        "specifications": "Gallium Nitride integrated HEMT power bridge, 94% efficiency",
+        "complianceStandard": "JEDEC JESD47"
+    },
+    {
+        "id": "COMP-021",
+        "name": "Cold-Rolled Spring Steel Strip",
+        "type": "Spring Alloy",
+        "supplierId": "SUP-009",
+        "specifications": "High-carbon C75S tempered spring steel, Rockwell C 48-52",
+        "complianceStandard": "EN 10132-4"
+    },
+    {
+        "id": "COMP-022",
+        "name": "High-Phosphor Luminescent Pigment",
+        "type": "Photoluminescent Compound",
+        "supplierId": "SUP-011",
+        "specifications": "Strontium aluminate doped with europium and dysprosium",
+        "complianceStandard": "DIN 67510"
+    },
+    {
+        "id": "COMP-023",
+        "name": "Tempered Soda-Lime Inspection Glass",
+        "type": "Sight Glass Element",
+        "supplierId": "SUP-003",
+        "specifications": "Thermal tempered flat glass, bevel edge, scratch index 6H",
+        "complianceStandard": "ASTM C1048"
+    },
+    {
+        "id": "COMP-024",
+        "name": "Polycarbonate Impact-Resistant Shell",
+        "type": "Engineering Thermoplastic",
+        "supplierId": "SUP-011",
+        "specifications": "Bayer Makrolon 2805 resin, UV stabilized, flame class UL94 V-2",
+        "complianceStandard": "UL 94"
+    }
+]

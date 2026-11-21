@@ -1,0 +1,16 @@
+# Quirk & Quanta - Zero Dependency Architecture
+# ===============================================
+
+This project purposefully requires NO npm packages, NO node_modules, NO bundlers,
+and NO external Python libraries.
+
+Technology Stack:
+- Frontend: Vanilla HTML5, CSS3, Modern ES6+ JavaScript
+- Backend / Build: Python 3 Standard Library only (json, os, sys, math, unittest)
+- Web Server: Built-in Python HTTP server (`python3 -m http.server 8000`)
+- Styling: Plain CSS with CSS Custom Properties, Flexbox, and CSS Grid
+- Icons / Images: Custom product-specific SVG vectors and standard SVG assets
+
+No `npm install`, `yarn`, `pip install`, `webpack`, `vite`, `tailwind`, or `react` needed.
+This guarantees reproducible, lightweight static hosting and rapid educational deployment
+across 100+ concurrent workshop participants.

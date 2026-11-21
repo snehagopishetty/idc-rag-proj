@@ -1,0 +1,22 @@
+{
+  "iteration": 5,
+  "date": "2026-11-20T19:44:35Z",
+  "costSpikeSimulation": {
+    "narrativeStory": "Story 7: Arthur Receives the Bill",
+    "simulatedCalls": 40,
+    "unprotectedRunaway": {
+      "totalTokens": 180000,
+      "totalCostUsd": 0.01692,
+      "status": "BILLING_SPIKE_DETECTED"
+    },
+    "protectedSafeguard": {
+      "totalTokens": 13500,
+      "totalCostUsd": 0.001269,
+      "successfulRequests": 3,
+      "throttledRequests": 37,
+      "status": "BUDGET_CAP_ENFORCED"
+    },
+    "costSavedUsd": 0.015651,
+    "status": "PASS"
+  }
+}

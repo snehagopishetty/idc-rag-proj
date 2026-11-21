@@ -1,0 +1,63 @@
+{
+  "iteration": 7,
+  "timestamp": "2026-11-20T14:34:00Z",
+  "goldenDatasetSize": 42,
+  "loadTestSummary": {
+    "totalWorkshopRequestsExecuted": 350,
+    "totalFailures": 0,
+    "overallErrorRatePercent": 0.0,
+    "staticP95Ms": 3.63,
+    "retrievalP95Ms": 2614.55,
+    "verdict": "PASS"
+  },
+  "concurrencyBenchmarks": {
+    "scenario_a_concurrent_retrieval": {
+      "concurrency": 100,
+      "totalRequests": 100,
+      "successfulRequests": 100,
+      "failedRequests": 0,
+      "errorRatePercent": 0.0,
+      "throughputReqPerSec": 29.21,
+      "latencyMs": {
+        "min": 154.2,
+        "max": 3120.4,
+        "mean": 542.8,
+        "p50": 324.4,
+        "p95": 2614.55,
+        "p99": 3050.1
+      }
+    },
+    "scenario_b_static_assets_burst": {
+      "concurrency": 150,
+      "totalRequests": 150,
+      "successfulRequests": 150,
+      "failedRequests": 0,
+      "errorRatePercent": 0.0,
+      "throughputReqPerSec": 13085.06,
+      "latencyMs": {
+        "min": 0.8,
+        "max": 5.2,
+        "mean": 1.9,
+        "p50": 1.84,
+        "p95": 3.63,
+        "p99": 4.9
+      }
+    },
+    "scenario_c_mixed_traffic": {
+      "concurrency": 100,
+      "totalRequests": 100,
+      "successfulRequests": 100,
+      "failedRequests": 0,
+      "errorRatePercent": 0.0,
+      "throughputReqPerSec": 84.26,
+      "latencyMs": {
+        "min": 1.2,
+        "max": 480.2,
+        "mean": 182.4,
+        "p50": 164.49,
+        "p95": 354.69,
+        "p99": 465.1
+      }
+    }
+  }
+}

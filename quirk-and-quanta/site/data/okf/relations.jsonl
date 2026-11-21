@@ -1,0 +1,8 @@
+{"id":"rel_qq0011_comp025","type":"CONTAINS","sourceId":"QQ-0011","targetId":"COMP-025","properties":{"function":"5V LED Driver Power Step-Down","batch":"BATCH-VREG-2026","criticality":"high"}}
+{"id":"rel_qq0074_comp025","type":"CONTAINS","sourceId":"QQ-0074","targetId":"COMP-025","properties":{"function":"Qi Induction Coil Input Regulator","batch":"BATCH-VREG-2026","criticality":"high"}}
+{"id":"rel_qq0049_comp025","type":"CONTAINS","sourceId":"QQ-0049","targetId":"COMP-025","properties":{"function":"Optical Diode Array DC-DC Converter","batch":"BATCH-VREG-2026","criticality":"high"}}
+{"id":"rel_comp025_recvreg01","type":"AFFECTED_BY","sourceId":"COMP-025","targetId":"REC-VREG-01","properties":{"severity":"high","batch":"BATCH-VREG-2026","status":"confirmed"}}
+{"id":"rel_comp025_sup008","type":"SUPPLIED_BY","sourceId":"COMP-025","targetId":"SUP-008","properties":{"leadTimeDays":21,"vendorContract":"QFM-CTR-2025-08"}}
+{"id":"rel_recvreg01_qq0011","type":"AFFECTS_PRODUCT","sourceId":"REC-VREG-01","targetId":"QQ-0011","properties":{"reportedSymptom":"flickering LED array","failureRate":0.142}}
+{"id":"rel_recvreg01_qq0074","type":"AFFECTS_PRODUCT","sourceId":"REC-VREG-01","targetId":"QQ-0074","properties":{"reportedSymptom":"intermittent charging cutoff","failureRate":0.187}}
+{"id":"rel_recvreg01_qq0049","type":"AFFECTS_PRODUCT","sourceId":"REC-VREG-01","targetId":"QQ-0049","properties":{"reportedSymptom":"unexpected reboot cycle","failureRate":0.093}}

@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quirk &amp; Quanta | Precisely Unnecessary. Scientifically Delightful.</title>
+  <meta name="description" content="Discover 100 precisely engineered gadgets, theoretical apparel, mathematical home decor, and glorious scientific absurdities.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- Top Announcement Ticker -->
+  <div class="announcement-bar">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+      <div class="announcement-bar-content">
+        <span class="announcement-ticker">
+          <span class="announcement-ticker-icon">⚛️</span>
+          <span>Peer-Reviewed Ground Velocity Shipping across India &bull; Free Transit on Orders Over ₹999</span>
+        </span>
+      </div>
+      <div class="announcement-bar-links">
+        <a href="about.html">Fictional Story</a>
+        <a href="products.html">All 100 Products</a>
+        <span style="color: var(--color-gold);">Gate 1 RAG Workshop Demo</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Sticky Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-main">
+        <!-- Logo -->
+        <a href="index.html" class="header-brand" aria-label="Quirk &amp; Quanta Home">
+          <img src="assets/logo.svg" alt="Quirk &amp; Quanta Logo" class="header-logo-img">
+        </a>
+
+        <!-- Global Search Bar -->
+        <div class="header-search">
+          <form id="global-search-form" class="search-input-wrapper">
+            <input type="text" 
+                   id="global-search-input" 
+                   class="search-input" 
+                   placeholder="Search 100 peer-reviewed items by SKU, concept, or formula..." 
+                   autocomplete="off"
+                   aria-label="Search catalog">
+            <button type="submit" class="search-btn" aria-label="Submit search">Search</button>
+          </form>
+          <!-- Live Preview Dropdown -->
+          <div id="search-dropdown" class="search-results-dropdown"></div>
+        </div>
+
+        <!-- Header Actions -->
+        <div class="header-actions">
+          <!-- Role Preview Toggle (Demo) -->
+          <button id="role-toggle-btn" class="role-badge-toggle" title="Switch Demonstration Role Preview">
+            <span>👤</span> Role: Customer
+          </button>
+
+          <!-- Wishlist Button -->
+          <a href="products.html" class="header-action-btn" title="View Wishlist">
+            <span>♥</span>
+            <span class="badge-count" id="header-wishlist-count">0</span>
+          </a>
+
+          <!-- Cart Drawer Button -->
+          <button id="header-cart-btn" class="header-action-btn" title="Open Shopping Cart">
+            <span>🛒</span>
+            <span>Cart</span>
+            <span class="badge-count" id="header-cart-count">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category Navigation Sub-bar -->
+    <nav class="header-nav" aria-label="Category navigation">
+      <div class="container">
+        <ul class="header-nav-list">
+          <li><a href="products.html" class="header-nav-link active">All 100 Products</a></li>
+          <li><a href="products.html?category=CAT-APPAREL" class="header-nav-link">Apparel</a></li>
+          <li><a href="products.html?category=CAT-DESK" class="header-nav-link">Desk &amp; Office</a></li>
+          <li><a href="products.html?category=CAT-KITCHEN" class="header-nav-link">Drinkware &amp; Kitchen</a></li>
+          <li><a href="products.html?category=CAT-HOME" class="header-nav-link">Home &amp; Decor</a></li>
+          <li><a href="products.html?category=CAT-GADGETS" class="header-nav-link">Science Gadgets</a></li>
+          <li><a href="products.html?category=CAT-PUZZLES" class="header-nav-link">Puzzles &amp; Games</a></li>
+          <li><a href="products.html?category=CAT-STATIONERY" class="header-nav-link">Stationery &amp; Learning</a></li>
+          <li><a href="products.html?category=CAT-TECH" class="header-nav-link">Tech Accessories</a></li>
+          <li><a href="products.html?category=CAT-RAILWAY" class="header-nav-link">Railway &amp; Engineering</a></li>
+          <li><a href="products.html?category=CAT-GIFTS" class="header-nav-link">Gifts &amp; Collectibles</a></li>
+          <li><a href="workshop.html" class="header-nav-link" style="color: var(--color-gold); font-weight: 700;">🧪 Workshop Lab</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container" style="padding-top: var(--space-md); padding-bottom: var(--space-md);">
+      <img src="assets/hero/hero-banner.svg" alt="Quirk &amp; Quanta Theoretical Workspace Hero Banner" class="hero-banner-img">
+    </div>
+    <div class="hero-cta-bar">
+      <div class="container hero-cta-container">
+        <div class="hero-cta-text">
+          <strong>"Precisely Unnecessary. Scientifically Delightful."</strong> — Discover gadgets, gifts, and glorious scientific absurdities.
+        </div>
+        <div class="hero-cta-buttons">
+          <a href="products.html" class="btn btn-gold btn-lg">Explore All 100 Oddities</a>
+          <a href="#featured-categories" class="btn btn-outline btn-lg" style="color: #FFFFFF; border-color: rgba(255,255,255,0.4);">Browse 10 Categories</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Badges Bar -->
+  <section class="trust-badges-bar">
+    <div class="container">
+      <div class="trust-badges-grid">
+        <div class="trust-badge-card">
+          <div class="trust-badge-icon">🔬</div>
+          <div>
+            <div class="trust-badge-title">Calculated Precision</div>
+            <div class="trust-badge-desc">Tolerances held to micrometer and atomic scale.</div>
+          </div>
+        </div>
+        <div class="trust-badge-card">
+          <div class="trust-badge-icon">⚖️</div>
+          <div>
+            <div class="trust-badge-title">Zero Real Purchases</div>
+            <div class="trust-badge-desc">100% fictional educational demonstration platform.</div>
+          </div>
+        </div>
+        <div class="trust-badge-card">
+          <div class="trust-badge-icon">📐</div>
+          <div>
+            <div class="trust-badge-title">Quantum Invariance</div>
+            <div class="trust-badge-desc">Formulas, constants, and proofs peer-reviewed.</div>
+          </div>
+        </div>
+        <div class="trust-badge-card">
+          <div class="trust-badge-icon">📦</div>
+          <div>
+            <div class="trust-badge-title">Obsessively Packaged</div>
+            <div class="trust-badge-desc">Dispatched via calculated velocity logistics.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Categories Section -->
+  <section class="section" id="featured-categories">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-title-group">
+          <div class="section-kicker">Curated Domains</div>
+          <h2 class="section-title">Explore by Scientific Discipline</h2>
+          <p class="section-subtitle">Ten rigorously partitioned categories containing exactly ten peer-reviewed items each.</p>
+        </div>
+        <a href="products.html" class="section-action-link">View Full Catalog (100) &rarr;</a>
+      </div>
+
+      <div class="category-grid">
+        <!-- Cat 1 -->
+        <a href="products.html?category=CAT-APPAREL" class="category-card">
+          <div class="category-icon-wrapper">👕</div>
+          <div class="category-name">Apparel</div>
+          <span class="category-count">10 Products</span>
+        </a>
+        <!-- Cat 2 -->
+        <a href="products.html?category=CAT-DESK" class="category-card">
+          <div class="category-icon-wrapper">💡</div>
+          <div class="category-name">Desk &amp; Office</div>
+          <span class="category-count">10 Products</span>
+        </a>
+        <!-- Cat 3 -->
+        <a href="products.html?category=CAT-KITCHEN" class="category-card">
+          <div class="category-icon-wrapper">☕</div>
+          <div class="category-name">Drinkware &amp; Kitchen</div>
+          <span class="category-count">10 Products</span>
+        </a>
+        <!-- Cat 4 -->
+        <a href="products.html?category=CAT-HOME" class="category-card">
+          <div class="category-icon-wrapper">🛋️</div>
+          <div class="category-name">Home &amp; Decor</div>
+          <span class="category-count">10 Products</span>
+        </a>
+        <!-- Cat 5 -->
+        <a href="products.html?category=CAT-GADGETS" class="category-card">
+          <div class="category-icon-wrapper">🧲</div>
+          <div class="category-name">Science Gadgets</div>
+          <span class="category-count">10 Products</span>
+        </a>
+        <!-- Cat 6 -->
+        <a href="products.html?category=CAT-PUZZLES" class="category-card">
+          <div class="category-icon-wrapper">🧩</div>
+          <div class="category-name">Puzzles &amp; Games</div>
+          <span class="category-count">10 Products</span>
+        </a>
+        <!-- Cat 7 -->
+        <a href="products.html?category=CAT-STATIONERY" class="category-card">
+          <div class="category-icon-wrapper">📓</div>
+          <div class="category-name">Stationery &amp; Learning</div>
+          <span class="category-count">10 Products</span>
+        </a>
+        <!-- Cat 8 -->
+        <a href="products.html?category=CAT-TECH" class="category-card">
+          <div class="category-icon-wrapper">⌨️</div>
+          <div class="category-name">Tech Accessories</div>
+          <span class="category-count">10 Products</span>
+        </a>
+        <!-- Cat 9 -->
+        <a href="products.html?category=CAT-RAILWAY" class="category-card">
+          <div class="category-icon-wrapper">🚂</div>
+          <div class="category-name">Railway &amp; Engineering</div>
+          <span class="category-count">10 Products</span>
+        </a>
+        <!-- Cat 10 -->
+        <a href="products.html?category=CAT-GIFTS" class="category-card">
+          <div class="category-icon-wrapper">🏆</div>
+          <div class="category-name">Gifts &amp; Collectibles</div>
+          <span class="category-count">10 Products</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trending Products Carousel / Spotlight -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-title-group">
+          <div class="section-kicker">High Velocity Demand</div>
+          <h2 class="section-title">Trending Fictional Products</h2>
+          <p class="section-subtitle">The most frequently cited apparatus currently circulating in peer-reviewed cart baskets.</p>
+        </div>
+        <a href="products.html?sort=rating-desc" class="section-action-link">Sort by Highest Rating &rarr;</a>
+      </div>
+
+      <div class="product-grid" id="trending-products-grid">
+        <!-- Rendered by JS or statically pre-seeded -->
+        <div class="product-card">
+          <div class="product-card-thumb-wrapper">
+            <span class="badge badge-navy product-card-badge">Apparel</span>
+            <a href="product.html?sku=QQ-0001">
+              <img src="assets/products/QQ-0001-thumb.svg" alt="Quantum Uncertainty Hoodie" class="product-card-thumb" loading="lazy">
+            </a>
+          </div>
+          <div class="product-card-body">
+            <div class="product-card-meta"><span>QQ-0001</span><span class="rating-score">★ 4.8</span></div>
+            <h3 class="product-card-title"><a href="product.html?sku=QQ-0001">Quantum Uncertainty Hoodie</a></h3>
+            <p class="product-card-desc">Heavyweight combed cotton blend hoodie with screen-printed wave equations and Planck constant aglets.</p>
+            <div class="product-card-price-row">
+              <span class="price-selling">₹1,799</span>
+              <span class="price-list">₹2,499</span>
+              <span class="price-savings">-28%</span>
+            </div>
+            <div class="product-card-actions">
+              <a href="product.html?sku=QQ-0001" class="btn btn-outline btn-sm">View Details</a>
+              <button class="btn btn-primary btn-sm" onclick="quickAddToCart('QQ-0001')">Add</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card-thumb-wrapper">
+            <span class="badge badge-navy product-card-badge">Desk &amp; Office</span>
+            <a href="product.html?sku=QQ-0011">
+              <img src="assets/products/QQ-0011-thumb.svg" alt="Atomic Orbit Desk Lamp" class="product-card-thumb" loading="lazy">
+            </a>
+          </div>
+          <div class="product-card-body">
+            <div class="product-card-meta"><span>QQ-0011</span><span class="rating-score">★ 4.9</span></div>
+            <h3 class="product-card-title"><a href="product.html?sku=QQ-0011">Atomic Orbit Desk Lamp</a></h3>
+            <p class="product-card-desc">Three independently gimballed aluminum rings rotating around a warm 2700K touch-dimmable LED filament nucleus.</p>
+            <div class="product-card-price-row">
+              <span class="price-selling">₹3,499</span>
+              <span class="price-list">₹4,999</span>
+              <span class="price-savings">-30%</span>
+            </div>
+            <div class="product-card-actions">
+              <a href="product.html?sku=QQ-0011" class="btn btn-outline btn-sm">View Details</a>
+              <button class="btn btn-primary btn-sm" onclick="quickAddToCart('QQ-0011')">Add</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card-thumb-wrapper">
+            <span class="badge badge-navy product-card-badge">Drinkware</span>
+            <a href="product.html?sku=QQ-0021">
+              <img src="assets/products/QQ-0021-thumb.svg" alt="Quantum Soup Mug" class="product-card-thumb" loading="lazy">
+            </a>
+          </div>
+          <div class="product-card-body">
+            <div class="product-card-meta"><span>QQ-0021</span><span class="rating-score">★ 4.7</span></div>
+            <h3 class="product-card-title"><a href="product.html?sku=QQ-0021">Quantum Soup Mug</a></h3>
+            <p class="product-card-desc">Heavy stoneware mug with heat-reactive thermochromic glaze that reveals Schrödinger wave equations above 60°C.</p>
+            <div class="product-card-price-row">
+              <span class="price-selling">₹899</span>
+              <span class="price-list">₹1,299</span>
+              <span class="price-savings">-31%</span>
+            </div>
+            <div class="product-card-actions">
+              <a href="product.html?sku=QQ-0021" class="btn btn-outline btn-sm">View Details</a>
+              <button class="btn btn-primary btn-sm" onclick="quickAddToCart('QQ-0021')">Add</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card-thumb-wrapper">
+            <span class="badge badge-navy product-card-badge">Railway</span>
+            <a href="product.html?sku=QQ-0081">
+              <img src="assets/products/QQ-0081-thumb.svg" alt="Vintage Locomotive Miniature Model" class="product-card-thumb" loading="lazy">
+            </a>
+          </div>
+          <div class="product-card-body">
+            <div class="product-card-meta"><span>QQ-0081</span><span class="rating-score">★ 4.9</span></div>
+            <h3 class="product-card-title"><a href="product.html?sku=QQ-0081">Vintage Locomotive Miniature Model</a></h3>
+            <p class="product-card-desc">HO-scale die-cast 4-6-2 Pacific steam engine with working brass valve gear rods and glowing firebox.</p>
+            <div class="product-card-price-row">
+              <span class="price-selling">₹4,999</span>
+              <span class="price-list">₹6,999</span>
+              <span class="price-savings">-29%</span>
+            </div>
+            <div class="product-card-actions">
+              <a href="product.html?sku=QQ-0081" class="btn btn-outline btn-sm">View Details</a>
+              <button class="btn btn-primary btn-sm" onclick="quickAddToCart('QQ-0081')">Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Humorous Promo Banner -->
+  <section class="section">
+    <div class="container">
+      <div class="promo-banner">
+        <div class="promo-banner-content">
+          <span class="promo-tag">Second Law of Thermodynamics</span>
+          <h3 class="promo-title">"Entropy is non-decreasing, but our prices are temporarily invariant."</h3>
+          <p class="promo-text">
+            While universal entropy inexorably climbs toward heat death, our prices remain strictly bounded within calibrated margins. Upgrade your workspace before cosmological expansion widens the distance between your desk and peer-reviewed satisfaction.
+          </p>
+        </div>
+        <div>
+          <a href="products.html" class="btn btn-gold btn-lg">Browse The Invariant Catalog</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Curated Collections -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-title-group">
+          <div class="section-kicker">Thematic Series</div>
+          <h2 class="section-title">Curated Fictional Collections</h2>
+          <p class="section-subtitle">Assembled by our resident theoretical fellows and dispute resolution authorities.</p>
+        </div>
+      </div>
+
+      <div class="collections-grid">
+        <div class="collection-card">
+          <div>
+            <div class="collection-curator">Curated by Dr. Arthur Pendelton</div>
+            <h3 class="collection-title">Quantum Living</h3>
+            <p class="collection-desc">Everyday apparel and lifestyle equipment calibrated for probabilistic existence and superposition comfort.</p>
+          </div>
+          <a href="products.html?category=CAT-APPAREL" class="btn btn-outline-teal btn-sm">View Series &rarr;</a>
+        </div>
+
+        <div class="collection-card">
+          <div>
+            <div class="collection-curator">Curated by Engineering Guild</div>
+            <h3 class="collection-title">The Standard Gauge Railway</h3>
+            <p class="collection-desc">High-precision locomotive scale models, switches, blueprints, and schedule charts for train enthusiasts.</p>
+          </div>
+          <a href="products.html?category=CAT-RAILWAY" class="btn btn-outline-teal btn-sm">View Series &rarr;</a>
+        </div>
+
+        <div class="collection-card">
+          <div>
+            <div class="collection-curator">Curated by Dr. Rajeshwari Varma</div>
+            <h3 class="collection-title">Cosmic Singularity Series</h3>
+            <p class="collection-desc">Instruments and decor celebrating deep-space observation, astronomical coordinates, and spacetime geometry.</p>
+          </div>
+          <a href="products.html?category=CAT-HOME" class="btn btn-outline-teal btn-sm">View Series &rarr;</a>
+        </div>
+
+        <div class="collection-card">
+          <div>
+            <div class="collection-curator">Dispute Resolution Directorate</div>
+            <h3 class="collection-title">The Roommate Protocol</h3>
+            <p class="collection-desc">Humorous, strict contractual stationery, seating cushions, and routine trackers for orderly cohabitation.</p>
+          </div>
+          <a href="products.html?category=CAT-STATIONERY" class="btn btn-outline-teal btn-sm">View Series &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-grid">
+          <!-- Col 1: Brand Info -->
+          <div class="footer-brand-col">
+            <img src="assets/logo.svg" alt="Quirk &amp; Quanta Logo" class="footer-logo-img">
+            <p class="footer-tagline">"Precisely Unnecessary. Scientifically Delightful."</p>
+            <p style="font-size: 0.8125rem; line-height: 1.6;">
+              An eccentric theoretical physicist's dream department store. Combining obsessive precision, subatomic humor, and everyday consumer products.
+            </p>
+            <div class="fictional-disclaimer">
+              <strong>Fictional Disclaimer:</strong> Quirk &amp; Quanta is a fictional storefront created for educational demonstrations. No products are available for purchase.
+            </div>
+          </div>
+
+          <!-- Col 2: Navigation Links -->
+          <div>
+            <h4 class="footer-col-title">Storefront</h4>
+            <ul class="footer-link-list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">All 100 Products</a></li>
+              <li><a href="about.html">About Quirk &amp; Quanta</a></li>
+              <li><a href="products.html?category=CAT-APPAREL">Apparel</a></li>
+              <li><a href="products.html?category=CAT-GADGETS">Science Gadgets</a></li>
+              <li><a href="products.html?category=CAT-RAILWAY">Railway Models</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Workshop Architecture -->
+          <div>
+            <h4 class="footer-col-title">IDC Workshop</h4>
+            <ul class="footer-link-list">
+              <li><a href="about.html#workshop">Gate 1: Storefront</a></li>
+              <li><span style="color: var(--color-text-light);">Gate 2: Embeddings &amp; Chunking</span></li>
+              <li><span style="color: var(--color-text-light);">Gate 3: BM25 &amp; Hybrid RAG</span></li>
+              <li><span style="color: var(--color-text-light);">Gate 4: GraphRAG &amp; AuraDB</span></li>
+              <li><span style="color: var(--color-text-light);">Gate 5: RBAC &amp; IDOR Security</span></li>
+            </ul>
+          </div>
+
+          <!-- Col 4: Fictional Office & Dispatch -->
+          <div>
+            <h4 class="footer-col-title">Fictional Headquarters</h4>
+            <p style="font-size: 0.8125rem; line-height: 1.6; margin-bottom: 8px;">
+              Department of Theoretical Retail &bull; Laboratory Suite 314<br>
+              Subatomic Park, Bengaluru, Karnataka, India
+            </p>
+            <p style="font-size: 0.8125rem; color: var(--color-gold);">
+              Operational Hours: 24 Hours (Circadian Invariant)
+            </p>
+            <div style="margin-top: 14px;">
+              <button onclick="openModal('role-explainer-modal')" class="btn btn-outline btn-sm" style="color: #FFFFFF; border-color: rgba(255,255,255,0.3);">
+                🛡️ Role Preview Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Quirk &amp; Quanta. All rights reserved. Built for "Beyond Basic RAG" Workshop.
+        </div>
+        <div style="font-size: 0.75rem; color: var(--color-text-light);">
+          Zero NPM Packages &bull; Vanilla HTML, CSS &amp; JS &bull; Pure Standard Library Data Architecture
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-Out Cart Drawer -->
+  <div class="modal-overlay" id="cart-drawer-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping Cart">
+    <div class="cart-drawer-header">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="font-size: 1.25rem;">🛒</span>
+        <h3 style="font-size: 1.125rem; font-weight: 800;">Your Calibrated Basket</h3>
+      </div>
+      <button class="modal-close-btn" id="close-cart-btn" aria-label="Close cart">&times;</button>
+    </div>
+    <div class="cart-drawer-items" id="cart-items-container">
+      <!-- Populated dynamically by cart.js -->
+    </div>
+    <div class="cart-drawer-footer">
+      <div class="cart-subtotal-row">
+        <span>Subtotal</span>
+        <span id="cart-subtotal-price">₹0</span>
+      </div>
+      <p style="font-size: 0.75rem; color: var(--color-text-muted);">
+        Taxes calculated using theoretical state tensors. Free ground shipping applies.
+      </p>
+      <button class="btn btn-primary btn-block btn-lg" id="checkout-action-btn">
+        Proceed to Checkout
+      </button>
+    </div>
+  </aside>
+
+  <!-- Educational Purchasing Disabled Modal -->
+  <div class="modal-overlay" id="checkout-demo-modal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 class="modal-title">Purchasing Disabled (Educational Demonstration)</h3>
+        <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div style="font-size: 3rem; text-align: center; margin-bottom: 16px;">🛑</div>
+        <h4 style="font-size: 1.125rem; font-weight: 800; color: var(--color-navy); text-align: center; margin-bottom: 8px;">
+          This is a fictional educational storefront.
+        </h4>
+        <p style="font-size: 0.9375rem; color: var(--color-text-muted); text-align: center; line-height: 1.6; margin-bottom: 16px;">
+          Purchasing is disabled. Quirk &amp; Quanta exists solely as the multi-domain knowledge base and application harness for the workshop <em>"Beyond Basic RAG: Building Production-Ready AI Systems."</em>
+        </p>
+        <div style="background-color: var(--color-bg); padding: 12px 16px; border-radius: 8px; font-size: 0.8125rem; color: var(--color-text-main);">
+          <strong>What happens next in the workshop?</strong><br>
+          In subsequent gates, this dataset will become the foundation for vector embeddings, semantic and BM25 hybrid search, GraphRAG multi-hop retrieval, and server-side RBAC security tests.
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary close-modal-trigger">Understood &bull; Continue Exploring</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Role Preview Explainer Modal -->
+  <div class="modal-overlay" id="role-explainer-modal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 class="modal-title">Role Preview Demonstration Architecture</h3>
+        <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div style="font-size: 2.5rem; text-align: center; margin-bottom: 12px;">🛡️</div>
+        <h4 style="font-size: 1.0625rem; font-weight: 800; color: var(--color-navy); margin-bottom: 8px;">
+          Client-Side Hiding is NOT Security
+        </h4>
+        <p style="font-size: 0.875rem; color: var(--color-text-main); line-height: 1.6; margin-bottom: 12px;">
+          This toggle demonstrates the separation between <strong>Public Storefront Data</strong> and <strong>Internal Canonical Data</strong>.
+        </p>
+        <ul style="padding-left: 20px; font-size: 0.8125rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 16px;">
+          <li><strong>Public Storefront Data:</strong> Filtered via <code>scripts/generate-public-data.py</code>. Contains zero cost prices, margins, or procurement codes.</li>
+          <li><strong>Internal Data:</strong> Strictly housed in <code>data/internal/</code> outside the deployable static site.</li>
+          <li><strong>Future Workshop Gates:</strong> In Gate 9 and Gate 10, true server-side authorization and RBAC retrieval filtering will be implemented with authenticated sessions.</li>
+        </ul>
+        <div class="fictional-disclaimer">
+          Toggling this switch in Gate 1 only modifies demo UI annotations. No sensitive canonical records are ever exposed to the client browser.
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary close-modal-trigger">Close Explanation</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- JavaScript Modules -->
+  <script src="js/app.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/role-preview.js"></script>
+</body>
+</html>

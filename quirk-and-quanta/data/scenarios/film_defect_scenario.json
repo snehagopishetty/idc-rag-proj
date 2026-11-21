@@ -1,0 +1,109 @@
+{
+  "scenarioId": "SCENARIO-FILM-DEFECT",
+  "version": "1.0.0",
+  "title": "Story 3: The Three-Product Flickering Defect Mystery",
+  "description": "Additive Knowledge Graph overlay connecting Atomic Orbit Desk Lamp (QQ-0011), Atomic Orbit Wireless Charger (QQ-0074), and Digital Astronomy Star Projector (QQ-0049) to common root cause COMP-025.",
+  "active": true,
+  "nodes": {
+    "components": [
+      {
+        "id": "COMP-025",
+        "name": "Step-Down Synchronous Voltage Regulator IC (5V/3A, SOT-23-6)",
+        "category": "Power Management IC",
+        "supplierId": "SUP-008",
+        "supplierName": "Quantum Flux Micro",
+        "specifications": "High-efficiency 1.5MHz synchronous step-down converter, input 4.5V-18V, output 5V/3A, thermal shutdown threshold 140°C.",
+        "costPerUnit": 0.42
+      }
+    ],
+    "recalls": [
+      {
+        "id": "REC-VREG-01",
+        "title": "Quality Alert & Voluntary Recall: Thermal Breakdown in Voltage Regulator ICs",
+        "componentId": "COMP-025",
+        "supplierId": "SUP-008",
+        "supplierName": "Quantum Flux Micro",
+        "batch": "BATCH-VREG-2026",
+        "severity": "high",
+        "dateIssued": "2026-10-15",
+        "defectDescription": "Thermal breakdown under continuous operation (>28°C ambient) causing gate-oxide micro-fractures, output voltage ripple fluctuation exceeding 1.2V, and sudden power cutoffs.",
+        "symptomsReported": "Erratic flickering light, intermittent wireless charging disconnections, and unexpected star projector reboot cycles.",
+        "affectedProductSkus": ["QQ-0011", "QQ-0074", "QQ-0049"],
+        "recommendedAction": "Immediate RMA exchange and board-level replacement of batch BATCH-VREG-2026 regulators."
+      }
+    ]
+  },
+  "relationships": [
+    {
+      "id": "REL-SCEN-0001",
+      "sourceId": "QQ-0011",
+      "relationship": "CONTAINS",
+      "targetId": "COMP-025",
+      "properties": {
+        "function": "5V LED Driver Power Step-Down",
+        "batch": "BATCH-VREG-2026"
+      }
+    },
+    {
+      "id": "REL-SCEN-0002",
+      "sourceId": "QQ-0074",
+      "relationship": "CONTAINS",
+      "targetId": "COMP-025",
+      "properties": {
+        "function": "Qi Induction Coil Input Regulator",
+        "batch": "BATCH-VREG-2026"
+      }
+    },
+    {
+      "id": "REL-SCEN-0003",
+      "sourceId": "QQ-0049",
+      "relationship": "CONTAINS",
+      "targetId": "COMP-025",
+      "properties": {
+        "function": "Optical Diode Array DC-DC Converter",
+        "batch": "BATCH-VREG-2026"
+      }
+    },
+    {
+      "id": "REL-SCEN-0004",
+      "sourceId": "COMP-025",
+      "relationship": "SUPPLIED_BY",
+      "targetId": "SUP-008",
+      "properties": {
+        "supplierName": "Quantum Flux Micro",
+        "leadTimeDays": 21
+      }
+    },
+    {
+      "id": "REL-SCEN-0005",
+      "sourceId": "COMP-025",
+      "relationship": "AFFECTED_BY",
+      "targetId": "REC-VREG-01",
+      "properties": {
+        "severity": "high",
+        "batch": "BATCH-VREG-2026"
+      }
+    },
+    {
+      "id": "REL-SCEN-0006",
+      "sourceId": "REC-VREG-01",
+      "relationship": "AFFECTS_PRODUCT",
+      "targetId": "QQ-0011",
+      "properties": { "reportedSymptom": "flickering LED array" }
+    },
+    {
+      "id": "REL-SCEN-0007",
+      "sourceId": "REC-VREG-01",
+      "relationship": "AFFECTS_PRODUCT",
+      "targetId": "QQ-0074",
+      "properties": { "reportedSymptom": "intermittent charging cutoff" }
+    },
+    {
+      "id": "REL-SCEN-0008",
+      "sourceId": "REC-VREG-01",
+      "relationship": "AFFECTS_PRODUCT",
+      "targetId": "QQ-0049",
+      "properties": { "reportedSymptom": "laser projection flicker" }
+    }
+  ]
+}

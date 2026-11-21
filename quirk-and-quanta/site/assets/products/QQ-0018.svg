@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="bgGrad_QQ-0018" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F0F4F8" />
+      <stop offset="100%" stop-color="#FFFFFF" />
+    </linearGradient>
+    <filter id="shadow_QQ-0018" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#18243A" flood-opacity="0.08" />
+    </filter>
+  </defs>
+
+  <!-- Clean Subtle Background -->
+  <rect width="400" height="400" fill="url(#bgGrad_QQ-0018)" />
+  
+  <!-- Subtle Technical Grid Lines -->
+  <g opacity="0.15" stroke="#2B4C7E" stroke-width="0.8">
+    <line x1="40" y1="0" x2="40" y2="400" stroke-dasharray="4,4" />
+    <line x1="360" y1="0" x2="360" y2="400" stroke-dasharray="4,4" />
+    <line x1="0" y1="40" x2="400" y2="40" stroke-dasharray="4,4" />
+    <line x1="0" y1="360" x2="400" y2="360" stroke-dasharray="4,4" />
+  </g>
+
+  <!-- Category & SKU Header Tag -->
+  <g transform="translate(25, 25)">
+    <rect x="0" y="0" width="75" height="22" rx="4" fill="#2B4C7E" />
+    <text x="37.5" y="15" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">QQ-0018</text>
+    
+    <text x="85" y="15" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#F4C95D">Desk &amp; Office</text>
+  </g>
+
+  <!-- Circular Pedestal Ground Shadow -->
+  <ellipse cx="200" cy="315" rx="120" ry="22" fill="#E2E8F0" opacity="0.6" filter="url(#shadow_QQ-0018)" />
+
+  <!-- Distinct Centered Product Vector Illustration -->
+  <g id="product-art">
+    
+        <g transform="translate(130, 90)">
+          <!-- Wood Base -->
+          <ellipse cx="70" cy="240" rx="45" ry="14" fill="#4A2E18" stroke="#2D1A0E" />
+          <!-- Stand Pillar -->
+          <rect x="66" y="190" width="8" height="52" fill="#D69E2E" />
+          <!-- Brass Meridian Ring -->
+          <circle cx="70" cy="110" r="65" fill="none" stroke="#D69E2E" stroke-width="4" />
+          <!-- Star Globe Sphere -->
+          <circle cx="70" cy="110" r="54" fill="#18243A" stroke="#158D89" stroke-width="1.5" />
+          <!-- Celestial Equator -->
+          <ellipse cx="70" cy="110" rx="54" ry="18" fill="none" stroke="#2CD4CD" stroke-width="1.2" transform="rotate(-23.5, 70, 110)" />
+          <!-- Constellation Dots & Lines -->
+          <circle cx="50" cy="90" r="2" fill="#F4C95D" />
+          <circle cx="65" cy="85" r="2.5" fill="#F4C95D" />
+          <circle cx="85" cy="100" r="2" fill="#F4C95D" />
+          <circle cx="95" cy="125" r="3" fill="#FFFFFF" />
+          <line x1="50" y1="90" x2="65" y2="85" stroke="#FFFFFF" stroke-width="0.8" opacity="0.6" />
+          <line x1="65" y1="85" x2="85" y2="100" stroke="#FFFFFF" stroke-width="0.8" opacity="0.6" />
+          <line x1="85" y1="100" x2="95" y2="125" stroke="#FFFFFF" stroke-width="0.8" opacity="0.6" />
+        </g>
+        
+  </g>
+
+  <!-- Product Title Label at Bottom -->
+  <g transform="translate(200, 368)">
+    <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#2B4C7E" text-anchor="middle">
+      Miniature Observatory Desk Globe
+    </text>
+    <text x="0" y="16" font-family="monospace" font-size="9.5" fill="#718096" text-anchor="middle">
+      Quirk &amp; Quanta &#8226; Certified Fictional
+    </text>
+  </g>
+</svg>

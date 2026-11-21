@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="bgGrad_QQ-0003" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EDF2F7" />
+      <stop offset="100%" stop-color="#FFFFFF" />
+    </linearGradient>
+    <filter id="shadow_QQ-0003" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#18243A" flood-opacity="0.08" />
+    </filter>
+  </defs>
+
+  <!-- Clean Subtle Background -->
+  <rect width="400" height="400" fill="url(#bgGrad_QQ-0003)" />
+  
+  <!-- Subtle Technical Grid Lines -->
+  <g opacity="0.15" stroke="#18243A" stroke-width="0.8">
+    <line x1="40" y1="0" x2="40" y2="400" stroke-dasharray="4,4" />
+    <line x1="360" y1="0" x2="360" y2="400" stroke-dasharray="4,4" />
+    <line x1="0" y1="40" x2="400" y2="40" stroke-dasharray="4,4" />
+    <line x1="0" y1="360" x2="400" y2="360" stroke-dasharray="4,4" />
+  </g>
+
+  <!-- Category & SKU Header Tag -->
+  <g transform="translate(25, 25)">
+    <rect x="0" y="0" width="75" height="22" rx="4" fill="#18243A" />
+    <text x="37.5" y="15" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">QQ-0003</text>
+    
+    <text x="85" y="15" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#158D89">Apparel</text>
+  </g>
+
+  <!-- Circular Pedestal Ground Shadow -->
+  <ellipse cx="200" cy="315" rx="120" ry="22" fill="#E2E8F0" opacity="0.6" filter="url(#shadow_QQ-0003)" />
+
+  <!-- Distinct Centered Product Vector Illustration -->
+  <g id="product-art">
+    
+        <!-- T-Shirt Body -->
+        <path d="M 125 150 L 175 115 L 225 115 L 275 150 L 255 180 L 230 165 L 230 330 L 170 330 L 170 165 L 145 180 Z" fill="#718096" />
+        <!-- Crew Neck -->
+        <path d="M 175 115 Q 200 135 225 115" fill="none" stroke="#4A5568" stroke-width="3" />
+        <!-- Box Illustration on Chest -->
+        <rect x="175" y="180" width="50" height="42" fill="#2D3748" stroke="#F4C95D" stroke-width="2" rx="4" />
+        <!-- Cat Silhouette Ears peeking out -->
+        <polygon points="185,180 190,168 198,180" fill="#1A202C" />
+        <polygon points="202,180 210,168 215,180" fill="#1A202C" />
+        <text x="200" y="205" font-family="'Courier New', monospace" font-size="11" fill="#2CD4CD" text-anchor="middle">|&#968;&#9002; = ?</text>
+        <text x="200" y="250" font-family="sans-serif" font-size="8" fill="#FFFFFF" text-anchor="middle">CLEAN &#8853; DIRTY</text>
+        
+  </g>
+
+  <!-- Product Title Label at Bottom -->
+  <g transform="translate(200, 368)">
+    <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#18243A" text-anchor="middle">
+      Schrödinger&#x27;s Laundry T-Shirt
+    </text>
+    <text x="0" y="16" font-family="monospace" font-size="9.5" fill="#718096" text-anchor="middle">
+      Quirk &amp; Quanta &#8226; Certified Fictional
+    </text>
+  </g>
+</svg>

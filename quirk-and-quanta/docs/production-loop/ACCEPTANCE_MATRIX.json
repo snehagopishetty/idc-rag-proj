@@ -1,0 +1,114 @@
+{
+  "project": "Quirk & Quanta",
+  "phase": "Production Deployment & Workshop Readiness",
+  "target_event": "IDC Workshop - Beyond Basic RAG (Nov 21, 2026)",
+  "audience_capacity": 100,
+  "gcp_project_configured": "idc-rag-proj",
+  "primary_region": "asia-south1",
+  "mandatory_gates": {
+    "P01": {
+      "name": "Reproducible Container Build",
+      "description": "Container builds reliably, runs as non-root user, minimal image size, zero pip packages.",
+      "status": "GREEN",
+      "verified_commit": "e75e4aa"
+    },
+    "P02": {
+      "name": "Cloud Run Service Deployed and Healthy",
+      "description": "quirk-quanta-rag deployed to Cloud Run in asia-south1, health endpoint 200 OK.",
+      "status": "GREEN_LOCALLY_VERIFIED",
+      "verified_commit": "bf7c09b"
+    },
+    "P03": {
+      "name": "Firebase Hosting Public URL Functional",
+      "description": "Firebase Hosting configured with single public domain routing static assets and /api/** rewrites to Cloud Run.",
+      "status": "GREEN_LOCALLY_VERIFIED",
+      "verified_commit": "029a950"
+    },
+    "P04": {
+      "name": "All Storefront Pages and Assets Functional",
+      "description": "Storefront, 100 products, 202 SVGs, catalog, detail, cart, and wishlist work without error.",
+      "status": "GREEN",
+      "verified_commit": "e75e4aa"
+    },
+    "P05": {
+      "name": "API Routing Works End-to-End",
+      "description": "Same-origin /api/** rewrites through Firebase Hosting proxy reach Cloud Run and return valid responses within proxy timeouts.",
+      "status": "GREEN",
+      "verified_commit": "029a950"
+    },
+    "P06": {
+      "name": "Secrets Managed Securely",
+      "description": "No API keys in Git or client JavaScript; runtime secrets managed securely; audit logging clean.",
+      "status": "GREEN",
+      "verified_commit": "c174863"
+    },
+    "P07": {
+      "name": "Backend Authentication & RBAC Hardened",
+      "description": "Server HTTP boundary enforces HMAC-SHA256 signature verification; client role tampering demoted.",
+      "status": "GREEN",
+      "verified_commit": "c174863"
+    },
+    "P08": {
+      "name": "No Publicly Exploitable Demonstration Endpoints",
+      "description": "Intentionally vulnerable demo modes safely isolated; public endpoints cannot disable server authorization.",
+      "status": "GREEN",
+      "verified_commit": "c174863"
+    },
+    "P09": {
+      "name": "Genuine Live Gemini Inference Verified",
+      "description": "Gemini 2.5 Flash and gemini-embedding-001 verified with quota bounds and deterministic offline fallback.",
+      "status": "GREEN",
+      "verified_commit": "6dc7ed0"
+    },
+    "P10": {
+      "name": "Vector, BM25, Hybrid & Local Graph Working",
+      "description": "All 4 retrieval strategies operate with verified accuracy and truthful metric attribution.",
+      "status": "GREEN",
+      "verified_commit": "6dc7ed0"
+    },
+    "P11": {
+      "name": "Golden Evaluation Behavior Verified",
+      "description": "42-case golden evaluation dataset reproducible across retrieval strategies.",
+      "status": "GREEN",
+      "verified_commit": "6dc7ed0"
+    },
+    "P12": {
+      "name": "All 17 Demos Reviewed on Hosted Interface",
+      "description": "Workshop Lab interface provides working access to all 17 film-aligned demonstrations.",
+      "status": "GREEN",
+      "verified_commit": "d818856"
+    },
+    "P13": {
+      "name": "Usage & Request Tracing Operational",
+      "description": "UUID tagging, distributed latency spans, token counts, cost estimation, and runaway spike protection verified.",
+      "status": "GREEN",
+      "verified_commit": "4fe9ef6"
+    },
+    "P14": {
+      "name": "100-Attendee Load Tests Completed Successfully",
+      "description": "Simultaneous 100-attendee retrieval and 150 static requests achieve >=99% success rate.",
+      "status": "GREEN",
+      "verified_commit": "4fe9ef6"
+    },
+    "P15": {
+      "name": "Dependency Failures Degrade Safely",
+      "description": "API outages, quota exhaustion, and network drops degrade gracefully without stack traces.",
+      "status": "GREEN",
+      "verified_commit": "4fe9ef6"
+    },
+    "P16": {
+      "name": "Final Release & Rollback Procedure Verified",
+      "description": "Release metadata recorded; exact rollback and recovery instructions verified.",
+      "status": "GREEN",
+      "verified_commit": "d1dce23"
+    }
+  },
+  "optional_gates": {
+    "O01": { "name": "Neo4j AuraDB Live Connection", "status": "GREEN_WITH_OFFLINE_FALLBACK" },
+    "O02": { "name": "Attendee AI Studio Deployment Tested", "status": "GREEN" },
+    "O03": { "name": "Attendee Vercel Deployment Tested", "status": "GREEN" },
+    "O04": { "name": "Advanced Monitoring Dashboards", "status": "PENDING" },
+    "O05": { "name": "Custom Domain Configuration", "status": "PENDING" },
+    "O06": { "name": "Additional Retrieval Optimization", "status": "PENDING" }
+  }
+}

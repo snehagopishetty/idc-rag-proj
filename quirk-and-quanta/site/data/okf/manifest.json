@@ -1,0 +1,89 @@
+{
+  "format": "open-knowledge-format",
+  "formatVersion": "1.0.0",
+  "datasetId": "quirk-and-quanta-defect-graph",
+  "title": "Quirk & Quanta Film Defect Knowledge Graph Bundle",
+  "description": "Portable Open Knowledge Format (OKF) bundle representing the three-product flickering defect scenario, connecting affected products to shared component COMP-025, recall REC-VREG-01, and supplier SUP-008.",
+  "version": "1.0.0",
+  "createdAt": "2026-11-20T23:45:00Z",
+  "license": "CC-BY-4.0",
+  "author": "Dr. Arthur Boon, Quirk & Quanta Quality Assurance",
+  "schema": {
+    "entityTypes": [
+      {
+        "name": "Product",
+        "description": "Commercial catalog merchandise items",
+        "primaryKey": "id",
+        "properties": ["sku", "title", "category", "price", "manufacturer"]
+      },
+      {
+        "name": "Component",
+        "description": "Bill of materials sub-assembly components",
+        "primaryKey": "id",
+        "properties": ["componentId", "name", "category", "supplierId", "specifications", "costPerUnit"]
+      },
+      {
+        "name": "RecallNotice",
+        "description": "Official engineering quality alerts and safety recalls",
+        "primaryKey": "id",
+        "properties": ["recallId", "title", "severity", "batch", "dateIssued", "defectDescription", "symptoms"]
+      },
+      {
+        "name": "Supplier",
+        "description": "Approved component manufacturing vendors",
+        "primaryKey": "id",
+        "properties": ["supplierId", "name", "country", "leadTimeDays"]
+      }
+    ],
+    "relationTypes": [
+      {
+        "name": "CONTAINS",
+        "sourceType": "Product",
+        "targetType": "Component",
+        "description": "Product bill of materials includes component",
+        "properties": ["function", "batch"]
+      },
+      {
+        "name": "AFFECTED_BY",
+        "sourceType": "Component",
+        "targetType": "RecallNotice",
+        "description": "Component batch subject to quality recall",
+        "properties": ["severity", "batch"]
+      },
+      {
+        "name": "SUPPLIED_BY",
+        "sourceType": "Component",
+        "targetType": "Supplier",
+        "description": "Component supplied by certified vendor",
+        "properties": ["leadTimeDays"]
+      },
+      {
+        "name": "AFFECTS_PRODUCT",
+        "sourceType": "RecallNotice",
+        "targetType": "Product",
+        "description": "Voluntary recall notice impacts product operation",
+        "properties": ["reportedSymptom"]
+      }
+    ]
+  },
+  "files": {
+    "entities": "entities.jsonl",
+    "relations": "relations.jsonl"
+  },
+  "counts": {
+    "entities": 6,
+    "relations": 8,
+    "entityBreakdown": {
+      "Product": 3,
+      "Component": 1,
+      "RecallNotice": 1,
+      "Supplier": 1
+    },
+    "relationBreakdown": {
+      "CONTAINS": 3,
+      "AFFECTED_BY": 1,
+      "SUPPLIED_BY": 1,
+      "AFFECTS_PRODUCT": 3
+    }
+  }
+}

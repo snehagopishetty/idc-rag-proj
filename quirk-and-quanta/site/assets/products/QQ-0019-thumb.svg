@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="160" height="160">
+  <defs>
+    <linearGradient id="bgGrad_QQ-0019_thumb" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F0F4F8" />
+      <stop offset="100%" stop-color="#FFFFFF" />
+    </linearGradient>
+    <filter id="shadow_QQ-0019_thumb" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#18243A" flood-opacity="0.08" />
+    </filter>
+  </defs>
+
+  <!-- Clean Subtle Background -->
+  <rect width="400" height="400" fill="url(#bgGrad_QQ-0019_thumb)" />
+  
+  <!-- Subtle Technical Grid Lines -->
+  <g opacity="0.15" stroke="#2B4C7E" stroke-width="0.8">
+    <line x1="40" y1="0" x2="40" y2="400" stroke-dasharray="4,4" />
+    <line x1="360" y1="0" x2="360" y2="400" stroke-dasharray="4,4" />
+    <line x1="0" y1="40" x2="400" y2="40" stroke-dasharray="4,4" />
+    <line x1="0" y1="360" x2="400" y2="360" stroke-dasharray="4,4" />
+  </g>
+
+  <!-- Category & SKU Header Tag -->
+  <g transform="translate(25, 25)">
+    <rect x="0" y="0" width="75" height="22" rx="4" fill="#2B4C7E" />
+    <text x="37.5" y="15" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">QQ-0019</text>
+    
+    <text x="85" y="15" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#F4C95D">Desk &amp; Office</text>
+  </g>
+
+  <!-- Circular Pedestal Ground Shadow -->
+  <ellipse cx="200" cy="315" rx="120" ry="22" fill="#E2E8F0" opacity="0.6" filter="url(#shadow_QQ-0019_thumb)" />
+
+  <!-- Distinct Centered Product Vector Illustration -->
+  <g id="product-art">
+    
+        <g transform="translate(110, 110)">
+          <!-- Easel Base & Backplate -->
+          <polygon points="20,180 160,180 140,50 40,50" fill="#2D3748" stroke="#1A202C" stroke-width="2" />
+          <!-- Open Textbook on Stand -->
+          <polygon points="35,170 90,170 85,70 30,70" fill="#EDF2F7" stroke="#CBD5E0" />
+          <polygon points="90,170 145,170 150,70 95,70" fill="#F7FAFC" stroke="#CBD5E0" />
+          <line x1="90" y1="170" x2="90" y2="70" stroke="#A0AEC0" stroke-width="2" />
+          <!-- Page text lines -->
+          <line x1="40" y1="85" x2="75" y2="85" stroke="#718096" stroke-width="1" />
+          <line x1="40" y1="100" x2="75" y2="100" stroke="#718096" stroke-width="1" />
+          <line x1="105" y1="85" x2="140" y2="85" stroke="#718096" stroke-width="1" />
+          <!-- Spring page clips holding pages down -->
+          <line x1="32" y1="150" x2="48" y2="175" stroke="#F4C95D" stroke-width="3" stroke-linecap="round" />
+          <line x1="148" y1="150" x2="132" y2="175" stroke="#F4C95D" stroke-width="3" stroke-linecap="round" />
+        </g>
+        
+  </g>
+
+  <!-- Product Title Label at Bottom -->
+  <g transform="translate(200, 368)">
+    <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#2B4C7E" text-anchor="middle">
+      Adjustable Experiment Book Stand
+    </text>
+    <text x="0" y="16" font-family="monospace" font-size="9.5" fill="#718096" text-anchor="middle">
+      Quirk &amp; Quanta &#8226; Certified Fictional
+    </text>
+  </g>
+</svg>

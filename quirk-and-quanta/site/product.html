@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details | Quirk &amp; Quanta</title>
+  <meta name="description" content="View specifications, peer reviews, theoretical features, and calibrated compatibility details at Quirk & Quanta.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+      <div class="announcement-bar-content">
+        <span class="announcement-ticker">
+          <span class="announcement-ticker-icon">⚛️</span>
+          <span>Peer-Reviewed Ground Velocity Shipping across India &bull; Free Transit on Orders Over ₹999</span>
+        </span>
+      </div>
+      <div class="announcement-bar-links">
+        <a href="about.html">Fictional Story</a>
+        <a href="products.html">All 100 Products</a>
+        <span style="color: var(--color-gold);">Gate 1 RAG Workshop Demo</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Sticky Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-main">
+        <!-- Logo -->
+        <a href="index.html" class="header-brand" aria-label="Quirk &amp; Quanta Home">
+          <img src="assets/logo.svg" alt="Quirk &amp; Quanta Logo" class="header-logo-img">
+        </a>
+
+        <!-- Global Search Bar -->
+        <div class="header-search">
+          <form id="global-search-form" class="search-input-wrapper">
+            <input type="text" 
+                   id="global-search-input" 
+                   class="search-input" 
+                   placeholder="Search 100 peer-reviewed items by SKU, concept, or formula..." 
+                   autocomplete="off"
+                   aria-label="Search catalog">
+            <button type="submit" class="search-btn" aria-label="Submit search">Search</button>
+          </form>
+          <!-- Live Preview Dropdown -->
+          <div id="search-dropdown" class="search-results-dropdown"></div>
+        </div>
+
+        <!-- Header Actions -->
+        <div class="header-actions">
+          <button id="role-toggle-btn" class="role-badge-toggle" title="Switch Demonstration Role Preview">
+            <span>👤</span> Role: Customer
+          </button>
+          <a href="products.html" class="header-action-btn" title="View Wishlist">
+            <span>♥</span>
+            <span class="badge-count" id="header-wishlist-count">0</span>
+          </a>
+          <button id="header-cart-btn" class="header-action-btn" title="Open Shopping Cart">
+            <span>🛒</span>
+            <span>Cart</span>
+            <span class="badge-count" id="header-cart-count">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category Navigation Sub-bar -->
+    <nav class="header-nav" aria-label="Category navigation">
+      <div class="container">
+        <ul class="header-nav-list">
+          <li><a href="products.html" class="header-nav-link">All 100 Products</a></li>
+          <li><a href="products.html?category=CAT-APPAREL" class="header-nav-link">Apparel</a></li>
+          <li><a href="products.html?category=CAT-DESK" class="header-nav-link">Desk &amp; Office</a></li>
+          <li><a href="products.html?category=CAT-KITCHEN" class="header-nav-link">Drinkware &amp; Kitchen</a></li>
+          <li><a href="products.html?category=CAT-HOME" class="header-nav-link">Home &amp; Decor</a></li>
+          <li><a href="products.html?category=CAT-GADGETS" class="header-nav-link">Science Gadgets</a></li>
+          <li><a href="products.html?category=CAT-PUZZLES" class="header-nav-link">Puzzles &amp; Games</a></li>
+          <li><a href="products.html?category=CAT-STATIONERY" class="header-nav-link">Stationery &amp; Learning</a></li>
+          <li><a href="products.html?category=CAT-TECH" class="header-nav-link">Tech Accessories</a></li>
+          <li><a href="products.html?category=CAT-RAILWAY" class="header-nav-link">Railway &amp; Engineering</a></li>
+          <li><a href="products.html?category=CAT-GIFTS" class="header-nav-link">Gifts &amp; Collectibles</a></li>
+          <li><a href="workshop.html" class="header-nav-link" style="color: var(--color-gold); font-weight: 700;">🧪 Workshop Lab</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Breadcrumbs Bar -->
+  <div style="background-color: #FFFFFF; border-bottom: 1px solid var(--color-border); padding: 12px 0;">
+    <div class="container">
+      <nav class="breadcrumbs" id="detail-breadcrumbs" aria-label="Breadcrumbs">
+        <a href="index.html">Home</a>
+        <span class="breadcrumbs-sep">/</span>
+        <a href="products.html">Catalog</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Main Product Detail Container -->
+  <main class="section">
+    <div class="container" id="product-detail-container">
+      
+      <!-- Primary Two-Column Product Hero -->
+      <div class="product-detail-grid">
+        
+        <!-- Left: Product Media Gallery -->
+        <div id="detail-gallery" class="product-detail-gallery">
+          <div class="product-gallery-main">
+            <span class="badge badge-teal product-card-badge">Loading...</span>
+            <div style="padding: 40px; text-align: center; color: var(--color-text-muted);">
+              Calibrating vector telemetry...
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Primary Product Information & Buying Box -->
+        <div id="detail-info" class="product-detail-info">
+          <div style="padding: 40px; text-align: center; color: var(--color-text-muted);">
+            Retrieving product state tensors...
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Tabbed Specifications, Full Description, and Policies -->
+      <div class="product-tabs-wrapper">
+        <div class="tabs-nav" role="tablist">
+          <button class="tab-btn active" data-tab="tab-description" role="tab" aria-selected="true">
+            Detailed Description
+          </button>
+          <button class="tab-btn" data-tab="tab-specs" role="tab" aria-selected="false">
+            Technical Specifications
+          </button>
+          <button class="tab-btn" data-tab="tab-policies" role="tab" aria-selected="false">
+            Logistics &amp; Guarantees
+          </button>
+        </div>
+
+        <div class="tab-content">
+          <div class="tab-pane active" id="tab-description" role="tabpanel"></div>
+          <div class="tab-pane" id="tab-specs" role="tabpanel"></div>
+          <div class="tab-pane" id="tab-policies" role="tabpanel"></div>
+        </div>
+      </div>
+
+      <!-- Frequently Bought Together / Bundle Section -->
+      <div id="bundle-section-container" style="display: none;"></div>
+
+      <!-- Related & Compatible Products Carousel/Grid -->
+      <div id="related-products-container" style="display: none;"></div>
+
+      <!-- Fictional Customer Reviews Section -->
+      <div id="reviews-section"></div>
+
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-grid">
+          
+          <div class="footer-col" style="grid-column: span 1.5;">
+            <div class="footer-brand">
+              <img src="assets/logo.svg" alt="Quirk &amp; Quanta" style="height: 44px; filter: brightness(0) invert(1); margin-bottom: 8px;">
+              <p class="footer-tagline">"Precisely Unnecessary. Scientifically Delightful."</p>
+              <p style="font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.5; margin-top: 10px;">
+                An eccentric theoretical physicist's dream department store. Built with mathematical precision and uncompromising scientific curiosity.
+              </p>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-col-title">Disciplines</h4>
+            <ul class="footer-links">
+              <li><a href="products.html?category=CAT-APPAREL">Apparel</a></li>
+              <li><a href="products.html?category=CAT-DESK">Desk &amp; Office</a></li>
+              <li><a href="products.html?category=CAT-KITCHEN">Drinkware &amp; Kitchen</a></li>
+              <li><a href="products.html?category=CAT-HOME">Home &amp; Decor</a></li>
+              <li><a href="products.html?category=CAT-GADGETS">Science Gadgets</a></li>
+              <li><a href="products.html?category=CAT-PUZZLES">Puzzles &amp; Games</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-col-title">Workshop Scope</h4>
+            <ul class="footer-links">
+              <li><a href="about.html">Fictional Brand Story</a></li>
+              <li><a href="products.html">All 100 Unique SKUs</a></li>
+              <li><a href="about.html#workshop">Beyond Basic RAG</a></li>
+              <li><a href="about.html#principles">Scientific Axioms</a></li>
+              <li><a href="about.html#architecture">Gate 1 Data Architecture</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-col-title">Fictional Headquarters</h4>
+            <p style="font-size: 0.8125rem; line-height: 1.6; margin-bottom: 8px;">
+              Department of Theoretical Retail &bull; Laboratory Suite 314<br>
+              Subatomic Park, Bengaluru, Karnataka, India
+            </p>
+            <p style="font-size: 0.8125rem; color: var(--color-gold);">
+              Operational Hours: 24 Hours (Circadian Invariant)
+            </p>
+            <div style="margin-top: 14px;">
+              <button onclick="openModal('role-explainer-modal')" class="btn btn-outline btn-sm" style="color: #FFFFFF; border-color: rgba(255,255,255,0.3);">
+                🛡️ Role Preview Details
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Quirk &amp; Quanta. All rights reserved. Built for "Beyond Basic RAG" Workshop.
+        </div>
+        <div style="font-size: 0.75rem; color: var(--color-text-light);">
+          Zero NPM Packages &bull; Vanilla HTML, CSS &amp; JS &bull; Pure Standard Library Data Architecture
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-Out Cart Drawer -->
+  <div class="modal-overlay" id="cart-drawer-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping Cart">
+    <div class="cart-drawer-header">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="font-size: 1.25rem;">🛒</span>
+        <h3 style="font-size: 1.125rem; font-weight: 800;">Your Calibrated Basket</h3>
+      </div>
+      <button class="modal-close-btn" id="close-cart-btn" aria-label="Close cart">&times;</button>
+    </div>
+    <div class="cart-drawer-items" id="cart-items-container"></div>
+    <div class="cart-drawer-footer">
+      <div class="cart-subtotal-row">
+        <span>Subtotal</span>
+        <span id="cart-subtotal-price">₹0</span>
+      </div>
+      <p style="font-size: 0.75rem; color: var(--color-text-muted);">
+        Taxes calculated using theoretical state tensors. Free ground shipping applies.
+      </p>
+      <button class="btn btn-primary btn-block btn-lg" id="checkout-action-btn">
+        Proceed to Checkout
+      </button>
+    </div>
+  </aside>
+
+  <!-- Educational Purchasing Disabled Modal -->
+  <div class="modal-overlay" id="checkout-demo-modal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 class="modal-title">Purchasing Disabled (Educational Demonstration)</h3>
+        <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div style="font-size: 3rem; text-align: center; margin-bottom: 16px;">🛑</div>
+        <h4 style="font-size: 1.125rem; font-weight: 800; color: var(--color-navy); text-align: center; margin-bottom: 8px;">
+          This is a fictional educational storefront.
+        </h4>
+        <p style="font-size: 0.9375rem; color: var(--color-text-muted); text-align: center; line-height: 1.6; margin-bottom: 16px;">
+          Purchasing is disabled. Quirk &amp; Quanta exists solely as the multi-domain knowledge base and application harness for the workshop <em>"Beyond Basic RAG: Building Production-Ready AI Systems."</em>
+        </p>
+        <div style="background-color: var(--color-bg); padding: 12px 16px; border-radius: 8px; font-size: 0.8125rem; color: var(--color-text-main);">
+          <strong>What happens next in the workshop?</strong><br>
+          In subsequent gates, this dataset will become the foundation for vector embeddings, semantic and BM25 hybrid search, GraphRAG multi-hop retrieval, and server-side RBAC security tests.
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary close-modal-trigger">Understood &bull; Continue Exploring</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Role Preview Explainer Modal -->
+  <div class="modal-overlay" id="role-explainer-modal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 class="modal-title">Role Preview Demonstration Architecture</h3>
+        <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div style="font-size: 2.5rem; text-align: center; margin-bottom: 12px;">🛡️</div>
+        <h4 style="font-size: 1.0625rem; font-weight: 800; color: var(--color-navy); margin-bottom: 8px;">
+          Client-Side Hiding is NOT Security
+        </h4>
+        <p style="font-size: 0.875rem; color: var(--color-text-main); line-height: 1.6; margin-bottom: 12px;">
+          This toggle demonstrates the separation between <strong>Public Storefront Data</strong> and <strong>Internal Canonical Data</strong>.
+        </p>
+        <ul style="padding-left: 20px; font-size: 0.8125rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 16px;">
+          <li><strong>Public Storefront Data:</strong> Filtered via <code>scripts/generate-public-data.py</code>. Contains zero cost prices, margins, or procurement codes.</li>
+          <li><strong>Internal Data:</strong> Strictly housed in <code>data/internal/</code> outside the deployable static site.</li>
+          <li><strong>Future Workshop Gates:</strong> In Gate 9 and Gate 10, true server-side authorization and RBAC retrieval filtering will be implemented with authenticated sessions.</li>
+        </ul>
+        <div class="fictional-disclaimer">
+          Toggling this switch in Gate 1 only modifies demo UI annotations. No sensitive canonical records are ever exposed to the client browser.
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary close-modal-trigger">Close Explanation</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- JavaScript Modules -->
+  <script src="js/app.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/role-preview.js"></script>
+  <script src="js/product-detail.js"></script>
+</body>
+</html>

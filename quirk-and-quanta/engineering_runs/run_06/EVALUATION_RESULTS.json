@@ -1,0 +1,46 @@
+{
+  "iteration": 6,
+  "date": "2026-11-20T19:48:27Z",
+  "totalCuratedQuestions": 42,
+  "baselineArchivedCases": 22,
+  "newCuratedCases": 20,
+  "comparativeMetrics42Cases": {
+    "vector": {
+      "hitRateAt5": 0.4762,
+      "mrr": 0.4762,
+      "precisionAt5": 0.1952,
+      "recallAt5": 0.3798,
+      "latencyP50Ms": 55.6,
+      "latencyP95Ms": 73.3,
+      "latencyAvgMs": 58.6,
+      "rbacSecurityPass": "7/7 (100%)"
+    },
+    "bm25": {
+      "hitRateAt5": 0.5714,
+      "mrr": 0.5187,
+      "precisionAt5": 0.2238,
+      "recallAt5": 0.4512,
+      "latencyP50Ms": 0.4,
+      "latencyP95Ms": 0.7,
+      "latencyAvgMs": 2.5,
+      "rbacSecurityPass": "7/7 (100%)"
+    },
+    "hybrid_rrf": {
+      "hitRateAt5": 0.5000,
+      "mrr": 0.4841,
+      "precisionAt5": 0.2048,
+      "recallAt5": 0.3917,
+      "latencyP50Ms": 56.8,
+      "latencyP95Ms": 75.6,
+      "latencyAvgMs": 60.0,
+      "rbacSecurityPass": "7/7 (100%)"
+    },
+    "graph_rag_defect_slice": {
+      "hitRateOnEVAL023_EVAL024": 1.0,
+      "latencyAvgMs": 0.08,
+      "resolvedComponent": "COMP-025",
+      "resolvedRecall": "REC-VREG-01",
+      "status": "PASS"
+    }
+  }
+}

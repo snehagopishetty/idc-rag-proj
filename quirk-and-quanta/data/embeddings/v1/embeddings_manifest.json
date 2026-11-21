@@ -1,0 +1,34 @@
+{
+  "version": "1.0.0",
+  "modelId": "gemini-embedding-001",
+  "vectorDimensions": 768,
+  "corpusVersion": "1.0.0",
+  "generatedAt": "2026-11-20T13:31:43.986602Z",
+  "liveApiMode": false,
+  "taskTypes": {
+    "documentEmbedding": "RETRIEVAL_DOCUMENT",
+    "queryEmbedding": "RETRIEVAL_QUERY"
+  },
+  "strategies": {
+    "semantic": {
+      "chunkCount": 1623,
+      "dimensions": 768,
+      "file": "embeddings_semantic.json",
+      "fileSizeKB": 7580.0
+    },
+    "fixed": {
+      "chunkCount": 1181,
+      "dimensions": 768,
+      "file": "embeddings_fixed.json",
+      "fileSizeKB": 5566.7
+    },
+    "sliding": {
+      "chunkCount": 1512,
+      "dimensions": 768,
+      "file": "embeddings_sliding.json",
+      "fileSizeKB": 7202.8
+    }
+  },
+  "totalChunksEmbedded": 4316,
+  "cachedQueryCount": 22
+}

@@ -1,0 +1,65 @@
+{
+  "iteration": 7,
+  "timestamp": "2026-11-20T14:34:00Z",
+  "totalTestSuites": 9,
+  "totalTests": 62,
+  "passed": 62,
+  "failed": 0,
+  "errors": 0,
+  "suites": [
+    {
+      "file": "tests/test-data.py",
+      "tests": 8,
+      "passed": 8,
+      "failed": 0
+    },
+    {
+      "file": "tests/test-evaluation.py",
+      "tests": 6,
+      "passed": 6,
+      "failed": 0
+    },
+    {
+      "file": "tests/test-graph.py",
+      "tests": 7,
+      "passed": 7,
+      "failed": 0
+    },
+    {
+      "file": "tests/test-guardrails.py",
+      "tests": 7,
+      "passed": 7,
+      "failed": 0
+    },
+    {
+      "file": "tests/test-hybrid.py",
+      "tests": 6,
+      "passed": 6,
+      "failed": 0
+    },
+    {
+      "file": "tests/test-load.py",
+      "tests": 6,
+      "passed": 6,
+      "failed": 0
+    },
+    {
+      "file": "tests/test-observability.py",
+      "tests": 5,
+      "passed": 5,
+      "failed": 0
+    },
+    {
+      "file": "tests/test-rag.py",
+      "tests": 9,
+      "passed": 9,
+      "failed": 0
+    },
+    {
+      "file": "tests/test-security.py",
+      "tests": 8,
+      "passed": 8,
+      "failed": 0
+    }
+  ]
+}

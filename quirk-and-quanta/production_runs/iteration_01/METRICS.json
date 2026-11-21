@@ -1,0 +1,19 @@
+{
+  "iteration": 1,
+  "timestamp": "2026-11-20T14:59:00Z",
+  "measurements": {
+    "coldStartInitMs": 313.12,
+    "memoryPeakMb": 102.41,
+    "healthzLatencyMs": 0.49,
+    "statusLatencyMs": 3.07,
+    "retrievalLatencyMs": 36.81,
+    "stress50ConcurrentReqs": {
+      "total": 50,
+      "success": 50,
+      "failures": 0,
+      "durationSec": 0.007,
+      "avgLatencyMs": 1.97
+    }
+  },
+  "classification": "LOCAL"
+}

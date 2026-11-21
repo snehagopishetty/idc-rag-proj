@@ -1,0 +1,13 @@
+{
+  "iteration": 7,
+  "service": "quirk-quanta-rag",
+  "rehearsal_metrics": {
+    "total_demos": 17,
+    "successful_demos": 17,
+    "failed_demos": 0,
+    "pass_rate_percent": 100.0,
+    "average_demo_latency_ms": 24.16,
+    "fastest_demo_ms": 0.1,
+    "slowest_demo_ms": 116.1
+  }
+}

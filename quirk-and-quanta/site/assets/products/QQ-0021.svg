@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="bgGrad_QQ-0021" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F7FAFC" />
+      <stop offset="100%" stop-color="#FFFFFF" />
+    </linearGradient>
+    <filter id="shadow_QQ-0021" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#18243A" flood-opacity="0.08" />
+    </filter>
+  </defs>
+
+  <!-- Clean Subtle Background -->
+  <rect width="400" height="400" fill="url(#bgGrad_QQ-0021)" />
+  
+  <!-- Subtle Technical Grid Lines -->
+  <g opacity="0.15" stroke="#2C7A7B" stroke-width="0.8">
+    <line x1="40" y1="0" x2="40" y2="400" stroke-dasharray="4,4" />
+    <line x1="360" y1="0" x2="360" y2="400" stroke-dasharray="4,4" />
+    <line x1="0" y1="40" x2="400" y2="40" stroke-dasharray="4,4" />
+    <line x1="0" y1="360" x2="400" y2="360" stroke-dasharray="4,4" />
+  </g>
+
+  <!-- Category & SKU Header Tag -->
+  <g transform="translate(25, 25)">
+    <rect x="0" y="0" width="75" height="22" rx="4" fill="#2C7A7B" />
+    <text x="37.5" y="15" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">QQ-0021</text>
+    
+    <text x="85" y="15" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#DD6B20">Drinkware &amp; Kitchen</text>
+  </g>
+
+  <!-- Circular Pedestal Ground Shadow -->
+  <ellipse cx="200" cy="315" rx="120" ry="22" fill="#E2E8F0" opacity="0.6" filter="url(#shadow_QQ-0021)" />
+
+  <!-- Distinct Centered Product Vector Illustration -->
+  <g id="product-art">
+    
+        <g transform="translate(110, 110)">
+          <!-- Ceramic Mug Body -->
+          <path d="M 40 50 L 140 50 L 130 180 Q 90 200 50 180 Z" fill="#18243A" stroke="#2D3748" stroke-width="2" />
+          <!-- Handle -->
+          <path d="M 135 70 Q 185 110 125 150" fill="none" stroke="#18243A" stroke-width="12" stroke-linecap="round" />
+          <!-- Thermal equation revealed on mug -->
+          <path d="M 55 120 Q 70 95 90 120 T 120 120" fill="none" stroke="#2CD4CD" stroke-width="2.5" />
+          <text x="90" y="145" font-family="'Courier New', monospace" font-size="10" fill="#F4C95D" text-anchor="middle">i&#8463;&#8706;&#968;/&#8706;t = &#292;&#968;</text>
+          <!-- Steam curls -->
+          <path d="M 65 35 Q 60 15 70 5" fill="none" stroke="#A0AEC0" stroke-width="2" stroke-linecap="round" opacity="0.6" />
+          <path d="M 90 35 Q 95 15 85 5" fill="none" stroke="#A0AEC0" stroke-width="2" stroke-linecap="round" opacity="0.6" />
+          <path d="M 115 35 Q 110 15 120 5" fill="none" stroke="#A0AEC0" stroke-width="2" stroke-linecap="round" opacity="0.6" />
+        </g>
+        
+  </g>
+
+  <!-- Product Title Label at Bottom -->
+  <g transform="translate(200, 368)">
+    <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#2C7A7B" text-anchor="middle">
+      Quantum Soup Mug
+    </text>
+    <text x="0" y="16" font-family="monospace" font-size="9.5" fill="#718096" text-anchor="middle">
+      Quirk &amp; Quanta &#8226; Certified Fictional
+    </text>
+  </g>
+</svg>

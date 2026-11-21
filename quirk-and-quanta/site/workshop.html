@@ -1,0 +1,2128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workshop Lab: Interactive RAG Strategy Playground | Quirk &amp; Quanta</title>
+  <meta name="description" content="IDC Workshop Lab: Interactive RAG Strategy Playground. Compare Vanilla Vector, BM25 Lexical, Hybrid RRF, Chunking, Embeddings, and GraphRAG.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+  <style>
+    .workshop-grid {
+      display: grid;
+      grid-template-columns: 440px 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+    @media (max-width: 1080px) {
+      .workshop-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .lab-panel {
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+    }
+    .lab-panel-title {
+      font-size: 1.125rem;
+      font-weight: 800;
+      color: var(--color-navy);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .form-group {
+      margin-bottom: 18px;
+    }
+    .form-label {
+      display: block;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      color: var(--color-navy);
+      margin-bottom: 6px;
+    }
+    .form-select, .form-textarea, .form-input {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 0.875rem;
+      background: #FFFFFF;
+      color: var(--color-text-main);
+    }
+    .form-select:focus, .form-textarea:focus, .form-input:focus {
+      outline: none;
+      border-color: var(--color-teal);
+      box-shadow: 0 0 0 3px rgba(21, 141, 137, 0.15);
+    }
+    .telemetry-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      background: var(--color-bg);
+      padding: 12px 16px;
+      border-radius: 6px;
+      border: 1px solid var(--color-border);
+      margin-bottom: 20px;
+    }
+    .telemetry-item {
+      font-size: 0.8125rem;
+      color: var(--color-text-muted);
+    }
+    .telemetry-item strong {
+      color: var(--color-navy);
+    }
+    .evidence-card {
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      padding: 16px;
+      margin-bottom: 14px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .evidence-card:hover {
+      border-color: var(--color-teal);
+      box-shadow: var(--shadow-md);
+    }
+    .evidence-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .score-meter {
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 12px;
+      background: #E6FFFA;
+      color: #234E52;
+      border: 1px solid #B2F5EA;
+    }
+    .chunk-id-tag {
+      font-family: ui-monospace, monospace;
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+    }
+    .evidence-text {
+      font-size: 0.875rem;
+      line-height: 1.6;
+      color: var(--color-text-main);
+      background: #F8FAFC;
+      padding: 12px;
+      border-radius: 4px;
+      border-left: 3px solid var(--color-teal);
+      white-space: pre-wrap;
+      font-family: inherit;
+    }
+    .answer-card {
+      background: #F0FDFA;
+      border: 1px solid #99F6E4;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 24px;
+    }
+    .answer-title {
+      font-size: 1rem;
+      font-weight: 800;
+      color: #0F766E;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .answer-body {
+      font-size: 0.9375rem;
+      line-height: 1.7;
+      color: #115E59;
+    }
+    .citation-pill {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 10px;
+      background: #CCFBF1;
+      color: #0F766E;
+      margin-right: 6px;
+      text-decoration: none;
+      border: 1px solid #5EEAD4;
+    }
+    .citation-pill:hover {
+      background: #99F6E4;
+    }
+
+    /* Interactive Tabs */
+    .lab-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid var(--color-border);
+      padding-bottom: 8px;
+    }
+    .lab-tab-btn {
+      padding: 9px 15px;
+      border-radius: 6px;
+      border: 1px solid var(--color-border);
+      background: #F8FAFC;
+      color: var(--color-navy);
+      font-size: 0.8125rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+    .lab-tab-btn:hover {
+      background: #E2E8F0;
+      border-color: var(--color-teal);
+    }
+    .lab-tab-btn.active {
+      background: var(--color-navy);
+      color: #FFFFFF;
+      border-color: var(--color-navy);
+      box-shadow: 0 2px 4px rgba(24,36,58,0.25);
+    }
+
+    /* 10 Film Scenario Presets Grid */
+    .preset-btn-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .preset-btn {
+      text-align: left;
+      padding: 9px 10px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      border: 1px solid #CBD5E1;
+      border-radius: 6px;
+      background: #FFFFFF;
+      color: var(--color-navy);
+      cursor: pointer;
+      transition: all 0.15s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      line-height: 1.3;
+    }
+    .preset-btn:hover {
+      border-color: var(--color-teal);
+      background: #F0FDFA;
+      color: #0F766E;
+      transform: translateY(-1px);
+    }
+    .preset-btn.active {
+      border-color: var(--color-teal);
+      background: #E6FFFA;
+      color: #0D9488;
+      font-weight: 800;
+    }
+
+    /* Explorer Chips & Cards */
+    .vector-chip {
+      font-family: ui-monospace, monospace;
+      font-size: 0.6875rem;
+      padding: 3px 6px;
+      border-radius: 4px;
+      background: #F1F5F9;
+      color: #0F172A;
+      border: 1px solid #CBD5E1;
+      display: inline-block;
+    }
+    .graph-node-card {
+      background: #FFFFFF;
+      border: 2px solid #CBD5E1;
+      border-radius: 8px;
+      padding: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .graph-node-card:hover {
+      border-color: var(--color-teal);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .graph-node-card.active {
+      border-color: var(--color-teal);
+      background: #F0FDFA;
+      box-shadow: 0 0 0 2px var(--color-teal);
+    }
+    .flow-step-box {
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      padding: 10px 14px;
+      text-align: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--color-navy);
+    }
+    .flow-arrow {
+      color: var(--color-teal);
+      font-weight: 900;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* =========================================================
+       UNDER THE HOOD: Educational Architecture & Code Styles
+       Optimized for 1080p/4K conference room projectors
+       ========================================================= */
+    .under-the-hood-card {
+      background: #FFFFFF;
+      border: 2px solid #0D9488;
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 12px rgba(13, 148, 136, 0.08);
+      position: relative;
+    }
+    .uth-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #E2E8F0;
+    }
+    .uth-title-group {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .uth-title {
+      font-size: 1.0625rem;
+      font-weight: 800;
+      color: #0F172A;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      letter-spacing: -0.01em;
+    }
+    .uth-subtitle {
+      font-size: 0.78125rem;
+      color: #64748B;
+      font-weight: 500;
+    }
+    .uth-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .uth-mode-badge {
+      font-size: 0.6875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 4px 8px;
+      border-radius: 4px;
+      letter-spacing: 0.04em;
+    }
+
+    /* Section 1: Visual Pipeline Sequence */
+    .uth-section-title {
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #0F766E;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .uth-pipeline-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+    .uth-stage-card {
+      background: #F8FAFC;
+      border: 1px solid #CBD5E1;
+      border-radius: 6px;
+      padding: 8px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+    .uth-stage-card.status-completed {
+      border-color: #10B981;
+      background: #ECFDF5;
+    }
+    .uth-stage-card.status-fallback {
+      border-color: #F59E0B;
+      background: #FFFBEB;
+    }
+    .uth-stage-card.status-intervened {
+      border-color: #EF4444;
+      background: #FEF2F2;
+    }
+    .uth-stage-card.status-skipped {
+      border-color: #94A3B8;
+      background: #F1F5F9;
+      opacity: 0.65;
+    }
+    .uth-stage-card.status-running {
+      border-color: #0D9488;
+      background: #F0FDFA;
+      animation: pulseStage 1.5s infinite;
+    }
+    @keyframes pulseStage {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(13, 148, 136, 0.4); }
+      50% { box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.2); }
+    }
+    .uth-stage-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.6875rem;
+    }
+    .uth-stage-num {
+      font-weight: 800;
+      color: #0F172A;
+    }
+    .uth-stage-status-badge {
+      font-size: 0.625rem;
+      font-weight: 800;
+      padding: 1px 5px;
+      border-radius: 3px;
+    }
+    .status-completed .uth-stage-status-badge { background: #10B981; color: #FFFFFF; }
+    .status-fallback .uth-stage-status-badge { background: #F59E0B; color: #FFFFFF; }
+    .status-intervened .uth-stage-status-badge { background: #EF4444; color: #FFFFFF; }
+    .status-skipped .uth-stage-status-badge { background: #94A3B8; color: #FFFFFF; }
+    .status-running .uth-stage-status-badge { background: #0D9488; color: #FFFFFF; }
+    .status-planned .uth-stage-status-badge { background: #CBD5E1; color: #475569; }
+
+    .uth-stage-name {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #1E293B;
+      line-height: 1.25;
+    }
+    .uth-stage-meta {
+      font-size: 0.6875rem;
+      color: #64748B;
+      line-height: 1.2;
+    }
+
+    /* Section 2: Zero-Dependency Syntax Highlighted Pseudocode */
+    .uth-code-wrapper {
+      background: #0F172A;
+      border: 1px solid #1E293B;
+      border-radius: 8px;
+      margin-bottom: 14px;
+      overflow: hidden;
+    }
+    .uth-code-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 6px 12px;
+      background: #1E293B;
+      border-bottom: 1px solid #334155;
+    }
+    .uth-code-label {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.6875rem;
+      color: #94A3B8;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .uth-code-btn {
+      background: #334155;
+      color: #F8FAFC;
+      border: none;
+      border-radius: 4px;
+      font-size: 0.6875rem;
+      font-weight: 600;
+      padding: 3px 8px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: background 0.15s;
+    }
+    .uth-code-btn:hover {
+      background: #0D9488;
+    }
+    .uth-code-block {
+      margin: 0;
+      padding: 12px 14px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.8125rem;
+      line-height: 1.55;
+      color: #E2E8F0;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    /* Syntax Highlighting Tokens */
+    .py-keyword { color: #F43F5E; font-weight: 700; }
+    .py-def { color: #38BDF8; font-weight: 700; }
+    .py-call { color: #67E8F9; }
+    .py-string { color: #A3E635; }
+    .py-comment { color: #64748B; font-style: italic; }
+    .py-number { color: #FBBF24; }
+    .py-builtin { color: #C084FC; }
+
+    /* Formula & Key Insight Boxes */
+    .uth-formula-box {
+      background: #F0FDFA;
+      border-left: 3px solid #0D9488;
+      padding: 8px 12px;
+      margin-bottom: 14px;
+      border-radius: 0 6px 6px 0;
+      font-family: ui-monospace, SFMono-Regular, monospace;
+      font-size: 0.75rem;
+      color: #0F766E;
+    }
+
+    /* Section 3: Execution Evidence Grid */
+    .uth-evidence-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .uth-evidence-stat {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 6px;
+      padding: 8px 10px;
+    }
+    .uth-evidence-label {
+      font-size: 0.6875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #64748B;
+      margin-bottom: 2px;
+    }
+    .uth-evidence-value {
+      font-size: 0.8125rem;
+      font-weight: 800;
+      color: #0F172A;
+      font-family: ui-monospace, monospace;
+    }
+
+    /* Section 4: Expandable Deeper Explanation */
+    .uth-details {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .uth-summary {
+      padding: 10px 14px;
+      font-size: 0.78125rem;
+      font-weight: 700;
+      color: #0F766E;
+      cursor: pointer;
+      user-select: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .uth-summary:hover {
+      background: #F1F5F9;
+    }
+    .uth-details-content {
+      padding: 12px 14px;
+      border-top: 1px solid #E2E8F0;
+      font-size: 0.78125rem;
+      color: #334155;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .uth-callout-box {
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      line-height: 1.45;
+    }
+    .uth-callout-insight {
+      background: #EFF6FF;
+      border-left: 3px solid #3B82F6;
+      color: #1E40AF;
+    }
+    .uth-callout-failure {
+      background: #FFFBEB;
+      border-left: 3px solid #F59E0B;
+      color: #92400E;
+    }
+    .uth-sources-list {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .uth-source-item {
+      font-size: 0.71875rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .uth-source-item code {
+      background: #E2E8F0;
+      color: #0F172A;
+      padding: 1px 4px;
+      border-radius: 3px;
+    }
+
+    /* =========================================================
+       OBSERVABILITY & RETRIEVAL EVALS DASHBOARD STYLES
+       ========================================================= */
+    .obs-dashboard-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .obs-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+    .obs-mode-switcher {
+      display: flex;
+      background: #F1F5F9;
+      padding: 4px;
+      border-radius: 8px;
+      gap: 4px;
+      border: 1px solid var(--color-border);
+    }
+    .obs-mode-btn {
+      padding: 6px 14px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      border: none;
+      background: transparent;
+      color: #64748B;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .obs-mode-btn:hover {
+      color: var(--color-navy);
+    }
+    .obs-mode-btn.active {
+      background: #FFFFFF;
+      color: var(--color-teal);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    /* KPI Grid */
+    .obs-kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 14px;
+    }
+    .obs-kpi-card {
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      padding: 14px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+    }
+    .obs-kpi-scope-badge {
+      font-size: 0.625rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 2px 6px;
+      border-radius: 4px;
+      align-self: flex-start;
+      margin-bottom: 4px;
+    }
+    .obs-kpi-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #64748B;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .obs-kpi-value {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--color-navy);
+      font-family: ui-monospace, SFMono-Regular, monospace;
+    }
+    .obs-kpi-subtext {
+      font-size: 0.6875rem;
+      color: #64748B;
+      line-height: 1.3;
+    }
+
+    /* Tables */
+    .obs-card {
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      padding: 16px;
+      box-shadow: var(--shadow-sm);
+    }
+    .obs-card-title {
+      font-size: 0.875rem;
+      font-weight: 800;
+      color: var(--color-navy);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .obs-table-wrapper {
+      overflow-x: auto;
+      max-height: 340px;
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+    }
+    .obs-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.75rem;
+      text-align: left;
+    }
+    .obs-table th {
+      background: #F8FAFC;
+      padding: 8px 10px;
+      font-weight: 800;
+      color: var(--color-navy);
+      border-bottom: 2px solid var(--color-border);
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+    .obs-table td {
+      padding: 8px 10px;
+      border-bottom: 1px solid var(--color-border);
+      color: #334155;
+    }
+    .obs-table tr:hover {
+      background: #F1F5F9;
+      cursor: pointer;
+    }
+    .obs-table tr.active-row {
+      background: #E6FFFA;
+      font-weight: 600;
+    }
+
+    /* Request Waterfall */
+    .obs-waterfall-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .obs-waterfall-item {
+      background: #F8FAFC;
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      padding: 10px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .obs-waterfall-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.75rem;
+    }
+    .obs-bar-track {
+      background: #E2E8F0;
+      border-radius: 4px;
+      height: 8px;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+    .obs-bar-fill {
+      background: var(--color-teal);
+      height: 100%;
+      border-radius: 4px;
+      transition: width 0.3s ease;
+    }
+    .obs-bar-fallback { background: #F59E0B; }
+    .obs-bar-intervened { background: #EF4444; }
+    .obs-bar-skipped { background: #94A3B8; }
+
+    /* Scorecard Table */
+    .obs-scorecard-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.8125rem;
+      text-align: left;
+    }
+    .obs-scorecard-table th {
+      padding: 10px 12px;
+      background: #F8FAFC;
+      border-bottom: 2px solid var(--color-border);
+      font-weight: 800;
+      color: var(--color-navy);
+    }
+    .obs-scorecard-table td {
+      padding: 9px 12px;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    /* Native SVG Charts */
+    .obs-charts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 16px;
+      margin-top: 12px;
+    }
+    .obs-svg-chart {
+      width: 100%;
+      height: 200px;
+      background: #FAFBFD;
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      padding: 10px;
+    }
+
+    /* Inspector Tags */
+    .obs-diff-tag {
+      font-family: ui-monospace, monospace;
+      font-size: 0.6875rem;
+      padding: 2px 6px;
+      border-radius: 4px;
+      display: inline-block;
+      margin: 2px 3px;
+    }
+    .obs-diff-hit { background: #ECFDF5; color: #047857; border: 1px solid #10B981; }
+    .obs-diff-miss { background: #FEF2F2; color: #B91C1C; border: 1px solid #EF4444; }
+    .obs-diff-extra { background: #FFFBEB; color: #B45309; border: 1px solid #F59E0B; }
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+      <div class="announcement-bar-content">
+        <span class="announcement-ticker">
+          <span class="announcement-ticker-icon">🧪</span>
+          <span>IDC Workshop Lab: Interactive RAG Strategy Playground &bull; Vanilla vs BM25 vs Hybrid vs GraphRAG</span>
+        </span>
+      </div>
+      <div class="announcement-bar-links" style="display: flex; align-items: center; gap: 12px;">
+        <span id="neo4j-status-pill" class="badge badge-gold" style="font-size: 0.6875rem;">
+          ⚠️ Neo4j: Checking...
+        </span>
+        <span id="embedding-model-pill" class="badge badge-navy" style="font-size: 0.6875rem;">
+          Model: gemini-embedding-001 (768-D)
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Sticky Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-main">
+        <!-- Logo -->
+        <a href="index.html" class="header-brand" aria-label="Quirk &amp; Quanta Home">
+          <img src="assets/logo.svg" alt="Quirk &amp; Quanta Logo" class="header-logo-img">
+        </a>
+
+        <!-- Global Search Bar -->
+        <div class="header-search">
+          <form id="global-search-form" class="search-input-wrapper">
+            <input type="text" 
+                   id="global-search-input" 
+                   class="search-input" 
+                   placeholder="Search 100 peer-reviewed items by SKU, concept, or formula..." 
+                   autocomplete="off"
+                   aria-label="Search catalog">
+            <button type="submit" class="search-btn" aria-label="Submit search">Search</button>
+          </form>
+          <div id="search-dropdown" class="search-results-dropdown"></div>
+        </div>
+
+        <!-- Header Actions -->
+        <div class="header-actions">
+          <button id="role-toggle-btn" class="role-badge-toggle" title="Switch Demonstration Role Preview">
+            <span>👤</span> Role: Customer
+          </button>
+          <a href="products.html" class="header-action-btn" title="View Wishlist">
+            <span>♥</span>
+            <span class="badge-count" id="header-wishlist-count">0</span>
+          </a>
+          <button id="header-cart-btn" class="header-action-btn" title="Open Shopping Cart">
+            <span>🛒</span>
+            <span>Cart</span>
+            <span class="badge-count" id="header-cart-count">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category Navigation Sub-bar -->
+    <nav class="header-nav" aria-label="Category navigation">
+      <div class="container">
+        <ul class="header-nav-list">
+          <li><a href="products.html" class="header-nav-link">All 100 Products</a></li>
+          <li><a href="products.html?category=CAT-APPAREL" class="header-nav-link">Apparel</a></li>
+          <li><a href="products.html?category=CAT-DESK" class="header-nav-link">Desk &amp; Office</a></li>
+          <li><a href="products.html?category=CAT-KITCHEN" class="header-nav-link">Drinkware &amp; Kitchen</a></li>
+          <li><a href="products.html?category=CAT-HOME" class="header-nav-link">Home &amp; Decor</a></li>
+          <li><a href="products.html?category=CAT-GADGETS" class="header-nav-link">Science Gadgets</a></li>
+          <li><a href="products.html?category=CAT-PUZZLES" class="header-nav-link">Puzzles &amp; Games</a></li>
+          <li><a href="products.html?category=CAT-STATIONERY" class="header-nav-link">Stationery &amp; Learning</a></li>
+          <li><a href="products.html?category=CAT-TECH" class="header-nav-link">Tech Accessories</a></li>
+          <li><a href="products.html?category=CAT-RAILWAY" class="header-nav-link">Railway &amp; Engineering</a></li>
+          <li><a href="products.html?category=CAT-GIFTS" class="header-nav-link">Gifts &amp; Collectibles</a></li>
+          <li><a href="workshop.html" class="header-nav-link active" style="color: var(--color-gold); font-weight: 800;">🧪 Workshop Lab</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Page Header -->
+  <div style="background: var(--color-navy); color: #FFFFFF; padding: 24px 0; border-bottom: 3px solid var(--color-gold);">
+    <div class="container">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+        <div>
+          <span class="badge badge-gold" style="margin-bottom: 8px;">Interactive RAG Strategy Playground</span>
+          <h1 style="font-size: 1.875rem; font-weight: 900; color: #FFFFFF; margin-bottom: 4px;">
+            RAG Strategy &amp; Retrieval Engineering Bench
+          </h1>
+          <p style="font-size: 0.875rem; color: rgba(255,255,255,0.8); margin: 0;">
+            Compare Dense Vectors vs BM25 Lexical vs Hybrid RRF vs GraphRAG. Inspect 768-D embeddings, chunking boundaries, and OKF knowledge graphs.
+          </p>
+        </div>
+        <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+          <div id="backend-status-pill" class="badge badge-teal" style="font-size: 0.8125rem; padding: 6px 14px;">
+            Checking Engine...
+          </div>
+          <div id="generation-mode-pill" class="badge badge-gold" style="font-size: 0.8125rem; padding: 6px 14px;">
+            Offline Reference Synthesizer
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Workshop Lab Section -->
+  <main class="section" style="padding-top: 28px;">
+    <div class="container">
+      
+      <div class="workshop-grid">
+        
+        <!-- Left Column: Experiment Controls -->
+        <aside class="lab-panel">
+          <h2 class="lab-panel-title">
+            <span>⚙️</span> Interactive Controls
+          </h2>
+
+          <!-- 10 Film-Aligned High-Value Scenario Presets -->
+          <div class="form-group" style="background: #F8FAFC; border: 1px solid #CBD5E1; padding: 14px; border-radius: 8px; margin-bottom: 18px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+              <label class="form-label" style="margin: 0; font-weight: 800; color: var(--color-navy);">
+                🎬 10 Film Master Scenario Presets
+              </label>
+              <span class="badge badge-teal" style="font-size: 0.6875rem;">Interactive Presets</span>
+            </div>
+            <div class="preset-btn-grid">
+              <button class="preset-btn" data-preset="1" title="Demonstrates dense cosine similarity drift on exact alphanumeric code">
+                <span>⚡</span> 1. Vector Failure
+              </button>
+              <button class="preset-btn" data-preset="2" title="BM25 inverted index retrieves exact SKU with 100% precision">
+                <span>🎯</span> 2. Exact SKU: QQ-0015
+              </button>
+              <button class="preset-btn" data-preset="3" title="Hybrid Reciprocal Rank Fusion combines vector topicality and BM25 precision">
+                <span>⚖️</span> 3. BM25 vs Vector vs Hybrid
+              </button>
+              <button class="preset-btn" data-preset="4" title="3 products flicker; standard retrieval fails to link shared component">
+                <span>🕵️</span> 4. 3-Product Mystery
+              </button>
+              <button class="preset-btn" data-preset="5" title="Graph traversal links products to COMP-025 and REC-VREG-01 in 0.08ms">
+                <span>🕸️</span> 5. GraphRAG Multi-Hop
+              </button>
+              <button class="preset-btn" data-preset="6" title="Grounded abstention refuses out-of-domain historical queries">
+                <span>🚫</span> 6. Calibrated Abstention
+              </button>
+              <button class="preset-btn" data-preset="7" title="Blackbeard pirate prompt injection blocked by guardrails">
+                <span>🏴‍☠️</span> 7. Injection Defense
+              </button>
+              <button class="preset-btn" data-preset="8" title="Server-side RBAC and IDOR protection demotes unauthenticated roles">
+                <span>🔐</span> 8. Server RBAC &amp; IDOR
+              </button>
+              <button class="preset-btn" data-preset="9" title="Observability traces simulated runaway intern loop vs budget caps">
+                <span>📈</span> 9. Cost-Spike Simulation
+              </button>
+              <button class="preset-btn" data-preset="10" title="Graceful degradation to deterministic synthesizer when Gemini is offline">
+                <span>🔌</span> 10. Outage &amp; Fallback
+              </button>
+            </div>
+            
+            <div id="preset-banner-box" style="display: none; margin-top: 10px; font-size: 0.75rem; color: var(--color-navy); line-height: 1.4; background: #EEF2F6; padding: 10px; border-radius: 6px; border-left: 3px solid var(--color-teal);">
+            </div>
+
+            <!-- Full 17 Master Demos Dropdown -->
+            <div style="margin-top: 10px; padding-top: 8px; border-top: 1px dashed #CBD5E1;">
+              <select id="demo-preset-select" class="form-select" style="font-size: 0.75rem; padding: 6px 8px;">
+                <option value="">-- Or Select All 17 Workshop Demos (Gate G15) --</option>
+                <option value="DEMO-01">Demo 01: Baseline Dense Vector Retrieval (Gate G2)</option>
+                <option value="DEMO-02">Demo 02: Fixed-Size Chunking Inspection (Gate G3)</option>
+                <option value="DEMO-03">Demo 03: Sliding-Window Chunking with Overlap (Gate G3)</option>
+                <option value="DEMO-04">Demo 04: Semantic / Structural Chunking Inspection (Gate G3)</option>
+                <option value="DEMO-05">Demo 05: Lexical BM25 Search on Exact SKU (Gate G4)</option>
+                <option value="DEMO-06">Demo 06: Hybrid RRF Search (Vector + BM25) (Gate G5)</option>
+                <option value="DEMO-07">Demo 07: 3-Product Flickering Multi-Hop Failure (Gate G6)</option>
+                <option value="DEMO-08">Demo 08: Local GraphRAG Deterministic Root-Cause Traversal (Gate G7)</option>
+                <option value="DEMO-09">Demo 09: Neo4j AuraDB Cypher Import &amp; Traversal (Gate O1)</option>
+                <option value="DEMO-10">Demo 10: Comparative Evaluation Harness &amp; Empirical Metrics (Gate G8)</option>
+                <option value="DEMO-11">Demo 11: Calibrated Grounded Abstention on Out-of-Domain Query (Gate G9)</option>
+                <option value="DEMO-12">Demo 12: Direct Prompt Injection Attack (Blackbeard Pirate) (Gate G10)</option>
+                <option value="DEMO-13">Demo 13: Off-Topic Scope Rejection &amp; Indirect Injection Defanging (Gate G11)</option>
+                <option value="DEMO-14">Demo 14: Observability, Distributed Tracing &amp; Cost Spikes (Gate G14)</option>
+                <option value="DEMO-15">Demo 15: Server-Side RBAC Enforcement &amp; Customer Privilege Demotion (Gate G12)</option>
+                <option value="DEMO-16">Demo 16: IDOR Direct Resource Access Protection (Gate G13)</option>
+                <option value="DEMO-17">Demo 17: Dependency Fallback &amp; Graceful Degradation (Gate G16)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Natural Language Question Input -->
+          <div class="form-group">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+              <label class="form-label" for="user-question-input" style="margin: 0;">Natural Language Query / Free Text</label>
+              <span id="query-provenance-badge" class="badge badge-navy" style="font-size: 0.6875rem;">Provenance: Pending</span>
+            </div>
+            <textarea id="user-question-input" 
+                      class="form-textarea" 
+                      rows="3" 
+                      placeholder="Type a product question, SKU (e.g. QQ-0015), or concept..."></textarea>
+          </div>
+
+          <!-- Curated Golden Questions -->
+          <div class="form-group">
+            <label class="form-label" for="question-preset-select">Curated Workshop Test Cases (Golden Dataset)</label>
+            <select id="question-preset-select" class="form-select">
+              <option value="">-- Choose a test case (42 curated) --</option>
+            </select>
+          </div>
+
+          <!-- Retrieval Method Selector -->
+          <div class="form-group">
+            <label class="form-label" for="method-select">Retrieval Strategy / Engine</label>
+            <select id="method-select" class="form-select">
+              <option value="vector" selected>Vanilla Vector (Dense Cosine / gemini-embedding-001 768-D)</option>
+              <option value="bm25">Lexical BM25 (Okapi Inverted Index, Exact SKU)</option>
+              <option value="hybrid">Hybrid RAG (Reciprocal Rank Fusion - RRF k=60)</option>
+              <option value="graph">Local GraphRAG (In-Memory Multi-Hop Traversal)</option>
+              <option value="neo4j">Neo4j GraphRAG (AuraDB Cypher - ⚠️ Not Connected Fallback)</option>
+            </select>
+            <div id="method-note-box" style="font-size: 0.75rem; color: var(--color-text-muted); margin-top: 4px;">
+              Dense vector similarity measures semantic topicality using 768-D embeddings.
+            </div>
+          </div>
+
+          <!-- Chunking Strategy Selector -->
+          <div class="form-group">
+            <label class="form-label" for="strategy-select">Chunking Strategy</label>
+            <select id="strategy-select" class="form-select">
+              <option value="semantic" selected>Structural / Heading-Based Section Splitting (H1/H2 Markdown - 1,623 chunks)</option>
+              <option value="fixed">Fixed-Size (450 chars, word-bounded - 1,181 chunks)</option>
+              <option value="sliding">Sliding-Window (450 chars / 150 overlap - 1,512 chunks)</option>
+            </select>
+            <div style="font-size: 0.75rem; color: var(--color-text-muted); margin-top: 4px;">
+              Honest labeling: Markdown section splitting preserves complete sentences; not true embedding-based semantic splitting.
+            </div>
+          </div>
+
+          <!-- Top-K Selector -->
+          <div class="form-group">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+              <label class="form-label" for="top-k-slider" style="margin: 0;">Top-K Retrieved Evidence Chunks</label>
+              <span id="top-k-val" style="font-weight: 800; color: var(--color-teal); font-size: 0.875rem;">5</span>
+            </div>
+            <input type="range" id="top-k-slider" min="1" max="10" value="5" style="width: 100%;">
+          </div>
+
+          <!-- Active User Role (RBAC) -->
+          <div class="form-group">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+              <label class="form-label" for="role-select" style="margin: 0;">Access Role (RBAC Security)</label>
+              <button id="btn-get-token" class="badge badge-teal" style="cursor: pointer; border: none; font-size: 0.6875rem;" title="Obtain signed HMAC bearer token">
+                🔑 Issue Admin Token
+              </button>
+            </div>
+            <select id="role-select" class="form-select">
+              <option value="customer" selected>Customer (Public Catalog Only)</option>
+              <option value="admin">Administrator / Procurement (Confidential Costs &amp; Recalls)</option>
+            </select>
+            <div id="auth-token-display" style="font-size: 0.6875rem; color: var(--color-text-muted); margin-top: 4px; word-break: break-all;">
+              Token status: <span id="token-status-label" style="color: var(--color-text-muted);">Unauthenticated (Client-only role)</span>
+            </div>
+          </div>
+
+          <!-- Hardened Guardrails Mode Toggle -->
+          <div class="form-group" style="background: #F1F5F9; padding: 10px 12px; border-radius: 6px; border: 1px solid #CBD5E1;">
+            <label style="display: flex; align-items: center; gap: 8px; font-size: 0.8125rem; font-weight: 700; color: var(--color-navy); cursor: pointer; margin: 0;">
+              <input type="checkbox" id="hardened-mode-checkbox" checked style="width: 16px; height: 16px;">
+              <span>🛡️ Hardened Guardrails Active</span>
+            </label>
+            <div style="font-size: 0.6875rem; color: var(--color-text-muted); margin-top: 4px; line-height: 1.3;">
+              Uncheck to simulate vulnerable mode for Story 5 (Pirate Persona Override &amp; Cost Leakage).
+            </div>
+          </div>
+
+          <!-- Primary Execution Actions -->
+          <div style="display: flex; gap: 10px; margin-top: 20px;">
+            <button id="btn-retrieve-only" class="btn btn-outline" style="flex: 1; font-size: 0.8125rem; font-weight: 800;">
+              🔍 Retrieve Only
+            </button>
+            <button id="btn-ask-rag" class="btn btn-primary" style="flex: 1; font-size: 0.8125rem; font-weight: 800;">
+              ⚡ Ask Full RAG
+            </button>
+          </div>
+          
+          <div style="margin-top: 10px;">
+            <button id="btn-compare-strategies" class="btn btn-secondary" style="width: 100%; font-size: 0.8125rem; background: var(--color-navy); color: #fff; font-weight: 800;">
+              ⚖️ Compare Methods (Vector vs BM25 vs Hybrid)
+            </button>
+          </div>
+
+          <!-- Secondary Deep-Dive Tools -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 10px;">
+            <button id="btn-open-embedding" class="btn btn-outline" style="font-size: 0.75rem; border-color: var(--color-teal); color: var(--color-teal);">
+              🧬 Embedding Explorer
+            </button>
+            <button id="btn-open-chunking" class="btn btn-outline" style="font-size: 0.75rem; border-color: var(--color-navy); color: var(--color-navy);">
+              📑 Chunking Lab
+            </button>
+            <button id="btn-open-okf" class="btn btn-outline" style="font-size: 0.75rem; border-color: #D97706; color: #B45309;">
+              🕸️ OKF Graph
+            </button>
+            <button id="btn-cost-spike" class="btn btn-outline" style="font-size: 0.75rem; border-color: #F59E0B; color: #B45309;">
+              📈 Cost Spike (D14)
+            </button>
+          </div>
+
+          <div style="margin-top: 10px;">
+            <button id="btn-test-idor" class="btn btn-outline" style="width: 100%; font-size: 0.75rem; border-color: #EF4444; color: #DC2626;">
+              🎯 Test IDOR Direct Resource Access (Demo 16)
+            </button>
+          </div>
+
+          <!-- Server Tip -->
+          <div style="margin-top: 18px; padding: 12px; background: var(--color-bg); border-radius: 6px; font-size: 0.75rem; color: var(--color-text-muted); line-height: 1.5;">
+            💡 <strong>Workshop Note:</strong> Live Cloud Run backend provides dynamic vector cosine calculation, pure-Python BM25 inverted index, and RRF rank fusion. Default comparisons run retrieval-only to conserve model quota.
+          </div>
+        </aside>
+
+        <!-- Right Column: Results & Interactive Explorers -->
+        <section class="lab-panel">
+          
+          <!-- Top Tab Navigation -->
+          <div class="lab-tabs" role="tablist">
+            <button class="lab-tab-btn active" data-tab="results" role="tab">
+              <span>📊</span> Results &amp; Evidence
+            </button>
+            <button class="lab-tab-btn" data-tab="comparison" role="tab">
+              <span>⚖️</span> Strategy Comparison
+            </button>
+            <button class="lab-tab-btn" data-tab="embedding" role="tab">
+              <span>🧬</span> Embedding Explorer
+            </button>
+            <button class="lab-tab-btn" data-tab="chunking" role="tab">
+              <span>📑</span> Chunking Lab
+            </button>
+            <button class="lab-tab-btn" data-tab="okf" role="tab">
+              <span>🕸️</span> OKF &amp; Graph Explorer
+            </button>
+            <button class="lab-tab-btn" data-tab="observability" role="tab" id="tab-btn-observability">
+              <span>📈</span> Observability &amp; Evals
+            </button>
+          </div>
+
+          <!-- TAB 1: Results & Evidence -->
+          <div id="tab-results" class="tab-content-panel">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+              <h2 class="lab-panel-title" style="margin: 0;">
+                <span>📊</span> Retrieval &amp; Generation Output
+              </h2>
+              <div id="execution-mode-badge" class="badge badge-navy">
+                Ready
+              </div>
+            </div>
+
+            <!-- UNDER THE HOOD: Technical Learning Panel -->
+            <section id="under-the-hood-panel" class="under-the-hood-card" aria-label="Under the Hood Algorithmic Architecture">
+              <!-- Header -->
+              <div class="uth-header">
+                <div class="uth-title-group">
+                  <div class="uth-title">
+                    <span>⚙️</span>
+                    <span>UNDER THE HOOD: See the algorithm behind the answer</span>
+                  </div>
+                  <div id="uth-subtitle" class="uth-subtitle">
+                    Select a RAG mode or scenario to inspect the algorithmic pipeline, teaching pseudocode, and execution evidence.
+                  </div>
+                </div>
+                <div class="uth-controls">
+                  <span id="uth-active-badge" class="uth-mode-badge badge-teal">VANILLA VECTOR</span>
+                  <button type="button" id="btn-toggle-uth" class="btn btn-outline" style="font-size: 0.6875rem; padding: 4px 8px;" title="Minimize / Expand panel">
+                    Minimize 🔼
+                  </button>
+                </div>
+              </div>
+
+              <div id="uth-body-content">
+                <!-- 1. Algorithmic Pipeline Stages -->
+                <div class="uth-section-title">
+                  <span>🔄</span> Algorithmic Pipeline Stages &amp; Dynamic State
+                </div>
+                <div id="uth-pipeline-stages" class="uth-pipeline-grid">
+                  <!-- Injected dynamically based on active mode -->
+                </div>
+
+                <!-- 2. Teaching Pseudocode & Formula -->
+                <div class="uth-section-title">
+                  <span>💻</span> Educational Pseudocode (Production Implementation)
+                </div>
+                <div class="uth-code-wrapper">
+                  <div class="uth-code-header">
+                    <span class="uth-code-label">
+                      <span>🐍</span> Python (Standard Library) &bull; Educational pseudocode based on this implementation
+                    </span>
+                    <button type="button" id="btn-copy-uth-code" class="uth-code-btn" title="Copy code snippet to clipboard">
+                      📋 Copy
+                    </button>
+                  </div>
+                  <pre class="uth-code-block"><code id="uth-code-snippet"></code></pre>
+                </div>
+                <div id="uth-formula-box" class="uth-formula-box">
+                  <!-- Formula injected dynamically -->
+                </div>
+
+                <!-- 3. Execution Evidence & Provenance -->
+                <div class="uth-section-title">
+                  <span>⏱️</span> Execution Evidence &amp; Latency Provenance
+                </div>
+                <div id="uth-evidence-grid" class="uth-evidence-grid">
+                  <div class="uth-evidence-stat">
+                    <div class="uth-evidence-label">Execution Status</div>
+                    <div id="uth-stat-status" class="uth-evidence-value" style="color: #0D9488;">READY (PLANNED)</div>
+                  </div>
+                  <div class="uth-evidence-stat">
+                    <div class="uth-evidence-label">Pipeline Latency</div>
+                    <div id="uth-stat-latency" class="uth-evidence-value">0.0 ms</div>
+                  </div>
+                  <div class="uth-evidence-stat">
+                    <div class="uth-evidence-label">Role Resolution</div>
+                    <div id="uth-stat-auth" class="uth-evidence-value">customer (valid)</div>
+                  </div>
+                  <div class="uth-evidence-stat">
+                    <div class="uth-evidence-label">Grounding Guardrails</div>
+                    <div id="uth-stat-guard" class="uth-evidence-value">PASSED</div>
+                  </div>
+                </div>
+
+                <!-- 4. Deeper Technical Explanation & Source References -->
+                <details id="uth-details" class="uth-details">
+                  <summary class="uth-summary">
+                    <span>🔍 View actual source code mappings &amp; failure modes</span>
+                    <span>▾</span>
+                  </summary>
+                  <div class="uth-details-content">
+                    <div id="uth-callout-insight" class="uth-callout-box uth-callout-insight">
+                      <!-- Key Learning Point -->
+                    </div>
+                    <div id="uth-callout-failure" class="uth-callout-box uth-callout-failure">
+                      <!-- Common Failure Mode -->
+                    </div>
+                    <div>
+                      <strong style="font-size: 0.71875rem; color: #0F172A; display: block; margin-bottom: 4px;">Audited Source Modules:</strong>
+                      <div id="uth-sources-list" class="uth-sources-list">
+                        <!-- File/symbol links -->
+                      </div>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Telemetry Bar -->
+            <div id="telemetry-container" class="telemetry-bar">
+              <div class="telemetry-item">Request ID: <strong id="trace-req-id" style="font-family:monospace; font-size:0.75rem;">none</strong></div>
+              <div class="telemetry-item">Embedding: <strong id="time-emb">0.0 ms</strong></div>
+              <div class="telemetry-item">Retrieval: <strong id="time-ret">0.0 ms</strong></div>
+              <div class="telemetry-item">Generation: <strong id="time-gen">0.0 ms</strong></div>
+              <div class="telemetry-item">Total Latency: <strong id="time-total" style="color: var(--color-teal);">0.0 ms</strong></div>
+              <div class="telemetry-item">Tokens: <strong id="trace-tokens">0 in / 0 out</strong></div>
+              <div class="telemetry-item">Cost: <strong id="trace-cost" style="color: #D97706;">$0.000000</strong></div>
+            </div>
+
+            <!-- Grounded Answer Card -->
+            <div id="answer-card-wrapper" style="display: none;">
+              <div class="answer-card">
+                <div class="answer-title">
+                  <span>🤖</span> Grounded Generation Output
+                </div>
+                <div class="answer-body" id="generated-answer-text"></div>
+                <div style="margin-top: 14px; padding-top: 10px; border-top: 1px dashed rgba(15,118,110,0.3);">
+                  <div style="font-size: 0.75rem; font-weight: 700; color: #0F766E; margin-bottom: 6px;">
+                    Attributed Sources:
+                  </div>
+                  <div id="answer-citations-list"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cost Spike Panel -->
+            <div id="cost-spike-wrapper" style="display: none; margin-bottom: 24px;">
+              <div class="lab-panel" style="background: #FFFBEB; border: 2px solid #F59E0B;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                  <h3 style="font-size: 1rem; font-weight: 800; color: #92400E; margin: 0;">
+                    📈 Story 7: "Arthur Receives the Bill" — Usage Spike vs Budget Protection
+                  </h3>
+                  <span class="badge badge-gold" id="cost-spike-badge">Simulation Complete</span>
+                </div>
+                <div id="cost-spike-container"></div>
+              </div>
+            </div>
+
+            <!-- Multi-Hop Graph Quick Path Card -->
+            <div id="graph-path-wrapper" style="display: none; margin-bottom: 24px;">
+              <div class="lab-panel" style="background: #FEF3C7; border: 2px solid #D97706;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                  <h3 style="font-size: 1rem; font-weight: 800; color: #92400E; margin: 0;">
+                    🕸️ Multi-Hop Knowledge Graph Traversal
+                  </h3>
+                  <span class="badge badge-gold" id="graph-path-badge">Root Cause Resolved</span>
+                </div>
+                <div id="graph-path-container" style="background: #FFFFFF; border-radius: 6px; padding: 16px; border: 1px solid #FCD34D;"></div>
+              </div>
+            </div>
+
+            <!-- Evidence List -->
+            <div>
+              <h3 style="font-size: 0.9375rem; font-weight: 800; color: var(--color-navy); margin-bottom: 12px; display: flex; justify-content: space-between;">
+                <span>Retrieved Context Chunks</span>
+                <span id="evidence-count-label" style="font-weight: 600; color: var(--color-text-muted); font-size: 0.8125rem;">0 chunks</span>
+              </h3>
+              <div id="evidence-results-list">
+                <div style="padding: 40px; text-align: center; color: var(--color-text-muted); font-size: 0.875rem;">
+                  Select a curated test question or type a query, then click <strong>Retrieve Only</strong> or <strong>Ask Full RAG</strong>.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 2: Strategy Comparison Matrix -->
+          <div id="tab-comparison" class="tab-content-panel" style="display: none;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+              <h2 class="lab-panel-title" style="margin: 0;">
+                <span>⚖️</span> Side-by-Side Strategy Comparison
+              </h2>
+              <div class="badge badge-teal">
+                Default: Retrieval Only (Quota Preserved)
+              </div>
+            </div>
+
+            <!-- Comparative Legend & Scoring Explanation -->
+            <div style="background: #F1F5F9; border: 1px solid #CBD5E1; border-radius: 6px; padding: 12px 16px; margin-bottom: 18px; font-size: 0.75rem; color: var(--color-navy); line-height: 1.5;">
+              <strong>💡 Scoring Model Distinction:</strong>
+              <div style="margin-top: 4px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px;">
+                <div><span style="color: #158D89; font-weight: 800;">Cosine Similarity (0.0 to 1.0):</span> Normalized dot product of 768-D dense vectors in semantic latent space.</div>
+                <div><span style="color: #2B4C7E; font-weight: 800;">Okapi BM25 Score (&gt;0, unbounded):</span> Term-frequency / inverse document frequency on exact lexical tokens.</div>
+                <div><span style="color: #B45309; font-weight: 800;">Hybrid RRF Score (0 to ~0.033):</span> Reciprocal Rank Fusion &sum; 1/(60 + rank<sub>m</sub>), combining relative rank orders.</div>
+              </div>
+            </div>
+
+            <div id="comparison-results-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
+              <div style="grid-column: 1 / -1; padding: 40px; text-align: center; color: var(--color-text-muted);">
+                Click <strong>⚖️ Compare Methods (Vector vs BM25 vs Hybrid)</strong> to evaluate the current question across all three retrieval approaches simultaneously.
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 3: Educational Embedding Explorer -->
+          <div id="tab-embedding" class="tab-content-panel" style="display: none;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+              <h2 class="lab-panel-title" style="margin: 0;">
+                <span>🧬</span> Educational Embedding Explorer
+              </h2>
+              <div id="embedding-provenance-tag" class="badge badge-teal">
+                Model: gemini-embedding-001 (768-D)
+              </div>
+            </div>
+
+            <!-- Pipeline Diagram -->
+            <div style="background: #F8FAFC; border: 1px solid #CBD5E1; border-radius: 8px; padding: 16px; margin-bottom: 20px;">
+              <div style="font-size: 0.8125rem; font-weight: 800; color: var(--color-navy); margin-bottom: 10px;">
+                📐 High-Dimensional Vector Transformation Pipeline
+              </div>
+              <div style="display: grid; grid-template-columns: 1fr auto 1fr auto 1.2fr auto 1fr; gap: 8px; align-items: center;">
+                <div class="flow-step-box">
+                  <div style="font-size: 1.1rem; margin-bottom: 4px;">📄</div>
+                  <div>Document Dossier</div>
+                  <div style="font-size: 0.6875rem; color: var(--color-text-muted); margin-top: 2px;">Markdown Text</div>
+                </div>
+                <div class="flow-arrow">➔</div>
+                <div class="flow-step-box">
+                  <div style="font-size: 1.1rem; margin-bottom: 4px;">✂️</div>
+                  <div>Text Chunk</div>
+                  <div style="font-size: 0.6875rem; color: var(--color-text-muted); margin-top: 2px;">~450 chars</div>
+                </div>
+                <div class="flow-arrow">➔</div>
+                <div class="flow-step-box" style="border-color: var(--color-teal); background: #F0FDFA;">
+                  <div style="font-size: 1.1rem; margin-bottom: 4px;">🧠</div>
+                  <div>gemini-embedding-001</div>
+                  <div style="font-size: 0.6875rem; color: #0F766E; margin-top: 2px;">768-D Dense Embedder</div>
+                </div>
+                <div class="flow-arrow">➔</div>
+                <div class="flow-step-box">
+                  <div style="font-size: 1.1rem; margin-bottom: 4px;">🔍</div>
+                  <div>Cosine Search</div>
+                  <div style="font-size: 0.6875rem; color: var(--color-text-muted); margin-top: 2px;">Unit Dot Product</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Vector Inspection Box -->
+            <div class="lab-panel" style="background: #FFFFFF; border: 1px solid var(--color-border); margin-bottom: 20px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                <h3 style="font-size: 0.9375rem; font-weight: 800; color: var(--color-navy); margin: 0;">
+                  Live Query Vector Telemetry
+                </h3>
+                <button id="btn-refresh-vector" class="btn btn-outline" style="font-size: 0.6875rem; padding: 4px 10px;">
+                  🔄 Inspect Active Query Vector
+                </button>
+              </div>
+
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-bottom: 14px;">
+                <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 6px; padding: 10px;">
+                  <div style="font-size: 0.6875rem; color: var(--color-text-muted); text-transform: uppercase;">Vector Dimensions</div>
+                  <div id="emb-dims-val" style="font-size: 1.125rem; font-weight: 800; color: var(--color-navy); margin-top: 2px;">768 floats</div>
+                </div>
+                <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 6px; padding: 10px;">
+                  <div style="font-size: 0.6875rem; color: var(--color-text-muted); text-transform: uppercase;">Vector L2 Norm (||v||)</div>
+                  <div id="emb-norm-val" style="font-size: 1.125rem; font-weight: 800; color: var(--color-teal); margin-top: 2px;">1.000000</div>
+                </div>
+                <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 6px; padding: 10px;">
+                  <div style="font-size: 0.6875rem; color: var(--color-text-muted); text-transform: uppercase;">Provenance Mode</div>
+                  <div id="emb-mode-val" style="font-size: 0.8125rem; font-weight: 800; color: #B45309; margin-top: 4px;">Cached Golden Vector</div>
+                </div>
+              </div>
+
+              <!-- Numerical Vector Value Chips -->
+              <div style="font-size: 0.8125rem; font-weight: 700; color: var(--color-navy); margin-bottom: 6px;">
+                Numerical Vector Sample (First 16 of 768 float dimensions):
+              </div>
+              <div id="emb-vector-samples-grid" style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px;">
+                <span class="vector-chip">d0: 0.000000</span>
+                <span class="vector-chip">d1: 0.000000</span>
+                <span class="vector-chip">d2: 0.000000</span>
+                <span class="vector-chip">d3: 0.000000</span>
+                <span class="vector-chip">d4: 0.000000</span>
+                <span class="vector-chip">d5: 0.000000</span>
+                <span class="vector-chip">d6: 0.000000</span>
+                <span class="vector-chip">d7: 0.119570</span>
+              </div>
+            </div>
+
+            <!-- Educational Callout: Why Exact SKUs Drift -->
+            <div style="background: #FFFBEB; border: 1px solid #FCD34D; border-radius: 8px; padding: 16px;">
+              <div style="display: flex; align-items: center; gap: 8px; font-weight: 800; color: #92400E; margin-bottom: 8px; font-size: 0.9375rem;">
+                <span>⚠️</span> Why Exact SKUs Fail with Dense Vector Retrieval
+              </div>
+              <div style="font-size: 0.8125rem; color: #78350F; line-height: 1.6;">
+                <p style="margin: 0 0 8px 0;">
+                  Dense vector models (like Gemini) use <strong>subword tokenizers</strong> (Byte-Pair Encoding). An arbitrary SKU code such as <code>QQ-0015</code> is fragmented into meaningless sub-tokens like <code>["QQ", "-", "00", "15"]</code>.
+                </p>
+                <p style="margin: 0 0 8px 0;">
+                  In 768-dimensional semantic latent space, these fragments project close to general digits, year dates, or generic physics tokens rather than clustering specifically on product <code>QQ-0015</code>. Dense cosine similarity measures <em>semantic topicality</em> rather than <em>exact symbol equality</em>.
+                </p>
+                <p style="margin: 0;">
+                  <strong>The Engineering Fix:</strong> Okapi BM25 builds an inverted index over whole tokens. The rare exact token <code>qq-0015</code> receives an extraordinarily high Inverse Document Frequency (IDF) weight, guaranteeing #1 ranking. Hybrid RRF combines both worlds.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 4: Chunking Lab Inspector -->
+          <div id="tab-chunking" class="tab-content-panel" style="display: none;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+              <h2 class="lab-panel-title" style="margin: 0;">
+                <span>📑</span> Interactive Chunking Lab Inspector
+              </h2>
+              <div style="display: flex; gap: 8px; align-items: center;">
+                <label for="chunk-sample-doc-select" style="font-size: 0.75rem; font-weight: 700; color: var(--color-navy);">Sample Document:</label>
+                <select id="chunk-sample-doc-select" class="form-select" style="font-size: 0.75rem; padding: 4px 8px; width: auto;">
+                  <option value="QQ-0011">QQ-0011: Atomic Orbit Desk Lamp</option>
+                  <option value="QQ-0015">QQ-0015: Precision Mirror Galvanometer</option>
+                  <option value="QQ-0074">QQ-0074: Atomic Orbit Wireless Charger</option>
+                  <option value="QQ-0049">QQ-0049: Digital Astronomy Star Projector</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Strategy Cards Overview -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-bottom: 20px;">
+              <div style="background: #FFFFFF; border: 2px solid var(--color-teal); border-radius: 8px; padding: 14px;">
+                <div style="font-weight: 800; font-size: 0.875rem; color: var(--color-teal); margin-bottom: 6px;">
+                  1. Structural / Heading-Based
+                </div>
+                <div style="font-size: 0.75rem; color: var(--color-text-muted); line-height: 1.4; margin-bottom: 8px;">
+                  Splits along Markdown H1/H2 boundaries. Preserves complete topical cohesion, specifications, and sentences.
+                </div>
+                <div style="font-size: 0.75rem; font-weight: 700; color: var(--color-navy);">
+                  Corpus chunks: <span class="badge badge-teal">1,623 chunks</span>
+                </div>
+              </div>
+
+              <div style="background: #FFFFFF; border: 2px solid #2B4C7E; border-radius: 8px; padding: 14px;">
+                <div style="font-weight: 800; font-size: 0.875rem; color: #2B4C7E; margin-bottom: 6px;">
+                  2. Fixed-Size Word-Bounded
+                </div>
+                <div style="font-size: 0.75rem; color: var(--color-text-muted); line-height: 1.4; margin-bottom: 8px;">
+                  Splits at strict 450-character window borders. Uniform chunk sizes, but truncates context across borders.
+                </div>
+                <div style="font-size: 0.75rem; font-weight: 700; color: var(--color-navy);">
+                  Corpus chunks: <span class="badge badge-navy">1,181 chunks</span>
+                </div>
+              </div>
+
+              <div style="background: #FFFFFF; border: 2px solid #B45309; border-radius: 8px; padding: 14px;">
+                <div style="font-weight: 800; font-size: 0.875rem; color: #B45309; margin-bottom: 6px;">
+                  3. Sliding-Window Overlap
+                </div>
+                <div style="font-size: 0.75rem; color: var(--color-text-muted); line-height: 1.4; margin-bottom: 8px;">
+                  450 chars with 150-char overlap. Carries context over boundaries; introduces 28% data redundancy.
+                </div>
+                <div style="font-size: 0.75rem; font-weight: 700; color: var(--color-navy);">
+                  Corpus chunks: <span class="badge badge-gold">1,512 chunks</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Chunk Boundaries Viewer -->
+            <div id="chunk-boundaries-display">
+              <div style="padding: 30px; text-align: center; color: var(--color-text-muted);">
+                Loading chunk slices for selected document...
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 5: OKF & Knowledge Graph Explorer -->
+          <div id="tab-okf" class="tab-content-panel" style="display: none;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+              <h2 class="lab-panel-title" style="margin: 0;">
+                <span>🕸️</span> Open Knowledge Format (OKF) &amp; Graph Explorer
+              </h2>
+              <span class="badge badge-gold">OKF Spec v1.0.0 Validated</span>
+            </div>
+
+            <!-- OKF Bundle Overview -->
+            <div style="background: #F8FAFC; border: 1px solid #CBD5E1; border-radius: 8px; padding: 14px; margin-bottom: 18px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                <div style="font-size: 0.8125rem; font-weight: 800; color: var(--color-navy);">
+                  📁 Portable Knowledge Bundle: <code>quirk-and-quanta-defect-graph</code>
+                </div>
+                <a href="/data/okf/manifest.json" target="_blank" class="citation-pill">View manifest.json</a>
+              </div>
+              <div style="font-size: 0.75rem; color: var(--color-text-muted); line-height: 1.4;">
+                Conformant with Google Cloud Knowledge Catalog Open Knowledge Format (OKF). Serialized into <code>manifest.json</code>, <code>entities.jsonl</code> (6 entities), and <code>relations.jsonl</code> (8 relations).
+              </div>
+            </div>
+
+            <!-- Interactive Graph Path Explorer -->
+            <div style="background: #FEF3C7; border: 2px solid #D97706; border-radius: 8px; padding: 16px; margin-bottom: 20px;">
+              <div style="font-size: 0.875rem; font-weight: 800; color: #92400E; margin-bottom: 12px; display: flex; justify-content: space-between;">
+                <span>Interactive Traversal: 3 Products ➔ 1 Shared Component ➔ 1 Active Recall Notice</span>
+                <span style="font-size: 0.75rem; font-weight: 600;">Click any node to view entity properties</span>
+              </div>
+
+              <!-- Interactive Node Flow -->
+              <div style="display: flex; flex-direction: column; gap: 12px;">
+                <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+                  <button class="graph-node-card active" data-entity="QQ-0011">
+                    <span style="font-size: 1rem;">💡</span> <strong>QQ-0011</strong><br>
+                    <span style="font-size: 0.6875rem; color: var(--color-text-muted);">Atomic Orbit Desk Lamp</span>
+                  </button>
+                  <button class="graph-node-card" data-entity="QQ-0074">
+                    <span style="font-size: 1rem;">🔋</span> <strong>QQ-0074</strong><br>
+                    <span style="font-size: 0.6875rem; color: var(--color-text-muted);">Atomic Wireless Charger</span>
+                  </button>
+                  <button class="graph-node-card" data-entity="QQ-0049">
+                    <span style="font-size: 1rem;">✨</span> <strong>QQ-0049</strong><br>
+                    <span style="font-size: 0.6875rem; color: var(--color-text-muted);">Digital Star Projector</span>
+                  </button>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 8px; margin-left: 20px;">
+                  <span style="color: #D97706; font-weight: 900; font-size: 1rem;">➔ [CONTAINS] ➔</span>
+                  <button class="graph-node-card" data-entity="COMP-025" style="border-color: #059669; background: #ECFDF5;">
+                    <span style="font-size: 1rem;">⚙️</span> <strong>COMP-025</strong><br>
+                    <span style="font-size: 0.6875rem; color: #065F46;">Voltage Regulator IC (5V/3A)</span>
+                  </button>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 8px; margin-left: 40px;">
+                  <span style="color: #DC2626; font-weight: 900; font-size: 1rem;">➔ [AFFECTED_BY] ➔</span>
+                  <button class="graph-node-card" data-entity="REC-VREG-01" style="border-color: #DC2626; background: #FEF2F2;">
+                    <span style="font-size: 1rem;">🚨</span> <strong>REC-VREG-01</strong><br>
+                    <span style="font-size: 0.6875rem; color: #991B1B;">Thermal Breakdown Recall</span>
+                  </button>
+                  
+                  <span style="color: #6B7280; font-weight: 900; font-size: 1rem; margin-left: 10px;">➔ [SUPPLIED_BY] ➔</span>
+                  <button class="graph-node-card" data-entity="SUP-008" style="border-color: #6B7280; background: #F3F4F6;">
+                    <span style="font-size: 1rem;">🏭</span> <strong>SUP-008</strong><br>
+                    <span style="font-size: 0.6875rem; color: #374151;">Quantum Flux Micro</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Selected Node Detail Card -->
+            <div id="node-detail-card" style="background: #FFFFFF; border: 1px solid var(--color-border); border-radius: 8px; padding: 18px; margin-bottom: 20px;">
+              <div style="font-size: 0.75rem; font-weight: 700; color: var(--color-text-muted); text-transform: uppercase;">
+                Selected Entity Properties
+              </div>
+              <div id="node-detail-content" style="margin-top: 8px;">
+                <h3 style="font-size: 1.125rem; font-weight: 800; color: var(--color-navy); margin-bottom: 4px;">
+                  QQ-0011: Atomic Orbit Desk Lamp
+                </h3>
+                <div style="font-size: 0.8125rem; color: var(--color-text-main); line-height: 1.6;">
+                  Category: Desk &amp; Office &bull; Price: ₹129.99 &bull; Rating: 4.7 &bull; In Stock: Yes<br>
+                  Bill of Materials: Contains <strong>COMP-025</strong> (5V LED Driver Step-Down Regulator, Batch: BATCH-VREG-2026).
+                </div>
+              </div>
+            </div>
+
+            <!-- Architectural Taxonomy Table -->
+            <div style="background: #F8FAFC; border: 1px solid var(--color-border); border-radius: 8px; padding: 16px;">
+              <h4 style="font-size: 0.875rem; font-weight: 800; color: var(--color-navy); margin-bottom: 8px;">
+                🏛️ Graph Architecture Taxonomy: OKF vs Local GraphRAG vs Neo4j AuraDB
+              </h4>
+              <div style="overflow-x: auto;">
+                <table style="width: 100%; font-size: 0.75rem; border-collapse: collapse; text-align: left;">
+                  <thead>
+                    <tr style="border-bottom: 2px solid var(--color-border); color: var(--color-navy);">
+                      <th style="padding: 6px 8px;">System Dimension</th>
+                      <th style="padding: 6px 8px;">Open Knowledge Format (OKF)</th>
+                      <th style="padding: 6px 8px;">Local GraphRAG</th>
+                      <th style="padding: 6px 8px;">Neo4j AuraDB</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr style="border-bottom: 1px solid var(--color-border);">
+                      <td style="padding: 6px 8px; font-weight: 700;">Role</td>
+                      <td style="padding: 6px 8px;">Portable Data Interchange Standard</td>
+                      <td style="padding: 6px 8px;">Embedded Python Traversal Engine</td>
+                      <td style="padding: 6px 8px;">Enterprise Cloud Graph Database</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--color-border);">
+                      <td style="padding: 6px 8px; font-weight: 700;">Format / Engine</td>
+                      <td style="padding: 6px 8px;">JSONL Schemas &amp; Manifest</td>
+                      <td style="padding: 6px 8px;">In-memory Adjacency BFS</td>
+                      <td style="padding: 6px 8px;">Cypher Query Engine (Transactional REST)</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--color-border);">
+                      <td style="padding: 6px 8px; font-weight: 700;">Latency</td>
+                      <td style="padding: 6px 8px;">N/A (Storage format)</td>
+                      <td style="padding: 6px 8px;">&lt; 0.1 ms (Deterministic)</td>
+                      <td style="padding: 6px 8px;">15 - 45 ms (Network roundtrip)</td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 6px 8px; font-weight: 700;">Current Status</td>
+                      <td style="padding: 6px 8px;"><span class="badge badge-teal">VALIDATED (data/okf/)</span></td>
+                      <td style="padding: 6px 8px;"><span class="badge badge-teal">ACTIVE (1,206 edges)</span></td>
+                      <td style="padding: 6px 8px;"><span class="badge badge-gold">NOT CONNECTED (Offline Fallback)</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- TAB 6: Observability & Evals -->
+          <div id="tab-observability" class="tab-content-panel" style="display: none;">
+            <div class="obs-dashboard-container">
+
+              <!-- Top Header & Sub-mode Switcher -->
+              <div class="obs-header">
+                <div>
+                  <h2 class="lab-panel-title" style="margin: 0 0 4px 0;">
+                    <span>📈</span> Observability, Traces &amp; Retrieval Evals
+                  </h2>
+                  <div style="font-size: 0.78125rem; color: #64748B;">
+                    Sub-millisecond latency profiling, token economics, golden accuracy benchmarks, and failure analysis.
+                  </div>
+                </div>
+                <div class="obs-mode-switcher" role="tablist">
+                  <button type="button" class="obs-mode-btn active" id="btn-subtab-live" role="tab">
+                    ⚡ Live Request Observability
+                  </button>
+                  <button type="button" class="obs-mode-btn" id="btn-subtab-evals" role="tab">
+                    📊 Golden Evaluations (42 Cases)
+                  </button>
+                </div>
+              </div>
+
+              <!-- Top 4 KPI Cards (Clear Scopes) -->
+              <div class="obs-kpi-grid">
+                <div class="obs-kpi-card">
+                  <span class="obs-kpi-scope-badge badge-teal">YOUR BROWSER SESSION</span>
+                  <div class="obs-kpi-title">Queries Executed</div>
+                  <div class="obs-kpi-value" id="kpi-session-queries">0</div>
+                  <div class="obs-kpi-subtext">Client session ring buffer (last 30 requests)</div>
+                </div>
+
+                <div class="obs-kpi-card">
+                  <span class="obs-kpi-scope-badge badge-navy">MEASURED TIMINGS</span>
+                  <div class="obs-kpi-title">Latency (Avg / P95)</div>
+                  <div class="obs-kpi-value" id="kpi-session-latency">0.0 ms / 0.0 ms</div>
+                  <div class="obs-kpi-subtext">Server perf-counter nanosecond instrumentation</div>
+                </div>
+
+                <div class="obs-kpi-card">
+                  <span class="obs-kpi-scope-badge badge-gold">ESTIMATED API COST</span>
+                  <div class="obs-kpi-title">Gemini Token Cost</div>
+                  <div class="obs-kpi-value" id="kpi-session-cost" style="color: #D97706;">$0.000000</div>
+                  <div class="obs-kpi-subtext">Gemini 2.5 Flash ($0.075 / $0.30 per 1M tokens)</div>
+                </div>
+
+                <div class="obs-kpi-card">
+                  <span class="obs-kpi-scope-badge badge-teal">GOLDEN BASELINE (42 CASES)</span>
+                  <div class="obs-kpi-title">Retrieval Accuracy</div>
+                  <div class="obs-kpi-value" id="kpi-golden-hitrate" style="font-size: 1.0625rem;">BM25: 57.1% | Hyb: 50.0%</div>
+                  <div class="obs-kpi-subtext">Hit Rate@5 across 7 functional query families</div>
+                </div>
+              </div>
+
+              <!-- ========================================================= -->
+              <!-- SUB-MODE A: LIVE REQUEST OBSERVABILITY                    -->
+              <!-- ========================================================= -->
+              <div id="obs-mode-live-container" style="display: flex; flex-direction: column; gap: 18px;">
+
+                <!-- Request History Table -->
+                <div class="obs-card">
+                  <div class="obs-card-title">
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                      <span>📋</span>
+                      <span>Client Session Request History</span>
+                      <span class="badge badge-navy" style="font-size: 0.6875rem;" id="obs-history-count-badge">0 requests</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                      <select id="obs-filter-strategy" class="form-select" style="width: auto; padding: 4px 8px; font-size: 0.75rem;">
+                        <option value="all">All Strategies</option>
+                        <option value="vector">Vector Only</option>
+                        <option value="bm25">BM25 Only</option>
+                        <option value="hybrid">Hybrid Only</option>
+                        <option value="graph">GraphRAG Only</option>
+                      </select>
+                      <button type="button" class="btn btn-outline" id="btn-clear-session" style="font-size: 0.6875rem; padding: 4px 8px;">
+                        🗑️ Clear
+                      </button>
+                      <button type="button" class="btn btn-outline" id="btn-export-session" style="font-size: 0.6875rem; padding: 4px 8px;">
+                        📥 Export JSON
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="obs-table-wrapper">
+                    <table class="obs-table">
+                      <thead>
+                        <tr>
+                          <th>Time</th>
+                          <th>Request ID</th>
+                          <th>Question</th>
+                          <th>Strategy</th>
+                          <th>Mode</th>
+                          <th>Latency</th>
+                          <th>Tokens (In/Out)</th>
+                          <th>Est. Cost</th>
+                          <th>Status</th>
+                        </tr>
+                      </thead>
+                      <tbody id="obs-history-tbody">
+                        <tr>
+                          <td colspan="9" style="text-align: center; color: #64748B; padding: 30px;">
+                            No queries recorded in this browser session yet. Run a search or click a Film Preset to capture live traces!
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div style="margin-top: 8px; font-size: 0.6875rem; color: #64748B;">
+                    💡 <em>Click any row above to inspect its execution waterfall and token economics below.</em>
+                  </div>
+                </div>
+
+                <!-- Request Execution Waterfall -->
+                <div class="obs-card" id="obs-waterfall-card">
+                  <div class="obs-card-title">
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                      <span>⏱️</span>
+                      <span>Execution Stage Waterfall: <code id="obs-selected-req-id" style="font-size: 0.8125rem;">none</code></span>
+                    </div>
+                    <div id="obs-selected-status-badges" style="display: flex; gap: 6px;">
+                      <span class="badge badge-navy" id="obs-waterfall-mode-badge">AWAITING QUERY</span>
+                    </div>
+                  </div>
+
+                  <div id="obs-waterfall-stages" class="obs-waterfall-list">
+                    <div style="padding: 24px; text-align: center; color: #64748B; font-size: 0.75rem;">
+                      Submit a query in the playground to visualize its measured execution waterfall.
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Cost Explorer & Runaway Intern Simulation -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px;">
+                  
+                  <!-- Token & Cost Economics Card -->
+                  <div class="obs-card">
+                    <div class="obs-card-title">
+                      <span>💰 Token &amp; Cost Accounting</span>
+                      <span class="badge badge-teal">GEMINI 2.5 FLASH</span>
+                    </div>
+                    <div style="font-size: 0.75rem; color: #334155; line-height: 1.5; display: flex; flex-direction: column; gap: 8px;">
+                      <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--color-border); padding-bottom: 6px;">
+                        <span>Input / Prompt Tokens:</span>
+                        <strong id="obs-cost-input-tokens" style="font-family: monospace;">0 tokens</strong>
+                      </div>
+                      <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--color-border); padding-bottom: 6px;">
+                        <span>Output / Completion Tokens:</span>
+                        <strong id="obs-cost-output-tokens" style="font-family: monospace;">0 tokens</strong>
+                      </div>
+                      <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--color-border); padding-bottom: 6px;">
+                        <span>Published Unit Pricing:</span>
+                        <span style="font-family: monospace;">$0.075 / 1M in &bull; $0.30 / 1M out</span>
+                      </div>
+                      <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--color-border); padding-bottom: 6px;">
+                        <span>Per-Request Estimated Cost:</span>
+                        <strong id="obs-cost-req-usd" style="color: #D97706; font-family: monospace;">$0.000000</strong>
+                      </div>
+                      <div style="display: flex; justify-content: space-between; padding-top: 2px;">
+                        <span>Session Cumulative Estimated Cost:</span>
+                        <strong id="obs-cost-cum-usd" style="color: #D97706; font-family: monospace;">$0.000000</strong>
+                      </div>
+                    </div>
+                    <div style="margin-top: 12px; padding: 8px; background: #F8FAFC; border-radius: 6px; font-size: 0.6875rem; color: #64748B;">
+                      <strong>Scope Transparency:</strong> Computed token cost is an <em>estimated API cost</em> based on published pricing, not an actual Google Cloud invoice total. Offline reference synthesizers incur $0.00 live spend.
+                    </div>
+                  </div>
+
+                  <!-- Story 7: Intern Runaway Loop Simulation -->
+                  <div class="obs-card" style="border-top: 4px solid #F59E0B;">
+                    <div class="obs-card-title">
+                      <span>⚠️ Story 7: Arthur Receives the Bill</span>
+                      <span class="badge badge-gold">SIMULATION &bull; ZERO SPEND</span>
+                    </div>
+                    <div style="font-size: 0.75rem; color: #334155; line-height: 1.45; margin-bottom: 12px;">
+                      Simulates an unmonitored intern script writing <code>while True: call_rag()</code> vs Quirk &amp; Quanta spending safeguards.
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                      <button type="button" class="btn btn-outline" id="btn-run-sim-spike" style="font-size: 0.75rem; font-weight: 700; color: #B45309; border-color: #F59E0B;">
+                        ⚡ Simulate Runaway Intern Spike
+                      </button>
+                      <span style="font-size: 0.6875rem; color: #64748B;">40 recursive loops</span>
+                    </div>
+                    <div id="obs-sim-results-box" style="padding: 10px; background: #FFFBEB; border: 1px dashed #F59E0B; border-radius: 6px; font-size: 0.71875rem; color: #92400E; display: none;">
+                      <!-- Populated dynamically -->
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <!-- ========================================================= -->
+              <!-- SUB-MODE B: GOLDEN BENCHMARK EVALUATIONS                  -->
+              <!-- ========================================================= -->
+              <div id="obs-mode-evals-container" style="display: none; flex-direction: column; gap: 18px;">
+
+                <!-- Scorecard Comparison Table -->
+                <div class="obs-card">
+                  <div class="obs-card-title">
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                      <span>⚖️</span>
+                      <span>Golden Dataset Benchmark Scorecard (42 Curated Cases)</span>
+                    </div>
+                    <span class="badge badge-teal">DATASET VERSION: v1.0-42q</span>
+                  </div>
+
+                  <div class="obs-table-wrapper">
+                    <table class="obs-scorecard-table">
+                      <thead>
+                        <tr>
+                          <th>Retrieval Strategy</th>
+                          <th title="Hit Rate@5: Did at least one relevant document appear in the top 5 results?">Hit Rate@5 ℹ️</th>
+                          <th title="MRR: Mean Reciprocal Rank of the first relevant result">MRR ℹ️</th>
+                          <th title="Precision@5: Proportion of retrieved documents that were relevant">Precision@5 ℹ️</th>
+                          <th title="Recall@5: Proportion of all relevant documents that were successfully retrieved">Recall@5 ℹ️</th>
+                          <th>Latency P50</th>
+                          <th>Latency P95</th>
+                          <th>RBAC Compliance</th>
+                        </tr>
+                      </thead>
+                      <tbody id="obs-scorecard-tbody">
+                        <tr>
+                          <td><strong>Dense Vector (Cosine)</strong></td>
+                          <td><span class="badge badge-navy">47.6% (20/42)</span></td>
+                          <td><code>0.4762</code></td>
+                          <td>19.5%</td>
+                          <td>38.0%</td>
+                          <td>22.52 ms</td>
+                          <td>24.54 ms</td>
+                          <td><span class="badge badge-teal">100% (Pass)</span></td>
+                        </tr>
+                        <tr>
+                          <td><strong>Okapi BM25 (Inverted Index)</strong></td>
+                          <td><span class="badge badge-teal" style="font-weight: 800;">57.1% (24/42)</span></td>
+                          <td><code>0.5187</code></td>
+                          <td>22.4%</td>
+                          <td>45.1%</td>
+                          <td><strong>0.35 ms</strong></td>
+                          <td><strong>0.78 ms</strong></td>
+                          <td><span class="badge badge-teal">100% (Pass)</span></td>
+                        </tr>
+                        <tr>
+                          <td><strong>Hybrid RRF (k=60)</strong></td>
+                          <td><span class="badge badge-gold">50.0% (21/42)</span></td>
+                          <td><code>0.4841</code></td>
+                          <td>20.5%</td>
+                          <td>39.2%</td>
+                          <td>22.32 ms</td>
+                          <td>24.49 ms</td>
+                          <td><span class="badge badge-teal">100% (Pass)</span></td>
+                        </tr>
+                        <tr>
+                          <td><strong>Local GraphRAG</strong></td>
+                          <td><span class="badge badge-navy">4.8% (2/42)*</span></td>
+                          <td><code>0.0476</code></td>
+                          <td>4.8%</td>
+                          <td>4.8%</td>
+                          <td><strong>0.02 ms</strong></td>
+                          <td><strong>0.03 ms</strong></td>
+                          <td><span class="badge badge-teal">100% (Pass)</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div style="margin-top: 8px; font-size: 0.6875rem; color: #64748B; line-height: 1.4;">
+                    * <em>Note on GraphRAG: Local GraphRAG is specialized for multi-hop relational root-cause defect analysis (Story 3), achieving 100% precision on relational defect queries, but is not designed for lexical catalog lookups.</em>
+                  </div>
+                </div>
+
+                <!-- Lightweight Native SVG Visualizations -->
+                <div class="obs-charts-grid">
+                  <!-- Chart 1: Hit Rate Bar Chart -->
+                  <div class="obs-card">
+                    <div class="obs-card-title">
+                      <span>📊 Hit Rate@5 by Strategy</span>
+                      <span style="font-size: 0.6875rem; color: #64748B;">42 Curated Cases</span>
+                    </div>
+                    <svg class="obs-svg-chart" viewBox="0 0 360 160" id="chart-hitrate-svg">
+                      <!-- Grid lines -->
+                      <line x1="50" y1="20" x2="340" y2="20" stroke="#E2E8F0" stroke-dasharray="3"/>
+                      <line x1="50" y1="60" x2="340" y2="60" stroke="#E2E8F0" stroke-dasharray="3"/>
+                      <line x1="50" y1="100" x2="340" y2="100" stroke="#E2E8F0" stroke-dasharray="3"/>
+                      <line x1="50" y1="130" x2="340" y2="130" stroke="#94A3B8"/>
+                      
+                      <!-- Y axis labels -->
+                      <text x="40" y="24" font-size="10" fill="#64748B" text-anchor="end">100%</text>
+                      <text x="40" y="64" font-size="10" fill="#64748B" text-anchor="end">60%</text>
+                      <text x="40" y="104" font-size="10" fill="#64748B" text-anchor="end">30%</text>
+                      <text x="40" y="134" font-size="10" fill="#64748B" text-anchor="end">0%</text>
+
+                      <!-- Bars -->
+                      <!-- Vector: 47.6% -->
+                      <rect x="75" y="78" width="55" height="52" fill="#2B4C7E" rx="3"/>
+                      <text x="102" y="73" font-size="11" font-weight="bold" fill="#2B4C7E" text-anchor="middle">47.6%</text>
+                      <text x="102" y="146" font-size="10" fill="#334155" text-anchor="middle">Vector</text>
+
+                      <!-- BM25: 57.1% -->
+                      <rect x="160" y="67" width="55" height="63" fill="#0D9488" rx="3"/>
+                      <text x="187" y="62" font-size="11" font-weight="bold" fill="#0D9488" text-anchor="middle">57.1%</text>
+                      <text x="187" y="146" font-size="10" fill="#334155" text-anchor="middle">BM25</text>
+
+                      <!-- Hybrid: 50.0% -->
+                      <rect x="245" y="75" width="55" height="55" fill="#D97706" rx="3"/>
+                      <text x="272" y="70" font-size="11" font-weight="bold" fill="#D97706" text-anchor="middle">50.0%</text>
+                      <text x="272" y="146" font-size="10" fill="#334155" text-anchor="middle">Hybrid</text>
+                    </svg>
+                  </div>
+
+                  <!-- Chart 2: Latency P50 vs P95 -->
+                  <div class="obs-card">
+                    <div class="obs-card-title">
+                      <span>⏱️ Retrieval Latency (P50 / P95)</span>
+                      <span style="font-size: 0.6875rem; color: #64748B;">Milliseconds</span>
+                    </div>
+                    <svg class="obs-svg-chart" viewBox="0 0 360 160" id="chart-latency-svg">
+                      <line x1="50" y1="20" x2="340" y2="20" stroke="#E2E8F0" stroke-dasharray="3"/>
+                      <line x1="50" y1="60" x2="340" y2="60" stroke="#E2E8F0" stroke-dasharray="3"/>
+                      <line x1="50" y1="100" x2="340" y2="100" stroke="#E2E8F0" stroke-dasharray="3"/>
+                      <line x1="50" y1="130" x2="340" y2="130" stroke="#94A3B8"/>
+                      
+                      <text x="40" y="24" font-size="10" fill="#64748B" text-anchor="end">30ms</text>
+                      <text x="40" y="64" font-size="10" fill="#64748B" text-anchor="end">20ms</text>
+                      <text x="40" y="104" font-size="10" fill="#64748B" text-anchor="end">10ms</text>
+                      <text x="40" y="134" font-size="10" fill="#64748B" text-anchor="end">0ms</text>
+
+                      <!-- BM25: P50=0.35ms, P95=0.78ms -->
+                      <rect x="75" y="127" width="24" height="3" fill="#0D9488" rx="2"/>
+                      <rect x="101" y="126" width="24" height="4" fill="#0F766E" rx="2"/>
+                      <text x="100" y="122" font-size="9" fill="#0D9488" text-anchor="middle">0.4ms</text>
+                      <text x="100" y="146" font-size="10" fill="#334155" text-anchor="middle">BM25</text>
+
+                      <!-- Vector: P50=22.5ms, P95=24.5ms -->
+                      <rect x="160" y="47" width="24" height="83" fill="#2B4C7E" rx="2"/>
+                      <rect x="186" y="40" width="24" height="90" fill="#1E3A8A" rx="2"/>
+                      <text x="185" y="35" font-size="9" fill="#2B4C7E" text-anchor="middle">24.5ms</text>
+                      <text x="185" y="146" font-size="10" fill="#334155" text-anchor="middle">Vector</text>
+
+                      <!-- Hybrid: P50=22.3ms, P95=24.5ms -->
+                      <rect x="245" y="48" width="24" height="82" fill="#D97706" rx="2"/>
+                      <rect x="271" y="40" width="24" height="90" fill="#B45309" rx="2"/>
+                      <text x="270" y="35" font-size="9" fill="#D97706" text-anchor="middle">24.5ms</text>
+                      <text x="270" y="146" font-size="10" fill="#334155" text-anchor="middle">Hybrid</text>
+                    </svg>
+                  </div>
+                </div>
+
+                <!-- Failed Evaluation Inspector Card -->
+                <div class="obs-card">
+                  <div class="obs-card-title">
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                      <span>🔍</span>
+                      <span>Failed Evaluation Root-Cause Inspector</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                      <label for="select-failed-eval" style="font-size: 0.75rem; font-weight: 700; color: #64748B;">Select Test Case:</label>
+                      <select id="select-failed-eval" class="form-select" style="width: auto; padding: 4px 8px; font-size: 0.75rem;">
+                        <option value="">-- Choose failed test case --</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div id="obs-failed-eval-content">
+                    <div style="padding: 24px; text-align: center; color: #64748B; font-size: 0.75rem;">
+                      Select a failed golden evaluation test case above to inspect missing chunks, unexpected retrievals, and failure root causes.
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Dr. Boon Challenge Demonstration Card -->
+                <div class="obs-card" style="border-left: 4px solid #3B82F6;">
+                  <div class="obs-card-title">
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                      <span>🔬</span>
+                      <span>Dr. Boon's Evaluation Challenge: Working vs Correct Retrieval</span>
+                    </div>
+                    <span class="badge badge-navy">FILM SCENARIO</span>
+                  </div>
+                  <div style="font-size: 0.75rem; color: #334155; line-height: 1.5; margin-bottom: 12px;">
+                    Dr. Boon challenges Arthur: <em>"Your dense vector retriever claims 98% cosine similarity on cold weather apparel, but returns completely irrelevant products. Working retrieval is not necessarily correct retrieval."</em>
+                  </div>
+                  <div style="display: flex; gap: 10px; align-items: center;">
+                    <button type="button" class="btn btn-outline" id="btn-load-boon-challenge" style="font-size: 0.75rem; font-weight: 700; color: #1D4ED8; border-color: #3B82F6;">
+                      🧪 Load Dr. Boon Challenge (EVAL-003)
+                    </button>
+                    <span style="font-size: 0.6875rem; color: #64748B;">Demonstrates vector false-confidence vs exact lexical precision</span>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </section>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer" style="margin-top: 48px;">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Quirk &amp; Quanta. "Beyond Basic RAG" Workshop Masterclass.
+        </div>
+        <div style="font-size: 0.75rem; color: var(--color-text-light);">
+          Interactive RAG Strategy Playground &bull; Multi-Strategy Retrieval &bull; Zero External Dependencies
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-Out Cart Drawer -->
+  <div class="modal-overlay" id="cart-drawer-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping Cart">
+    <div class="cart-drawer-header">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="font-size: 1.25rem;">🛒</span>
+        <h3 style="font-size: 1.125rem; font-weight: 800;">Your Calibrated Basket</h3>
+      </div>
+      <button class="modal-close-btn" id="close-cart-btn" aria-label="Close cart">&times;</button>
+    </div>
+    <div class="cart-drawer-items" id="cart-items-container"></div>
+    <div class="cart-drawer-footer">
+      <div class="cart-subtotal-row">
+        <span>Subtotal</span>
+        <span id="cart-subtotal-price">₹0</span>
+      </div>
+      <button class="btn btn-primary btn-block btn-lg" id="checkout-action-btn">
+        Proceed to Checkout
+      </button>
+    </div>
+  </aside>
+
+  <!-- Modals -->
+  <div class="modal-overlay" id="checkout-demo-modal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 class="modal-title">Purchasing Disabled (Educational Demonstration)</h3>
+        <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>Purchasing is disabled. Quirk &amp; Quanta exists solely as the multi-domain knowledge base for RAG workshops.</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary close-modal-trigger">Understood</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- JavaScript Modules -->
+  <script src="js/app.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/role-preview.js"></script>
+  <script src="js/workshop.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="160" height="160">
+  <defs>
+    <linearGradient id="bgGrad_QQ-0092_thumb" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF5F5" />
+      <stop offset="100%" stop-color="#FFFFFF" />
+    </linearGradient>
+    <filter id="shadow_QQ-0092_thumb" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#18243A" flood-opacity="0.08" />
+    </filter>
+  </defs>
+
+  <!-- Clean Subtle Background -->
+  <rect width="400" height="400" fill="url(#bgGrad_QQ-0092_thumb)" />
+  
+  <!-- Subtle Technical Grid Lines -->
+  <g opacity="0.15" stroke="#742A2A" stroke-width="0.8">
+    <line x1="40" y1="0" x2="40" y2="400" stroke-dasharray="4,4" />
+    <line x1="360" y1="0" x2="360" y2="400" stroke-dasharray="4,4" />
+    <line x1="0" y1="40" x2="400" y2="40" stroke-dasharray="4,4" />
+    <line x1="0" y1="360" x2="400" y2="360" stroke-dasharray="4,4" />
+  </g>
+
+  <!-- Category & SKU Header Tag -->
+  <g transform="translate(25, 25)">
+    <rect x="0" y="0" width="75" height="22" rx="4" fill="#742A2A" />
+    <text x="37.5" y="15" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">QQ-0092</text>
+    
+    <text x="85" y="15" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#D69E2E">Gifts &amp; Collectibles</text>
+  </g>
+
+  <!-- Circular Pedestal Ground Shadow -->
+  <ellipse cx="200" cy="315" rx="120" ry="22" fill="#E2E8F0" opacity="0.6" filter="url(#shadow_QQ-0092_thumb)" />
+
+  <!-- Distinct Centered Product Vector Illustration -->
+  <g id="product-art">
+    
+        <g transform="translate(120, 80)">
+          <!-- Black Marquina Marble Plinth -->
+          <rect x="40" y="180" width="80" height="45" rx="3" fill="#1A202C" stroke="#2D3748" stroke-width="2" />
+          <!-- Gold Plaque on front -->
+          <rect x="50" y="195" width="60" height="18" fill="#D69E2E" rx="2" />
+          <text x="80" y="207" font-family="serif" font-size="7" font-weight="bold" fill="#1A202C" text-anchor="middle">PEER REVIEWED</text>
+          <!-- Crystal Glass Atom Sphere -->
+          <circle cx="80" cy="110" r="42" fill="#E6FFFA" stroke="#2CD4CD" stroke-width="2" opacity="0.8" />
+          <!-- Laser Etched Atomic Orbitals inside crystal -->
+          <ellipse cx="80" cy="110" rx="35" ry="12" fill="none" stroke="#D69E2E" stroke-width="2" transform="rotate(-30, 80, 110)" />
+          <ellipse cx="80" cy="110" rx="35" ry="12" fill="none" stroke="#D69E2E" stroke-width="2" transform="rotate(30, 80, 110)" />
+          <circle cx="80" cy="110" r="7" fill="#F4C95D" />
+        </g>
+        
+  </g>
+
+  <!-- Product Title Label at Bottom -->
+  <g transform="translate(200, 368)">
+    <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#742A2A" text-anchor="middle">
+      Genius-Level Achievement Trophy
+    </text>
+    <text x="0" y="16" font-family="monospace" font-size="9.5" fill="#718096" text-anchor="middle">
+      Quirk &amp; Quanta &#8226; Certified Fictional
+    </text>
+  </g>
+</svg>

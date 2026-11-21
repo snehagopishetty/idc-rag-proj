@@ -1,0 +1,51 @@
+{
+  "version": 2,
+  "public": true,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/site/index.html"
+    },
+    {
+      "source": "/workshop",
+      "destination": "/site/workshop.html"
+    },
+    {
+      "source": "/products",
+      "destination": "/site/products.html"
+    },
+    {
+      "source": "/product",
+      "destination": "/site/product.html"
+    },
+    {
+      "source": "/about",
+      "destination": "/site/about.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/site/$1"
+    }
+  ]
+}
